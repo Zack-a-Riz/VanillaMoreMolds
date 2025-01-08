@@ -1,0 +1,42 @@
+{
+    //Start log
+    "start": "VanillaMoreMolds : Chargé",
+    //Menu tab
+    "game:tabname-VanillaMoreMolds": "Vanilla More Molds",
+    //Mold Sawblade
+    "block-toolmold-raw-sawblade-*": "Moule de lame de scie brut",
+    "block-toolmold-burned-sawblade-*": "Moule de lame de scie",
+    //Mold nail
+    "block-toolmold-raw-nail-*": "Moule de clous et bandes brut",
+    "block-toolmold-burned-nail-*": "Moule de clous et bandes",
+    //Mold arrowhead
+    "block-toolmold-raw-arrowhead-*": "Moule de pointes de flèches brut",
+    "block-toolmold-burned-arrowhead-*": "Moule de pointes de flèches",
+    //Mold hoop
+    "block-toolmold-raw-hoop-*": "Moule de cerclage brut",
+    "block-toolmold-burned-hoop-*": "Moule de cerclage",
+    //Mold plate
+    "block-toolmold-raw-plate-*": "Moule de plaque brut",
+    "block-toolmold-burned-plate-*": "Moule de plaque",
+    //Mold spearhead
+    "block-toolmold-raw-spearhead-*": "Moule de pointe de lance brut",
+    "block-toolmold-burned-spearhead-*": "Moule de pointe de lance",
+    //Mold knifeblade
+    "block-toolmold-raw-knifeblade-*": "Moule de lame de couteau brut",
+    "block-toolmold-burned-knifeblade-*": "Moule de lame de couteau",
+    //Mold scytheblade
+    "block-toolmold-raw-scythehead-*": "Moule de lame de faux brut",
+    "block-toolmold-burned-scythehead-*": "Moule de lame de faux",
+    //Mold ingotheavy
+    "block-toolmold-raw-ingotheavy-*": "Moule à lingots lourd brut",
+    "block-toolmold-burned-ingotheavy-*": "Moule à lingots lourd",
+    "blockdesc-toolmold-burned-ingotheavy-*": "Permet la fonte de 10 lingots",
+    //Mold ingotmedium
+    "block-toolmold-raw-ingotmedium-*": "Moule à lingots moyen brut",
+    "block-toolmold-burned-ingotmedium-*": "Moule à lingots moyen",
+    "blockdesc-toolmold-burned-ingotmedium-*": "Permet la fonte de 8 lingots",
+    //Mold ingotlite
+    "block-toolmold-raw-ingotlite-*": "Moule à lingots léger brut",
+    "block-toolmold-burned-ingotlite-*": "Moule à lingots léger",
+    "blockdesc-toolmold-burned-ingotlite-*": "Permet la fonte de 6 lingots"
+}

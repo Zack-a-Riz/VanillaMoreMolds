@@ -1,0 +1,15 @@
+{
+    "type": "code",
+    "modid": "vanillamoremolds",
+    "name": "VanillaMoreMolds",
+    "authors": [
+        "Zack.a.Riz"
+    ],
+    "description": "Added new vanilla style mold variants!",
+    "version": "1.0.0",
+    "requiredOnServer": true,
+    "requiredOnClient": true,
+    "dependencies": {
+        "game": "1.20.0-rc.8"
+    }
+}

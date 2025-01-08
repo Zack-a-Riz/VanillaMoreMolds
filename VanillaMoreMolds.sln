@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VanillaMoreMolds", "VanillaMoreMolds\VanillaMoreMolds.csproj", "{8202B9F3-4DE6-4692-988C-72D542088085}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CakeBuild", "ZZCakeBuild\CakeBuild.csproj", "{AED6638C-15EB-4042-8695-5B5AF563CD3E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8202B9F3-4DE6-4692-988C-72D542088085}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8202B9F3-4DE6-4692-988C-72D542088085}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8202B9F3-4DE6-4692-988C-72D542088085}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8202B9F3-4DE6-4692-988C-72D542088085}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AED6638C-15EB-4042-8695-5B5AF563CD3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AED6638C-15EB-4042-8695-5B5AF563CD3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AED6638C-15EB-4042-8695-5B5AF563CD3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AED6638C-15EB-4042-8695-5B5AF563CD3E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

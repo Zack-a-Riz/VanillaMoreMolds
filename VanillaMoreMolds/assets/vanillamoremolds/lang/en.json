@@ -1,0 +1,43 @@
+{
+    //Start log
+    "start": "VanillaMoreMolds : Loaded",
+    //Menu tab
+    "game:tabname-VanillaMoreMolds": "Vanilla More Molds",
+    //Mold Sawblade
+    "block-toolmold-raw-sawblade-*": "Raw Sawblade Mold",
+    "block-toolmold-burned-sawblade-*": "Sawblade Mold",
+    //Mold nail
+    "block-toolmold-raw-nail-*": "Raw Nail and Strips Mold",
+    "block-toolmold-burned-nail-*": "Nail and Strips Mold",
+    //Mold arrowhead
+    "block-toolmold-raw-arrowhead-*": "Raw Arrowhead Mold",
+    "block-toolmold-burned-arrowhead-*": "Arrowhead Mold",
+    //Mold hoop
+    "block-toolmold-raw-hoop-*": "Raw Hoop Mold",
+    "block-toolmold-burned-hoop-*": "Hoop Mold",
+    //Mold plate
+    "block-toolmold-raw-plate-*": "Raw Plate Mold",
+    "block-toolmold-burned-plate-*": "Plate Mold",
+    //Mold spearhead
+    "block-toolmold-raw-spearhead-*": "Raw Spearhead Mold",
+    "block-toolmold-burned-spearhead-*": "Spearhead Mold",
+    //Mold knifeblade
+    "block-toolmold-raw-knifeblade-*": "Raw Knifeblade Mold",
+    "block-toolmold-burned-knifeblade-*": "Knifeblade Mold",
+    //Mold scytheblade
+    "block-toolmold-raw-scythehead-*": "Raw Scytheblade Mold",
+    "block-toolmold-burned-scythehead-*": "Scytheblade Mold",
+    //Mold ingotheavy
+    "block-toolmold-raw-ingotheavy-*": "Raw Ingot Heavy Mold",
+    "block-toolmold-burned-ingotheavy-*": "Ingot Heavy Mold",
+    "blockdesc-toolmold-burned-ingotheavy-*": "Allows the melting of 10 ingots",
+    //Mold ingotmedium
+    "block-toolmold-raw-ingotmedium-*": "Raw Ingot Medium Mold",
+    "block-toolmold-burned-ingotmedium-*": "Ingot Medium Mold",
+    "blockdesc-toolmold-burned-ingotmedium-*": "Allows the melting of 8 ingots",
+    //Mold ingotlite
+    "block-toolmold-raw-ingotlite-*": "Raw Ingot Lite Mold",
+    "block-toolmold-burned-ingotlite-*": "Ingot Lite Mold",
+    "blockdesc-toolmold-burned-ingotlite-*": "Allows the melting of 6 ingots"
+
+}

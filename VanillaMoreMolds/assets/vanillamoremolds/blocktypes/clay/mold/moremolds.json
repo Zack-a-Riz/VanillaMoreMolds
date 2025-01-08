@@ -47,7 +47,7 @@
             }
         },
         "toolmold-burned-nail-*": {
-            "requiredUnits": 100,
+            "requiredUnits": 75,
             "fillHeight": 1,
             "moldrackable": true,
             "onmoldrackTransform": { "rotation": { "z": 90 } },

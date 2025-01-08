@@ -28,16 +28,16 @@
     "block-toolmold-raw-scythehead-*": "Raw Scytheblade Mold",
     "block-toolmold-burned-scythehead-*": "Scytheblade Mold",
     //Mold ingotheavy
-    "block-toolmold-raw-ingotheavy-*": "Raw Ingot Heavy Mold",
-    "block-toolmold-burned-ingotheavy-*": "Ingot Heavy Mold",
+    "block-toolmold-raw-ingotheavy-*": "Raw Heavy Ingot Mold",
+    "block-toolmold-burned-ingotheavy-*": "Heavy Ingot Mold",
     "blockdesc-toolmold-burned-ingotheavy-*": "Allows the melting of 10 ingots",
     //Mold ingotmedium
-    "block-toolmold-raw-ingotmedium-*": "Raw Ingot Medium Mold",
-    "block-toolmold-burned-ingotmedium-*": "Ingot Medium Mold",
+    "block-toolmold-raw-ingotmedium-*": "Raw Medium Ingot Mold",
+    "block-toolmold-burned-ingotmedium-*": "Medium Ingot Mold",
     "blockdesc-toolmold-burned-ingotmedium-*": "Allows the melting of 8 ingots",
     //Mold ingotlite
-    "block-toolmold-raw-ingotlite-*": "Raw Ingot Lite Mold",
-    "block-toolmold-burned-ingotlite-*": "Ingot Lite Mold",
+    "block-toolmold-raw-ingotlite-*": "Raw Lite Ingot Mold",
+    "block-toolmold-burned-ingotlite-*": "Lite Ingot Mold",
     "blockdesc-toolmold-burned-ingotlite-*": "Allows the melting of 6 ingots"
 
 }

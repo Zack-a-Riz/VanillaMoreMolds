@@ -12,7 +12,7 @@ namespace VanillaMoreMolds
         // Useful for registering block/entity classes on both sides
         public override void Start(ICoreAPI api)
         {
-            api.Logger.Notification("Hello from vanillamoremolds mod: " + api.Side);
+            api.Logger.Notification("VanillaMoreMolds : " + api.Side);
         }
 
         public override void StartServerSide(ICoreServerAPI api)

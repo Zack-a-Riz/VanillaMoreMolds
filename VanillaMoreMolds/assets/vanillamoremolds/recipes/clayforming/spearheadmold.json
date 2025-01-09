@@ -42,6 +42,6 @@
 	"name": "Spearhead Mold",
 	"output": {
 		"type": "block",
-		"code": "vanillamoremolds:toolmold-raw-spearhead-north"
+		"code": "vanillamoremolds:toolmold-raw-spearhead-north-{type}"
 	}
 }

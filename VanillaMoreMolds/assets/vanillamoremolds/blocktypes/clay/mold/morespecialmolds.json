@@ -2,10 +2,10 @@
     //Code provenant de la gestion des moules de Vintage Story (Merci a Tyron pour le code de base).
 
     "enabled": true,
-    "code": "toolmold",
+    "code": "specialmold",
     "classByType": {
-        "toolmold-raw-*": "Block",
-        "toolmold-burned-*": "BlockToolMold"
+        "specialmold-raw-*": "Block",
+        "specialmold-burned-*": "BlockToolMold"
     },
     "behaviorsByType": {
         "*-raw-*": [
@@ -20,11 +20,11 @@
         ]
     },
     "entityBehaviorsByType": {
-        "toolmold-burned-*": [ { "name": "TemperatureSensitive" } ]
+        "specialmold-burned-*": [ { "name": "TemperatureSensitive" } ]
     },
     "variantgroups": [
         { "code": "materialtype","states": [ "raw", "burned" ] },
-        { "code": "tooltype", "states": ["sawblade","nail","arrowhead","plate","hoop","spearhead","knifeblade","scythehead","ingotheavy","ingotmedium","ingotlite" ] },
+        { "code": "tooltype", "states": ["ingotheavy","ingotmedium","ingotlite" ] },
         { "code":"side", "loadFromProperties": "abstract/horizontalorientation" }
     ],
     "attributes": {
@@ -35,95 +35,7 @@
     //Ajouts de nouveau moules.
 
     "attributesByType": {
-        "toolmold-burned-sawblade-*": {
-            "requiredUnits": 100,
-            "fillHeight": 1,
-            "moldrackable": true,
-            "onmoldrackTransform": { "rotation": { "z": 90 } },
-            "drop": {
-                "type": "item",
-                "code": "game:sawblade-{metal}",
-                "quantity": 1
-            }
-        },
-        "toolmold-burned-nail-*": {
-            "requiredUnits": 75,
-            "fillHeight": 1,
-            "moldrackable": true,
-            "onmoldrackTransform": { "rotation": { "z": 90 } },
-            "drop": {
-                "type": "item",
-                "code": "game:metalnailsandstrips-{metal}",
-                "quantity": 3
-            }
-        },
-        "toolmold-burned-arrowhead-*": {
-            "requiredUnits": 100,
-            "fillHeight": 1,
-            "moldrackable": true,
-            "onmoldrackTransform": { "rotation": { "z": 90 } },
-            "drop": {
-                "type": "item",
-                "code": "game:arrowhead-{metal}",
-                "quantity": 8
-            }
-        },
-        "toolmold-burned-plate-*": {
-            "requiredUnits": 200,
-            "fillHeight": 1,
-            "moldrackable": true,
-            "onmoldrackTransform": { "rotation": { "z": 90 } },
-            "drop": {
-                "type": "item",
-                "code": "game:metalplate-{metal}",
-                "quantity": 1
-            }
-        },
-        "toolmold-burned-hoop-*": {
-            "requiredUnits": 100,
-            "fillHeight": 1,
-            "moldrackable": true,
-            "onmoldrackTransform": { "rotation": { "z": 90 } },
-            "drop": {
-                "type": "item",
-                "code": "game:hoop-{metal}",
-                "quantity": 1
-            }
-        },
-        "toolmold-burned-spearhead-*": {
-            "requiredUnits": 100,
-            "fillHeight": 1,
-            "moldrackable": true,
-            "onmoldrackTransform": { "rotation": { "z": 90 } },
-            "drop": {
-                "type": "item",
-                "code": "game:spearhead-{metal}",
-                "quantity": 1
-            }
-        },
-        "toolmold-burned-knifeblade-*": {
-            "requiredUnits": 100,
-            "fillHeight": 1,
-            "moldrackable": true,
-            "onmoldrackTransform": { "rotation": { "z": 90 } },
-            "drop": {
-                "type": "item",
-                "code": "game:knifeblade-{metal}",
-                "quantity": 1
-            }
-        },
-        "toolmold-burned-scythehead-*": {
-            "requiredUnits": 100,
-            "fillHeight": 1,
-            "moldrackable": true,
-            "onmoldrackTransform": { "rotation": { "z": 90 } },
-            "drop": {
-                "type": "item",
-                "code": "game:scythehead-{metal}",
-                "quantity": 1
-            }
-        },
-        "toolmold-burned-ingotheavy-*": {
+        "specialmold-burned-ingotheavy-*": {
             "requiredUnits": 1000,
             "fillHeight": 7,
             "moldrackable": false,
@@ -134,7 +46,7 @@
                 "quantity": 10
             }
         },
-        "toolmold-burned-ingotmedium-*": {
+        "specialmold-burned-ingotmedium-*": {
             "requiredUnits": 800,
             "fillHeight": 7,
             "fillQuadsByLevel": [
@@ -154,7 +66,7 @@
                 "quantity": 8
             }
         },
-        "toolmold-burned-ingotlite-*": {
+        "specialmold-burned-ingotlite-*": {
             "requiredUnits": 600,
             "fillHeight": 7,
                         "fillQuadsByLevel": [
@@ -179,17 +91,17 @@
     //Fin des ajouts.
 
     "entityClassByType": {
-        "toolmold-burned-*": "ToolMold"
+        "specialmold-burned-*": "ToolMold"
     },
     "combustiblePropsByType": {
-        "toolmold-raw-*": {
+        "specialmold-raw-*": {
             "meltingPoint": 650,
             "meltingDuration": 45,
             "smeltedRatio": 1,
             "smeltingType": "fire",
             "smeltedStack": {
             "type": "block",
-            "code": "vanillamoremolds:toolmold-burned-{tooltype}-{side}" },
+            "code": "vanillamoremolds:specialmold-burned-{tooltype}-{side}" },
             "requiresContainer": false 
         }
     },
@@ -200,18 +112,10 @@
     "maxStackSize": 8,
     "lightAbsorption": 0,
     "texturesByType": {
-        "toolmold-raw-sawblade-*": { "all": { "base": "game:block/clay/blueclay" } },
-        "toolmold-raw-nail-*": { "all": { "base": "game:block/clay/blueclay" } },
-        "toolmold-raw-arrowhead-*": { "all": { "base": "game:block/clay/blueclay" } },
-        "toolmold-raw-plate-*": { "all": { "base": "game:block/clay/blueclay" } },
-        "toolmold-raw-hoop-*": { "all": { "base": "game:block/clay/blueclay" } },
-        "toolmold-raw-spearhead-*": { "all": { "base": "game:block/clay/blueclay" } },
-        "toolmold-raw-knifeblade-*": { "all": { "base": "game:block/clay/blueclay" } },
-        "toolmold-raw-scythehead-*": { "all": { "base": "game:block/clay/blueclay" } },
-        "toolmold-raw-ingotheavy-*": { "all": { "base": "game:block/clay/fireclay" } },
-        "toolmold-raw-ingotmedium-*": { "all": { "base": "game:block/clay/fireclay" } },
-        "toolmold-raw-ingotlite-*": { "all": { "base": "game:block/clay/fireclay" } },
-        "toolmold-burned-*": {
+        "specialmold-raw-ingotheavy-*": { "all": { "base": "game:block/clay/fireclay" } },
+        "specialmold-raw-ingotmedium-*": { "all": { "base": "game:block/clay/fireclay" } },
+        "specialmold-raw-ingotlite-*": { "all": { "base": "game:block/clay/fireclay" } },
+        "specialmold-burned-*": {
             "floor": { "base": "game:block/clay/ceramic-dark" },
             "other": { "base": "game:block/clay/ceramic" }
         }

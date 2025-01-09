@@ -28,15 +28,15 @@
     "block-toolmold-raw-scythehead-*": "Moule de lame de faux brut",
     "block-toolmold-burned-scythehead-*": "Moule de lame de faux",
     //Mold ingotheavy
-    "block-toolmold-raw-ingotheavy-*": "Moule à lingots lourd brut",
-    "block-toolmold-burned-ingotheavy-*": "Moule à lingots lourd",
-    "blockdesc-toolmold-burned-ingotheavy-*": "Permet la fonte de 10 lingots",
+    "block-specialmold-raw-ingotheavy-*": "Moule à lingots lourd brut",
+    "block-specialmold-burned-ingotheavy-*": "Moule à lingots lourd",
+    "blockdesc-specialmold-burned-ingotheavy-*": "Permet la fonte de 10 lingots",
     //Mold ingotmedium
-    "block-toolmold-raw-ingotmedium-*": "Moule à lingots moyen brut",
-    "block-toolmold-burned-ingotmedium-*": "Moule à lingots moyen",
-    "blockdesc-toolmold-burned-ingotmedium-*": "Permet la fonte de 8 lingots",
+    "block-specialmold-raw-ingotmedium-*": "Moule à lingots moyen brut",
+    "block-specialmold-burned-ingotmedium-*": "Moule à lingots moyen",
+    "blockdesc-specialmold-burned-ingotmedium-*": "Permet la fonte de 8 lingots",
     //Mold ingotlite
-    "block-toolmold-raw-ingotlite-*": "Moule à lingots léger brut",
-    "block-toolmold-burned-ingotlite-*": "Moule à lingots léger",
-    "blockdesc-toolmold-burned-ingotlite-*": "Permet la fonte de 6 lingots"
+    "block-specialmold-raw-ingotlite-*": "Moule à lingots léger brut",
+    "block-specialmold-burned-ingotlite-*": "Moule à lingots léger",
+    "blockdesc-specialmold-burned-ingotlite-*": "Permet la fonte de 6 lingots"
 }

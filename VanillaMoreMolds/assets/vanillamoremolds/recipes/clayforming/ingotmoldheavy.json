@@ -154,6 +154,6 @@
 	"name": "Ingot Mold Heavy",
 	"output": {
 		"type": "block",
-		"code": "vanillamoremolds:toolmold-raw-ingotheavy-north"
+		"code": "vanillamoremolds:specialmold-raw-ingotheavy-north"
 	}
 }

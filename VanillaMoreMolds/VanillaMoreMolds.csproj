@@ -59,6 +59,7 @@
 </ItemGroup>
 
 <ItemGroup>
+  <Folder Include="assets\vanillamoremolds\itemtypes\" />
   <Folder Include="assets\vanillamoremolds\textures\" />
 </ItemGroup>
 

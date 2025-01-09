@@ -136,6 +136,6 @@
 	"name": "Ingot Mold Medium",
 	"output": {
 		"type": "block",
-		"code": "vanillamoremolds:toolmold-raw-ingotmedium-north"
+		"code": "vanillamoremolds:specialmold-raw-ingotmedium-north"
 	}
 }

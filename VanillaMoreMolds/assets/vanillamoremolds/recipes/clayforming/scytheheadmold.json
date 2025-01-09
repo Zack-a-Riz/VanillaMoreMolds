@@ -42,6 +42,6 @@
 	"name": "Scythe Mold",
 	"output": {
 		"type": "block",
-		"code": "vanillamoremolds:toolmold-raw-scythehead-north"
+		"code": "vanillamoremolds:toolmold-raw-scythehead-north-{type}"
 	}
 }

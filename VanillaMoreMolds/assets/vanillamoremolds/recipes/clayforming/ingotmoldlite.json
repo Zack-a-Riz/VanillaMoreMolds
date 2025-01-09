@@ -118,6 +118,6 @@
     "name": "Ingot Mold Lite",
     "output": {
         "type": "block",
-        "code": "vanillamoremolds:toolmold-raw-ingotlite-north"
+        "code": "vanillamoremolds:specialmold-raw-ingotlite-north"
     }
 }

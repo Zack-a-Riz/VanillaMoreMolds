@@ -42,6 +42,6 @@
     "name": "Nails Mold",
     "output": {
         "type": "block",
-        "code": "vanillamoremolds:toolmold-raw-nail-north-{type}"
+        "code": "vanillamoremolds:toolmold-raw-nail-north"
     }
 }

@@ -20,13 +20,12 @@
         ]
     },
     "entityBehaviorsByType": {
-        "toolmold-burned-*-*-*": [ { "name": "TemperatureSensitive" } ]
+        "toolmold-burned-*": [ { "name": "TemperatureSensitive" } ]
     },
     "variantgroups": [
         { "code": "materialtype","states": [ "raw", "burned" ] },
         { "code": "tooltype", "states": ["sawblade","nail","arrowhead","plate","hoop","spearhead","knifeblade","scythehead" ] },
-        { "code":"side", "loadFromProperties": "abstract/horizontalorientation" },
-        { "code": "claycolor", "states": [ "blue", "red", "fire" ] }
+        { "code":"side", "loadFromProperties": "abstract/horizontalorientation" }
     ],
     "attributes": {
         "reinforcable": true,
@@ -36,7 +35,7 @@
     //Ajouts de nouveau moules.
 
     "attributesByType": {
-        "toolmold-burned-sawblade-*-*": {
+        "toolmold-burned-sawblade-*": {
             "requiredUnits": 100,
             "fillHeight": 1,
             "moldrackable": true,
@@ -47,7 +46,7 @@
                 "quantity": 1
             }
         },
-        "toolmold-burned-nail-*-*": {
+        "toolmold-burned-nail-*": {
             "requiredUnits": 75,
             "fillHeight": 1,
             "moldrackable": true,
@@ -58,7 +57,7 @@
                 "quantity": 3
             }
         },
-        "toolmold-burned-arrowhead-*-*": {
+        "toolmold-burned-arrowhead-*": {
             "requiredUnits": 100,
             "fillHeight": 1,
             "moldrackable": true,
@@ -69,7 +68,7 @@
                 "quantity": 8
             }
         },
-        "toolmold-burned-plate-*-*": {
+        "toolmold-burned-plate-*": {
             "requiredUnits": 200,
             "fillHeight": 1,
             "moldrackable": true,
@@ -80,7 +79,7 @@
                 "quantity": 1
             }
         },
-        "toolmold-burned-hoop-*-*": {
+        "toolmold-burned-hoop-*": {
             "requiredUnits": 100,
             "fillHeight": 1,
             "moldrackable": true,
@@ -91,7 +90,7 @@
                 "quantity": 1
             }
         },
-        "toolmold-burned-spearhead-*-*": {
+        "toolmold-burned-spearhead-*": {
             "requiredUnits": 100,
             "fillHeight": 1,
             "moldrackable": true,
@@ -102,7 +101,7 @@
                 "quantity": 1
             }
         },
-        "toolmold-burned-knifeblade-*-*": {
+        "toolmold-burned-knifeblade-*": {
             "requiredUnits": 100,
             "fillHeight": 1,
             "moldrackable": true,
@@ -113,7 +112,7 @@
                 "quantity": 1
             }
         },
-        "toolmold-burned-scythehead-*-*": {
+        "toolmold-burned-scythehead-*": {
             "requiredUnits": 100,
             "fillHeight": 1,
             "moldrackable": true,
@@ -139,67 +138,44 @@
             "smeltingType": "fire",
             "smeltedStack": {
             "type": "block",
-            "code": "vanillamoremolds:toolmold-burned-{tooltype}-{side}-{claycolor}" },
+            "code": "vanillamoremolds:toolmold-burned-{tooltype}-{side}" },
             "requiresContainer": false 
         }
     },
     "blockmaterial": "Ceramic",
-    "creativeinventory": {
-        "general": [ "toolmold-burned-*-north-blue", "toolmold-raw-*-north-*" ],
-        "construction": [ "toolmold-burned-*-north-blue", "toolmold-raw-*-north-*" ],
-        "VanillaMoreMolds": [ "toolmold-burned-*-north-blue", "toolmold-raw-*-north-*" ]
-    },
+    "creativeinventory": {"general": [ "*-north" ],"construction": [ "*-north" ],"VanillaMoreMolds": [ "*-north" ]},
     "replaceable": 700,
     "resistance": 1.5,
     "maxStackSize": 8,
     "lightAbsorption": 0,
     "texturesByType": {
-        //Moule d'outils bleu
-        "toolmold-raw-sawblade-*-blue": { "all": { "base": "game:block/clay/blueclay" } },
-        "toolmold-raw-nail-*-blue": { "all": { "base": "game:block/clay/blueclay" } },
-        "toolmold-raw-arrowhead-*-blue": { "all": { "base": "game:block/clay/blueclay" } },
-        "toolmold-raw-plate-*-blue": { "all": { "base": "game:block/clay/blueclay" } },
-        "toolmold-raw-hoop-*-blue": { "all": { "base": "game:block/clay/blueclay" } },
-        "toolmold-raw-spearhead-*-blue": { "all": { "base": "game:block/clay/blueclay" } },
-        "toolmold-raw-knifeblade-*-blue": { "all": { "base": "game:block/clay/blueclay" } },
-        "toolmold-raw-scythehead-*-blue": { "all": { "base": "game:block/clay/blueclay" } },
-        //Moule d'outils rouge
-        "toolmold-raw-sawblade-*-red": { "all": { "base": "game:block/clay/redclay" } },
-        "toolmold-raw-nail-*-red": { "all": { "base": "game:block/clay/redclay" } },
-        "toolmold-raw-arrowhead-*-red": { "all": { "base": "game:block/clay/redclay" } },
-        "toolmold-raw-plate-*-red": { "all": { "base": "game:block/clay/redclay" } },
-        "toolmold-raw-hoop-*-red": { "all": { "base": "game:block/clay/redclay" } },
-        "toolmold-raw-spearhead-*-red": { "all": { "base": "game:block/clay/redclay" } },
-        "toolmold-raw-knifeblade-*-red": { "all": { "base": "game:block/clay/redclay" } },
-        "toolmold-raw-scythehead-*-red": { "all": { "base": "game:block/clay/redclay" } },
-        //Moule d'outils réfractaire
-        "toolmold-raw-sawblade-*-fire": { "all": { "base": "game:block/clay/fireclay" } },
-        "toolmold-raw-nail-*-fire": { "all": { "base": "game:block/clay/fireclay" } },
-        "toolmold-raw-arrowhead-*-fire": { "all": { "base": "game:block/clay/fireclay" } },
-        "toolmold-raw-plate-*-fire": { "all": { "base": "game:block/clay/fireclay" } },
-        "toolmold-raw-hoop-*-fire": { "all": { "base": "game:block/clay/fireclay" } },
-        "toolmold-raw-spearhead-*-fire": { "all": { "base": "game:block/clay/fireclay" } },
-        "toolmold-raw-knifeblade-*-fire": { "all": { "base": "game:block/clay/fireclay" } },
-        "toolmold-raw-scythehead-*-fire": { "all": { "base": "game:block/clay/fireclay" } },
-        "toolmold-burned-*-*-*": {
+        "toolmold-raw-sawblade-*": { "all": { "base": "game:block/clay/blueclay" } },
+        "toolmold-raw-nail-*": { "all": { "base": "game:block/clay/blueclay" } },
+        "toolmold-raw-arrowhead-*": { "all": { "base": "game:block/clay/blueclay" } },
+        "toolmold-raw-plate-*": { "all": { "base": "game:block/clay/blueclay" } },
+        "toolmold-raw-hoop-*": { "all": { "base": "game:block/clay/blueclay" } },
+        "toolmold-raw-spearhead-*": { "all": { "base": "game:block/clay/blueclay" } },
+        "toolmold-raw-knifeblade-*": { "all": { "base": "game:block/clay/blueclay" } },
+        "toolmold-raw-scythehead-*": { "all": { "base": "game:block/clay/blueclay" } },
+        "toolmold-burned-*": {
             "floor": { "base": "game:block/clay/ceramic-dark" },
             "other": { "base": "game:block/clay/ceramic" }
         }
     },
     "shapeByType": {
-        "*-north-*": {
+        "*-north": {
             "base": "vanillamoremolds:block/clay/mold/{tooltype}",
             "rotateY": 0
         },
-        "*-east-*": {
+        "*-east": {
             "base": "vanillamoremolds:block/clay/mold/{tooltype}",
             "rotateY": 90
         },
-        "*-west-*": {
+        "*-west": {
             "base": "vanillamoremolds:block/clay/mold/{tooltype}",
             "rotateY": 270
         },
-        "*-south-*": {
+        "*-south": {
             "base": "vanillamoremolds:block/clay/mold/{tooltype}",
             "rotateY": 180
         }

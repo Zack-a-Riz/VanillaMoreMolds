@@ -42,6 +42,6 @@
     "name": "Plate Mold",
     "output": {
         "type": "block",
-        "code": "vanillamoremolds:toolmold-raw-plate-north-{type}"
+        "code": "vanillamoremolds:toolmold-raw-plate-north"
     }
 }

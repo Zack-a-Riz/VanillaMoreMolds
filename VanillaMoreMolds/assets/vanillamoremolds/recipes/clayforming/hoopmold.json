@@ -42,6 +42,6 @@
 	"name": "Hoop Mold",
 	"output": {
 		"type": "block",
-		"code": "vanillamoremolds:toolmold-raw-hoop-north-{type}"
+		"code": "vanillamoremolds:toolmold-raw-hoop-north"
 	}
 }

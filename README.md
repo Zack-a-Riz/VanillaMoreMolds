@@ -15,13 +15,21 @@ The mod also seeks to give Fire Clay additional value by allowing the creation o
 # FAQ :
 
 Will you add new tool molds?
+
 - In theory, I could, but adding extra tool molds would break the use of the forge, so it's not planned. However, adding more utilitarian molds, like large ingot molds for example, is planned!
 
 Can I translate the mod into another language?
+
 - The mod is currently available in English and French, but if you have any other suggestions, I’d be happy to hear them. You can submit your translations via GitHub ( link in the 'Source' tab ).
 
 Is there a config file?
+
 - No, not yet. And if there ever is one, it would be for features that wouldn’t break the vanilla aspect of the game.
+
+I can't manage to pour molten copper into the hoop mold!
+
+- It's normal, copper hoops don't exist in the game :)
+
 ...
 
 # Future plan :

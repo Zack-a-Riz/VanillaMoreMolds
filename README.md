@@ -48,7 +48,9 @@ No news, good news 🤣
 
 # Update :
 
-08/01/2025 : Release 1.0.0
+18/01/2025 : 1.1.0 : Full support for 1.20.0, model tweak, preparing the environment for the future update
+
+08/01/2025 : 1.0.0 : Mod Release
 
 ![2025-01-08_02-45-43](https://github.com/user-attachments/assets/8a206614-ebb4-4d9b-a51c-787741c60492)
 ![2025-01-08_02-46-38](https://github.com/user-attachments/assets/443d29ad-2abd-4422-bf9d-eb6854db6a05)

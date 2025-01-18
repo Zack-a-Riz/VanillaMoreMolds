@@ -27,16 +27,16 @@
     //Mold scytheblade
     "block-toolmold-raw-scythehead-*": "Moule de lame de faux brut",
     "block-toolmold-burned-scythehead-*": "Moule de lame de faux",
-    //Mold ingotheavy
-    "block-specialmold-raw-ingotheavy-*": "Moule à lingots lourd brut",
-    "block-specialmold-burned-ingotheavy-*": "Moule à lingots lourd",
-    "blockdesc-specialmold-burned-ingotheavy-*": "Permet la fonte de 10 lingots",
-    //Mold ingotmedium
-    "block-specialmold-raw-ingotmedium-*": "Moule à lingots moyen brut",
-    "block-specialmold-burned-ingotmedium-*": "Moule à lingots moyen",
-    "blockdesc-specialmold-burned-ingotmedium-*": "Permet la fonte de 8 lingots",
-    //Mold ingotlite
-    "block-specialmold-raw-ingotlite-*": "Moule à lingots léger brut",
-    "block-specialmold-burned-ingotlite-*": "Moule à lingots léger",
-    "blockdesc-specialmold-burned-ingotlite-*": "Permet la fonte de 6 lingots"
+    //Mold heavybasemold
+    "block-specialmold-raw-heavybase-*": "Raw Heavy Base Mold",
+    "block-specialmold-burned-heavybase-*": "Heavy Base Mold",
+    "blockdesc-specialmold-burned-heavybase-*": "Add sand and the imprint of the tool you want to mold.",
+    //Mold mediumbasemold
+    "block-specialmold-raw-mediumbase-*": "Raw Medium Base Mold",
+    "block-specialmold-burned-mediumbase-*": "Medium Base Mold",
+    "blockdesc-specialmold-burned-mediumbase-*": "Add sand and the imprint of the tool you want to mold.",
+    //Mold litebasemold
+    "block-specialmold-raw-litebase-*": "Raw Lite Base Mold",
+    "block-specialmold-burned-litebase-*": "Lite Base Mold",
+    "blockdesc-specialmold-burned-litebase-*": "Add sand and the imprint of the tool you want to mold."
 }

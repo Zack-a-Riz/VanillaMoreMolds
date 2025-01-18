@@ -28,15 +28,15 @@
     "block-toolmold-raw-scythehead-*": "Moule de lame de faux brut",
     "block-toolmold-burned-scythehead-*": "Moule de lame de faux",
     //Mold heavybasemold
-    "block-specialmold-raw-heavybase-*": "Raw Heavy Base Mold",
-    "block-specialmold-burned-heavybase-*": "Heavy Base Mold",
-    "blockdesc-specialmold-burned-heavybase-*": "Add sand and the imprint of the tool you want to mold.",
+    "block-specialbasemold-raw-heavybase-*": "Raw Heavy Base Mold",
+    "block-specialbasemold-burned-heavybase-*": "Heavy Base Mold",
+    "blockdesc-specialbasemold-burned-heavybase-*": "Add sand and the imprint of the tool you want to mold.",
     //Mold mediumbasemold
-    "block-specialmold-raw-mediumbase-*": "Raw Medium Base Mold",
-    "block-specialmold-burned-mediumbase-*": "Medium Base Mold",
-    "blockdesc-specialmold-burned-mediumbase-*": "Add sand and the imprint of the tool you want to mold.",
+    "block-specialbasemold-raw-mediumbase-*": "Raw Medium Base Mold",
+    "block-specialbasemold-burned-mediumbase-*": "Medium Base Mold",
+    "blockdesc-specialbasemold-burned-mediumbase-*": "Add sand and the imprint of the tool you want to mold.",
     //Mold litebasemold
-    "block-specialmold-raw-litebase-*": "Raw Lite Base Mold",
-    "block-specialmold-burned-litebase-*": "Lite Base Mold",
-    "blockdesc-specialmold-burned-litebase-*": "Add sand and the imprint of the tool you want to mold."
+    "block-specialbasemold-raw-litebase-*": "Raw Lite Base Mold",
+    "block-specialbasemold-burned-litebase-*": "Lite Base Mold",
+    "blockdesc-specialbasemold-burned-litebase-*": "Add sand and the imprint of the tool you want to mold."
 }

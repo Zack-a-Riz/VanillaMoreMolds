@@ -136,6 +136,6 @@
 	"name": "Medium Base Mold",
 	"output": {
 		"type": "block",
-		"code": "vanillamoremolds:specialmold-raw-mediumbase-north"
+		"code": "vanillamoremolds:specialbasemold-raw-mediumbase-north"
 	}
 }

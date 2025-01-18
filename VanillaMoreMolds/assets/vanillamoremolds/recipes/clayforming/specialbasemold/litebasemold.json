@@ -118,6 +118,6 @@
     "name": "Lite Base Mold",
     "output": {
         "type": "block",
-        "code": "vanillamoremolds:specialmold-raw-litebase-north"
+        "code": "vanillamoremolds:specialbasemold-raw-litebase-north"
     }
 }

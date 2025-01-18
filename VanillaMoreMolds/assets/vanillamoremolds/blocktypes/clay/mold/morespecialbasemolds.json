@@ -2,10 +2,10 @@
     //Code provenant de la gestion des moules de Vintage Story (Merci a Tyron pour le code de base).
 
     "enabled": true,
-    "code": "specialmold",
+    "code": "specialbasemold",
     "classByType": {
-        "specialmold-raw-*": "Block",
-        "specialmold-burned-*": "Block"
+        "specialbasemold-raw-*": "Block",
+        "specialbasemold-burned-*": "Block"
     },
     "behaviorsByType": {
         "*-raw-*": [
@@ -20,7 +20,7 @@
         ]
     },
 //   "entityBehaviorsByType": {
-//        "specialmold-burned-*": [ { "name": "TemperatureSensitive" } ]
+//        "specialbasemold-burned-*": [ { "name": "TemperatureSensitive" } ]
 //  },
     "variantgroups": [
         { "code": "materialtype","states": [ "raw", "burned" ] },
@@ -28,14 +28,14 @@
         { "code":"side", "loadFromProperties": "abstract/horizontalorientation" }
     ],
     "attributes": {
-        "reinforcable": true,
+        "reinforcable": true
 //      "shatteredShape": { "base": "game:block/clay/mold/shattered-ingot" }
     },
 
     //Ajouts de nouveau moules.
 
 //    "attributesByType": {
-//        "specialmold-burned-heavybase-*": {
+//        "specialbasemold-burned-heavybase-*": {
 //            "requiredUnits": 1000,
 //            "fillHeight": 7,
 //            "moldrackable": false,
@@ -46,7 +46,7 @@
 //                "quantity": 10
 //            }
 //        },
-//        "specialmold-burned-mediumbase-*": {
+//        "specialbasemold-burned-mediumbase-*": {
 //            "requiredUnits": 800,
 //            "fillHeight": 7,
 //            "fillQuadsByLevel": [
@@ -66,7 +66,7 @@
 //                "quantity": 8
 //            }
 //        },
-//        "specialmold-burned-litebase-*": {
+//        "specialbasemold-burned-litebase-*": {
 //            "requiredUnits": 600,
 //            "fillHeight": 7,
 //                        "fillQuadsByLevel": [
@@ -91,17 +91,17 @@
     //Fin des ajouts.
 
 //    "entityClassByType": {
-//        "specialmold-burned-*": "ToolMold"
+//        "specialbasemold-burned-*": "ToolMold"
 //    },
     "combustiblePropsByType": {
-        "specialmold-raw-*": {
+        "specialbasemold-raw-*": {
             "meltingPoint": 650,
             "meltingDuration": 45,
             "smeltedRatio": 1,
             "smeltingType": "fire",
             "smeltedStack": {
             "type": "block",
-            "code": "vanillamoremolds:specialmold-burned-{tooltype}-{side}" },
+            "code": "vanillamoremolds:specialbasemold-burned-{tooltype}-{side}" },
             "requiresContainer": false 
         }
     },
@@ -112,29 +112,29 @@
     "maxStackSize": 8,
     "lightAbsorption": 0,
     "texturesByType": {
-        "specialmold-raw-heavybase-*": { "all": { "base": "game:block/clay/fireclay" } },
-        "specialmold-raw-mediumbase-*": { "all": { "base": "game:block/clay/fireclay" } },
-        "specialmold-raw-litebase-*": { "all": { "base": "game:block/clay/fireclay" } },
-        "specialmold-burned-*": {
+        "specialbasemold-raw-heavybase-*": { "all": { "base": "game:block/clay/fireclay" } },
+        "specialbasemold-raw-mediumbase-*": { "all": { "base": "game:block/clay/fireclay" } },
+        "specialbasemold-raw-litebase-*": { "all": { "base": "game:block/clay/fireclay" } },
+        "specialbasemold-burned-*": {
             "floor": { "base": "game:block/clay/ceramic-dark" },
             "other": { "base": "game:block/clay/ceramic" }
         }
     },
     "shapeByType": {
         "*-north": {
-            "base": "vanillamoremolds:block/clay/mold/specialmold/{tooltype}",
+            "base": "vanillamoremolds:block/clay/mold/specialbasemold/{tooltype}",
             "rotateY": 0
         },
         "*-east": {
-            "base": "vanillamoremolds:block/clay/mold/specialmold/{tooltype}",
+            "base": "vanillamoremolds:block/clay/mold/specialbasemold/{tooltype}",
             "rotateY": 90
         },
         "*-west": {
-            "base": "vanillamoremolds:block/clay/mold/specialmold/{tooltype}",
+            "base": "vanillamoremolds:block/clay/mold/specialbasemold/{tooltype}",
             "rotateY": 270
         },
         "*-south": {
-            "base": "vanillamoremolds:block/clay/mold/specialmold/{tooltype}",
+            "base": "vanillamoremolds:block/clay/mold/specialbasemold/{tooltype}",
             "rotateY": 180
         }
     },

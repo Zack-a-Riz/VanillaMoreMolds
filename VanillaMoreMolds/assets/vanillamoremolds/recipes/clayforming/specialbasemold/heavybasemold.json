@@ -154,6 +154,6 @@
 	"name": "Heavy Base Mold",
 	"output": {
 		"type": "block",
-		"code": "vanillamoremolds:specialmold-raw-heavybase-north"
+		"code": "vanillamoremolds:specialbasemold-raw-heavybase-north"
 	}
 }

@@ -1,0 +1,15 @@
+[
+	{
+        "ingredientPattern": "B_B	_M_   B_B",
+		"ingredients": {
+			"L": { "type": "block", "code": "vanillamoremolds:specialbasemold-burned-{tooltype}-*", "quantity": 1},
+			"B": { "type": "item", "code": "game:stick", "quantity": 1}
+		},
+		"width": 3,
+		"height": 3,
+		"output": {
+			"type": "block",
+			"code": "vanillamoremolds:preparationmold-heavypreparation-*"
+		}
+	}
+]

@@ -19,9 +19,6 @@
             { "name": "HorizontalOrientable" }
         ]
     },
-//   "entityBehaviorsByType": {
-//        "specialbasemold-burned-*": [ { "name": "TemperatureSensitive" } ]
-//  },
     "variantgroups": [
         { "code": "materialtype","states": [ "raw", "burned" ] },
         { "code": "tooltype", "states": ["heavybase","mediumbase","litebase" ] },
@@ -29,70 +26,8 @@
     ],
     "attributes": {
         "reinforcable": true
-//      "shatteredShape": { "base": "game:block/clay/mold/shattered-ingot" }
     },
 
-    //Ajouts de nouveau moules.
-
-//    "attributesByType": {
-//        "specialbasemold-burned-heavybase-*": {
-//            "requiredUnits": 1000,
-//            "fillHeight": 7,
-//            "moldrackable": false,
-//            "onmoldrackTransform": { "rotation": { "z": 90 } },
-//            "drop": {
-//                "type": "item",
-//                "code": "game:ingot-{metal}",
-//                "quantity": 10
-//            }
-//        },
-//        "specialbasemold-burned-mediumbase-*": {
-//            "requiredUnits": 800,
-//            "fillHeight": 7,
-//            "fillQuadsByLevel": [
-//				{ "x1": 3, "z1": 3, "x2": 13, "z2": 13 },
-//				{ "x1": 3, "z1": 3, "x2": 13, "z2": 13 },
-//				{ "x1": 3, "z1": 3, "x2": 13, "z2": 13 },				
-//				{ "x1": 3, "z1": 3, "x2": 13, "z2": 13 },
-//				{ "x1": 3, "z1": 3, "x2": 13, "z2": 13 },
-//				{ "x1": 3, "z1": 3, "x2": 13, "z2": 13 },
-//				{ "x1": 3, "z1": 3, "x2": 13, "z2": 13 }
-//                ],
-//            "moldrackable": false,
-//            "onmoldrackTransform": { "rotation": { "z": 90 } },
-//            "drop": {
-//                "type": "item",
-//                "code": "game:ingot-{metal}",
-//                "quantity": 8
-//            }
-//        },
-//        "specialbasemold-burned-litebase-*": {
-//            "requiredUnits": 600,
-//            "fillHeight": 7,
-//                        "fillQuadsByLevel": [
-//				{ "x1": 4, "z1": 4, "x2": 12, "z2": 12 },
-//				{ "x1": 4, "z1": 4, "x2": 12, "z2": 12 },
-//				{ "x1": 4, "z1": 4, "x2": 12, "z2": 12 },				
-//				{ "x1": 4, "z1": 4, "x2": 12, "z2": 12 },
-//				{ "x1": 4, "z1": 4, "x2": 12, "z2": 12 },
-//				{ "x1": 4, "z1": 4, "x2": 12, "z2": 12 },
-//				{ "x1": 4, "z1": 4, "x2": 12, "z2": 12 }
-//                ],
-//            "moldrackable": false,
-//            "onmoldrackTransform": { "rotation": { "z": 90 } },
-//            "drop": {
-//                "type": "item",
-//                "code": "game:ingot-{metal}",
-//                "quantity": 6
-//            }
-//        }
-//    },
-
-    //Fin des ajouts.
-
-//    "entityClassByType": {
-//        "specialbasemold-burned-*": "ToolMold"
-//    },
     "combustiblePropsByType": {
         "specialbasemold-raw-*": {
             "meltingPoint": 650,

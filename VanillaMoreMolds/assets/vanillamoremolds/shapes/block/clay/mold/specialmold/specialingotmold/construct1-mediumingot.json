@@ -10,7 +10,8 @@
     "textures": {
         "other": "game:block/clay/ceramic",
         "floor": "game:block/clay/ceramic-dark",
-        "wood": "game:block/wood/bark/pine-h"
+        "wood": "game:block/wood/bark/oak-h",
+        "sand": "game:block/stone/sand/granite"
     },
     "elements": [
         {
@@ -48,7 +49,7 @@
                 {
                     "name": "Face1",
                     "from": [ 0.0, 1.0, 0.0 ],
-                    "to": [ 12.0, 11.0, 1.0 ],
+                    "to": [ 12.0, 9.0, 1.0 ],
                     "rotationOrigin": [ 0.0, 1.0, 0.0 ],
                     "faces": {
                         "north": {
@@ -80,7 +81,7 @@
                 {
                     "name": "Face2",
                     "from": [ 0.0, 1.0, 11.0 ],
-                    "to": [ 12.0, 11.0, 12.0 ],
+                    "to": [ 12.0, 9.0, 12.0 ],
                     "rotationOrigin": [ 0.0, 1.0, 11.0 ],
                     "faces": {
                         "north": {
@@ -112,7 +113,7 @@
                 {
                     "name": "Face3",
                     "from": [ 0.0, 1.0, 1.0 ],
-                    "to": [ 1.0, 11.0, 11.0 ],
+                    "to": [ 1.0, 9.0, 11.0 ],
                     "rotationOrigin": [ 0.0, 1.0, 1.0 ],
                     "faces": {
                         "north": {
@@ -144,7 +145,7 @@
                 {
                     "name": "Face4",
                     "from": [ 11.0, 1.0, 1.0 ],
-                    "to": [ 12.0, 11.0, 11.0 ],
+                    "to": [ 12.0, 9.0, 11.0 ],
                     "rotationOrigin": [ 11.0, 1.0, 1.0 ],
                     "faces": {
                         "north": {
@@ -667,7 +668,6 @@
                     "to": [ 15.0, 1.0, 5.0 ],
                     "rotationOrigin": [ 14.0, 0.0, 4.0 ],
                     "rotationX": -180.0,
-                    "rotationY": 0.0,
                     "rotationZ": -180.0,
                     "faces": {
                         "north": {
@@ -865,7 +865,6 @@
                             "to": [ 15.0, 1.0, 5.0 ],
                             "rotationOrigin": [ 14.0, 0.0, 4.0 ],
                             "rotationX": -180.0,
-                            "rotationY": 0.0,
                             "rotationZ": -180.0,
                             "faces": {
                                 "north": {
@@ -963,6 +962,38 @@
                     ]
                 }
             ]
+        },
+        {
+            "name": "Sable",
+            "from": [ 3.0, 1.0, 3.0 ],
+            "to": [ 13.0, 5.8, 13.0 ],
+            "rotationOrigin": [ 3.0, 1.0, 3.0 ],
+            "faces": {
+                "north": {
+                    "texture": "#sand",
+                    "uv": [ 0.0, 0.0, 10.0, 4.5 ]
+                },
+                "east": {
+                    "texture": "#sand",
+                    "uv": [ 0.0, 0.0, 10.0, 4.5 ]
+                },
+                "south": {
+                    "texture": "#sand",
+                    "uv": [ 0.0, 0.0, 10.0, 4.5 ]
+                },
+                "west": {
+                    "texture": "#sand",
+                    "uv": [ 0.0, 0.0, 10.0, 4.5 ]
+                },
+                "up": {
+                    "texture": "#sand",
+                    "uv": [ 0.0, 0.0, 10.0, 10.0 ]
+                },
+                "down": {
+                    "texture": "#sand",
+                    "uv": [ 0.0, 0.0, 10.0, 10.0 ]
+                }
+            }
         }
     ]
 }

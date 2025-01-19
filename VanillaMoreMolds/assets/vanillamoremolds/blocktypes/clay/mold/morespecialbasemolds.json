@@ -111,17 +111,17 @@
         "*-litebase-*": {
 			"translation": { "x": 0, "y": 1, "z": 0 },
 			"origin": { "x": 0.5, "y": 0.3, "z": 0.5 },
-			"scale": 1.33
+			"scale": 1.15
 		},
         "*-mediumbase-*": {
 			"translation": { "x": 0, "y": 1, "z": 0 },
 			"origin": { "x": 0.5, "y": 0.3, "z": 0.5 },
-			"scale": 1.33
+			"scale": 1.15
 		},
         "*-heavybase-*": {
 			"translation": { "x": 0, "y": 1, "z": 0 },
 			"origin": { "x": 0.5, "y": 0.3, "z": 0.5 },
-			"scale": 1.33
+			"scale": 1.15
 		},
         "*": {
             "translation": {"x": 0,"y": 3,"z": 0},

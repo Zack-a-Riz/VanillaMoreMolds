@@ -1,0 +1,365 @@
+{
+    "enabled": true,
+    "code": "emptymold",
+    "behaviors": [
+        { "name": "Lockable" },
+        { "name": "UnstableFalling" },
+        { "name": "HorizontalOrientable" },
+        { "name": "RightClickPickup" },
+        {
+            "name": "Unplaceable",
+            "__comment": "The ground storable obsoletes this being a block. Should be an item, but is kept a block for backwards compatibility"
+        },
+        {
+            "name": "GroundStorable",
+            "properties": { "layout": "SingleCenter" }
+        }
+    ],
+    "variantgroups": [
+        {
+            "code": "type",
+            "states": [ "liteempty", "mediumempty", "heavyempty" ]
+        },
+        {
+            "code": "side",
+            "loadFromProperties": "abstract/horizontalorientation"
+        }
+    ],
+    "creativeinventory": {
+        "general": [ "*-north" ],
+        "construction": [ "*-north" ],
+        "VanillaMoreMolds": [ "*-north" ]
+    },
+    "shape": {
+        "base": "vanillamoremolds:block/clay/mold/specialmold/{type}"
+    },
+    "blockmaterial": "Ceramic",
+    "replaceable": 700,
+    "resistance": 1.5,
+    "maxStackSize": 8,
+    "lightAbsorption": 0,
+    "shapeByType": {
+        "*-north": {
+            "base": "vanillamoremolds:block/clay/mold/specialmold/{type}",
+            "rotateY": 0
+        },
+        "*-east": {
+            "base": "vanillamoremolds:block/clay/mold/specialmold/{type}",
+            "rotateY": 90
+        },
+        "*-west": {
+            "base": "vanillamoremolds:block/clay/mold/specialmold/{type}",
+            "rotateY": 270
+        },
+        "*-south": {
+            "base": "vanillamoremolds:block/clay/mold/specialmold/{type}",
+            "rotateY": 180
+        }
+    },
+    "sounds": {
+        "walk": "game:walk/stone"
+    },
+
+    //Box de collision et box de selection (1 pixels = 0.0625 16x16 textures).
+
+    "collisionboxByType": {
+        "*-liteempty-*": {
+            "x1": 0.1250,
+            "y1": 0,
+            "z1": 0.1250,
+            "x2": 0.8750,
+            "y2": 0.75,
+            "z2": 0.8750
+        },
+        "*-mediumempty-*": {
+            "x1": 0.0625,
+            "y1": 0,
+            "z1": 0.0625,
+            "x2": 0.9375,
+            "y2": 0.75,
+            "z2": 0.9375
+        },
+        "*-heavyempty-*": {
+            "x1": 0,
+            "y1": 0,
+            "z1": 0,
+            "x2": 1,
+            "y2": 0.75,
+            "z2": 1
+        },
+        "*": {
+            "x1": 0.0625,
+            "y1": 0,
+            "z1": 0.0625,
+            "x2": 0.9375,
+            "y2": 0.125,
+            "z2": 0.9375
+        }
+    },
+    "selectionboxByType": {
+        "*-liteempty-*": {
+            "x1": 0.1250,
+            "y1": 0,
+            "z1": 0.1250,
+            "x2": 0.8750,
+            "y2": 0.75,
+            "z2": 0.8750
+        },
+        "*-mediumempty-*": {
+            "x1": 0.0625,
+            "y1": 0,
+            "z1": 0.0625,
+            "x2": 0.9375,
+            "y2": 0.75,
+            "z2": 0.9375
+        },
+        "*-heavyempty-*": {
+            "x1": 0,
+            "y1": 0,
+            "z1": 0,
+            "x2": 1,
+            "y2": 0.75,
+            "z2": 1
+        },
+        "*": {
+            "x1": 0.0625,
+            "y1": 0,
+            "z1": 0.0625,
+            "x2": 0.9375,
+            "y2": 0.125,
+            "z2": 0.9375
+        }
+    },
+    "sideopaque": {
+        "all": false
+    },
+    "sidesolid": {
+        "all": false
+    },
+    "heldTpIdleAnimationByType": {
+        "*-liteempty-*": "holdbothhandslarge",
+        "*-mediumempty-*": "holdbothhandslarge",
+        "*-heavyempty-*": "holdbothhandslarge"
+    },
+    "heldTpUseAnimationByType": {
+        "*-liteempty-*": "twohandplaceblock",
+        "*-mediumempty-*": "twohandplaceblock",
+        "*-heavyempty-*": "twohandplaceblock"
+    },
+    "guiTransformByType": {
+        "*-liteempty-*": {
+            "translation": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "origin": {
+                "x": 0.5,
+                "y": 0.3,
+                "z": 0.5
+            },
+            "scale": 1.15
+        },
+        "*-mediumempty-*": {
+            "translation": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "origin": {
+                "x": 0.5,
+                "y": 0.3,
+                "z": 0.5
+            },
+            "scale": 1.15
+        },
+        "*-heavyempty-*": {
+            "translation": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "origin": {
+                "x": 0.5,
+                "y": 0.3,
+                "z": 0.5
+            },
+            "scale": 1.15
+        },
+        "*": {
+            "translation": {
+                "x": 0,
+                "y": 3,
+                "z": 0
+            },
+            "origin": {
+                "x": 0.5,
+                "y": 0.0625,
+                "z": 0.5
+            },
+            "scale": 1.33
+        }
+    },
+    "tpHandTransformByType": {
+        "*-liteempty-*": {
+            "translation": {
+                "x": -0.75,
+                "y": -0.1,
+                "z": -0.45
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": -90
+            },
+            "origin": {
+                "x": 0.5,
+                "y": 0.125,
+                "z": 0.5
+            },
+            "scale": 0.7
+        },
+        "*-mediumempty-*": {
+            "translation": {
+                "x": -0.7,
+                "y": -0.2,
+                "z": -0.40
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": -90
+            },
+            "origin": {
+                "x": 0.5,
+                "y": 0.125,
+                "z": 0.5
+            },
+            "scale": 0.7
+        },
+        "*-heavyempty-*": {
+            "translation": {
+                "x": -0.7,
+                "y": -0.3,
+                "z": -0.35
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": -90
+            },
+            "origin": {
+                "x": 0.5,
+                "y": 0.125,
+                "z": 0.5
+            },
+            "scale": 0.7
+        },
+        "*": {
+            "translation": {
+                "x": -1,
+                "y": -0.6,
+                "z": -1.05
+            },
+            "rotation": {
+                "x": -87,
+                "y": 9,
+                "z": 4
+            },
+            "origin": {
+                "x": 0.5,
+                "y": 0.125,
+                "z": 0.5
+            },
+            "scale": 0.5
+        }
+    },
+    "fpHandTransformByType": {
+        "*-liteempty-*": {
+            "translation": {
+                "x": -0.3,
+                "y": 0,
+                "z": 0.5
+            },
+            "rotation": {
+                "x": 16,
+                "y": -50,
+                "z": 1
+            },
+            "origin": {
+                "x": 0.5,
+                "y": 0.125,
+                "z": 0.5
+            }
+        },
+        "*-mediumempty-*": {
+            "translation": {
+                "x": -0.3,
+                "y": 0,
+                "z": 0.5
+            },
+            "rotation": {
+                "x": 16,
+                "y": -50,
+                "z": 1
+            },
+            "origin": {
+                "x": 0.5,
+                "y": 0.125,
+                "z": 0.5
+            }
+        },
+        "*-heavyempty-*": {
+            "translation": {
+                "x": -0.3,
+                "y": 0,
+                "z": 0.5
+            },
+            "rotation": {
+                "x": 16,
+                "y": -50,
+                "z": 1
+            },
+            "origin": {
+                "x": 0.5,
+                "y": 0.125,
+                "z": 0.5
+            }
+        },
+        "*": {
+            "translation": {
+                "x": -0.3,
+                "y": 0,
+                "z": 0.5
+            },
+            "rotation": {
+                "x": 16,
+                "y": -51,
+                "z": 91
+            },
+            "origin": {
+                "x": 0.5,
+                "y": 0.125,
+                "z": 0.5
+            }
+        }
+    },
+    "groundTransform": {
+        "translation": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+        },
+        "rotation": {
+            "x": 0,
+            "y": -45,
+            "z": 0
+        },
+        "origin": {
+            "x": 0.5,
+            "y": 0,
+            "z": 0.5
+        },
+        "scale": 2.2
+    }
+}

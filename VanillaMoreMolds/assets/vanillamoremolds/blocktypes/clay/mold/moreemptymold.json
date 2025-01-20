@@ -1,6 +1,10 @@
 {
     "enabled": true,
     "code": "emptymold",
+    "classByType": {
+        "emptymold-*": "Block",
+        "emptymold-ready-*": "BlockToolMold"
+    },
     "behaviors": [
         { "name": "Lockable" },
         { "name": "UnstableFalling" },
@@ -17,21 +21,39 @@
     ],
     "variantgroups": [
         {
-            "code": "type",
-            "states": [ "liteempty", "mediumempty", "heavyempty" ]
+            "code": "buidlingstate",
+            "states": [ "stage1", "stage2", "stage3" ]
+        },
+        {
+            "code": "size",
+            "states": [ "lite", "medium", "heavy" ]
+        },
+        {
+            "code": "tooltype",
+            "states": [ "empty", "ingot" ]
         },
         {
             "code": "side",
             "loadFromProperties": "abstract/horizontalorientation"
         }
     ],
+    "attributes": {
+        "reinforcable": true,
+        "handbook": {
+            "include": true,
+            "extraSections": [
+                {
+                    "title": "firepit-handbook-help-title",
+                    "text": "firepit-handbook-help-text"
+                }
+            ]
+        }
+    },
+    "shape": { "base": "vanillamoremolds:block/clay/mold/specialmold/{tooltype}/-{buidlingstate}-{size}-{tooltype}-{side}" },
     "creativeinventory": {
         "general": [ "*-north" ],
         "construction": [ "*-north" ],
         "VanillaMoreMolds": [ "*-north" ]
-    },
-    "shape": {
-        "base": "vanillamoremolds:block/clay/mold/specialmold/{type}"
     },
     "blockmaterial": "Ceramic",
     "replaceable": 700,
@@ -40,19 +62,19 @@
     "lightAbsorption": 0,
     "shapeByType": {
         "*-north": {
-            "base": "vanillamoremolds:block/clay/mold/specialmold/{type}",
+            "base": "vanillamoremolds:block/clay/mold/specialmold/{tooltype}/-{buidlingstate}-{size}-{tooltype}",
             "rotateY": 0
         },
         "*-east": {
-            "base": "vanillamoremolds:block/clay/mold/specialmold/{type}",
+            "base": "vanillamoremolds:block/clay/mold/specialmold/{tooltype}/-{buidlingstate}-{size}-{tooltype}",
             "rotateY": 90
         },
         "*-west": {
-            "base": "vanillamoremolds:block/clay/mold/specialmold/{type}",
+            "base": "vanillamoremolds:block/clay/mold/specialmold/{tooltype}/-{buidlingstate}-{size}-{tooltype}",
             "rotateY": 270
         },
         "*-south": {
-            "base": "vanillamoremolds:block/clay/mold/specialmold/{type}",
+            "base": "vanillamoremolds:block/clay/mold/specialmold/{tooltype}/-{buidlingstate}-{size}-{tooltype}",
             "rotateY": 180
         }
     },
@@ -63,7 +85,7 @@
     //Box de collision et box de selection (1 pixels = 0.0625 16x16 textures).
 
     "collisionboxByType": {
-        "*-liteempty-*": {
+        "*-lite-*": {
             "x1": 0.1250,
             "y1": 0,
             "z1": 0.1250,
@@ -71,7 +93,7 @@
             "y2": 0.75,
             "z2": 0.8750
         },
-        "*-mediumempty-*": {
+        "*-medium-*": {
             "x1": 0.0625,
             "y1": 0,
             "z1": 0.0625,
@@ -79,7 +101,7 @@
             "y2": 0.75,
             "z2": 0.9375
         },
-        "*-heavyempty-*": {
+        "*-heavy-*": {
             "x1": 0,
             "y1": 0,
             "z1": 0,
@@ -97,7 +119,7 @@
         }
     },
     "selectionboxByType": {
-        "*-liteempty-*": {
+        "*-lite-*": {
             "x1": 0.1250,
             "y1": 0,
             "z1": 0.1250,
@@ -105,7 +127,7 @@
             "y2": 0.75,
             "z2": 0.8750
         },
-        "*-mediumempty-*": {
+        "*-medium-*": {
             "x1": 0.0625,
             "y1": 0,
             "z1": 0.0625,
@@ -113,7 +135,7 @@
             "y2": 0.75,
             "z2": 0.9375
         },
-        "*-heavyempty-*": {
+        "*-heavy-*": {
             "x1": 0,
             "y1": 0,
             "z1": 0,
@@ -137,17 +159,17 @@
         "all": false
     },
     "heldTpIdleAnimationByType": {
-        "*-liteempty-*": "holdbothhandslarge",
-        "*-mediumempty-*": "holdbothhandslarge",
-        "*-heavyempty-*": "holdbothhandslarge"
+        "*-lite-*": "holdbothhandslarge",
+        "*-medium-*": "holdbothhandslarge",
+        "*-heavy-*": "holdbothhandslarge"
     },
     "heldTpUseAnimationByType": {
-        "*-liteempty-*": "twohandplaceblock",
-        "*-mediumempty-*": "twohandplaceblock",
-        "*-heavyempty-*": "twohandplaceblock"
+        "*-lite-*": "twohandplaceblock",
+        "*-medium-*": "twohandplaceblock",
+        "*-heavy-*": "twohandplaceblock"
     },
     "guiTransformByType": {
-        "*-liteempty-*": {
+        "*-lite-*": {
             "translation": {
                 "x": 0,
                 "y": 1,
@@ -160,7 +182,7 @@
             },
             "scale": 1.15
         },
-        "*-mediumempty-*": {
+        "*-medium-*": {
             "translation": {
                 "x": 0,
                 "y": 1,
@@ -173,7 +195,7 @@
             },
             "scale": 1.15
         },
-        "*-heavyempty-*": {
+        "*-heavy-*": {
             "translation": {
                 "x": 0,
                 "y": 1,
@@ -201,7 +223,7 @@
         }
     },
     "tpHandTransformByType": {
-        "*-liteempty-*": {
+        "*-lite-*": {
             "translation": {
                 "x": -0.75,
                 "y": -0.1,
@@ -219,7 +241,7 @@
             },
             "scale": 0.7
         },
-        "*-mediumempty-*": {
+        "*-medium-*": {
             "translation": {
                 "x": -0.7,
                 "y": -0.2,
@@ -237,7 +259,7 @@
             },
             "scale": 0.7
         },
-        "*-heavyempty-*": {
+        "*-heavy-*": {
             "translation": {
                 "x": -0.7,
                 "y": -0.3,
@@ -275,7 +297,7 @@
         }
     },
     "fpHandTransformByType": {
-        "*-liteempty-*": {
+        "*-lite-*": {
             "translation": {
                 "x": -0.3,
                 "y": 0,
@@ -292,7 +314,7 @@
                 "z": 0.5
             }
         },
-        "*-mediumempty-*": {
+        "*-medium-*": {
             "translation": {
                 "x": -0.3,
                 "y": 0,
@@ -309,7 +331,7 @@
                 "z": 0.5
             }
         },
-        "*-heavyempty-*": {
+        "*-heavy-*": {
             "translation": {
                 "x": -0.3,
                 "y": 0,

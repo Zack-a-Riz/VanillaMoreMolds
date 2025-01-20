@@ -1,6 +1,6 @@
 {
 	"editor": {
-		"collapsedPaths": "Root/Poing/Poing6,Root/Poing,Root/Floor,Root/Sable,Root/Baton",
+		"collapsedPaths": "Root/Poing/Poing6,Root/Poing,Root/Floor,Root/Baton",
 		"allAngles": false,
 		"entityTextureMode": false
 	},
@@ -440,107 +440,16 @@
 		},
 		{
 			"name": "Sable",
-			"from": [ 6.0, 1.0, 3.0 ],
-			"to": [ 7.0, 8.8, 13.0 ],
-			"rotationOrigin": [ 6.0, 1.0, 3.0 ],
+			"from": [ 3.0, 1.0, 3.0 ],
+			"to": [ 13.0, 8.8, 13.0 ],
+			"rotationOrigin": [ 3.0, 1.0, 3.0 ],
 			"faces": {
-				"north": { "texture": "#null", "uv": [ 0.0, 0.0, 1.0, 7.5 ] },
+				"north": { "texture": "#null", "uv": [ 0.0, 0.0, 10.0, 7.5 ] },
 				"east": { "texture": "#null", "uv": [ 0.0, 0.0, 10.0, 7.5 ] },
-				"south": { "texture": "#null", "uv": [ 0.0, 0.0, 1.0, 7.5 ] },
+				"south": { "texture": "#null", "uv": [ 0.0, 0.0, 10.0, 7.5 ] },
 				"west": { "texture": "#null", "uv": [ 0.0, 0.0, 10.0, 7.5 ] },
-				"up": { "texture": "#null", "uv": [ 0.0, 0.0, 1.0, 10.0 ] },
-				"down": { "texture": "#null", "uv": [ 0.0, 0.0, 1.0, 10.0 ] }
-			},
-			"children": [
-				{
-					"name": "Sable2",
-					"from": [ 3.0, 0.0, 0.0 ],
-					"to": [ 4.0, 7.8, 10.0 ],
-					"rotationOrigin": [ 3.0, 0.0, 0.0 ],
-					"faces": {
-						"north": { "texture": "#null", "uv": [ 0.0, 0.0, 1.0, 7.5 ] },
-						"east": { "texture": "#null", "uv": [ 0.0, 0.0, 10.0, 7.5 ] },
-						"south": { "texture": "#null", "uv": [ 0.0, 0.0, 1.0, 7.5 ] },
-						"west": { "texture": "#null", "uv": [ 0.0, 0.0, 10.0, 7.5 ] },
-						"up": { "texture": "#null", "uv": [ 0.0, 0.0, 1.0, 10.0 ] },
-						"down": { "texture": "#null", "uv": [ 0.0, 0.0, 1.0, 10.0 ] }
-					}
-				},
-				{
-					"name": "Sable3",
-					"from": [ 6.9969, 0.0, 6.0045 ],
-					"to": [ 8.9969, 7.8, 9.0045 ],
-					"rotationOrigin": [ 7.0, 0.0, 6.0 ],
-					"rotationY": -89.9802,
-					"faces": {
-						"north": { "texture": "#null", "uv": [ 0.0, 0.0, 2.0, 7.5 ] },
-						"east": { "texture": "#null", "uv": [ 0.0, 0.0, 3.0, 7.5 ] },
-						"south": { "texture": "#null", "uv": [ 0.0, 0.0, 2.0, 7.5 ] },
-						"west": { "texture": "#null", "uv": [ 0.0, 0.0, 3.0, 7.5 ] },
-						"up": { "texture": "#null", "uv": [ 0.0, 0.0, 2.0, 3.0 ] },
-						"down": { "texture": "#null", "uv": [ 0.0, 0.0, 2.0, 3.0 ] }
-					}
-				},
-				{
-					"name": "Sable4",
-					"from": [ -0.0031, 0.0, 6.0021 ],
-					"to": [ 1.9969, 7.8, 9.0021 ],
-					"rotationOrigin": [ 0.0, 0.0, 6.0 ],
-					"rotationY": -89.9802,
-					"faces": {
-						"north": { "texture": "#null", "uv": [ 0.0, 0.0, 2.0, 7.5 ] },
-						"east": { "texture": "#null", "uv": [ 0.0, 0.0, 3.0, 7.5 ] },
-						"south": { "texture": "#null", "uv": [ 0.0, 0.0, 2.0, 7.5 ] },
-						"west": { "texture": "#null", "uv": [ 0.0, 0.0, 3.0, 7.5 ] },
-						"up": { "texture": "#null", "uv": [ 0.0, 0.0, 2.0, 3.0 ] },
-						"down": { "texture": "#null", "uv": [ 0.0, 0.0, 2.0, 3.0 ] }
-					}
-				},
-				{
-					"name": "Sable5",
-					"from": [ 2.9979, 0.0, 3.0031 ],
-					"to": [ 6.9979, 7.8, 5.0031 ],
-					"rotationOrigin": [ 3.0, 0.0, 3.0 ],
-					"rotationY": -89.9802,
-					"faces": {
-						"north": { "texture": "#null", "uv": [ 0.0, 0.0, 4.0, 7.5 ] },
-						"east": { "texture": "#null", "uv": [ 0.0, 0.0, 2.0, 7.5 ] },
-						"south": { "texture": "#null", "uv": [ 0.0, 0.0, 4.0, 7.5 ] },
-						"west": { "texture": "#null", "uv": [ 0.0, 0.0, 2.0, 7.5 ] },
-						"up": { "texture": "#null", "uv": [ 0.0, 0.0, 4.0, 2.0 ] },
-						"down": { "texture": "#null", "uv": [ 0.0, 0.0, 4.0, 2.0 ] }
-					}
-				},
-				{
-					"name": "Sable6",
-					"from": [ 6.9983, 0.0, 2.0045 ],
-					"to": [ 8.9983, 7.8, 5.0045 ],
-					"rotationOrigin": [ 7.0, 0.0, 2.0 ],
-					"rotationY": -89.9802,
-					"faces": {
-						"north": { "texture": "#null", "uv": [ 0.0, 0.0, 2.0, 7.5 ] },
-						"east": { "texture": "#null", "uv": [ 0.0, 0.0, 3.0, 7.5 ] },
-						"south": { "texture": "#null", "uv": [ 0.0, 0.0, 2.0, 7.5 ] },
-						"west": { "texture": "#null", "uv": [ 0.0, 0.0, 3.0, 7.5 ] },
-						"up": { "texture": "#null", "uv": [ 0.0, 0.0, 2.0, 3.0 ] },
-						"down": { "texture": "#null", "uv": [ 0.0, 0.0, 2.0, 3.0 ] }
-					}
-				},
-				{
-					"name": "Sable7",
-					"from": [ -0.0017, 0.0, 2.0021 ],
-					"to": [ 1.9983, 7.8, 5.0021 ],
-					"rotationOrigin": [ 0.0, 0.0, 2.0 ],
-					"rotationY": -89.9802,
-					"faces": {
-						"north": { "texture": "#null", "uv": [ 0.0, 0.0, 2.0, 7.5 ] },
-						"east": { "texture": "#null", "uv": [ 0.0, 0.0, 3.0, 7.5 ] },
-						"south": { "texture": "#null", "uv": [ 0.0, 0.0, 2.0, 7.5 ] },
-						"west": { "texture": "#null", "uv": [ 0.0, 0.0, 3.0, 7.5 ] },
-						"up": { "texture": "#null", "uv": [ 0.0, 0.0, 2.0, 3.0 ] },
-						"down": { "texture": "#null", "uv": [ 0.0, 0.0, 2.0, 3.0 ] }
-					}
-				}
-			]
+				"up": { "texture": "#null", "uv": [ 0.0, 0.0, 10.0, 10.0 ] },
+				"down": { "texture": "#null", "uv": [ 0.0, 0.0, 10.0, 10.0 ] }
+			}
 		}
 	]}

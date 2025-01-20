@@ -10,8 +10,7 @@
 	"textures": {
 		"other": "game:block/clay/ceramic",
 		"floor": "game:block/clay/ceramic-dark",
-		"wood": "game:block/wood/bark/oak-h",
-		"sand": "game:block/stone/sand/granite"
+		"wood": "game:block/wood/bark/oak-h"
 	},
 	"elements": [
 		{
@@ -668,6 +667,7 @@
 					"to": [ 5.0, 1.0, 13.0 ],
 					"rotationOrigin": [ 4.0, 0.0, 12.0 ],
 					"rotationX": -180.0,
+					"rotationY": 0.0,
 					"rotationZ": -180.0,
 					"faces": {
 						"north": {
@@ -865,6 +865,7 @@
 							"to": [ 5.0, 1.0, 13.0 ],
 							"rotationOrigin": [ 4.0, 0.0, 12.0 ],
 							"rotationX": -180.0,
+							"rotationY": 0.0,
 							"rotationZ": -180.0,
 							"faces": {
 								"north": {
@@ -962,38 +963,6 @@
 					]
 				}
 			]
-		},
-		{
-			"name": "Sable",
-			"from": [ 4.0, 1.0, 4.0 ],
-			"to": [ 12.0, 8.8, 12.0 ],
-			"rotationOrigin": [ 4.0, 1.0, 4.0 ],
-			"faces": {
-				"north": {
-					"texture": "#sand",
-					"uv": [ 0.0, 0.0, 8.0, 7.5 ]
-				},
-				"east": {
-					"texture": "#sand",
-					"uv": [ 0.0, 0.0, 8.0, 7.5 ]
-				},
-				"south": {
-					"texture": "#sand",
-					"uv": [ 0.0, 0.0, 8.0, 7.5 ]
-				},
-				"west": {
-					"texture": "#sand",
-					"uv": [ 0.0, 0.0, 8.0, 7.5 ]
-				},
-				"up": {
-					"texture": "#sand",
-					"uv": [ 0.0, 0.0, 8.0, 8.0 ]
-				},
-				"down": {
-					"texture": "#sand",
-					"uv": [ 0.0, 0.0, 8.0, 8.0 ]
-				}
-			}
 		}
 	]
 }

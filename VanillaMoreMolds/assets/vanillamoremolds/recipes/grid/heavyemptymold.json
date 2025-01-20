@@ -17,7 +17,7 @@
         "height": 3,
         "output": {
             "type": "block",
-            "code": "vanillamoremolds:emptymold-stage1-heavy-empty-north"
+            "code": "vanillamoremolds:specialmolds-stage0-heavy-ingot-north"
         }
     }
 ]

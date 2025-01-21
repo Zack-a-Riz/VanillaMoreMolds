@@ -48,6 +48,8 @@ No news, good news 🤣
 
 # Update :
 
+21/01/2025 : 1.1.1 : Fixed mods that just wouldn't load in 1.1.0
+
 18/01/2025 : 1.1.0 : Full support for 1.20.0, model tweak, preparing the environment for the future update
 
 08/01/2025 : 1.0.0 : Mod Release

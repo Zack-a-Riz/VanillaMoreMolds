@@ -1,29 +1,35 @@
-{
+/*{
     "enabled": true,
     "code": "specialmolds",
-    "class": "SpecialMoldBlockBehavior",
+    "classByType": {
+        "*": "SpecialMoldBlockBehavior"
+    },
     "behaviors": [
         { "name": "Lockable" },
         { "name": "UnstableFalling" },
         { "name": "HorizontalOrientable" },
-        //   { "name": "RightClickPickup" },
+        { "name": "RightClickPickup" },
         {
-        //    "name": "Unplaceable",
-        //    "__comment": "The ground storable obsoletes this being a block. Should be an item, but is kept a block for backwards compatibility"
+            "name": "Unplaceable",
+            "__comment": "The ground storable obsoletes this being a block. Should be an item, but is kept a block for backwards compatibility"
         },
         {
-        //    "name": "GroundStorable",
+            "name": "GroundStorable",
             "properties": { "layout": "SingleCenter" }
         }
     ],
     "variantgroups": [
         {
-            "code": "buildingstage",
-            "states": [ "empty" ]
+            "code": "buidlingstate",
+            "states": [ "stage0", "stage1", "stage2", "stage3", "ready" ]
         },
         {
             "code": "size",
             "states": [ "lite", "medium", "heavy" ]
+        },
+        {
+            "code": "tooltype",
+            "states": [ "ingot" ]
         },
         {
             "code": "side",
@@ -42,7 +48,7 @@
             ]
         }
     },
-    "shape": { "base": "vanillamoremolds:block/clay/mold/specialmold/null/{buildingstage}-{size}-{side}" },
+    "shape": { "base": "vanillamoremolds:block/clay/mold/specialmold/{tooltype}/{buidlingstate}-{size}-{tooltype}-{side}" },
     "creativeinventory": {
         "general": [ "*-north" ],
         "construction": [ "*-north" ],
@@ -55,19 +61,19 @@
     "lightAbsorption": 0,
     "shapeByType": {
         "*-north": {
-            "base": "vanillamoremolds:block/clay/mold/specialmold/null/{buildingstage}-{size}",
+            "base": "vanillamoremolds:block/clay/mold/specialmold/{tooltype}/{buidlingstate}-{size}-{tooltype}",
             "rotateY": 0
         },
         "*-east": {
-            "base": "vanillamoremolds:block/clay/mold/specialmold/null/{buildingstage}-{size}",
+            "base": "vanillamoremolds:block/clay/mold/specialmold/{tooltype}/{buidlingstate}-{size}-{tooltype}",
             "rotateY": 90
         },
         "*-west": {
-            "base": "vanillamoremolds:block/clay/mold/specialmold/null/{buildingstage}-{size}",
+            "base": "vanillamoremolds:block/clay/mold/specialmold/{tooltype}/{buidlingstate}-{size}-{tooltype}",
             "rotateY": 270
         },
         "*-south": {
-            "base": "vanillamoremolds:block/clay/mold/specialmold/null/{buildingstage}-{size}",
+            "base": "vanillamoremolds:block/clay/mold/specialmold/{tooltype}/{buidlingstate}-{size}-{tooltype}",
             "rotateY": 180
         },
         "sounds": {
@@ -375,4 +381,4 @@
             "scale": 2.2
         }
     }
-}
+}*/

@@ -62,7 +62,12 @@
 <ItemGroup>
   <Folder Include="assets\vanillamoremolds\itemtypes\" />
   <Folder Include="assets\vanillamoremolds\textures\" />
-  <Folder Include="src\" />
+</ItemGroup>
+
+<ItemGroup>
+  <Content Update="assets\vanillamoremolds\blocktypes\clay\mold\save.json">
+    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+  </Content>
 </ItemGroup>
 
 </Project>

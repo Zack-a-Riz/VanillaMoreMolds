@@ -17,7 +17,7 @@
         "height": 3,
         "output": {
             "type": "block",
-            "code": "vanillamoremolds:specialmolds-empty-medium-north"
+            "code": "vanillamoremolds:specialmolds-empty-medium"
         }
     }
 ]

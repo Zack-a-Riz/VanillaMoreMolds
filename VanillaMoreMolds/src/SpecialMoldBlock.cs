@@ -56,73 +56,69 @@ namespace VanillaMoreMolds.src
 
         public override bool OnBlockInteractStart(IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel)
         {
-            // Vérifie si le joueur est en sneak (shift)
-            if (byPlayer?.Entity?.Controls.Sneak == true)
+            // Vérifie si une sélection de bloc existe
+            if (blockSel == null)
             {
-                // Récupère l'ItemStack tenu en main
-                ItemStack heldStack = byPlayer.InventoryManager.ActiveHotbarSlot?.Itemstack;
-                if (heldStack?.Block != null)
-                {
-                    // Vérifie s'il s'agit de sable (toutes variantes : sand, sand-granite, etc.)
-                    bool isSand = heldStack.Block.Code.Path == "sand"
-                               || heldStack.Block.Code.Path.StartsWith("sand-");
-
-                    // Vérifie qu'on n'est pas déjà au dernier stade
-                    bool notAtFinalStage = (StageIndex < 4);
-
-                    if (isSand && notAtFinalStage)
-                    {
-                        // ----
-                        // ICI, on renvoie 'true' côté client ET serveur pour empêcher la pose de sable
-                        // ----
-
-                        // La logique de changement de stage ne se fait que côté serveur
-                        if (world.Side == EnumAppSide.Server)
-                        {
-                            // Stage suivant
-                            string nextStage = NextStageCodePart;
-                            // Taille (lite, medium, heavy)
-                            string size = Variant["size"];
-
-                            // Construit le nouveau code
-                            // => "specialmolds-[nextStage]-[size]" (ex: "specialmolds-stage2-lite")
-                            AssetLocation newCode = CodeWithParts(nextStage, size);
-                            Block nextBlock = world.GetBlock(newCode);
-
-                            if (nextBlock != null)
-                            {
-                                // Changer le bloc
-                                world.BlockAccessor.ExchangeBlock(nextBlock.BlockId, blockSel.Position);
-
-                                // Consommer 1 sable (sauf créatif)
-                                if (byPlayer.WorldData.CurrentGameMode != EnumGameMode.Creative)
-                                {
-                                    byPlayer.InventoryManager.ActiveHotbarSlot.TakeOut(1);
-                                    byPlayer.InventoryManager.ActiveHotbarSlot.MarkDirty();
-                                }
-
-                                // Jouer un son si présent
-                                if (nextBlock.Sounds?.Place != null)
-                                {
-                                    world.PlaySoundAt(
-                                        nextBlock.Sounds.Place,
-                                        blockSel.Position.X,
-                                        blockSel.Position.Y,
-                                        blockSel.Position.Z,
-                                        byPlayer
-                                    );
-                                }
-                            }
-                        }
-
-                        // On bloque l'interaction pour empêcher le placement du bloc sable
-                        return true;
-                    }
-                }
+                return false;
             }
 
-            // Sinon, on laisse l’interaction se poursuivre normalement
-            return false;
+            // Vérifie le bloc ciblé
+            Block targetedBlock = world.BlockAccessor.GetBlock(blockSel.Position);
+            if (!(targetedBlock is SpecialMoldBlock))
+            {
+                return false;
+            }
+
+            // Empêche toujours le placement de blocs si le joueur regarde ce bloc
+            ItemStack heldStack = byPlayer.InventoryManager.ActiveHotbarSlot?.Itemstack;
+            if (heldStack?.Block != null)
+            {
+                // Vérifie si l'objet tenu est une variante de sable
+                bool isSand = heldStack.Block.Code.Path.Contains("sand");
+                if (isSand && StageIndex < 4)
+                {
+                    if (world.Side == EnumAppSide.Server)
+                    {
+                        // Passe au prochain stade
+                        string nextStage = NextStageCodePart;
+                        string size = Variant["size"];
+                        AssetLocation newCode = CodeWithParts(nextStage, size);
+                        Block nextBlock = world.GetBlock(newCode);
+
+                        if (nextBlock != null)
+                        {
+                            world.BlockAccessor.ExchangeBlock(nextBlock.BlockId, blockSel.Position);
+
+                            // Consomme un bloc de sable (sauf mode créatif)
+                            if (byPlayer.WorldData.CurrentGameMode != EnumGameMode.Creative)
+                            {
+                                byPlayer.InventoryManager.ActiveHotbarSlot.TakeOut(1);
+                                byPlayer.InventoryManager.ActiveHotbarSlot.MarkDirty();
+                            }
+
+                            // Joue un son si défini
+                            if (nextBlock.Sounds?.Place != null)
+                            {
+                                world.PlaySoundAt(
+                                    nextBlock.Sounds.Place,
+                                    blockSel.Position.X,
+                                    blockSel.Position.Y,
+                                    blockSel.Position.Z,
+                                    byPlayer
+                                );
+                            }
+                        }
+                    }
+
+                    // Empêche toute autre interaction
+                    return true;
+                }
+
+                return true;
+            }
+
+            // Empêche toute autre interaction si aucun objet n'est tenu ou si ce n'est pas du sable
+            return true;
         }
     }
 }

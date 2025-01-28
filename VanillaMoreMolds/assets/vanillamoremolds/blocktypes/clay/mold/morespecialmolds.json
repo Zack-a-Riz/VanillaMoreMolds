@@ -16,7 +16,10 @@
     // Propriétés communes à tous les variants (collisionbox, blockmaterial, etc.)
 
     "behaviors": [
-        { "name": "HorizontalOrientable" }
+        { "name": "HorizontalOrientable" },
+        { "name": "Lockable" },
+        { "name": "UnstableFalling" },
+        { "name": "RightClickPickup" }
     ],
     "attributes": {
         "reinforcable": true

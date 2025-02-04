@@ -18,8 +18,7 @@
     "behaviors": [
         { "name": "HorizontalOrientable" },
         { "name": "Lockable" },
-        { "name": "UnstableFalling" },
-        { "name": "RightClickPickup" }
+        { "name": "UnstableFalling" }
     ],
     "attributes": {
         "reinforcable": true

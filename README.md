@@ -28,7 +28,7 @@ Will you add new tool molds?
 
 Can I translate the mod into another language?
 
-- The mod is currently available in English and French, but if you have any other suggestions, I’d be happy to hear them. You can submit your translations via GitHub ( link in the 'Source' tab ).
+- The mod is currently available in English, Chinese, Russian and French, but if you have any other suggestions, I’d be happy to hear them. You can submit your translations via GitHub ( link in the 'Source' tab ).
 
 Is there a config file?
 

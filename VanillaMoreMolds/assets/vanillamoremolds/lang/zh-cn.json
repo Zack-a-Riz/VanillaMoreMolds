@@ -1,0 +1,43 @@
+﻿{
+    //Translated by Glaciers www.vintagestory.at/profile/398143-glaciers/
+    //Start log
+    "start": "VanillaMoreMolds : Loaded",
+    //Menu tab
+    "game:tabname-VanillaMoreMolds": "更多原版风格模具",
+    //Mold Sawblade
+    "block-toolmold-raw-sawblade-*": "未烧制的锯片模具",
+    "block-toolmold-burned-sawblade-*": "锯片模具",
+    //Mold nail
+    "block-toolmold-raw-nail-*": "未烧制的钉子和垫片模具",
+    "block-toolmold-burned-nail-*": "钉子和垫片模具",
+    //Mold arrowhead
+    "block-toolmold-raw-arrowhead-*": "未烧制的箭头模具",
+    "block-toolmold-burned-arrowhead-*": "箭头模具",
+    //Mold hoop
+    "block-toolmold-raw-hoop-*": "未烧制的箍模具",
+    "block-toolmold-burned-hoop-*": "箍模具",
+    //Mold plate
+    "block-toolmold-raw-plate-*": "未烧制的板模具",
+    "block-toolmold-burned-plate-*": "板模具",
+    //Mold spearhead
+    "block-toolmold-raw-spearhead-*": "未烧制的矛头模具",
+    "block-toolmold-burned-spearhead-*": "矛头模具",
+    //Mold knifeblade
+    "block-toolmold-raw-knifeblade-*": "未烧制的刀片模具",
+    "block-toolmold-burned-knifeblade-*": "刀片模具",
+    //Mold scytheblade
+    "block-toolmold-raw-scythehead-*": "未烧制的镰刀剑模具",
+    "block-toolmold-burned-scythehead-*": "镰刀剑模具",
+    //Mold ingotheavy
+    "block-toolmold-raw-ingotheavy-*": "未烧制的重型铸锭模具",
+    "block-toolmold-burned-ingotheavy-*": "重型铸锭模具",
+    "blockdesc-toolmold-burned-ingotheavy-*": "允许单次浇铸10块金属锭",
+    //Mold ingotmedium
+    "block-toolmold-raw-ingotmedium-*": "未烧制的中型铸锭模具",
+    "block-toolmold-burned-ingotmedium-*": "中型铸锭模具",
+    "blockdesc-toolmold-burned-ingotmedium-*": "允许单次浇铸8块金属锭",
+    //Mold ingotlite
+    "block-toolmold-raw-ingotlite-*": "未烧制的轻型铸锭模具",
+    "block-toolmold-burned-ingotlite-*": "轻型铸锭模具",
+    "blockdesc-toolmold-burned-ingotlite-*": "允许单次浇铸6块金属锭"
+}

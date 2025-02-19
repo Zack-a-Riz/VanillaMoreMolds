@@ -1,6 +1,7 @@
 {
+    //Natively translated by Zack.a.riz
     //Start log
-    "start": "VanillaMoreMolds : Chargé",
+    "start": "VanillaMoreMolds : Loaded",
     //Menu tab
     "game:tabname-VanillaMoreMolds": "Vanilla More Molds",
     //Mold Sawblade
@@ -27,16 +28,16 @@
     //Mold scytheblade
     "block-toolmold-raw-scythehead-*": "Moule de lame de faux brut",
     "block-toolmold-burned-scythehead-*": "Moule de lame de faux",
-    //Mold heavybasemold
-    "block-specialbasemold-raw-heavybase-*": "Raw Heavy Base Mold",
-    "block-specialbasemold-burned-heavybase-*": "Heavy Base Mold",
-    "blockdesc-specialbasemold-burned-heavybase-*": "Add sand and the imprint of the tool you want to mold.",
-    //Mold mediumbasemold
-    "block-specialbasemold-raw-mediumbase-*": "Raw Medium Base Mold",
-    "block-specialbasemold-burned-mediumbase-*": "Medium Base Mold",
-    "blockdesc-specialbasemold-burned-mediumbase-*": "Add sand and the imprint of the tool you want to mold.",
-    //Mold litebasemold
-    "block-specialbasemold-raw-litebase-*": "Raw Lite Base Mold",
-    "block-specialbasemold-burned-litebase-*": "Lite Base Mold",
-    "blockdesc-specialbasemold-burned-litebase-*": "Add sand and the imprint of the tool you want to mold."
+    //Mold ingotheavy
+    "block-toolmold-raw-ingotheavy-*": "Moule à lingots lourd brut",
+    "block-toolmold-burned-ingotheavy-*": "Moule à lingots lourd",
+    "blockdesc-toolmold-burned-ingotheavy-*": "Permet la fonte de 10 lingots",
+    //Mold ingotmedium
+    "block-toolmold-raw-ingotmedium-*": "Moule à lingots moyen brut",
+    "block-toolmold-burned-ingotmedium-*": "Moule à lingots moyen",
+    "blockdesc-toolmold-burned-ingotmedium-*": "Permet la fonte de 8 lingots",
+    //Mold ingotlite
+    "block-toolmold-raw-ingotlite-*": "Moule à lingots léger brut",
+    "block-toolmold-burned-ingotlite-*": "Moule à lingots léger",
+    "blockdesc-toolmold-burned-ingotlite-*": "Permet la fonte de 6 lingots"
 }

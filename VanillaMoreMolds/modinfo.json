@@ -7,10 +7,10 @@
         "Zack.a.Riz"
     ],
     "description": "Do you want more diverse molds while staying true to the spirit and mechanics of the game? This mod is for you!",
-    "version": "1.2.0-snap.1",
+    "version": "1.2.0-snap.16",
     "requiredOnServer": true,
     "requiredOnClient": true,
     "dependencies": {
-        "game": "1.20.0"
+        "game": "1.20.4"
     }
 }

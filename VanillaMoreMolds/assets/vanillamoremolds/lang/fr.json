@@ -1,6 +1,7 @@
 {
+    //Natively translated by Zack.a.riz
     //Start log
-    "start": "VanillaMoreMolds : Chargé",
+    "start": "VanillaMoreMolds : Loaded",
     //Menu tab
     "game:tabname-VanillaMoreMolds": "Vanilla More Molds",
     //Mold Sawblade

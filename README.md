@@ -2,6 +2,14 @@
 
 # Do you want more diverse molds while staying true to the spirit and mechanics of the game? This mod is for you!
 
+---
+Dev Update : Almost 4000 downloads soon!
+
+The update for the large molds is taking me a bit more time than expected. There are a lot of changes, and I’m implementing a new crafting mechanic for this type of mold in a vanilla-friendly style. However, I don’t want to rush my work, so I’m taking the necessary time to ensure everything is well-polished. I hope that once the update is released, it will meet your expectations and be something you’ll enjoy !
+When I have a stable snapshot version, it will be available in the snapshot branch on my GitHub for testing and feedback.
+Thank you so much for the (almost) 4000 downloads – it truly warms my heart! 🙂❤️
+---
+
 Indeed, the Vanilla More Molds project aims to add new varieties of molds to expand the arsenal of your forge, all while staying true to the base game (mechanics, smelting logic, crafting).
 
 The mod also seeks to give Fire Clay additional value by allowing the creation of advanced ingot molds for mass production
@@ -47,6 +55,8 @@ I’m open to suggestions, as long as they stay within the theme of the mod.
 No news, good news 🤣
 
 # Update :
+
+19/02/2025 : 1.1.2 : Community Update
 
 21/01/2025 : 1.1.1 : Fixed mods that just wouldn't load in 1.1.0
 

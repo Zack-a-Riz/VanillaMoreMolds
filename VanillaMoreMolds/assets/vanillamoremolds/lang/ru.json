@@ -1,4 +1,4 @@
-{
+﻿{
     //Translated by Donoryaaa www.vintagestory.at/profile/175994-donoryaaa/
     //Start log
     "start": "VanillaMoreMolds : Loaded",
@@ -43,5 +43,4 @@
     "blockdesc-toolmold-raw-ingotlite-*": "Для выплавки 6 слитков",
     "block-toolmold-burned-ingotlite-*": "Малая форма для слитков",
     "blockdesc-toolmold-burned-ingotlite-*": "Позволяет выплавить 6 слитков за раз"
-
 }

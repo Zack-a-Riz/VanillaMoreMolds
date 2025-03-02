@@ -1,0 +1,396 @@
+{
+    "enabled": true,
+    "code": "specialbasemold",
+    "classByType": {
+        "specialbasemold-raw-*": "Block",
+        "specialbasemold-burned-*": "Block"
+    },
+    "behaviors": [
+        { "name": "Lockable" },
+        { "name": "UnstableFalling" },
+        { "name": "HorizontalOrientable" },
+        { "name": "RightClickPickup" },
+        {
+            "name": "Unplaceable",
+            "__comment": "The ground storable obsoletes this being a block. Should be an item, but is kept a block for backwards compatibility"
+        },
+        {
+            "name": "GroundStorable",
+            "properties": { "layout": "SingleCenter" }
+        }
+    ],
+    "variantgroups": [
+        {
+            "code": "materialtype",
+            "states": [ "raw", "burned" ]
+        },
+        {
+            "code": "tooltype",
+            "states": [ "heavybase", "mediumbase", "litebase" ]
+        },
+        {
+            "code": "side",
+            "loadFromProperties": "abstract/horizontalorientation"
+        }
+    ],
+    "attributes": {
+        "reinforcable": true
+    },
+
+    "combustiblePropsByType": {
+        "specialbasemold-raw-*": {
+            "meltingPoint": 650,
+            "meltingDuration": 45,
+            "smeltedRatio": 1,
+            "smeltingType": "fire",
+            "smeltedStack": {
+                "type": "block",
+                "code": "vanillamoremolds:specialbasemold-burned-{tooltype}-{side}"
+            },
+            "requiresContainer": false
+        }
+    },
+    "blockmaterial": "Ceramic",
+    "creativeinventory": {
+        "general": [ "*-north" ],
+        "construction": [ "*-north" ],
+        "VanillaMoreMolds": [ "*-north" ]
+    },
+    "replaceable": 700,
+    "resistance": 1.5,
+    "maxStackSize": 8,
+    "lightAbsorption": 0,
+    "texturesByType": {
+        "specialbasemold-raw-heavybase-*": { "all": { "base": "game:block/clay/fireclay" } },
+        "specialbasemold-raw-mediumbase-*": { "all": { "base": "game:block/clay/fireclay" } },
+        "specialbasemold-raw-litebase-*": { "all": { "base": "game:block/clay/fireclay" } },
+        "specialbasemold-burned-*": {
+            "floor": { "base": "game:block/clay/ceramic-dark" },
+            "other": { "base": "game:block/clay/ceramic" }
+        }
+    },
+    "shapeByType": {
+        "*-north": {
+            "base": "vanillamoremolds:block/clay/mold/specialbasemold/{tooltype}",
+            "rotateY": 0
+        },
+        "*-east": {
+            "base": "vanillamoremolds:block/clay/mold/specialbasemold/{tooltype}",
+            "rotateY": 90
+        },
+        "*-west": {
+            "base": "vanillamoremolds:block/clay/mold/specialbasemold/{tooltype}",
+            "rotateY": 270
+        },
+        "*-south": {
+            "base": "vanillamoremolds:block/clay/mold/specialbasemold/{tooltype}",
+            "rotateY": 180
+        }
+    },
+    "sounds": {
+        "walk": "game:walk/stone"
+    },
+
+    //Box de collision et box de selection (1 pixels = 0.0625 16x16 textures).
+
+    "collisionboxByType": {
+        "*-litebase-*": {
+            "x1": 0.1875,
+            "y1": 0,
+            "z1": 0.1875,
+            "x2": 0.8125,
+            "y2": 0.56,
+            "z2": 0.8125
+        },
+        "*-mediumbase-*": {
+            "x1": 0.1250,
+            "y1": 0,
+            "z1": 0.1250,
+            "x2": 0.8750,
+            "y2": 0.56,
+            "z2": 0.8750
+        },
+        "*-heavybase-*": {
+            "x1": 0.0625,
+            "y1": 0,
+            "z1": 0.0625,
+            "x2": 0.9375,
+            "y2": 0.56,
+            "z2": 0.9375
+        },
+        "*": {
+            "x1": 0.0625,
+            "y1": 0,
+            "z1": 0.0625,
+            "x2": 0.9375,
+            "y2": 0.125,
+            "z2": 0.9375
+        }
+    },
+    "selectionboxByType": {
+        "*-litebase-*": {
+            "x1": 0.1875,
+            "y1": 0,
+            "z1": 0.1875,
+            "x2": 0.8125,
+            "y2": 0.56,
+            "z2": 0.8125
+        },
+        "*-mediumbase-*": {
+            "x1": 0.1250,
+            "y1": 0,
+            "z1": 0.1250,
+            "x2": 0.8750,
+            "y2": 0.56,
+            "z2": 0.8750
+        },
+        "*-heavybase-*": {
+            "x1": 0.0625,
+            "y1": 0,
+            "z1": 0.0625,
+            "x2": 0.9375,
+            "y2": 0.56,
+            "z2": 0.9375
+        },
+        "*": {
+            "x1": 0.0625,
+            "y1": 0,
+            "z1": 0.0625,
+            "x2": 0.9375,
+            "y2": 0.125,
+            "z2": 0.9375
+        }
+    },
+    "sideopaque": {
+        "all": false
+    },
+    "sidesolid": {
+        "all": false
+    },
+    "heldTpIdleAnimationByType": {
+        "*-litebase-*": "holdbothhandslarge",
+        "*-mediumbase-*": "holdbothhandslarge",
+        "*-heavybase-*": "holdbothhandslarge"
+    },
+    "heldTpUseAnimationByType": {
+        "*-litebase-*": "twohandplaceblock",
+        "*-mediumbase-*": "twohandplaceblock",
+        "*-heavybase-*": "twohandplaceblock"
+    },
+    "guiTransformByType": {
+        "*-litebase-*": {
+            "translation": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "origin": {
+                "x": 0.5,
+                "y": 0.3,
+                "z": 0.5
+            },
+            "scale": 1.15
+        },
+        "*-mediumbase-*": {
+            "translation": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "origin": {
+                "x": 0.5,
+                "y": 0.3,
+                "z": 0.5
+            },
+            "scale": 1.15
+        },
+        "*-heavybase-*": {
+            "translation": {
+                "x": 0,
+                "y": 1,
+                "z": 0
+            },
+            "origin": {
+                "x": 0.5,
+                "y": 0.3,
+                "z": 0.5
+            },
+            "scale": 1.15
+        },
+        "*": {
+            "translation": {
+                "x": 0,
+                "y": 3,
+                "z": 0
+            },
+            "origin": {
+                "x": 0.5,
+                "y": 0.0625,
+                "z": 0.5
+            },
+            "scale": 1.33
+        }
+    },
+    "tpHandTransformByType": {
+        "*-litebase-*": {
+            "translation": {
+                "x": -0.75,
+                "y": -0.1,
+                "z": -0.45
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": -90
+            },
+            "origin": {
+                "x": 0.5,
+                "y": 0.125,
+                "z": 0.5
+            },
+            "scale": 0.7
+        },
+        "*-mediumbase-*": {
+            "translation": {
+                "x": -0.7,
+                "y": -0.2,
+                "z": -0.40
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": -90
+            },
+            "origin": {
+                "x": 0.5,
+                "y": 0.125,
+                "z": 0.5
+            },
+            "scale": 0.7
+        },
+        "*-heavybase-*": {
+            "translation": {
+                "x": -0.7,
+                "y": -0.3,
+                "z": -0.35
+            },
+            "rotation": {
+                "x": 0,
+                "y": 0,
+                "z": -90
+            },
+            "origin": {
+                "x": 0.5,
+                "y": 0.125,
+                "z": 0.5
+            },
+            "scale": 0.7
+        },
+        "*": {
+            "translation": {
+                "x": -1,
+                "y": -0.6,
+                "z": -1.05
+            },
+            "rotation": {
+                "x": -87,
+                "y": 9,
+                "z": 4
+            },
+            "origin": {
+                "x": 0.5,
+                "y": 0.125,
+                "z": 0.5
+            },
+            "scale": 0.5
+        }
+    },
+    "fpHandTransformByType": {
+        "*-litebase-*": {
+            "translation": {
+                "x": -0.3,
+                "y": 0,
+                "z": 0.5
+            },
+            "rotation": {
+                "x": 16,
+                "y": -50,
+                "z": 1
+            },
+            "origin": {
+                "x": 0.5,
+                "y": 0.125,
+                "z": 0.5
+            }
+        },
+        "*-mediumbase-*": {
+            "translation": {
+                "x": -0.3,
+                "y": 0,
+                "z": 0.5
+            },
+            "rotation": {
+                "x": 16,
+                "y": -50,
+                "z": 1
+            },
+            "origin": {
+                "x": 0.5,
+                "y": 0.125,
+                "z": 0.5
+            }
+        },
+        "*-heavybase-*": {
+            "translation": {
+                "x": -0.3,
+                "y": 0,
+                "z": 0.5
+            },
+            "rotation": {
+                "x": 16,
+                "y": -50,
+                "z": 1
+            },
+            "origin": {
+                "x": 0.5,
+                "y": 0.125,
+                "z": 0.5
+            }
+        },
+        "*": {
+            "translation": {
+                "x": -0.3,
+                "y": 0,
+                "z": 0.5
+            },
+            "rotation": {
+                "x": 16,
+                "y": -51,
+                "z": 91
+            },
+            "origin": {
+                "x": 0.5,
+                "y": 0.125,
+                "z": 0.5
+            }
+        }
+    },
+    "groundTransform": {
+        "translation": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+        },
+        "rotation": {
+            "x": 0,
+            "y": -45,
+            "z": 0
+        },
+        "origin": {
+            "x": 0.5,
+            "y": 0,
+            "z": 0.5
+        },
+        "scale": 2.2
+    }
+}

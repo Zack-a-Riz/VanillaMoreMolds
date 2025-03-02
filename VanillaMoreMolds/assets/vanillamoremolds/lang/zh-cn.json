@@ -1,4 +1,4 @@
-{
+﻿{
     //Translated by Glaciers www.vintagestory.at/profile/398143-glaciers/
     //Start log
     "start": "VanillaMoreMolds : Loaded",
@@ -40,5 +40,4 @@
     "block-toolmold-raw-ingotlite-*": "未烧制的轻型铸锭模具",
     "block-toolmold-burned-ingotlite-*": "轻型铸锭模具",
     "blockdesc-toolmold-burned-ingotlite-*": "允许单次浇铸6块金属锭"
-
 }

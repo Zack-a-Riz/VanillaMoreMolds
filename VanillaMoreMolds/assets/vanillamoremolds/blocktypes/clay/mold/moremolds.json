@@ -1,0 +1,347 @@
+{
+    //Code provenant de la gestion des moules de Vintage Story (Merci a Tyron pour le code de base).
+
+    "enabled": true,
+    "code": "toolmold",
+    "classByType": {
+        "toolmold-raw-*": "Block",
+        "toolmold-burned-*": "BlockToolMold"
+    },
+    "behaviorsByType": {
+        "*-raw-*": [
+            { "name": "GroundStorable","properties": { "layout": "SingleCenter" } },
+		    { "name": "Unplaceable", "__comment": "The ground storable obsoletes this being a block. Should be an item, but is kept a block for backwards compatibility" }, 
+            { "name": "RightClickPickup" }
+        ],
+        "*": [
+            { "name": "Lockable" },
+            { "name": "UnstableFalling" },
+            { "name": "HorizontalOrientable" }
+        ]
+    },
+    "entityBehaviorsByType": {
+        "toolmold-burned-*": [ { "name": "TemperatureSensitive" } ]
+    },
+    "variantgroups": [
+        { "code": "materialtype","states": [ "raw", "burned" ] },
+        { "code": "tooltype", "states": ["sawblade","nail","arrowhead","plate","hoop","spearhead","knifeblade","scythehead","ingotheavy","ingotmedium","ingotlite" ] },
+        { "code":"side", "loadFromProperties": "abstract/horizontalorientation" }
+    ],
+    "attributes": {
+        "reinforcable": true,
+        "shatteredShape": { "base": "game:block/clay/mold/shattered-ingot" }
+    },
+
+    //Ajouts de nouveau moules.
+
+    "attributesByType": {
+        "toolmold-burned-sawblade-*": {
+            "requiredUnits": 100,
+            "fillHeight": 1,
+            "moldrackable": true,
+            "onmoldrackTransform": { "rotation": { "z": 90 } },
+            "drop": {
+                "type": "item",
+                "code": "game:sawblade-{metal}",
+                "quantity": 1
+            }
+        },
+        "toolmold-burned-nail-*": {
+            "requiredUnits": 75,
+            "fillHeight": 1,
+            "moldrackable": true,
+            "onmoldrackTransform": { "rotation": { "z": 90 } },
+            "drop": {
+                "type": "item",
+                "code": "game:metalnailsandstrips-{metal}",
+                "quantity": 3
+            }
+        },
+        "toolmold-burned-arrowhead-*": {
+            "requiredUnits": 100,
+            "fillHeight": 1,
+            "moldrackable": true,
+            "onmoldrackTransform": { "rotation": { "z": 90 } },
+            "drop": {
+                "type": "item",
+                "code": "game:arrowhead-{metal}",
+                "quantity": 8
+            }
+        },
+        "toolmold-burned-plate-*": {
+            "requiredUnits": 200,
+            "fillHeight": 1,
+            "moldrackable": true,
+            "onmoldrackTransform": { "rotation": { "z": 90 } },
+            "drop": {
+                "type": "item",
+                "code": "game:metalplate-{metal}",
+                "quantity": 1
+            }
+        },
+        "toolmold-burned-hoop-*": {
+            "requiredUnits": 100,
+            "fillHeight": 1,
+            "moldrackable": true,
+            "onmoldrackTransform": { "rotation": { "z": 90 } },
+            "drop": {
+                "type": "item",
+                "code": "game:hoop-{metal}",
+                "quantity": 1
+            }
+        },
+        "toolmold-burned-spearhead-*": {
+            "requiredUnits": 100,
+            "fillHeight": 1,
+            "moldrackable": true,
+            "onmoldrackTransform": { "rotation": { "z": 90 } },
+            "drop": {
+                "type": "item",
+                "code": "game:spearhead-{metal}",
+                "quantity": 1
+            }
+        },
+        "toolmold-burned-knifeblade-*": {
+            "requiredUnits": 100,
+            "fillHeight": 1,
+            "moldrackable": true,
+            "onmoldrackTransform": { "rotation": { "z": 90 } },
+            "drop": {
+                "type": "item",
+                "code": "game:knifeblade-{metal}",
+                "quantity": 1
+            }
+        },
+        "toolmold-burned-scythehead-*": {
+            "requiredUnits": 100,
+            "fillHeight": 1,
+            "moldrackable": true,
+            "onmoldrackTransform": { "rotation": { "z": 90 } },
+            "drop": {
+                "type": "item",
+                "code": "game:scythehead-{metal}",
+                "quantity": 1
+            }
+        },
+        "toolmold-burned-ingotheavy-*": {
+            "requiredUnits": 1000,
+            "fillHeight": 7,
+            "moldrackable": false,
+            "onmoldrackTransform": { "rotation": { "z": 90 } },
+            "drop": {
+                "type": "item",
+                "code": "game:ingot-{metal}",
+                "quantity": 10
+            }
+        },
+        "toolmold-burned-ingotmedium-*": {
+            "requiredUnits": 800,
+            "fillHeight": 7,
+            "fillQuadsByLevel": [
+				{ "x1": 3, "z1": 3, "x2": 13, "z2": 13 },
+				{ "x1": 3, "z1": 3, "x2": 13, "z2": 13 },
+				{ "x1": 3, "z1": 3, "x2": 13, "z2": 13 },				
+				{ "x1": 3, "z1": 3, "x2": 13, "z2": 13 },
+				{ "x1": 3, "z1": 3, "x2": 13, "z2": 13 },
+				{ "x1": 3, "z1": 3, "x2": 13, "z2": 13 },
+				{ "x1": 3, "z1": 3, "x2": 13, "z2": 13 }
+                ],
+            "moldrackable": false,
+            "onmoldrackTransform": { "rotation": { "z": 90 } },
+            "drop": {
+                "type": "item",
+                "code": "game:ingot-{metal}",
+                "quantity": 8
+            }
+        },
+        "toolmold-burned-ingotlite-*": {
+            "requiredUnits": 600,
+            "fillHeight": 7,
+                        "fillQuadsByLevel": [
+				{ "x1": 4, "z1": 4, "x2": 12, "z2": 12 },
+				{ "x1": 4, "z1": 4, "x2": 12, "z2": 12 },
+				{ "x1": 4, "z1": 4, "x2": 12, "z2": 12 },				
+				{ "x1": 4, "z1": 4, "x2": 12, "z2": 12 },
+				{ "x1": 4, "z1": 4, "x2": 12, "z2": 12 },
+				{ "x1": 4, "z1": 4, "x2": 12, "z2": 12 },
+				{ "x1": 4, "z1": 4, "x2": 12, "z2": 12 }
+                ],
+            "moldrackable": false,
+            "onmoldrackTransform": { "rotation": { "z": 90 } },
+            "drop": {
+                "type": "item",
+                "code": "game:ingot-{metal}",
+                "quantity": 6
+            }
+        }
+    },
+
+    //Fin des ajouts.
+
+    "entityClassByType": {
+        "toolmold-burned-*": "ToolMold"
+    },
+    "combustiblePropsByType": {
+        "toolmold-raw-*": {
+            "meltingPoint": 650,
+            "meltingDuration": 45,
+            "smeltedRatio": 1,
+            "smeltingType": "fire",
+            "smeltedStack": {
+            "type": "block",
+            "code": "vanillamoremolds:toolmold-burned-{tooltype}-{side}" },
+            "requiresContainer": false 
+        }
+    },
+    "blockmaterial": "Ceramic",
+    "creativeinventory": {"general": [ "*-north" ],"construction": [ "*-north" ],"VanillaMoreMolds": [ "*-north" ]},
+    "replaceable": 700,
+    "resistance": 1.5,
+    "maxStackSize": 8,
+    "lightAbsorption": 0,
+    "texturesByType": {
+        "toolmold-raw-sawblade-*": { "all": { "base": "game:block/clay/blueclay" } },
+        "toolmold-raw-nail-*": { "all": { "base": "game:block/clay/blueclay" } },
+        "toolmold-raw-arrowhead-*": { "all": { "base": "game:block/clay/blueclay" } },
+        "toolmold-raw-plate-*": { "all": { "base": "game:block/clay/blueclay" } },
+        "toolmold-raw-hoop-*": { "all": { "base": "game:block/clay/blueclay" } },
+        "toolmold-raw-spearhead-*": { "all": { "base": "game:block/clay/blueclay" } },
+        "toolmold-raw-knifeblade-*": { "all": { "base": "game:block/clay/blueclay" } },
+        "toolmold-raw-scythehead-*": { "all": { "base": "game:block/clay/blueclay" } },
+        "toolmold-raw-ingotheavy-*": { "all": { "base": "game:block/clay/fireclay" } },
+        "toolmold-raw-ingotmedium-*": { "all": { "base": "game:block/clay/fireclay" } },
+        "toolmold-raw-ingotlite-*": { "all": { "base": "game:block/clay/fireclay" } },
+        "toolmold-burned-*": {
+            "floor": { "base": "game:block/clay/ceramic-dark" },
+            "other": { "base": "game:block/clay/ceramic" }
+        }
+    },
+    "shapeByType": {
+        "*-north": {
+            "base": "vanillamoremolds:block/clay/mold/{tooltype}",
+            "rotateY": 0
+        },
+        "*-east": {
+            "base": "vanillamoremolds:block/clay/mold/{tooltype}",
+            "rotateY": 90
+        },
+        "*-west": {
+            "base": "vanillamoremolds:block/clay/mold/{tooltype}",
+            "rotateY": 270
+        },
+        "*-south": {
+            "base": "vanillamoremolds:block/clay/mold/{tooltype}",
+            "rotateY": 180
+        }
+    },
+    "sounds": {
+        "walk": "game:walk/stone"
+    },
+
+    //Box de collision et box de selection (1 pixels = 0.0625 16x16 textures).
+
+    "collisionboxByType": {
+         "*-ingotlite-*": {"x1": 0.1875,"y1": 0,"z1": 0.1875,"x2": 0.8125,"y2": 0.56,"z2": 0.8125},
+         "*-ingotmedium-*": {"x1": 0.1250,"y1": 0,"z1": 0.1250,"x2": 0.8750,"y2": 0.56,"z2": 0.8750},
+         "*-ingotheavy-*": {"x1": 0.0625,"y1": 0,"z1": 0.0625,"x2": 0.9375,"y2": 0.56,"z2": 0.9375},
+         "*": {"x1": 0.0625,"y1": 0,"z1": 0.0625,"x2": 0.9375,"y2": 0.125,"z2": 0.9375}
+    },
+    "selectionboxByType": {
+         "*-ingotlite-*": {"x1": 0.1875,"y1": 0,"z1": 0.1875,"x2": 0.8125,"y2": 0.56,"z2": 0.8125},
+         "*-ingotmedium-*": {"x1": 0.1250,"y1": 0,"z1": 0.1250,"x2": 0.8750,"y2": 0.56,"z2": 0.8750},
+         "*-ingotheavy-*": {"x1": 0.0625,"y1": 0,"z1": 0.0625,"x2": 0.9375,"y2": 0.56,"z2": 0.9375},
+         "*": {"x1": 0.0625,"y1": 0,"z1": 0.0625,"x2": 0.9375,"y2": 0.125,"z2": 0.9375}
+    },
+    "sideopaque": {
+        "all": false
+    },
+    "sidesolid": {
+        "all": false
+    },
+    "heldTpIdleAnimationByType": {
+        "*-ingotlite-*": "holdbothhandslarge",
+        "*-ingotmedium-*": "holdbothhandslarge",
+        "*-ingotheavy-*": "holdbothhandslarge"
+    },
+    "heldTpUseAnimationByType": {
+        "*-ingotlite-*": "twohandplaceblock",
+        "*-ingotmedium-*": "twohandplaceblock",
+        "*-ingotheavy-*": "twohandplaceblock"
+    },
+    "guiTransformByType": {
+        "*-ingotlite-*": {
+			"translation": { "x": 0, "y": 1, "z": 0 },
+			"origin": { "x": 0.5, "y": 0.3, "z": 0.5 },
+			"scale": 1.33
+		},
+        "*-ingotmedium-*": {
+			"translation": { "x": 0, "y": 1, "z": 0 },
+			"origin": { "x": 0.5, "y": 0.3, "z": 0.5 },
+			"scale": 1.33
+		},
+        "*-ingotheavy-*": {
+			"translation": { "x": 0, "y": 1, "z": 0 },
+			"origin": { "x": 0.5, "y": 0.3, "z": 0.5 },
+			"scale": 1.33
+		},
+        "*": {
+            "translation": {"x": 0,"y": 3,"z": 0},
+            "origin": {"x": 0.5,"y": 0.0625,"z": 0.5},
+            "scale": 1.33
+        }
+    },
+    "tpHandTransformByType": {
+        "*-ingotlite-*": {
+			"translation": { "x": -0.75, "y": -0.1, "z": -0.45 },
+			"rotation": { "x": 0, "y": 0, "z": -90 },
+			"origin": { "x": 0.5, "y": 0.125, "z": 0.5 },
+            "scale": 0.7
+        },
+        "*-ingotmedium-*": {
+			"translation": { "x": -0.7, "y": -0.2, "z": -0.40 },
+			"rotation": { "x": 0, "y": 0, "z": -90 },
+			"origin": { "x": 0.5, "y": 0.125, "z": 0.5 },
+            "scale": 0.7
+        },
+        "*-ingotheavy-*": {
+			"translation": { "x": -0.7, "y": -0.3, "z": -0.35 },
+			"rotation": { "x": 0, "y": 0, "z": -90 },
+			"origin": { "x": 0.5, "y": 0.125, "z": 0.5 },
+            "scale": 0.7
+        },
+		"*": {
+			"translation": { "x": -1, "y": -0.6, "z": -1.05 },
+			"rotation": { "x": -87, "y": 9, "z": 4 },
+			"origin": { "x": 0.5, "y": 0.125, "z": 0.5 },
+			"scale": 0.5
+		}
+    },
+    "fpHandTransformByType": {
+        "*-ingotlite-*": {
+			"translation": { "x": -0.3, "y": 0, "z": 0.5 },
+			"rotation": { "x": 16, "y": -50, "z": 1 },
+			"origin": { "x": 0.5, "y": 0.125, "z": 0.5 }
+		},
+        "*-ingotmedium-*": {
+			"translation": { "x": -0.3, "y": 0, "z": 0.5 },
+			"rotation": { "x": 16, "y": -50, "z": 1 },
+			"origin": { "x": 0.5, "y": 0.125, "z": 0.5 }
+		},
+        "*-ingotheavy-*": {
+			"translation": { "x": -0.3, "y": 0, "z": 0.5 },
+			"rotation": { "x": 16, "y": -50, "z": 1 },
+			"origin": { "x": 0.5, "y": 0.125, "z": 0.5 }
+		},
+        "*": {
+            "translation": {"x": -0.3,"y": 0,"z": 0.5},
+            "rotation": {"x": 16,"y": -51,"z": 91},
+            "origin": {"x": 0.5,"y": 0.125,"z": 0.5}
+        }
+    },
+    "groundTransform": {
+        "translation": {"x": 0,"y": 0,"z": 0},
+        "rotation": {"x": 0,"y": -45,"z": 0},
+        "origin": {"x": 0.5,"y": 0,"z": 0.5},
+        "scale": 2.2
+  }
+}

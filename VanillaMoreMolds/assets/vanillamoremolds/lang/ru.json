@@ -1,0 +1,47 @@
+{
+    //Translated by Donoryaaa www.vintagestory.at/profile/175994-donoryaaa/
+    //Start log
+    "start": "VanillaMoreMolds : Loaded",
+    //Menu tab
+    "game:tabname-VanillaMoreMolds": "Vanilla More Molds",
+    //Mold Sawblade
+    "block-toolmold-raw-sawblade-*": "Необожжённая форма для пилы",
+    "block-toolmold-burned-sawblade-*": "Форма для пилы",
+    //Mold nail
+    "block-toolmold-raw-nail-*": "Необожжённая форма для гвоздей и пластин",
+    "block-toolmold-burned-nail-*": "Форма для гвоздей и пластин",
+    //Mold arrowhead
+    "block-toolmold-raw-arrowhead-*": "Необожжённая форма для наконечников стрел",
+    "block-toolmold-burned-arrowhead-*": "Форма для наконечников стрел",
+    //Mold hoop
+    "block-toolmold-raw-hoop-*": "Необожжённая форма для окантовки щита",
+    "block-toolmold-burned-hoop-*": "Форма для окантовки щита",
+    //Mold plate
+    "block-toolmold-raw-plate-*": "Необожжённая форма для пластины",
+    "block-toolmold-burned-plate-*": "Форма для пластины",
+    //Mold spearhead
+    "block-toolmold-raw-spearhead-*": "Необожжённая форма для наконечника копья",
+    "block-toolmold-burned-spearhead-*": "Форма для наконечника копья",
+    //Mold knifeblade
+    "block-toolmold-raw-knifeblade-*": "Необожжённая форма для ножа",
+    "block-toolmold-burned-knifeblade-*": "Форма для ножа",
+    //Mold scytheblade
+    "block-toolmold-raw-scythehead-*": "Необожжённая форма для косы",
+    "block-toolmold-burned-scythehead-*": "Форма для косы",
+    //Mold ingotheavy
+    "block-toolmold-raw-ingotheavy-*": "Необожжённая крупная форма для слитков",
+    "blockdesc-toolmold-raw-ingotheavy-*": "Для выплавки 10 слитков",
+    "block-toolmold-burned-ingotheavy-*": "Крупная форма для слитков",
+    "blockdesc-toolmold-burned-ingotheavy-*": "Позволяет выплавить 10 слитков за раз",
+    //Mold ingotmedium
+    "block-toolmold-raw-ingotmedium-*": "Необожжённая средняя форма для слитков",
+    "blockdesc-toolmold-raw-ingotmedium-*": "Для выплавки 8 слитков",
+    "block-toolmold-burned-ingotmedium-*": "Средняя форма для слитков",
+    "blockdesc-toolmold-burned-ingotmedium-*": "Позволяет выплавить 8 слитков за раз",
+    //Mold ingotlite
+    "block-toolmold-raw-ingotlite-*": "Необожжённая малая форма для слитков",
+    "blockdesc-toolmold-raw-ingotlite-*": "Для выплавки 6 слитков",
+    "block-toolmold-burned-ingotlite-*": "Малая форма для слитков",
+    "blockdesc-toolmold-burned-ingotlite-*": "Позволяет выплавить 6 слитков за раз"
+
+}

@@ -1,7 +1,136 @@
 {
     //Translated by Zack.a.riz
     //Start log
-    "start": "VanillaMoreMolds : Loaded",
+    "start": "VanillaMoreMolds: Loaded",
+
     //Menu tab
     "game:tabname-VanillaMoreMolds": "Vanilla More Molds",
+
+    //Mold Sawblade raw
+    "block-toolmold-blue-raw-sawblade": "Raw blue clay saw blade mold",
+    "block-toolmold-red-raw-sawblade": "Raw red clay saw blade mold",
+    "block-toolmold-fire-raw-sawblade": "Raw fire clay saw blade mold",
+
+    //Mold Sawblade fired
+    "block-toolmold-cream-fired-sawblade": "Cream ceramic saw blade mold",
+    "block-toolmold-gray-fired-sawblade": "Gray ceramic saw blade mold",
+    "block-toolmold-black-fired-sawblade": "Black ceramic saw blade mold",
+    "block-toolmold-tan-fired-sawblade": "Tan ceramic saw blade mold",
+    "block-toolmold-orange-fired-sawblade": "Orange ceramic saw blade mold",
+    "block-toolmold-red-fired-sawblade": "Red ceramic saw blade mold",
+    "block-toolmold-brown-fired-sawblade": "Brown ceramic saw blade mold",
+    "block-toolmold-fire-fired-sawblade": "Fireclay ceramic saw blade mold",
+    "block-toolmold-blue-fired-sawblade": "Dark brown ceramic saw blade mold",
+
+    //Mold nail raw
+    "block-toolmold-blue-raw-nail": "Raw blue clay nail and strip mold",
+    "block-toolmold-red-raw-nail": "Raw red clay nail and strip mold",
+    "block-toolmold-fire-raw-nail": "Raw fire clay nail and strip mold",
+
+    //Mold nail fired
+    "block-toolmold-cream-fired-nail": "Cream ceramic nail and strip mold",
+    "block-toolmold-gray-fired-nail": "Gray ceramic nail and strip mold",
+    "block-toolmold-black-fired-nail": "Black ceramic nail and strip mold",
+    "block-toolmold-tan-fired-nail": "Tan ceramic nail and strip mold",
+    "block-toolmold-orange-fired-nail": "Orange ceramic nail and strip mold",
+    "block-toolmold-red-fired-nail": "Red ceramic nail and strip mold",
+    "block-toolmold-brown-fired-nail": "Brown ceramic nail and strip mold",
+    "block-toolmold-fire-fired-nail": "Fireclay ceramic nail and strip mold",
+    "block-toolmold-blue-fired-nail": "Dark brown ceramic nail and strip mold",
+
+    //Mold arrowhead raw
+    "block-toolmold-blue-raw-arrowhead": "Raw blue clay arrowhead mold",
+    "block-toolmold-red-raw-arrowhead": "Raw red clay arrowhead mold",
+    "block-toolmold-fire-raw-arrowhead": "Raw fire clay arrowhead mold",
+
+    //Mold arrowhead fired
+    "block-toolmold-cream-fired-arrowhead": "Cream ceramic arrowhead mold",
+    "block-toolmold-gray-fired-arrowhead": "Gray ceramic arrowhead mold",
+    "block-toolmold-black-fired-arrowhead": "Black ceramic arrowhead mold",
+    "block-toolmold-tan-fired-arrowhead": "Tan ceramic arrowhead mold",
+    "block-toolmold-orange-fired-arrowhead": "Orange ceramic arrowhead mold",
+    "block-toolmold-red-fired-arrowhead": "Red ceramic arrowhead mold",
+    "block-toolmold-brown-fired-arrowhead": "Brown ceramic arrowhead mold",
+    "block-toolmold-fire-fired-arrowhead": "Fireclay ceramic arrowhead mold",
+    "block-toolmold-blue-fired-arrowhead": "Dark brown ceramic arrowhead mold",
+
+    //Mold hoop raw
+    "block-toolmold-blue-raw-hoop": "Raw blue clay hoop mold",
+    "block-toolmold-red-raw-hoop": "Raw red clay hoop mold",
+    "block-toolmold-fire-raw-hoop": "Raw fire clay hoop mold",
+
+    //Mold hoop fired
+    "block-toolmold-cream-fired-hoop": "Cream ceramic hoop mold",
+    "block-toolmold-gray-fired-hoop": "Gray ceramic hoop mold",
+    "block-toolmold-black-fired-hoop": "Black ceramic hoop mold",
+    "block-toolmold-tan-fired-hoop": "Tan ceramic hoop mold",
+    "block-toolmold-orange-fired-hoop": "Orange ceramic hoop mold",
+    "block-toolmold-red-fired-hoop": "Red ceramic hoop mold",
+    "block-toolmold-brown-fired-hoop": "Brown ceramic hoop mold",
+    "block-toolmold-fire-fired-hoop": "Fireclay ceramic hoop mold",
+    "block-toolmold-blue-fired-hoop": "Dark brown ceramic hoop mold",
+
+    //Mold plate raw
+    "block-toolmold-blue-raw-plate": "Raw blue clay plate mold",
+    "block-toolmold-red-raw-plate": "Raw red clay plate mold",
+    "block-toolmold-fire-raw-plate": "Raw fire clay plate mold",
+
+    //Mold plate fired
+    "block-toolmold-cream-fired-plate": "Cream ceramic plate mold",
+    "block-toolmold-gray-fired-plate": "Gray ceramic plate mold",
+    "block-toolmold-black-fired-plate": "Black ceramic plate mold",
+    "block-toolmold-tan-fired-plate": "Tan ceramic plate mold",
+    "block-toolmold-orange-fired-plate": "Orange ceramic plate mold",
+    "block-toolmold-red-fired-plate": "Red ceramic plate mold",
+    "block-toolmold-brown-fired-plate": "Brown ceramic plate mold",
+    "block-toolmold-fire-fired-plate": "Fireclay ceramic plate mold",
+    "block-toolmold-blue-fired-plate": "Dark brown ceramic plate mold",
+
+    //Mold spearhead raw
+    "block-toolmold-blue-raw-spearhead": "Raw blue clay spearhead mold",
+    "block-toolmold-red-raw-spearhead": "Raw red clay spearhead mold",
+    "block-toolmold-fire-raw-spearhead": "Raw fire clay spearhead mold",
+
+    //Mold spearhead fired
+    "block-toolmold-cream-fired-spearhead": "Cream ceramic spearhead mold",
+    "block-toolmold-gray-fired-spearhead": "Gray ceramic spearhead mold",
+    "block-toolmold-black-fired-spearhead": "Black ceramic spearhead mold",
+    "block-toolmold-tan-fired-spearhead": "Tan ceramic spearhead mold",
+    "block-toolmold-orange-fired-spearhead": "Orange ceramic spearhead mold",
+    "block-toolmold-red-fired-spearhead": "Red ceramic spearhead mold",
+    "block-toolmold-brown-fired-spearhead": "Brown ceramic spearhead mold",
+    "block-toolmold-fire-fired-spearhead": "Fireclay ceramic spearhead mold",
+    "block-toolmold-blue-fired-spearhead": "Dark brown ceramic spearhead mold",
+
+    //Mold knifeblade raw
+    "block-toolmold-blue-raw-knifeblade": "Raw blue clay knife blade mold",
+    "block-toolmold-red-raw-knifeblade": "Raw red clay knife blade mold",
+    "block-toolmold-fire-raw-knifeblade": "Raw fire clay knife blade mold",
+
+    //Mold knifeblade fired
+    "block-toolmold-cream-fired-knifeblade": "Cream ceramic knife blade mold",
+    "block-toolmold-gray-fired-knifeblade": "Gray ceramic knife blade mold",
+    "block-toolmold-black-fired-knifeblade": "Black ceramic knife blade mold",
+    "block-toolmold-tan-fired-knifeblade": "Tan ceramic knife blade mold",
+    "block-toolmold-orange-fired-knifeblade": "Orange ceramic knife blade mold",
+    "block-toolmold-red-fired-knifeblade": "Red ceramic knife blade mold",
+    "block-toolmold-brown-fired-knifeblade": "Brown ceramic knife blade mold",
+    "block-toolmold-fire-fired-knifeblade": "Fireclay ceramic knife blade mold",
+    "block-toolmold-blue-fired-knifeblade": "Dark brown ceramic knife blade mold",
+
+    //Mold scytheblade raw
+    "block-toolmold-blue-raw-scythehead": "Raw blue clay scythe blade mold",
+    "block-toolmold-red-raw-scythehead": "Raw red clay scythe blade mold",
+    "block-toolmold-fire-raw-scythehead": "Raw fire clay scythe blade mold",
+
+    //Mold scytheblade fired
+    "block-toolmold-cream-fired-scythehead": "Cream ceramic scythe blade mold",
+    "block-toolmold-gray-fired-scythehead": "Gray ceramic scythe blade mold",
+    "block-toolmold-black-fired-scythehead": "Black ceramic scythe blade mold",
+    "block-toolmold-tan-fired-scythehead": "Tan ceramic scythe blade mold",
+    "block-toolmold-orange-fired-scythehead": "Orange ceramic scythe blade mold",
+    "block-toolmold-red-fired-scythehead": "Red ceramic scythe blade mold",
+    "block-toolmold-brown-fired-scythehead": "Brown ceramic scythe blade mold",
+    "block-toolmold-fire-fired-scythehead": "Fireclay ceramic scythe blade mold",
+    "block-toolmold-blue-fired-scythehead": "Dark brown ceramic scythe blade mold"
 }

@@ -1,14 +1,17 @@
 ﻿{
     //Natively translated by Zack.a.riz
     //Start log
-    "start": "VanillaMoreMolds : Loaded",
+    "start": "VanillaMoreMolds : Chargé",
+
     //Menu tab
     "game:tabname-VanillaMoreMolds": "Vanilla More Molds",
-    //Mold Sawblade brut
+
+    //Mold Sawblade raw
     "block-toolmold-blue-raw-sawblade": "Moule de lame de scie en argile bleu brut",
     "block-toolmold-red-raw-sawblade": "Moule de lame de scie en argile rouge brut",
     "block-toolmold-fire-raw-sawblade": "Moule de lame de scie en argile réfractaire brut",
-    //Mold Sawblade cuit
+
+    //Mold Sawblade fired
     "block-toolmold-cream-fired-sawblade": "Moule de lame de scie en céramique crème",
     "block-toolmold-gray-fired-sawblade": "Moule de lame de scie en céramique grise",
     "block-toolmold-black-fired-sawblade": "Moule de lame de scie en céramique noire",
@@ -18,11 +21,13 @@
     "block-toolmold-brown-fired-sawblade": "Moule de lame de scie en céramique brune",
     "block-toolmold-fire-fired-sawblade": "Moule de lame de scie en céramique réfractaire",
     "block-toolmold-blue-fired-sawblade": "Moule de lame de scie en céramique brun foncé",
-    //Mold nail brut
+
+    //Mold nail raw
     "block-toolmold-blue-raw-nail": "Moule de clous et bandes en argile bleu brut",
     "block-toolmold-red-raw-nail": "Moule de clous et bandes en argile rouge brut",
     "block-toolmold-fire-raw-nail": "Moule de clous et bandes en argile réfractaire brut",
-    //Mold nail cuit
+
+    //Mold nail fired
     "block-toolmold-cream-fired-nail": "Moule de clous et bandes en céramique crème",
     "block-toolmold-gray-fired-nail": "Moule de clous et bandes en céramique grise",
     "block-toolmold-black-fired-nail": "Moule de clous et bandes en céramique noire",
@@ -32,11 +37,13 @@
     "block-toolmold-brown-fired-nail": "Moule de clous et bandes en céramique brune",
     "block-toolmold-fire-fired-nail": "Moule de clous et bandes en céramique réfractaire",
     "block-toolmold-blue-fired-nail": "Moule de clous et bandes en céramique brun foncé",
-    //Mold arrowhead brut
+
+    //Mold arrowhead raw
     "block-toolmold-blue-raw-arrowhead": "Moule de pointes de flèches en argile bleu brut",
     "block-toolmold-red-raw-arrowhead": "Moule de pointes de flèches en argile rouge brut",
     "block-toolmold-fire-raw-arrowhead": "Moule de pointes de flèches en argile réfractaire brut",
-    //Mold arrowhead cuit
+
+    //Mold arrowhead fired
     "block-toolmold-cream-fired-arrowhead": "Moule de pointes de flèches en céramique crème",
     "block-toolmold-gray-fired-arrowhead": "Moule de pointes de flèches en céramique grise",
     "block-toolmold-black-fired-arrowhead": "Moule de pointes de flèches en céramique noire",
@@ -46,11 +53,13 @@
     "block-toolmold-brown-fired-arrowhead": "Moule de pointes de flèches en céramique brune",
     "block-toolmold-fire-fired-arrowhead": "Moule de pointes de flèches en céramique réfractaire",
     "block-toolmold-blue-fired-arrowhead": "Moule de pointes de flèches en céramique brun foncé",
-    //Mold hoop brut
+
+    //Mold hoop raw
     "block-toolmold-blue-raw-hoop": "Moule de cerclage en argile bleu brut",
     "block-toolmold-red-raw-hoop": "Moule de cerclage en argile rouge brut",
     "block-toolmold-fire-raw-hoop": "Moule de cerclage en argile réfractaire brut",
-    //Mold hoop cuit
+
+    //Mold hoop fired
     "block-toolmold-cream-fired-hoop": "Moule de cerclage en céramique crème",
     "block-toolmold-gray-fired-hoop": "Moule de cerclage en céramique grise",
     "block-toolmold-black-fired-hoop": "Moule de cerclage en céramique noire",
@@ -60,11 +69,13 @@
     "block-toolmold-brown-fired-hoop": "Moule de cerclage en céramique brune",
     "block-toolmold-fire-fired-hoop": "Moule de cerclage en céramique réfractaire",
     "block-toolmold-blue-fired-hoop": "Moule de cerclage en céramique brun foncé",
-    //Mold plate brut
+
+    //Mold plate raw
     "block-toolmold-blue-raw-plate": "Moule de plaque en argile bleu brut",
     "block-toolmold-red-raw-plate": "Moule de plaque en argile rouge brut",
     "block-toolmold-fire-raw-plate": "Moule de plaque en argile réfractaire brut",
-    //Mold plate cuit
+
+    //Mold plate fired
     "block-toolmold-cream-fired-plate": "Moule de plaque en céramique crème",
     "block-toolmold-gray-fired-plate": "Moule de plaque en céramique grise",
     "block-toolmold-black-fired-plate": "Moule de plaque en céramique noire",
@@ -74,11 +85,13 @@
     "block-toolmold-brown-fired-plate": "Moule de plaque en céramique brune",
     "block-toolmold-fire-fired-plate": "Moule de plaque en céramique réfractaire",
     "block-toolmold-blue-fired-plate": "Moule de plaque en céramique brun foncé",
-    //Mold spearhead brut
+
+    //Mold spearhead raw
     "block-toolmold-blue-raw-spearhead": "Moule de pointe de lance en argile bleu brut",
     "block-toolmold-red-raw-spearhead": "Moule de pointe de lance en argile rouge brut",
     "block-toolmold-fire-raw-spearhead": "Moule de pointe de lance en argile réfractaire brut",
-    //Mold spearhead cuit
+
+    //Mold spearhead fired
     "block-toolmold-cream-fired-spearhead": "Moule de pointe de lance en céramique crème",
     "block-toolmold-gray-fired-spearhead": "Moule de pointe de lance en céramique grise",
     "block-toolmold-black-fired-spearhead": "Moule de pointe de lance en céramique noire",
@@ -88,11 +101,13 @@
     "block-toolmold-brown-fired-spearhead": "Moule de pointe de lance en céramique brune",
     "block-toolmold-fire-fired-spearhead": "Moule de pointe de lance en céramique réfractaire",
     "block-toolmold-blue-fired-spearhead": "Moule de pointe de lance en céramique brun foncé",
-    //Mold knifeblade brut
+
+    //Mold knifeblade raw
     "block-toolmold-blue-raw-knifeblade": "Moule de lame de couteau en argile bleu brut",
     "block-toolmold-red-raw-knifeblade": "Moule de lame de couteau en argile rouge brut",
     "block-toolmold-fire-raw-knifeblade": "Moule de lame de couteau en argile réfractaire brut",
-    //Mold knifeblade cuit
+
+    //Mold knifeblade fired
     "block-toolmold-cream-fired-knifeblade": "Moule de lame de couteau en céramique crème",
     "block-toolmold-gray-fired-knifeblade": "Moule de lame de couteau en céramique grise",
     "block-toolmold-black-fired-knifeblade": "Moule de lame de couteau en céramique noire",
@@ -102,11 +117,13 @@
     "block-toolmold-brown-fired-knifeblade": "Moule de lame de couteau en céramique brune",
     "block-toolmold-fire-fired-knifeblade": "Moule de lame de couteau en céramique réfractaire",
     "block-toolmold-blue-fired-knifeblade": "Moule de lame de couteau en céramique brun foncé",
-    //Mold scytheblade brut
+
+    //Mold scytheblade raw
     "block-toolmold-blue-raw-scythehead": "Moule de lame de faux en argile bleu brut",
     "block-toolmold-red-raw-scythehead": "Moule de lame de faux en argile rouge brut",
     "block-toolmold-fire-raw-scythehead": "Moule de lame de faux en argile réfractaire brut",
-    //Mold scytheblade cuit
+
+    //Mold scytheblade fired
     "block-toolmold-cream-fired-scythehead": "Moule de lame de faux en céramique crème",
     "block-toolmold-gray-fired-scythehead": "Moule de lame de faux en céramique grise",
     "block-toolmold-black-fired-scythehead": "Moule de lame de faux en céramique noire",

@@ -12,7 +12,7 @@
 		{ code:"tooltype", states: [ "sawblade", "nail", "arrowhead", "plate", "hoop", "spearhead", "knifeblade", "scythehead" ] }
 	],
 	shapebytype: {
-		"*": { base: "block/clay/mold/{tooltype}", rotateY: 90 },
+		"*": { base: "block/clay/mold/{tooltype}", rotateY: 0 },
 	},
 	textures: {  all: { base: "game:block/clay/{color}clay" } },
 	attributes: {

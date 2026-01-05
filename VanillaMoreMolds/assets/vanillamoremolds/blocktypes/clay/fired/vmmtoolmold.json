@@ -53,7 +53,7 @@
 			drop: { type: "item", code: "game:arrowhead-{metal}", "quantity": 8 }
 		},
 		"toolmold-*-fired-plate": {
-			requiredUnits: 100,
+			requiredUnits: 200,
 			fillHeight: 1,
 			moldrackable: true,
 			onmoldrackTransform: { rotation: { z: 90 } },

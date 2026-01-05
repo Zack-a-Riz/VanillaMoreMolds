@@ -1,0 +1,127 @@
+{ // Moules à outils en argile non cuits
+	code: "toolmold",
+	class: "Block",
+	behaviors: [
+		{ name: "GroundStorable", properties: { layout: 'SingleCenter' } },
+		{ name: "Unplaceable", },
+		{ name: "RightClickPickup" }
+	],
+	variantgroups: [
+		{ code: "color", states: ["blue", "red", "fire"] },
+		{ code:"materialtype", states: ["raw"] },
+		{ code:"tooltype", states: [ "sawblade", "nail", "arrowhead", "plate", "hoop", "spearhead", "knifeblade", "scythehead" ] }
+	],
+	shapebytype: {
+		"*": { base: "block/clay/mold/{tooltype}", rotateY: 90 },
+	},
+	textures: {  all: { base: "game:block/clay/{color}clay" } },
+	attributes: {
+		reinforcable: true,
+		onTongTransformByType: {
+			"*": {
+				translation: { x: -0.9, y: -1.5, z: -0.6 },
+				rotation: { x: 117, y: 0, z: 0 },
+				scale: 0.74
+			}
+		},
+		shelvableByType: {
+			"*": false
+		},
+		handbook: {
+			groupBy: ["toolmold-*-{materialtype}-{tooltype}"]
+		}
+	},
+	attributesByType:{
+		"toolmold-red-raw-*":{
+			beehivekiln:{
+				"0": { "type": "block", "code": "vanillamoremolds:toolmold-tan-fired-{tooltype}" },
+				"1": { "type": "block", "code": "vanillamoremolds:toolmold-orange-fired-{tooltype}" },
+				"2": { "type": "block", "code": "vanillamoremolds:toolmold-red-fired-{tooltype}" },
+				"3": { "type": "block", "code": "vanillamoremolds:toolmold-brown-fired-{tooltype}" }
+			}
+		},
+		"toolmold-blue-raw-*":{
+			beehivekiln:{
+				"0": { "type": "block", "code": "vanillamoremolds:toolmold-cream-fired-{tooltype}"},
+				"1": { "type": "block", "code": "vanillamoremolds:toolmold-gray-fired-{tooltype}"},
+				"2": { "type": "block", "code": "vanillamoremolds:toolmold-black-fired-{tooltype}"},
+				"3": { "type": "block", "code": "vanillamoremolds:toolmold-black-fired-{tooltype}"}
+			}
+		},
+		"toolmold-fire-raw-*":{
+			beehivekiln:{
+				"0": { "type": "block", "code": "vanillamoremolds:toolmold-fire-fired-{tooltype}"},
+				"1": { "type": "block", "code": "vanillamoremolds:toolmold-fire-fired-{tooltype}"},
+				"2": { "type": "block", "code": "vanillamoremolds:toolmold-fire-fired-{tooltype}"},
+				"3": { "type": "block", "code": "vanillamoremolds:toolmold-fire-fired-{tooltype}"}
+			}
+		}
+	},
+	combustiblePropsByType: {
+		"toolmold-fire-raw-*": {
+			meltingPoint: 650,
+			meltingDuration: 45,
+			smeltedRatio: 1,
+			smeltingType: "fire",
+			smeltedStack: { type: "block", code: "vanillamoremolds:toolmold-fire-fired-{tooltype}" },
+			requiresContainer: false
+		},
+		"toolmold-*-raw-*": {
+			meltingPoint: 650,
+			meltingDuration: 45,
+			smeltedRatio: 1,
+			smeltingType: "fire",
+			smeltedStack: { type: "block", code: "vanillamoremolds:toolmold-blue-fired-{tooltype}" },
+			requiresContainer: false
+		}
+	},
+	blockmaterial: "Ceramic",
+	creativeinventory: { "general": ["*"], "construction": ["*"], "VanillaMoreMolds": ["*"] },
+	replaceable: 700,
+	resistance: 1.5,
+	maxStackSize: 8,
+	lightAbsorption: 0,
+	sounds: {
+		walk: "game:walk/stone",
+	},
+	collisionboxByType: {
+		"*": { x1: 0.0625, y1: 0, z1: 0.0625, x2: 0.9375, y2: 0.125, z2: 0.9375 },
+	},
+	selectionboxByType: {
+		"*": { x1: 0.0625, y1: 0, z1: 0.0625, x2: 0.9375, y2: 0.125, z2: 0.9375 },
+	},
+	sideopaque: {
+		all: false
+	},
+	sidesolid: {
+		all: false
+	},
+	guiTransformByType: {
+		"*": {
+			translation: { x: 0, y: 3, z: 0 },
+			origin: { x: 0.5, y: 0.0625, z: 0.5 },
+			scale: 1.33
+		}
+	},
+	tpHandTransformByType: {
+		"*": {
+			translation: { x: -1, y: -0.6, z: -1.05 },
+			rotation: { x: -87, y: 9, z: 4 },
+			origin: { x: 0.5, y: 0.125, z: 0.5 },
+			scale: 0.5
+		}
+	},
+	fpHandTransformByType: {
+		"*": {
+			translation: { x: -0.3, y: 0, z: 0.5 },
+			rotation: { x: 16, y: -51, z: 91 },
+			origin: { x: 0.5, y: 0.125, z: 0.5 }
+		}
+	},
+	groundTransform: {
+		translation: { x: 0, y: 0, z: 0 },
+		rotation: { x: 0, y: -45, z: 0 },
+		origin: { x: 0.5, y: 0, z: 0.5 },
+		scale: 2.2
+	}
+}

@@ -1,0 +1,140 @@
+{ // Moules à outils en argile cuits
+	code: "toolmold",
+	class: "BlockToolMold",
+	entityClass: "ToolMold",
+	behaviors: [
+		{name: "Lockable"},
+		{name: "UnstableFalling"}
+	],
+	entityBehaviors: [{ name: "TemperatureSensitive" }],
+	variantgroups: [
+		{ code: "color", states: ["blue", "fire", "black", "brown", "cream", "gray", "orange", "red", "tan", ] },
+		{ code:"materialtype", states: ["fired"] },
+		{ code:"tooltype", states: [ "sawblade", "nail", "arrowhead", "plate", "hoop", "spearhead", "knifeblade", "scythehead" ] }
+	],
+	shapebytype: {
+		"*": { base: "block/clay/mold/{tooltype}", rotateY: 90 },
+	},
+	textures: {  floor: { base: "game:block/clay/hardened/{color}" }, other: { base: "game:block/clay/hardened/{color}" } },
+	attributes: {
+		reinforcable: true,
+		shatteredShape: { base: "block/clay/mold/shattered-ingot" },
+		onTongTransformByType: {
+			"*": {
+				translation: { x: -1.7, y: -1.3, z: -0.57 },
+				rotation: { x: 98, y: 16, z: 3 },
+				scale: 0.55
+			}
+		},
+		handbook: {
+			groupBy: ["toolmold-*-{materialtype}-{tooltype}"]
+		}
+	},
+	attributesByType: {
+		"toolmold-*-fired-sawblade": {
+			requiredUnits: 100,
+			fillHeight: 1,
+			moldrackable: true,
+			onmoldrackTransform: { rotation: { z: 90 } },
+			drop: { type: "item", code: "game:sawblade-{metal}", "quantity": 1 }
+		},
+		"toolmold-*-fired-nail": {
+			requiredUnits: 75,
+			fillHeight: 1,
+			moldrackable: true,
+			onmoldrackTransform: { rotation: { z: 90 } },
+			drop: { type: "item", code: "game:metalnailsandstrips-{metal}", "quantity": 3 }
+		},
+		"toolmold-*-fired-arrowhead": {
+			requiredUnits: 100,
+			fillHeight: 1,
+			moldrackable: true,
+			onmoldrackTransform: { rotation: { z: 90 } },
+			drop: { type: "item", code: "game:arrowhead-{metal}", "quantity": 8 }
+		},
+		"toolmold-*-fired-plate": {
+			requiredUnits: 100,
+			fillHeight: 1,
+			moldrackable: true,
+			onmoldrackTransform: { rotation: { z: 90 } },
+			drop: { type: "item", code: "game:metalplate-{metal}", "quantity": 1 }
+		},
+		"toolmold-*-fired-hoop": {
+			requiredUnits: 100,
+			fillHeight: 1,
+			moldrackable: true,
+			onmoldrackTransform: { rotation: { z: 90 } },
+			drop: { type: "item", code: "game:hoop-{metal}", "quantity": 1 }
+		},
+		"toolmold-*-fired-spearhead": {
+			requiredUnits: 100,
+			fillHeight: 1,
+			moldrackable: true,
+			onmoldrackTransform: { rotation: { z: 90 } },
+			drop: { type: "item", code: "game:spearhead-{metal}", "quantity": 1 }
+		},
+		"toolmold-*-fired-knifeblade": {
+			requiredUnits: 100,
+			fillHeight: 1,
+			moldrackable: true,
+			onmoldrackTransform: { rotation: { z: 90 } },
+			drop: { type: "item", code: "game:knifeblade-{metal}", "quantity": 1 }
+		},
+		"toolmold-*-fired-scythehead": {
+			requiredUnits: 100,
+			fillHeight: 1,
+			moldrackable: true,
+			onmoldrackTransform: { rotation: { z: 90 } },
+			drop: { type: "item", code: "game:scythehead-{metal}", "quantity": 1 }
+		},
+	},
+	blockmaterial: "Ceramic",
+	creativeinventory: { "general": ["*"], "construction": ["*"], "VanillaMoreMolds": ["*"] },
+	replaceable: 700,
+	resistance: 1.5,
+	maxStackSize: 8,
+	lightAbsorption: 0,
+	sounds: {
+		walk: "game:walk/stone",
+	},
+	collisionboxByType: {
+		"*": { x1: 0.0625, y1: 0, z1: 0.0625, x2: 0.9375, y2: 0.125, z2: 0.9375 },
+	},
+	selectionboxByType: {
+		"*": { x1: 0.0625, y1: 0, z1: 0.0625, x2: 0.9375, y2: 0.125, z2: 0.9375 },
+	},
+	sideopaque: {
+		all: false
+	},
+	sidesolid: {
+		all: false
+	},
+	guiTransformByType: {
+		"*": {
+			translation: { x: 0, y: 3, z: 0 },
+			origin: { x: 0.5, y: 0.0625, z: 0.5 },
+			scale: 1.33
+		}
+	},
+	tpHandTransformByType: {
+		"*": {
+			translation: { x: -1, y: -0.6, z: -1.05 },
+			rotation: { x: -87, y: 9, z: 4 },
+			origin: { x: 0.5, y: 0.125, z: 0.5 },
+			scale: 0.5
+		}
+	},
+	fpHandTransformByType: {
+		"*": {
+			translation: { x: -0.3, y: 0, z: 0.5 },
+			rotation: { x: 16, y: -51, z: 91 },
+			origin: { x: 0.5, y: 0.125, z: 0.5 }
+		}
+	},
+	groundTransform: {
+		translation: { x: 0, y: 0, z: 0 },
+		rotation: { x: 0, y: -45, z: 0 },
+		origin: { x: 0.5, y: 0, z: 0.5 },
+		scale: 2.2
+	}
+}

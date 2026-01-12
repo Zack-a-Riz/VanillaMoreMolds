@@ -6,6 +6,9 @@
     //Menu tab
     "game:tabname-VanillaMoreMolds": "Vanilla More Molds",
 
+    //Handbook text caution for fired molds
+    "vanillamoremolds:block-handbooktext-vanillamoremolds:toolmold-*-fired-*": "<strong>Caution:</strong> Getting a mold with molten metal in it wet will cause the mold to shatter, and you will lose some of the metal.",
+
     //Mold Sawblade raw
     "block-toolmold-blue-raw-sawblade": "Raw blue clay saw blade mold",
     "block-toolmold-red-raw-sawblade": "Raw red clay saw blade mold",

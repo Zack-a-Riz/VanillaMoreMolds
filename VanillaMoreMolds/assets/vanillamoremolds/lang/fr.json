@@ -6,6 +6,9 @@
     //Menu tab
     "game:tabname-VanillaMoreMolds": "Vanilla More Molds",
 
+    //Handbook text caution for fired molds
+    "vanillamoremolds:block-handbooktext-vanillamoremolds:toolmold-*-fired-*": "<strong>Attention :<\/strong> Mouiller un moule contenant du métal en fusion entraînera sa destruction et vous perdrez une partie du métal.",
+
     //Mold Sawblade raw
     "block-toolmold-blue-raw-sawblade": "Moule de lame de scie en argile bleu brut",
     "block-toolmold-red-raw-sawblade": "Moule de lame de scie en argile rouge brut",

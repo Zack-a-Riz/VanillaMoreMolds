@@ -27,7 +27,7 @@
 			}
 		},
 		handbook: {
-			groupBy: ["toolmold-*-{materialtype}-{tooltype}"]
+			groupBy: ["game:toolmold-*-{materialtype}-{tooltype}"]
 		}
 	},
 	attributesByType: {

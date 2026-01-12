@@ -42,6 +42,6 @@
     "name": "Arrow Head Mold",
     "output": {
         "type": "block",
-        "code": "vanillamoremolds:toolmold-{color}-raw-arrowhead"
+        "code": "vanillamoremolds:vmmtoolmold-{color}-raw-arrowhead"
     }
 }

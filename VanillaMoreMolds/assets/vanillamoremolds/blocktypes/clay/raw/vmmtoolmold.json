@@ -1,5 +1,5 @@
 { // Moules à outils en argile non cuits
-	code: "toolmold",
+	code: "vmmtoolmold",
 	class: "Block",
 	behaviors: [
 		{ name: "GroundStorable", properties: { layout: 'SingleCenter' } },
@@ -28,50 +28,50 @@
 			"*": false
 		},
 		handbook: {
-			groupBy: ["toolmold-*-{materialtype}-{tooltype}"]
+			groupBy: ["game:toolmold-*-{materialtype}-{tooltype}"]
 		}
 	},
 	attributesByType:{
-		"toolmold-red-raw-*":{
+		"vmmtoolmold-red-raw-*":{
 			beehivekiln:{
-				"0": { "type": "block", "code": "vanillamoremolds:toolmold-tan-fired-{tooltype}" },
-				"1": { "type": "block", "code": "vanillamoremolds:toolmold-orange-fired-{tooltype}" },
-				"2": { "type": "block", "code": "vanillamoremolds:toolmold-red-fired-{tooltype}" },
-				"3": { "type": "block", "code": "vanillamoremolds:toolmold-brown-fired-{tooltype}" }
+				"0": { "type": "block", "code": "vanillamoremolds:vmmtoolmold-tan-fired-{tooltype}" },
+				"1": { "type": "block", "code": "vanillamoremolds:vmmtoolmold-orange-fired-{tooltype}" },
+				"2": { "type": "block", "code": "vanillamoremolds:vmmtoolmold-red-fired-{tooltype}" },
+				"3": { "type": "block", "code": "vanillamoremolds:vmmtoolmold-brown-fired-{tooltype}" }
 			}
 		},
-		"toolmold-blue-raw-*":{
+		"vmmtoolmold-blue-raw-*":{
 			beehivekiln:{
-				"0": { "type": "block", "code": "vanillamoremolds:toolmold-cream-fired-{tooltype}"},
-				"1": { "type": "block", "code": "vanillamoremolds:toolmold-gray-fired-{tooltype}"},
-				"2": { "type": "block", "code": "vanillamoremolds:toolmold-black-fired-{tooltype}"},
-				"3": { "type": "block", "code": "vanillamoremolds:toolmold-black-fired-{tooltype}"}
+				"0": { "type": "block", "code": "vanillamoremolds:vmmtoolmold-cream-fired-{tooltype}"},
+				"1": { "type": "block", "code": "vanillamoremolds:vmmtoolmold-gray-fired-{tooltype}"},
+				"2": { "type": "block", "code": "vanillamoremolds:vmmtoolmold-black-fired-{tooltype}"},
+				"3": { "type": "block", "code": "vanillamoremolds:vmmtoolmold-black-fired-{tooltype}"}
 			}
 		},
-		"toolmold-fire-raw-*":{
+		"vmmtoolmold-fire-raw-*":{
 			beehivekiln:{
-				"0": { "type": "block", "code": "vanillamoremolds:toolmold-fire-fired-{tooltype}"},
-				"1": { "type": "block", "code": "vanillamoremolds:toolmold-fire-fired-{tooltype}"},
-				"2": { "type": "block", "code": "vanillamoremolds:toolmold-fire-fired-{tooltype}"},
-				"3": { "type": "block", "code": "vanillamoremolds:toolmold-fire-fired-{tooltype}"}
+				"0": { "type": "block", "code": "vanillamoremolds:vmmtoolmold-fire-fired-{tooltype}"},
+				"1": { "type": "block", "code": "vanillamoremolds:vmmtoolmold-fire-fired-{tooltype}"},
+				"2": { "type": "block", "code": "vanillamoremolds:vmmtoolmold-fire-fired-{tooltype}"},
+				"3": { "type": "block", "code": "vanillamoremolds:vmmtoolmold-fire-fired-{tooltype}"}
 			}
 		}
 	},
 	combustiblePropsByType: {
-		"toolmold-fire-raw-*": {
+		"vmmtoolmold-fire-raw-*": {
 			meltingPoint: 650,
 			meltingDuration: 45,
 			smeltedRatio: 1,
 			smeltingType: "fire",
-			smeltedStack: { type: "block", code: "vanillamoremolds:toolmold-fire-fired-{tooltype}" },
+			smeltedStack: { type: "block", code: "vanillamoremolds:vmmtoolmold-fire-fired-{tooltype}" },
 			requiresContainer: false
 		},
-		"toolmold-*-raw-*": {
+		"vmmtoolmold-*-raw-*": {
 			meltingPoint: 650,
 			meltingDuration: 45,
 			smeltedRatio: 1,
 			smeltingType: "fire",
-			smeltedStack: { type: "block", code: "vanillamoremolds:toolmold-blue-fired-{tooltype}" },
+			smeltedStack: { type: "block", code: "vanillamoremolds:vmmtoolmold-blue-fired-{tooltype}" },
 			requiresContainer: false
 		}
 	},

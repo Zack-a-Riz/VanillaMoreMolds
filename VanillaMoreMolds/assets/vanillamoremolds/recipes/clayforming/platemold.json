@@ -42,6 +42,6 @@
     "name": "Plate Mold",
     "output": {
         "type": "block",
-        "code": "vanillamoremolds:toolmold-{color}-raw-plate"
+        "code": "vanillamoremolds:vmmtoolmold-{color}-raw-plate"
     }
 }

@@ -42,6 +42,6 @@
     "name": "Knife Blade Mold",
     "output": {
         "type": "block",
-        "code": "vanillamoremolds:toolmold-{color}-raw-knifeblade"
+        "code": "vanillamoremolds:vmmtoolmold-{color}-raw-knifeblade"
     }
 }

@@ -42,6 +42,6 @@
     "name": "Spearhead Mold",
     "output": {
         "type": "block",
-        "code": "vanillamoremolds:toolmold-{color}-raw-spearhead"
+        "code": "vanillamoremolds:vmmtoolmold-{color}-raw-spearhead"
     }
 }

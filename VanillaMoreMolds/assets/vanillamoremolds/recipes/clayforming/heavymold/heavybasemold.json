@@ -187,9 +187,9 @@
             "________________"
         ]
     ],
-    "name": "Base Mold",
+    "name": "Heavy Base Mold",
     "output": {
         "type": "block",
-        "code": "vanillamoremolds:vmmbasetoolmold-{color}-raw-base"
+        "code": "vanillamoremolds:vmmheavybasetoolmold-{color}-raw-heavybase"
     }
 }

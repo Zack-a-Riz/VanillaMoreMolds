@@ -1,5 +1,5 @@
 { // Moules de base en argile non cuits
-	code: "vmmbasetoolmold",
+	code: "vmmheavybasetoolmold",
 	class: "Block",
 	behaviors: [
 		{ name: "GroundStorable", properties: { layout: 'SingleCenter' } },
@@ -9,10 +9,10 @@
 	variantgroups: [
 		{ code: "color", states: ["blue", "red", "fire"] },
 		{ code:"materialtype", states: ["raw"] },
-		{ code:"tooltype", states: [ "base" ] }
+		{ code:"tooltype", states: [ "heavybase" ] }
 	],
 	shapebytype: {
-		"*": { base: "block/clay/mold/specialmold/{tooltype}", rotateY: 0 },
+		"*": { base: "block/clay/mold/heavymold/{tooltype}", rotateY: 0 },
 	},
 	textures: {  all: { base: "game:block/clay/{color}clay" } },
 	attributes: {
@@ -32,46 +32,46 @@
 		}
 	},
 	attributesByType:{
-		"vmmbasetoolmold-red-raw-*":{
+		"vmmheavybasetoolmold-red-raw-*":{
 			beehivekiln:{
-				"0": { "type": "block", "code": "vanillamoremolds:vmmbasetoolmold-tan-fired-{tooltype}" },
-				"1": { "type": "block", "code": "vanillamoremolds:vmmbasetoolmold-orange-fired-{tooltype}" },
-				"2": { "type": "block", "code": "vanillamoremolds:vmmbasetoolmold-red-fired-{tooltype}" },
-				"3": { "type": "block", "code": "vanillamoremolds:vmmbasetoolmold-brown-fired-{tooltype}" }
+				"0": { "type": "block", "code": "vanillamoremolds:vmmheavybasetoolmold-tan-fired-{tooltype}" },
+				"1": { "type": "block", "code": "vanillamoremolds:vmmheavybasetoolmold-orange-fired-{tooltype}" },
+				"2": { "type": "block", "code": "vanillamoremolds:vmmheavybasetoolmold-red-fired-{tooltype}" },
+				"3": { "type": "block", "code": "vanillamoremolds:vmmheavybasetoolmold-brown-fired-{tooltype}" }
 			}
 		},
-		"vmmbasetoolmold-blue-raw-*":{
+		"vmmheavybasetoolmold-blue-raw-*":{
 			beehivekiln:{
-				"0": { "type": "block", "code": "vanillamoremolds:vmmbasetoolmold-cream-fired-{tooltype}"},
-				"1": { "type": "block", "code": "vanillamoremolds:vmmbasetoolmold-gray-fired-{tooltype}"},
-				"2": { "type": "block", "code": "vanillamoremolds:vmmbasetoolmold-black-fired-{tooltype}"},
-				"3": { "type": "block", "code": "vanillamoremolds:vmmbasetoolmold-black-fired-{tooltype}"}
+				"0": { "type": "block", "code": "vanillamoremolds:vmmheavybasetoolmold-cream-fired-{tooltype}"},
+				"1": { "type": "block", "code": "vanillamoremolds:vmmheavybasetoolmold-gray-fired-{tooltype}"},
+				"2": { "type": "block", "code": "vanillamoremolds:vmmheavybasetoolmold-black-fired-{tooltype}"},
+				"3": { "type": "block", "code": "vanillamoremolds:vmmheavybasetoolmold-black-fired-{tooltype}"}
 			}
 		},
-		"vmmbasetoolmold-fire-raw-*":{
+		"vmmheavybasetoolmold-fire-raw-*":{
 			beehivekiln:{
-				"0": { "type": "block", "code": "vanillamoremolds:vmmbasetoolmold-fire-fired-{tooltype}"},
-				"1": { "type": "block", "code": "vanillamoremolds:vmmbasetoolmold-fire-fired-{tooltype}"},
-				"2": { "type": "block", "code": "vanillamoremolds:vmmbasetoolmold-fire-fired-{tooltype}"},
-				"3": { "type": "block", "code": "vanillamoremolds:vmmbasetoolmold-fire-fired-{tooltype}"}
+				"0": { "type": "block", "code": "vanillamoremolds:vmmheavybasetoolmold-fire-fired-{tooltype}"},
+				"1": { "type": "block", "code": "vanillamoremolds:vmmheavybasetoolmold-fire-fired-{tooltype}"},
+				"2": { "type": "block", "code": "vanillamoremolds:vmmheavybasetoolmold-fire-fired-{tooltype}"},
+				"3": { "type": "block", "code": "vanillamoremolds:vmmheavybasetoolmold-fire-fired-{tooltype}"}
 			}
 		}
 	},
 	combustiblePropsByType: {
-		"vmmbasetoolmold-fire-raw-*": {
+		"vmmheavybasetoolmold-fire-raw-*": {
 			meltingPoint: 650,
 			meltingDuration: 45,
 			smeltedRatio: 1,
 			smeltingType: "fire",
-			smeltedStack: { type: "block", code: "vanillamoremolds:vmmbasetoolmold-fire-fired-{tooltype}" },
+			smeltedStack: { type: "block", code: "vanillamoremolds:vmmheavybasetoolmold-fire-fired-{tooltype}" },
 			requiresContainer: false
 		},
-		"vmmbasetoolmold-*-raw-*": {
+		"vmmheavybasetoolmold-*-raw-*": {
 			meltingPoint: 650,
 			meltingDuration: 45,
 			smeltedRatio: 1,
 			smeltingType: "fire",
-			smeltedStack: { type: "block", code: "vanillamoremolds:vmmbasetoolmold-blue-fired-{tooltype}" },
+			smeltedStack: { type: "block", code: "vanillamoremolds:vmmheavybasetoolmold-blue-fired-{tooltype}" },
 			requiresContainer: false
 		}
 	},

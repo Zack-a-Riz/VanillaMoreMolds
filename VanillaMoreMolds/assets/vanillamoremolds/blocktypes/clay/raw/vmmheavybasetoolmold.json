@@ -6,7 +6,8 @@
             "name": "GroundStorable",
             "properties": { "layout": "SingleCenter" }
         },
-        { "name": "RightClickPickup" }
+        { "name": "RightClickPickup" },
+        { "name": "Unplaceable" }
     ],
     "variantgroups": [
         {
@@ -147,7 +148,7 @@
     },
     "replaceable": 700,
     "resistance": 1.5,
-    "maxStackSize": 8,
+    "maxStackSize": 1,
     "lightAbsorption": 0,
     "sounds": {
         "walk": "game:walk/stone"

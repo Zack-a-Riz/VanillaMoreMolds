@@ -8,6 +8,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="src\**" />
+    <EmbeddedResource Remove="src\**" />
+    <None Remove="src\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <RuntimeHostConfigurationOption Include="System.Runtime.Loader.UseResolvingHandlerOnLoad" Value="false" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Reference Include="VintagestoryAPI">
       <HintPath>$(VINTAGE_STORY)/VintagestoryAPI.dll</HintPath>
       <Private>false</Private>
@@ -27,7 +37,6 @@
 </ItemGroup>
 
 <ItemGroup>
-  <Folder Include="assets\vanillamoremolds\blocktypes\heavymold\" />
   <Folder Include="src\" />
 </ItemGroup>
 

@@ -1,5 +1,5 @@
-{ // Moules de base en argile cuits
-    "code": "vmmheavybasetoolmold",
+{ // Heavymold
+    "code": "vmmheavymold",
     "class": "Block",
     "behaviors": [
         {
@@ -9,29 +9,17 @@
         { "name": "RightClickPickup" },
         { "name": "Unplaceable" }
     ],
-    "variantgroups": [
-        {
-            "code": "color",
-            "states": [ "blue", "fire", "black", "brown", "cream", "gray", "orange", "red", "tan" ]
-        },
-        {
-            "code": "materialtype",
-            "states": [ "fired" ]
-        },
-        {
-            "code": "tooltype",
-            "states": [ "heavybase" ]
-        }
-    ],
     "shapebytype": {
         "*": {
-            "base": "block/clay/mold/heavymold/{tooltype}",
+            "base": "block/clay/mold/heavymold/heavymold",
             "rotateY": 0
         }
     },
     "textures": {
-        "floor": { "base": "game:block/clay/hardened/{color}" },
-        "other": { "base": "game:block/clay/hardened/{color}" }
+        "floor": { "base": "game:block/clay/ceramic" },
+        "other": { "base": "game:block/clay/ceramic-dark" },
+        "wood": { "base": "game:block/wood/planks/aged/aged2" },
+        "rope": { "base": "game:block/cloth/paper/blank-large" }
     },
     "attributes": {
         "reinforcable": true,

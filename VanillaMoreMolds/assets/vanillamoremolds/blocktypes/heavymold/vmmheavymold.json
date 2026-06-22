@@ -1,25 +1,39 @@
 { // Heavymold
     "code": "vmmheavymold",
-    "class": "Block",
+    "class": "BlockHeavyMold",
+    "entity": "BlockEntityHeavyMold",
     "behaviors": [
         {
             "name": "GroundStorable",
             "properties": { "layout": "SingleCenter" }
         },
-        { "name": "RightClickPickup" },
-        { "name": "Unplaceable" }
+        {
+            "name": "RightClickPickup"
+        }
+    ],
+    "variantgroups": [
+        {
+            "code": "stage",
+            "states": [ "empty", "fill1", "fill2", "fill3", "fill" ]
+        },
+        {
+            "code": "color",
+            "states": [ "blue", "fire", "black", "brown", "cream", "gray", "orange", "red", "tan" ]
+        }
     ],
     "shapebytype": {
-        "*": {
-            "base": "block/clay/mold/heavymold/heavymold",
-            "rotateY": 0
-        }
+        "*empty*": { "base": "block/clay/mold/heavymold/heavymold-empty", "rotateY": 0 },
+        "*fill1*": { "base": "block/clay/mold/heavymold/state/heavymold-fill1", "rotateY": 0 },
+        "*fill2*": { "base": "block/clay/mold/heavymold/state/heavymold-fill2", "rotateY": 0 },
+        "*fill3*": { "base": "block/clay/mold/heavymold/state/heavymold-fill3", "rotateY": 0 },
+        "*fill*": { "base": "block/clay/mold/heavymold/state/heavymold-fill", "rotateY": 0 }
     },
     "textures": {
-        "floor": { "base": "game:block/clay/ceramic" },
-        "other": { "base": "game:block/clay/ceramic-dark" },
+        "floor": { "base": "game:block/clay/hardened/{color}" },
+        "other": { "base": "game:block/clay/hardened/{color}" },
         "wood": { "base": "game:block/wood/planks/aged/aged2" },
-        "rope": { "base": "game:block/cloth/paper/blank-large" }
+        "rope": { "base": "game:block/cloth/paper/blank-large" },
+        "sand": { "base": "game:block/stone/sand/andesite" }
     },
     "attributes": {
         "reinforcable": true,

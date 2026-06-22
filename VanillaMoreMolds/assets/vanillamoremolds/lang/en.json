@@ -135,5 +135,25 @@
     "block-vmmtoolmold-red-fired-scythehead": "Red ceramic scythe blade mold",
     "block-vmmtoolmold-brown-fired-scythehead": "Brown ceramic scythe blade mold",
     "block-vmmtoolmold-fire-fired-scythehead": "Fireclay ceramic scythe blade mold",
-    "block-vmmtoolmold-blue-fired-scythehead": "Dark brown ceramic scythe blade mold"
+    "block-vmmtoolmold-blue-fired-scythehead": "Dark brown ceramic scythe blade mold",
+
+    //Heavy Mold
+    "block-vmmheavymold-empty-blue": "Blue heavy mold",
+    "block-vmmheavymold-empty-fire": "Fire heavy mold",
+    "block-vmmheavymold-empty-black": "Black heavy mold",
+    "block-vmmheavymold-empty-brown": "Brown heavy mold",
+    "block-vmmheavymold-empty-cream": "Cream heavy mold",
+    "block-vmmheavymold-empty-gray": "Gray heavy mold",
+    "block-vmmheavymold-empty-orange": "Orange heavy mold",
+    "block-vmmheavymold-empty-red": "Red heavy mold",
+    "block-vmmheavymold-empty-tan": "Tan heavy mold",
+
+    //Heavy Mold filled
+    "block-vmmheavymold-fill1-blue": "Partially filled blue heavy mold",
+    "block-vmmheavymold-fill2-blue": "Mostly filled blue heavy mold",
+    "block-vmmheavymold-fill3-blue": "Full blue heavy mold",
+    "block-vmmheavymold-fill-blue": "Completed blue heavy mold",
+
+    //Heavy Mold handbook info
+    "vanillamoremolds:block-handbooktext-vanillamoremolds:vmmheavymold-*": "<strong>Heavy Mold:</strong><br>Used for holding and filling with sand.<br><br><strong>Use:</strong><br>+ Right-Click: Pick up<br>+ Shift + Right-Click with sand: Fill mold (3 stages)<br>+ Shift + Right-Click with ingot (when full): Add metal"
 }

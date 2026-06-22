@@ -33,7 +33,7 @@
     "height": 3,
     "output": {
         "type": "block",
-        "code": "vanillamoremolds:vmmheavymold",
+        "code": "vanillamoremolds:vmmheavymold-empty-{color}",
         "quantity": 1
     }
 }

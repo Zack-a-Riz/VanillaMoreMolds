@@ -14,6 +14,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Include="src\block\BlockEntityHeavyMold.cs" />
+    <Compile Include="src\block\BlockHeavyMold.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <RuntimeHostConfigurationOption Include="System.Runtime.Loader.UseResolvingHandlerOnLoad" Value="false" />
   </ItemGroup>
 
@@ -34,10 +39,6 @@
   <Content Include="modicon.png" Condition="Exists('modicon.png')">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
   </Content>
-</ItemGroup>
-
-<ItemGroup>
-  <Folder Include="src\" />
 </ItemGroup>
 
 </Project>

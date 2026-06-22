@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <OutputPath>bin\$(Configuration)\Mods\mod</OutputPath>
     <Nullable>enable</Nullable>
@@ -27,6 +27,7 @@
 </ItemGroup>
 
 <ItemGroup>
+  <Folder Include="assets\vanillamoremolds\blocktypes\heavymold\" />
   <Folder Include="src\" />
 </ItemGroup>
 

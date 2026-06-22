@@ -8,6 +8,8 @@
 	"textureSizes": {
 	},
 	"textures": {
+		"other": "game:block/clay/ceramic",
+		"floor": "game:block/clay/ceramic-dark"
 	},
 	"elements": [
 		{
@@ -166,4 +168,5 @@
 				}
 			]
 		}
-	]}
+	]
+}

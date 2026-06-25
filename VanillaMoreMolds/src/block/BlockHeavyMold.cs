@@ -50,15 +50,13 @@ namespace VanillaMoreMolds
 
             if (StageIndex < 3 && isSand && hasShift)
             {
-                if (world.Side == EnumAppSide.Server)
-                    AdvanceStage(world, byPlayer, blockSel);
+                AdvanceStage(world, byPlayer, blockSel);
                 return true;
             }
 
             if (StageIndex == 3 && isIngot && hasShift)
             {
-                if (world.Side == EnumAppSide.Server)
-                    AdvanceStage(world, byPlayer, blockSel);
+                AdvanceStage(world, byPlayer, blockSel);
                 return true;
             }
 
@@ -88,18 +86,29 @@ namespace VanillaMoreMolds
             return base.OnBlockInteractStart(world, byPlayer, blockSel);
         }
 
+
+
         public override void OnBlockPlaced(IWorldAccessor world, BlockPos blockPos, ItemStack byItemStack)
         {
             base.OnBlockPlaced(world, blockPos, byItemStack);
 
-            IPlayer placer = world.NearestPlayer(blockPos.X, blockPos.Y, blockPos.Z);
-            if (placer == null) return;
-
-            float snapped = (float)(System.Math.Round(placer.Entity.Pos.Yaw / GameMath.PIHALF) * GameMath.PIHALF);
             var be = world.BlockAccessor.GetBlockEntity(blockPos) as BlockEntityHeavyMold;
             if (be == null) return;
 
-            be.MeshAngle = snapped;
+            // Si l'angle est transmis via les attributes du stack (transition de stage), on l'utilise directement
+            if (byItemStack?.Attributes?.HasAttribute("meshAngle") == true)
+            {
+                be.MeshAngle = byItemStack.Attributes.GetFloat("meshAngle");
+                if (world.Side == EnumAppSide.Server)
+                    be.MarkDirty(true);
+                return;
+            }
+
+            // Sinon, c'est une pose normale par le joueur : on calcule l'angle depuis son orientation
+            IPlayer placer = world.NearestPlayer(blockPos.X, blockPos.Y, blockPos.Z);
+            if (placer == null) return;
+
+            be.MeshAngle = (float)(System.Math.Round(placer.Entity.Pos.Yaw / GameMath.PIHALF) * GameMath.PIHALF);
 
             if (world.Side == EnumAppSide.Server)
                 be.MarkDirty(true);
@@ -109,8 +118,6 @@ namespace VanillaMoreMolds
 
         private void AdvanceStage(IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel)
         {
-            if (world.Side != EnumAppSide.Server) return;
-
             string nextStage = NextStageCodePart();
             if (nextStage == null) return;
 
@@ -120,35 +127,40 @@ namespace VanillaMoreMolds
             float meshAngle = (world.BlockAccessor.GetBlockEntity(blockSel.Position) as BlockEntityHeavyMold)?.MeshAngle ?? 0f;
 
             Block nextBlock;
-
             if (nextStage == "ingot")
-            {
                 nextBlock = world.GetBlock(new AssetLocation("vanillamoremolds:vmmheavymold-toolmold-ingot-" + color));
-            }
             else
-            {
                 nextBlock = world.GetBlock(CodeWithParts(nextStage, color));
-            }
 
             if (nextBlock == null) return;
 
-            world.BlockAccessor.SetBlock(nextBlock.BlockId, blockSel.Position);
+            ItemStack fakeStack = new ItemStack(nextBlock);
+            fakeStack.Attributes.SetFloat("meshAngle", meshAngle);
+            world.BlockAccessor.SetBlock(nextBlock.BlockId, blockSel.Position, fakeStack);
 
             if (world.BlockAccessor.GetBlockEntity(blockSel.Position) is BlockEntityHeavyMold newBe)
             {
                 newBe.MeshAngle = meshAngle;
-                newBe.MarkDirty(true);
+                if (world.Side == EnumAppSide.Server)
+                    newBe.MarkDirty(true);
             }
 
-            if (byPlayer.WorldData.CurrentGameMode != EnumGameMode.Creative)
+            if (world.Side == EnumAppSide.Server)
             {
-                ItemStack heldStack = byPlayer.InventoryManager.ActiveHotbarSlot?.Itemstack;
-                if (heldStack != null)
-                    heldStack.StackSize--;
-            }
+                if (byPlayer.WorldData.CurrentGameMode != EnumGameMode.Creative)
+                {
+                    ItemSlot slot = byPlayer.InventoryManager.ActiveHotbarSlot;
+                    if (slot?.Itemstack != null)
+                    {
+                        slot.Itemstack.StackSize--;
+                        if (slot.Itemstack.StackSize <= 0) slot.Itemstack = null;
+                        slot.MarkDirty();
+                    }
+                }
 
-            if (nextBlock.Sounds?.Place != null)
-                world.PlaySoundAt(nextBlock.Sounds.Place, blockSel.Position.X, blockSel.Position.Y, blockSel.Position.Z, 0);
+                if (nextBlock.Sounds?.Place != null)
+                    world.PlaySoundAt(nextBlock.Sounds.Place, blockSel.Position.X, blockSel.Position.Y, blockSel.Position.Z, 0);
+            }
         }
     }
 }

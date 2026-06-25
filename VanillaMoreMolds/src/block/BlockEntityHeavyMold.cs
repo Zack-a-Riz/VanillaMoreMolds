@@ -18,25 +18,35 @@ namespace VanillaMoreMolds
 
         public override void FromTreeAttributes(ITreeAttribute tree, IWorldAccessor world)
         {
+            float prevAngle = MeshAngle;
             base.FromTreeAttributes(tree, world);
             MeshAngle = tree.GetFloat("meshAngle", 0f);
 
-            if (world.Side == EnumAppSide.Client)
+            if (world.Side == EnumAppSide.Client && Api != null && Pos != null && MeshAngle != prevAngle)
             {
-                Api?.World?.BlockAccessor?.MarkBlockEntityDirty(Pos);
-                Api?.World?.BlockAccessor?.MarkBlockDirty(Pos);
+                Api.World.BlockAccessor.MarkBlockDirty(Pos);
             }
         }
 
         public override bool OnTesselation(ITerrainMeshPool mesher, ITesselatorAPI tessThreadTesselator)
         {
-            if (MeshAngle == 0f) return false;
+            float angle = MeshAngle;
+
+            if (angle == 0f && Api?.Side == EnumAppSide.Client)
+            {
+                IClientWorldAccessor clientWorld = Api.World as IClientWorldAccessor;
+                IPlayer player = clientWorld?.Player;
+                if (player?.Entity != null)
+                    angle = (float)(System.Math.Round(player.Entity.Pos.Yaw / GameMath.PIHALF) * GameMath.PIHALF);
+            }
 
             MeshData baseMesh;
             tessThreadTesselator.TesselateBlock(Block, out baseMesh);
             if (baseMesh == null) return false;
 
-            baseMesh.Rotate(new Vec3f(0.5f, 0.5f, 0.5f), 0f, MeshAngle, 0f);
+            if (angle != 0f)
+                baseMesh.Rotate(new Vec3f(0.5f, 0.5f, 0.5f), 0f, angle, 0f);
+
             mesher.AddMeshData(baseMesh);
             return true;
         }

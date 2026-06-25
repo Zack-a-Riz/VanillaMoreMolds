@@ -1,16 +1,16 @@
-{ // Heavymold
-    "code": "vmmheavymold",
-    "class": "BlockHeavyMold",
-    "entityClass": "BlockEntityHeavyMold",
+{ // HeavyMold toolmold
+    "code": "vmmheavymold-toolmold",
+    "class": "BlockToolMold",
+    "entityClass": "ToolMold",
     "behaviors": [
-        {
-            "name": "RightClickPickup"
-        }
+        { "name": "Lockable" },
+        { "name": "UnstableFalling" }
     ],
+    "entityBehaviors": [ { "name": "TemperatureSensitive" } ],
     "variantgroups": [
         {
             "code": "stage",
-            "states": [ "empty", "fill1", "fill2", "fill3" ]
+            "states": [ "ingot" ]
         },
         {
             "code": "color",
@@ -18,10 +18,10 @@
         }
     ],
     "shapebytype": {
-        "*empty*": { "base": "block/clay/mold/heavymold/heavymold-empty", "rotateY": 0 },
-        "*fill1*": { "base": "block/clay/mold/heavymold/state/heavymold-fill1", "rotateY": 0 },
-        "*fill2*": { "base": "block/clay/mold/heavymold/state/heavymold-fill2", "rotateY": 0 },
-        "*fill3*": { "base": "block/clay/mold/heavymold/state/heavymold-fill3", "rotateY": 0 }
+        "*ingot*": {
+            "base": "block/clay/mold/heavymold/state/heavymold-ingot",
+            "rotateY": 0
+        }
     },
     "textures": {
         "floor": { "base": "game:block/clay/hardened/{color}" },

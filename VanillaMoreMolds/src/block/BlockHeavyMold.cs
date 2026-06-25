@@ -12,7 +12,7 @@ namespace VanillaMoreMolds
             "fill1" => 1,
             "fill2" => 2,
             "fill3" => 3,
-            "fill" => 4,
+            "ingot" => 4,
             _ => 0
         };
 
@@ -21,7 +21,7 @@ namespace VanillaMoreMolds
             "empty" => "fill1",
             "fill1" => "fill2",
             "fill2" => "fill3",
-            "fill3" => "fill",
+            "fill3" => "ingot",
             _ => null
         };
 
@@ -58,10 +58,7 @@ namespace VanillaMoreMolds
             if (StageIndex == 3 && isIngot && hasShift)
             {
                 if (world.Side == EnumAppSide.Server)
-                {
                     AdvanceStage(world, byPlayer, blockSel);
-                    held.StackSize--;
-                }
                 return true;
             }
 
@@ -120,10 +117,28 @@ namespace VanillaMoreMolds
             Block currentBlock = world.BlockAccessor.GetBlock(blockSel.Position);
             string color = currentBlock.Variant?["color"] ?? "blue";
 
-            Block nextBlock = world.GetBlock(CodeWithParts(nextStage, color));
+            float meshAngle = (world.BlockAccessor.GetBlockEntity(blockSel.Position) as BlockEntityHeavyMold)?.MeshAngle ?? 0f;
+
+            Block nextBlock;
+
+            if (nextStage == "ingot")
+            {
+                nextBlock = world.GetBlock(new AssetLocation("vanillamoremolds:vmmheavymold-toolmold-ingot-" + color));
+            }
+            else
+            {
+                nextBlock = world.GetBlock(CodeWithParts(nextStage, color));
+            }
+
             if (nextBlock == null) return;
 
             world.BlockAccessor.SetBlock(nextBlock.BlockId, blockSel.Position);
+
+            if (world.BlockAccessor.GetBlockEntity(blockSel.Position) is BlockEntityHeavyMold newBe)
+            {
+                newBe.MeshAngle = meshAngle;
+                newBe.MarkDirty(true);
+            }
 
             if (byPlayer.WorldData.CurrentGameMode != EnumGameMode.Creative)
             {

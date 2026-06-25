@@ -13,7 +13,6 @@ namespace VanillaMoreMolds
             "fill1" => 1,
             "fill2" => 2,
             "fill3" => 3,
-            "ingot" => 4,
             _ => 0
         };
 
@@ -25,11 +24,6 @@ namespace VanillaMoreMolds
             "fill3" => "ingot",
             _ => null
         };
-
-        public override bool CanPlaceBlock(IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel, ref string failureCode)
-        {
-            return base.CanPlaceBlock(world, byPlayer, blockSel, ref failureCode);
-        }
 
         public override bool OnBlockInteractStart(IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel)
         {
@@ -66,9 +60,7 @@ namespace VanillaMoreMolds
                         activeSlot.MarkDirty();
                     }
                     else if (!byPlayer.InventoryManager.TryGiveItemstack(pickupStack))
-                    {
                         world.SpawnItemEntity(pickupStack, blockSel.Position.ToVec3d());
-                    }
 
                     world.BlockAccessor.SetBlock(0, blockSel.Position);
                 }
@@ -78,8 +70,6 @@ namespace VanillaMoreMolds
             return base.OnBlockInteractStart(world, byPlayer, blockSel);
         }
 
-
-
         public override void OnBlockPlaced(IWorldAccessor world, BlockPos blockPos, ItemStack byItemStack)
         {
             base.OnBlockPlaced(world, blockPos, byItemStack);
@@ -87,16 +77,6 @@ namespace VanillaMoreMolds
             var be = world.BlockAccessor.GetBlockEntity(blockPos) as BlockEntityHeavyMold;
             if (be == null) return;
 
-            // Si l'angle est transmis via les attributes du stack (transition de stage), on l'utilise directement
-            if (byItemStack?.Attributes?.HasAttribute("meshAngle") == true)
-            {
-                be.MeshAngle = byItemStack.Attributes.GetFloat("meshAngle");
-                if (world.Side == EnumAppSide.Server)
-                    be.MarkDirty(true);
-                return;
-            }
-
-            // Sinon, c'est une pose normale par le joueur : on calcule l'angle depuis son orientation
             IPlayer placer = world.NearestPlayer(blockPos.X, blockPos.Y, blockPos.Z);
             if (placer == null) return;
 
@@ -113,22 +93,16 @@ namespace VanillaMoreMolds
             string nextStage = NextStageCodePart();
             if (nextStage == null) return;
 
-            Block currentBlock = world.BlockAccessor.GetBlock(blockSel.Position);
-            string color = currentBlock.Variant?["color"] ?? "blue";
-
+            string color = world.BlockAccessor.GetBlock(blockSel.Position).Variant?["color"] ?? "blue";
             float meshAngle = (world.BlockAccessor.GetBlockEntity(blockSel.Position) as BlockEntityHeavyMold)?.MeshAngle ?? 0f;
 
-            Block nextBlock;
-            if (nextStage == "ingot")
-                nextBlock = world.GetBlock(new AssetLocation("vanillamoremolds:vmmheavymold-toolmold-ingot-" + color));
-            else
-                nextBlock = world.GetBlock(CodeWithParts(nextStage, color));
+            Block nextBlock = nextStage == "ingot"
+                ? world.GetBlock(new AssetLocation("vanillamoremolds:vmmheavymold-toolmold-ingot-" + color))
+                : world.GetBlock(CodeWithParts(nextStage, color));
 
             if (nextBlock == null) return;
 
-            ItemStack fakeStack = new ItemStack(nextBlock);
-            fakeStack.Attributes.SetFloat("meshAngle", meshAngle);
-            world.BlockAccessor.SetBlock(nextBlock.BlockId, blockSel.Position, fakeStack);
+            world.BlockAccessor.SetBlock(nextBlock.BlockId, blockSel.Position);
 
             if (world.BlockAccessor.GetBlockEntity(blockSel.Position) is BlockEntityHeavyMold newBe)
             {
@@ -141,8 +115,7 @@ namespace VanillaMoreMolds
                 var toolMoldBe = world.BlockAccessor.GetBlockEntity(blockSel.Position);
                 if (toolMoldBe != null)
                 {
-                    var field = toolMoldBe.GetType().GetField("MeshAngle", BindingFlags.Public | BindingFlags.Instance);
-                    field?.SetValue(toolMoldBe, meshAngle);
+                    toolMoldBe.GetType().GetField("MeshAngle", BindingFlags.Public | BindingFlags.Instance)?.SetValue(toolMoldBe, meshAngle);
                     if (world.Side == EnumAppSide.Server)
                         toolMoldBe.MarkDirty(true);
                 }

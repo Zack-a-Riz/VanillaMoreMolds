@@ -1,3 +1,4 @@
+using System.Reflection;
 using Vintagestory.API.Common;
 using Vintagestory.API.MathTools;
 #nullable disable
@@ -134,6 +135,17 @@ namespace VanillaMoreMolds
                 newBe.MeshAngle = meshAngle;
                 if (world.Side == EnumAppSide.Server)
                     newBe.MarkDirty(true);
+            }
+            else
+            {
+                var toolMoldBe = world.BlockAccessor.GetBlockEntity(blockSel.Position);
+                if (toolMoldBe != null)
+                {
+                    var field = toolMoldBe.GetType().GetField("MeshAngle", BindingFlags.Public | BindingFlags.Instance);
+                    field?.SetValue(toolMoldBe, meshAngle);
+                    if (world.Side == EnumAppSide.Server)
+                        toolMoldBe.MarkDirty(true);
+                }
             }
 
             if (world.Side == EnumAppSide.Server)

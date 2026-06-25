@@ -137,7 +137,7 @@
     "block-vmmtoolmold-fire-fired-scythehead": "Fireclay ceramic scythe blade mold",
     "block-vmmtoolmold-blue-fired-scythehead": "Dark brown ceramic scythe blade mold",
 
-    //Heavy Mold
+    //Heavy Mold Empty
     "block-vmmheavymold-empty-blue": "Blue heavy mold",
     "block-vmmheavymold-empty-fire": "Fire heavy mold",
     "block-vmmheavymold-empty-black": "Black heavy mold",
@@ -148,11 +148,49 @@
     "block-vmmheavymold-empty-red": "Red heavy mold",
     "block-vmmheavymold-empty-tan": "Tan heavy mold",
 
-    //Heavy Mold filled
+    //Heavy Mold Fill1
     "block-vmmheavymold-fill1-blue": "Partially filled blue heavy mold",
+    "block-vmmheavymold-fill1-fire": "Partially filled fire heavy mold",
+    "block-vmmheavymold-fill1-black": "Partially filled black heavy mold",
+    "block-vmmheavymold-fill1-brown": "Partially filled brown heavy mold",
+    "block-vmmheavymold-fill1-cream": "Partially filled cream heavy mold",
+    "block-vmmheavymold-fill1-gray": "Partially filled gray heavy mold",
+    "block-vmmheavymold-fill1-orange": "Partially filled orange heavy mold",
+    "block-vmmheavymold-fill1-red": "Partially filled red heavy mold",
+    "block-vmmheavymold-fill1-tan": "Partially filled tan heavy mold",
+
+    //Heavy Mold Fill2
     "block-vmmheavymold-fill2-blue": "Mostly filled blue heavy mold",
+    "block-vmmheavymold-fill2-fire": "Mostly filled fire heavy mold",
+    "block-vmmheavymold-fill2-black": "Mostly filled black heavy mold",
+    "block-vmmheavymold-fill2-brown": "Mostly filled brown heavy mold",
+    "block-vmmheavymold-fill2-cream": "Mostly filled cream heavy mold",
+    "block-vmmheavymold-fill2-gray": "Mostly filled gray heavy mold",
+    "block-vmmheavymold-fill2-orange": "Mostly filled orange heavy mold",
+    "block-vmmheavymold-fill2-red": "Mostly filled red heavy mold",
+    "block-vmmheavymold-fill2-tan": "Mostly filled tan heavy mold",
+
+    //Heavy Mold Fill3
     "block-vmmheavymold-fill3-blue": "Full blue heavy mold",
-    "block-vmmheavymold-fill-blue": "Completed blue heavy mold",
+    "block-vmmheavymold-fill3-fire": "Full fire heavy mold",
+    "block-vmmheavymold-fill3-black": "Full black heavy mold",
+    "block-vmmheavymold-fill3-brown": "Full brown heavy mold",
+    "block-vmmheavymold-fill3-cream": "Full cream heavy mold",
+    "block-vmmheavymold-fill3-gray": "Full gray heavy mold",
+    "block-vmmheavymold-fill3-orange": "Full orange heavy mold",
+    "block-vmmheavymold-fill3-red": "Full red heavy mold",
+    "block-vmmheavymold-fill3-tan": "Full tan heavy mold",
+
+    //Heavy Mold Ingot
+    "block-vmmheavymold-ingot-blue": "Blue ingot heavy mold",
+    "block-vmmheavymold-ingot-fire": "Fire ingot heavy mold",
+    "block-vmmheavymold-ingot-black": "Black ingot heavy mold",
+    "block-vmmheavymold-ingot-brown": "Brown ingot heavy mold",
+    "block-vmmheavymold-ingot-cream": "Cream ingot heavy mold",
+    "block-vmmheavymold-ingot-gray": "Gray ingot heavy mold",
+    "block-vmmheavymold-ingot-orange": "Orange ingot heavy mold",
+    "block-vmmheavymold-ingot-red": "Red ingot heavy mold",
+    "block-vmmheavymold-ingot-tan": "Tan ingot heavy mold",
 
     //Heavy Mold handbook info
     "vanillamoremolds:block-handbooktext-vanillamoremolds:vmmheavymold-*": "<strong>Heavy Mold:</strong><br>Used for holding and filling with sand.<br><br><strong>Use:</strong><br>+ Right-Click: Pick up<br>+ Shift + Right-Click with sand: Fill mold (3 stages)<br>+ Shift + Right-Click with ingot (when full): Add metal"

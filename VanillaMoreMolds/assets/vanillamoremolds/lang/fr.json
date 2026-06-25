@@ -136,4 +136,62 @@
     "block-vmmtoolmold-brown-fired-scythehead": "Moule de lame de faux en céramique brune",
     "block-vmmtoolmold-fire-fired-scythehead": "Moule de lame de faux en céramique réfractaire",
     "block-vmmtoolmold-blue-fired-scythehead": "Moule de lame de faux en céramique brun foncé",
+
+    //Heavy Mold Empty
+    "block-vmmheavymold-empty-blue": "Moule lourd bleu",
+    "block-vmmheavymold-empty-fire": "Moule lourd réfractaire",
+    "block-vmmheavymold-empty-black": "Moule lourd noir",
+    "block-vmmheavymold-empty-brown": "Moule lourd brun",
+    "block-vmmheavymold-empty-cream": "Moule lourd crème",
+    "block-vmmheavymold-empty-gray": "Moule lourd gris",
+    "block-vmmheavymold-empty-orange": "Moule lourd orange",
+    "block-vmmheavymold-empty-red": "Moule lourd rouge",
+    "block-vmmheavymold-empty-tan": "Moule lourd ocre",
+
+    //Heavy Mold Fill1
+    "block-vmmheavymold-fill1-blue": "Moule lourd bleu partiellement rempli",
+    "block-vmmheavymold-fill1-fire": "Moule lourd réfractaire partiellement rempli",
+    "block-vmmheavymold-fill1-black": "Moule lourd noir partiellement rempli",
+    "block-vmmheavymold-fill1-brown": "Moule lourd brun partiellement rempli",
+    "block-vmmheavymold-fill1-cream": "Moule lourd crème partiellement rempli",
+    "block-vmmheavymold-fill1-gray": "Moule lourd gris partiellement rempli",
+    "block-vmmheavymold-fill1-orange": "Moule lourd orange partiellement rempli",
+    "block-vmmheavymold-fill1-red": "Moule lourd rouge partiellement rempli",
+    "block-vmmheavymold-fill1-tan": "Moule lourd ocre partiellement rempli",
+
+    //Heavy Mold Fill2
+    "block-vmmheavymold-fill2-blue": "Moule lourd bleu largement rempli",
+    "block-vmmheavymold-fill2-fire": "Moule lourd réfractaire largement rempli",
+    "block-vmmheavymold-fill2-black": "Moule lourd noir largement rempli",
+    "block-vmmheavymold-fill2-brown": "Moule lourd brun largement rempli",
+    "block-vmmheavymold-fill2-cream": "Moule lourd crème largement rempli",
+    "block-vmmheavymold-fill2-gray": "Moule lourd gris largement rempli",
+    "block-vmmheavymold-fill2-orange": "Moule lourd orange largement rempli",
+    "block-vmmheavymold-fill2-red": "Moule lourd rouge largement rempli",
+    "block-vmmheavymold-fill2-tan": "Moule lourd ocre largement rempli",
+
+    //Heavy Mold Fill3
+    "block-vmmheavymold-fill3-blue": "Moule lourd bleu complet",
+    "block-vmmheavymold-fill3-fire": "Moule lourd réfractaire complet",
+    "block-vmmheavymold-fill3-black": "Moule lourd noir complet",
+    "block-vmmheavymold-fill3-brown": "Moule lourd brun complet",
+    "block-vmmheavymold-fill3-cream": "Moule lourd crème complet",
+    "block-vmmheavymold-fill3-gray": "Moule lourd gris complet",
+    "block-vmmheavymold-fill3-orange": "Moule lourd orange complet",
+    "block-vmmheavymold-fill3-red": "Moule lourd rouge complet",
+    "block-vmmheavymold-fill3-tan": "Moule lourd ocre complet",
+
+    //Heavy Mold Ingot
+    "block-vmmheavymold-ingot-blue": "Moule lourd bleu pour lingot",
+    "block-vmmheavymold-ingot-fire": "Moule lourd réfractaire pour lingot",
+    "block-vmmheavymold-ingot-black": "Moule lourd noir pour lingot",
+    "block-vmmheavymold-ingot-brown": "Moule lourd brun pour lingot",
+    "block-vmmheavymold-ingot-cream": "Moule lourd crème pour lingot",
+    "block-vmmheavymold-ingot-gray": "Moule lourd gris pour lingot",
+    "block-vmmheavymold-ingot-orange": "Moule lourd orange pour lingot",
+    "block-vmmheavymold-ingot-red": "Moule lourd rouge pour lingot",
+    "block-vmmheavymold-ingot-tan": "Moule lourd ocre pour lingot",
+
+    //Heavy Mold handbook info
+    "vanillamoremolds:block-handbooktext-vanillamoremolds:vmmheavymold-*": "<strong>Moule lourd :</strong><br>Utilisé pour contenir et remplir de sable.<br><br><strong>Utilisation :</strong><br>+ Clic droit : Ramasser<br>+ Maj + Clic droit avec sable : Remplir le moule (3 étapes)<br>+ Maj + Clic droit avec lingot (quand plein) : Ajouter du métal"
 }

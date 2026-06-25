@@ -27,16 +27,7 @@ namespace VanillaMoreMolds
 
         public override bool CanPlaceBlock(IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel, ref string failureCode)
         {
-            if (!base.CanPlaceBlock(world, byPlayer, blockSel, ref failureCode)) return false;
-
-            if (byPlayer?.WorldData?.CurrentGameMode == EnumGameMode.Creative || 
-                byPlayer?.InventoryManager.ActiveHotbarSlot?.Itemstack?.Block?.Code.Path.Contains("vmmheavymold") == true)
-            {
-                failureCode = "";
-                return true;
-            }
-
-            return true;
+            return base.CanPlaceBlock(world, byPlayer, blockSel, ref failureCode);
         }
 
         public override bool OnBlockInteractStart(IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel)
@@ -164,5 +155,3 @@ namespace VanillaMoreMolds
         }
     }
 }
-
-

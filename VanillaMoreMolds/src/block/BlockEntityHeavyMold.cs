@@ -30,22 +30,12 @@ namespace VanillaMoreMolds
 
         public override bool OnTesselation(ITerrainMeshPool mesher, ITesselatorAPI tessThreadTesselator)
         {
-            float angle = MeshAngle;
-
-            if (angle == 0f && Api?.Side == EnumAppSide.Client)
-            {
-                IClientWorldAccessor clientWorld = Api.World as IClientWorldAccessor;
-                IPlayer player = clientWorld?.Player;
-                if (player?.Entity != null)
-                    angle = (float)(System.Math.Round(player.Entity.Pos.Yaw / GameMath.PIHALF) * GameMath.PIHALF);
-            }
-
             MeshData baseMesh;
             tessThreadTesselator.TesselateBlock(Block, out baseMesh);
             if (baseMesh == null) return false;
 
-            if (angle != 0f)
-                baseMesh.Rotate(new Vec3f(0.5f, 0.5f, 0.5f), 0f, angle, 0f);
+            if (MeshAngle != 0f)
+                baseMesh.Rotate(new Vec3f(0.5f, 0.5f, 0.5f), 0f, MeshAngle, 0f);
 
             mesher.AddMeshData(baseMesh);
             return true;

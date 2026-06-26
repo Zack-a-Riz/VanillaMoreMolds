@@ -31,18 +31,19 @@ namespace VanillaMoreMolds
 
             ItemStack held = byPlayer?.InventoryManager?.ActiveHotbarSlot?.Itemstack;
             bool hasShift = byPlayer?.Entity?.Controls?.ShiftKey == true;
-            bool isSand = held != null && (held.Block?.Code?.Path?.Contains("sand") == true || held.Item?.Code?.Path?.Contains("sand") == true);
+            bool isSand = held?.Block?.Code?.Path?.StartsWith("sand-") == true;
             bool isIngot = held?.Item?.Code?.Path?.Contains("ingot") == true;
 
             if (StageIndex < 3 && isSand && hasShift)
             {
-                AdvanceStage(world, byPlayer, blockSel);
+                string sandRock = held.Block.Code.Path.Substring("sand-".Length);
+                AdvanceStage(world, byPlayer, blockSel, sandRock, consumeItem: true);
                 return true;
             }
 
             if (StageIndex == 3 && isIngot && hasShift)
             {
-                AdvanceStage(world, byPlayer, blockSel);
+                AdvanceStage(world, byPlayer, blockSel, sandRock: null, consumeItem: false);
                 return true;
             }
 
@@ -88,42 +89,50 @@ namespace VanillaMoreMolds
                 world.BlockAccessor.MarkBlockEntityDirty(blockPos);
         }
 
-        private void AdvanceStage(IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel)
+        private void AdvanceStage(IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel, string sandRock, bool consumeItem)
         {
             string nextStage = NextStageCodePart();
             if (nextStage == null) return;
 
             string color = world.BlockAccessor.GetBlock(blockSel.Position).Variant?["color"] ?? "blue";
-            float meshAngle = (world.BlockAccessor.GetBlockEntity(blockSel.Position) as BlockEntityHeavyMold)?.MeshAngle ?? 0f;
+            var currentBe = world.BlockAccessor.GetBlockEntity(blockSel.Position) as BlockEntityHeavyMold;
+            float meshAngle = currentBe?.MeshAngle ?? 0f;
+            string existingSandType = currentBe?.SandType;
+            string sandType = sandRock ?? existingSandType;
 
             Block nextBlock = nextStage == "ingot"
-                ? world.GetBlock(new AssetLocation("vanillamoremolds:vmmheavymold-toolmold-ingot-" + color))
+                ? world.GetBlock(new AssetLocation("vanillamoremolds:vmmheavymold-toolmold-ingot-" + color + "-fired-ingot"))
                 : world.GetBlock(CodeWithParts(nextStage, color));
 
             if (nextBlock == null) return;
 
+            // Pré-injecte sandType pour le behavior côté client (évite le flash de texture)
+            if (nextStage == "ingot" && !string.IsNullOrEmpty(sandType))
+                BEBehaviorSandTexture.PendingSandType[blockSel.Position.Copy()] = sandType;
+
             world.BlockAccessor.SetBlock(nextBlock.BlockId, blockSel.Position);
 
-            if (world.BlockAccessor.GetBlockEntity(blockSel.Position) is BlockEntityHeavyMold newBe)
+            var newEntity = world.BlockAccessor.GetBlockEntity(blockSel.Position);
+            if (newEntity is BlockEntityHeavyMold newBe)
             {
                 newBe.MeshAngle = meshAngle;
+                newBe.SandType = sandType;
                 if (world.Side == EnumAppSide.Server)
                     newBe.MarkDirty(true);
             }
-            else
+            else if (newEntity != null)
             {
-                var toolMoldBe = world.BlockAccessor.GetBlockEntity(blockSel.Position);
-                if (toolMoldBe != null)
-                {
-                    toolMoldBe.GetType().GetField("MeshAngle", BindingFlags.Public | BindingFlags.Instance)?.SetValue(toolMoldBe, meshAngle);
-                    if (world.Side == EnumAppSide.Server)
-                        toolMoldBe.MarkDirty(true);
-                }
+                newEntity.GetType().GetField("MeshAngle", BindingFlags.Public | BindingFlags.Instance)?.SetValue(newEntity, meshAngle);
+                var sandBehavior = newEntity.GetBehavior<BEBehaviorSandTexture>();
+                if (sandBehavior != null && !string.IsNullOrEmpty(sandType))
+                    sandBehavior.SetSandType(sandType);
+                if (world.Side == EnumAppSide.Server)
+                    newEntity.MarkDirty(true);
             }
 
             if (world.Side == EnumAppSide.Server)
             {
-                if (byPlayer.WorldData.CurrentGameMode != EnumGameMode.Creative)
+                if (consumeItem && byPlayer.WorldData.CurrentGameMode != EnumGameMode.Creative)
                 {
                     ItemSlot slot = byPlayer.InventoryManager.ActiveHotbarSlot;
                     if (slot?.Itemstack != null)

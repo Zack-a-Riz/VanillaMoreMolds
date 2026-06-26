@@ -6,7 +6,7 @@
         { "name": "Lockable" },
         { "name": "UnstableFalling" }
     ],
-    "entityBehaviors": [ { "name": "TemperatureSensitive" } ],
+    "entityBehaviors": [{ "name": "TemperatureSensitive" }, { "name": "BEBehaviorSandTexture" }],
     "variantgroups": [
         {
             "code": "stage",
@@ -15,7 +15,9 @@
         {
             "code": "color",
             "states": [ "blue", "fire", "black", "brown", "cream", "gray", "orange", "red", "tan" ]
-        }
+        },
+        { "code": "materialtype", "states": [ "fired" ] },
+        { "code": "tooltype", "states": [ "ingot" ] }
     ],
     "shapebytype": {
         "*ingot*": {
@@ -48,7 +50,8 @@
             }
         },
         "handbook": {
-            "groupBy": [ "{color}-{materialtype}-{tooltype}" ]
+            "groupBy": [ "{color}-{materialtype}-{tooltype}" ],
+            "exclude": true
         }
     },
     "blockmaterial": "Ceramic",

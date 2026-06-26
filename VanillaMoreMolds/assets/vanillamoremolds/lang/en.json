@@ -229,15 +229,15 @@
     // Heavy Mold - Ingot
     // =====================
 
-    "block-vmmheavymold-toolmold-ingot-blue": "Earthy brown heavy ingot mold",
-    "block-vmmheavymold-toolmold-ingot-black": "Black heavy ingot mold",
-    "block-vmmheavymold-toolmold-ingot-brown": "Brown heavy ingot mold",
-    "block-vmmheavymold-toolmold-ingot-cream": "Cream heavy ingot mold",
-    "block-vmmheavymold-toolmold-ingot-fire": "Fireclay heavy ingot mold",
-    "block-vmmheavymold-toolmold-ingot-gray": "Gray heavy ingot mold",
-    "block-vmmheavymold-toolmold-ingot-orange": "Orange heavy ingot mold",
-    "block-vmmheavymold-toolmold-ingot-red": "Red heavy ingot mold",
-    "block-vmmheavymold-toolmold-ingot-tan": "Tan heavy ingot mold",
+    "block-vmmheavymold-toolmold-ingot-blue-fired-ingot": "Earthy brown heavy ingot mold",
+    "block-vmmheavymold-toolmold-ingot-black-fired-ingot": "Black heavy ingot mold",
+    "block-vmmheavymold-toolmold-ingot-brown-fired-ingot": "Brown heavy ingot mold",
+    "block-vmmheavymold-toolmold-ingot-cream-fired-ingot": "Cream heavy ingot mold",
+    "block-vmmheavymold-toolmold-ingot-fire-fired-ingot": "Fireclay heavy ingot mold",
+    "block-vmmheavymold-toolmold-ingot-gray-fired-ingot": "Gray heavy ingot mold",
+    "block-vmmheavymold-toolmold-ingot-orange-fired-ingot": "Orange heavy ingot mold",
+    "block-vmmheavymold-toolmold-ingot-red-fired-ingot": "Red heavy ingot mold",
+    "block-vmmheavymold-toolmold-ingot-tan-fired-ingot": "Tan heavy ingot mold",
 
     //Heavy Mold handbook info
     "vanillamoremolds:block-handbooktext-vanillamoremolds:vmmheavymold-*": "<strong>Heavy Mold:</strong><br>Used for holding and filling with sand.<br><br><strong>Use:</strong><br>+ Right-Click: Pick up<br>+ Shift + Right-Click with sand: Fill mold (3 stages)<br>+ Shift + Right-Click with ingot (when full): Add metal"

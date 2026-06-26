@@ -8,8 +8,10 @@ namespace VanillaMoreMolds
 {
     public class BEHeavyMold : BlockEntity
     {
-        public float MeshAngle { get; set; } = 0f;
-        public string SandType { get; set; } = null;
+        private static readonly Vec3f RotationPivot = new Vec3f(0.5f, 0.5f, 0.5f);
+
+        public float MeshAngle { get; set; }
+        public string SandType { get; set; }
 
         public override void ToTreeAttributes(ITreeAttribute tree)
         {
@@ -38,20 +40,17 @@ namespace VanillaMoreMolds
         {
             CompositeTexture prevSandTex = null;
 
-            if (!string.IsNullOrEmpty(SandType) && Block.Textures.ContainsKey("sand"))
+            if (!string.IsNullOrEmpty(SandType) && Block.Textures.ContainsKey("sand")
+                && Api is ICoreClientAPI capi)
             {
-                ICoreClientAPI capi = Api as ICoreClientAPI;
-                if (capi != null)
-                {
-                    prevSandTex = Block.Textures["sand"];
-                    AssetLocation texLoc = new AssetLocation("game", "block/stone/sand/" + SandType);
+                prevSandTex = Block.Textures["sand"];
+                AssetLocation texLoc = new AssetLocation("game", "block/stone/sand/" + SandType);
 
-                    capi.BlockTextureAtlas.GetOrInsertTexture(texLoc, out int texSubId, out _);
+                capi.BlockTextureAtlas.GetOrInsertTexture(texLoc, out int texSubId, out _);
 
-                    CompositeTexture newTex = new CompositeTexture(texLoc);
-                    newTex.Baked = new BakedCompositeTexture { BakedName = texLoc, TextureSubId = texSubId };
-                    Block.Textures["sand"] = newTex;
-                }
+                CompositeTexture newTex = new CompositeTexture(texLoc);
+                newTex.Baked = new BakedCompositeTexture { BakedName = texLoc, TextureSubId = texSubId };
+                Block.Textures["sand"] = newTex;
             }
 
             try
@@ -61,7 +60,7 @@ namespace VanillaMoreMolds
                 if (baseMesh == null) return false;
 
                 if (MeshAngle != 0f)
-                    baseMesh.Rotate(new Vec3f(0.5f, 0.5f, 0.5f), 0f, MeshAngle, 0f);
+                    baseMesh.Rotate(RotationPivot, 0f, MeshAngle, 0f);
 
                 mesher.AddMeshData(baseMesh);
                 return true;

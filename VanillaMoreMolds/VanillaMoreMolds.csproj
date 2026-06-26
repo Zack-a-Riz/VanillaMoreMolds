@@ -16,7 +16,6 @@
   <ItemGroup>
     <Compile Include="src\Block\BlockHeavyMold.cs" />
     <Compile Include="src\BlockEntity\BEHeavyMold.cs" />
-    <Compile Include="src\BlockEntity\BEHeavyMoldIngot.cs" />
     <Compile Include="src\BlockEntityBehavior\BEBehaviorSandTexture.cs" />
   </ItemGroup>
 

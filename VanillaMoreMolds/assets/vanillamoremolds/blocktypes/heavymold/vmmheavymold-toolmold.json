@@ -6,7 +6,7 @@
         { "name": "Lockable" },
         { "name": "UnstableFalling" }
     ],
-    "entityBehaviors": [ { "name": "BEBehaviorSandTexture" }],
+    "entityBehaviors": [ { "name": "BEBehaviorSandTexture" } ],
     "variantgroups": [
         {
             "code": "stage",
@@ -16,8 +16,14 @@
             "code": "color",
             "states": [ "blue", "fire", "black", "brown", "cream", "gray", "orange", "red", "tan" ]
         },
-        { "code": "materialtype", "states": [ "fired" ] },
-        { "code": "tooltype", "states": [ "ingot" ] }
+        {
+            "code": "materialtype",
+            "states": [ "fired" ]
+        },
+        {
+            "code": "tooltype",
+            "states": [ "ingot" ]
+        }
     ],
     "shapebytype": {
         "*ingot*": {
@@ -52,6 +58,26 @@
         "handbook": {
             "groupBy": [ "{color}-{materialtype}-{tooltype}" ],
             "exclude": true
+        }
+    },
+    "attributesByType": {
+        "vmmheavymold-toolmold-ingot-*": {
+            "requiredUnits": 600,
+            "fillHeight": 7,
+			"fillQuadsByLevel": [
+				{ "x1": 3, "z1": 3, "x2": 13, "z2": 13 },
+				{ "x1": 3, "z1": 3, "x2": 13, "z2": 13 },
+				{ "x1": 3, "z1": 3, "x2": 13, "z2": 13 },
+				{ "x1": 3, "z1": 3, "x2": 13, "z2": 13 },
+				{ "x1": 3, "z1": 3, "x2": 13, "z2": 13 },
+				{ "x1": 3, "z1": 3, "x2": 13, "z2": 13 },
+				{ "x1": 3, "z1": 3, "x2": 13, "z2": 13 }
+                ],
+            "drop": {
+                "type": "item",
+                "code": "game:ingot-{metal}",
+                "quantity": 6
+            }
         }
     },
     "blockmaterial": "Ceramic",

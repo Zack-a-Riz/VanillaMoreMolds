@@ -13,8 +13,8 @@ namespace VanillaMoreMolds
     {
         internal static readonly Dictionary<BlockPos, string> PendingSandType = new();
 
-        private string sandType = null;
-        private string appliedSandType = null;
+        private string sandType;
+        private string appliedSandType;
         private readonly MethodInfo genMeshesMethod;
 
         public BEBehaviorSandTexture(BlockEntity be) : base(be)
@@ -23,7 +23,7 @@ namespace VanillaMoreMolds
                 .GetMethod("GenMeshes", BindingFlags.NonPublic | BindingFlags.Instance);
         }
 
-        public void SetSandType(string type) { sandType = type; }
+        public void SetSandType(string type) => sandType = type;
 
         public override void ToTreeAttributes(ITreeAttribute tree)
         {
@@ -36,8 +36,8 @@ namespace VanillaMoreMolds
             base.FromTreeAttributes(tree, world);
             sandType = tree.GetString("sandType", null);
 
-            if (world.Side == EnumAppSide.Client && Api != null)
-                ApplySandTexture(Api as ICoreClientAPI);
+            if (world.Side == EnumAppSide.Client && Api is ICoreClientAPI capi)
+                ApplySandTexture(capi);
         }
 
         public override void Initialize(ICoreAPI api, JsonObject properties)
@@ -51,8 +51,8 @@ namespace VanillaMoreMolds
 
             base.Initialize(api, properties);
 
-            if (api.Side == EnumAppSide.Client)
-                ApplySandTexture(api as ICoreClientAPI);
+            if (api.Side == EnumAppSide.Client && api is ICoreClientAPI capi)
+                ApplySandTexture(capi);
         }
 
         private void ApplySandTexture(ICoreClientAPI capi)

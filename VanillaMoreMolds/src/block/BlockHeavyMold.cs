@@ -7,16 +7,9 @@ namespace VanillaMoreMolds
 {
     public class BlockHeavyMold : Block
     {
-        private int StageIndex => (Variant?["stage"] ?? "empty") switch
-        {
-            "empty" => 0,
-            "fill1" => 1,
-            "fill2" => 2,
-            "fill3" => 3,
-            _ => 0
-        };
+        private string Stage => Variant?["stage"] ?? "empty";
 
-        private string NextStageCodePart() => (Variant?["stage"] ?? "empty") switch
+        private string NextStageCodePart() => Stage switch
         {
             "empty" => "fill1",
             "fill1" => "fill2",
@@ -34,14 +27,14 @@ namespace VanillaMoreMolds
             bool isSand = held?.Block?.Code?.Path?.StartsWith("sand-") == true;
             bool isIngot = held?.Item?.Code?.Path?.Contains("ingot") == true;
 
-            if (StageIndex < 3 && isSand && hasShift)
+            if (Stage != "fill3" && Stage != "ingot" && isSand && hasShift)
             {
                 string sandRock = held.Block.Code.Path.Substring("sand-".Length);
                 AdvanceStage(world, byPlayer, blockSel, sandRock, consumeItem: true);
                 return true;
             }
 
-            if (StageIndex == 3 && isIngot && hasShift)
+            if (Stage == "fill3" && isIngot && hasShift)
             {
                 AdvanceStage(world, byPlayer, blockSel, sandRock: null, consumeItem: false);
                 return true;

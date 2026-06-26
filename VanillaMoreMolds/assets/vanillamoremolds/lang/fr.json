@@ -240,5 +240,5 @@
     "block-vmmheavymold-toolmold-ingot-tan-fired-ingot": "Moule lourd à lingots en céramique ocre",
 
     //Heavy Mold handbook info
-    "vanillamoremolds:block-handbooktext-vanillamoremolds:vmmheavymold-*": "<strong>Moule lourd :</strong><br>Utilisé pour contenir et remplir de sable.<br><br><strong>Utilisation :</strong><br>+ Clic droit : Ramasser<br>+ Maj + Clic droit avec sable : Remplir le moule (3 étapes)<br>+ Maj + Clic droit avec lingot (quand plein) : Ajouter du métal"
+    "vanillamoremolds:block-handbooktext-vanillamoremolds:vmmheavymold-*": "<strong>Moule lourd :</strong><br>Conçu pour la production de masse de lingots. Son contenant résiste à l'eau et doit être rempli de sable avant de créer une empreinte à partir d'un lingot existant.<br><br><strong>Utilisation :</strong><br>Ajoutez les différents ingrédients au moule: Shift + Clic droit"
 }

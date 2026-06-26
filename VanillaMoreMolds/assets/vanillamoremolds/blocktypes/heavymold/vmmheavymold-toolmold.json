@@ -6,7 +6,7 @@
         { "name": "Lockable" },
         { "name": "UnstableFalling" }
     ],
-    "entityBehaviors": [{ "name": "TemperatureSensitive" }, { "name": "BEBehaviorSandTexture" }],
+    "entityBehaviors": [ { "name": "BEBehaviorSandTexture" }],
     "variantgroups": [
         {
             "code": "stage",

@@ -6,7 +6,7 @@ using Vintagestory.API.MathTools;
 
 namespace VanillaMoreMolds
 {
-    public class BlockEntityHeavyMold : BlockEntity
+    public class BEHeavyMold : BlockEntity
     {
         public float MeshAngle { get; set; } = 0f;
         public string SandType { get; set; } = null;
@@ -74,5 +74,3 @@ namespace VanillaMoreMolds
         }
     }
 }
-
-

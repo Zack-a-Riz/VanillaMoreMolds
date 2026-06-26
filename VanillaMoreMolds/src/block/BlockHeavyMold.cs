@@ -1,4 +1,4 @@
-using System.Reflection;
+﻿using System.Reflection;
 using Vintagestory.API.Common;
 using Vintagestory.API.MathTools;
 #nullable disable
@@ -75,7 +75,7 @@ namespace VanillaMoreMolds
         {
             base.OnBlockPlaced(world, blockPos, byItemStack);
 
-            var be = world.BlockAccessor.GetBlockEntity(blockPos) as BlockEntityHeavyMold;
+            var be = world.BlockAccessor.GetBlockEntity(blockPos) as BEHeavyMold;
             if (be == null) return;
 
             IPlayer placer = world.NearestPlayer(blockPos.X, blockPos.Y, blockPos.Z);
@@ -95,7 +95,7 @@ namespace VanillaMoreMolds
             if (nextStage == null) return;
 
             string color = world.BlockAccessor.GetBlock(blockSel.Position).Variant?["color"] ?? "blue";
-            var currentBe = world.BlockAccessor.GetBlockEntity(blockSel.Position) as BlockEntityHeavyMold;
+            var currentBe = world.BlockAccessor.GetBlockEntity(blockSel.Position) as BEHeavyMold;
             float meshAngle = currentBe?.MeshAngle ?? 0f;
             string existingSandType = currentBe?.SandType;
             string sandType = sandRock ?? existingSandType;
@@ -106,14 +106,13 @@ namespace VanillaMoreMolds
 
             if (nextBlock == null) return;
 
-            // Pré-injecte sandType pour le behavior côté client (évite le flash de texture)
             if (nextStage == "ingot" && !string.IsNullOrEmpty(sandType))
                 BEBehaviorSandTexture.PendingSandType[blockSel.Position.Copy()] = sandType;
 
             world.BlockAccessor.SetBlock(nextBlock.BlockId, blockSel.Position);
 
             var newEntity = world.BlockAccessor.GetBlockEntity(blockSel.Position);
-            if (newEntity is BlockEntityHeavyMold newBe)
+            if (newEntity is BEHeavyMold newBe)
             {
                 newBe.MeshAngle = meshAngle;
                 newBe.SandType = sandType;

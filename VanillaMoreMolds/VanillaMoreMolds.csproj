@@ -14,10 +14,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Include="src\block\BEBehaviorSandTexture.cs" />
-    <Compile Include="src\block\BlockEntityHeavyMold.cs" />
-    <Compile Include="src\block\BlockEntityHeavyMoldIngot.cs" />
-    <Compile Include="src\block\BlockHeavyMold.cs" />
+    <Compile Include="src\Block\BlockHeavyMold.cs" />
+    <Compile Include="src\BlockEntity\BEHeavyMold.cs" />
+    <Compile Include="src\BlockEntity\BEHeavyMoldIngot.cs" />
+    <Compile Include="src\BlockEntityBehavior\BEBehaviorSandTexture.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -46,6 +46,7 @@
 <ItemGroup>
   <Folder Include="src\BlockBehavior\" />
   <Folder Include="src\BlockEntity\" />
+  <Folder Include="src\BlockEntityBehavior\" />
 </ItemGroup>
 
 </Project>

@@ -1,7 +1,7 @@
 { // Heavymold
     "code": "vmmheavymold",
     "class": "BlockHeavyMold",
-    "entityClass": "BlockEntityHeavyMold",
+    "entityClass": "BEHeavyMold",
     "behaviors": [
         {
             "name": "RightClickPickup"

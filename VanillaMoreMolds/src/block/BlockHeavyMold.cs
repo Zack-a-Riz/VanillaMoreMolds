@@ -34,13 +34,13 @@ namespace VanillaMoreMolds
                 return true;
             }
 
-            if (Stage == "fill3" && isIngot && hasShift)
+            if (Stage == "fill3" && isIngot && hasShift && (VanillaMoreMoldsConfig.Current?.IsHeavyMoldIngotEnabled ?? true))
             {
                 AdvanceStage(world, byPlayer, blockSel, "ingot", sandRock: null, consumeItem: false);
                 return true;
             }
 
-            if (Stage == "fill3" && isPlate && hasShift)
+            if (Stage == "fill3" && isPlate && hasShift && (VanillaMoreMoldsConfig.Current?.IsHeavyMoldPlateEnabled ?? true))
             {
                 AdvanceStage(world, byPlayer, blockSel, "plate", sandRock: null, consumeItem: false);
                 return true;

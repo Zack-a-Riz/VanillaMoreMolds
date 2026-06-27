@@ -1,0 +1,44 @@
+{
+    //▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
+
+    //                            === Vanilla More Molds : Configuration File ===
+
+
+    //▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
+
+    //                   Hi, I'm Zack! This is the configuration file for VanillaMoreMolds.
+    //  The default settings are designed to keep the game balanced and avoid making blacksmithing obsolete.
+    //                      Feel free to change these settings to suit your preferences, 
+    //      but I recommend keeping the defaults if you want to preserve the intended gameplay balance.
+    //            This is a very early version of the configuration file, so it may evolve over time.
+
+    //▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
+
+    // Configuration:
+
+    // === Vanilla More Molds : Additional Vanilla-Style Molds ===
+
+    "EnableVMMToolMolds": true, // Default: true
+    // If "EnableVMMToolMolds" is set to false, the individual options below are ignored.
+
+    "EnableArrowheadMold": false, // Default: false
+    "EnableHoopMold": true, // Default: true
+    "EnableKnifeBladeMold": false, // Default: false
+    "EnableNailMold": true, // Default: true
+    "EnablePlateMold": true, // Default: true
+    "EnableSawBladeMold": false, // Default: false
+    "EnableScytheHeadMold": false, // Default: false
+    "EnableSpearHeadMold": false, // Default: false
+
+    // === Vanilla More Molds : Heavy Molds ===
+
+    "EnableVMMHeavyMold": true, // Default: true
+    // If "EnableVMMHeavyMold" is set to false, the individual options below are ignored.
+
+    "EnableHeavyMoldIngot": true, // Default: true
+    "EnableHeavyMoldPlate": true // Default: true
+
+    // WARNING //
+    // Don't forget to restart your world after modifying this configuration file for the changes to take effect.
+    // WARNING //
+}

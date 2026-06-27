@@ -17,6 +17,7 @@
     <Compile Include="src\Block\BlockHeavyMold.cs" />
     <Compile Include="src\BlockEntity\BEHeavyMold.cs" />
     <Compile Include="src\BlockEntityBehavior\BEBehaviorSandTexture.cs" />
+    <Compile Include="src\System\VanillaMoreMoldsConfig.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -26,6 +27,10 @@
   <ItemGroup>
     <Reference Include="VintagestoryAPI">
       <HintPath>$(VINTAGE_STORY)/VintagestoryAPI.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>$(APPDATA)/Vintagestory/Lib/Newtonsoft.Json.dll</HintPath>
       <Private>false</Private>
     </Reference>
   </ItemGroup>
@@ -43,6 +48,7 @@
 </ItemGroup>
 
 <ItemGroup>
+  <Folder Include="assets\ModConfig\" />
   <Folder Include="src\BlockBehavior\" />
   <Folder Include="src\BlockEntity\" />
   <Folder Include="src\BlockEntityBehavior\" />

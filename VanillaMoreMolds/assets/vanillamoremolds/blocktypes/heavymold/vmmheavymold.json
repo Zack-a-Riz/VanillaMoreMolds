@@ -48,7 +48,7 @@
             }
         },
         "handbook": {
-            "groupBy": [ "{color}-{materialtype}-{tooltype}" ]
+            "groupBy": [ "{color}" ]
         }
     },
     "blockmaterial": "Ceramic",

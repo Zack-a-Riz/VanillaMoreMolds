@@ -56,8 +56,7 @@
             }
         },
         "handbook": {
-            "groupBy": [ "{color}-{materialtype}-{tooltype}" ],
-            "exclude": true
+            "groupBy": [ "{color}" ]
         }
     },
     "attributesByType": {

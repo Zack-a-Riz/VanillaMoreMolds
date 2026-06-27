@@ -28,7 +28,7 @@
         "metal": [ "copper", "blackbronze", "tinbronze", "bismuthbronze", "iron", "silver", "gold", "meteoriciron", "steel", "electrum" ],
         "color": [ "blue", "fire", "black", "brown", "cream", "gray", "orange", "red", "tan" ]
     },
-    "name": "test1",
+    "name": "Empty Heavy Mold",
     "width": 3,
     "height": 3,
     "output": {

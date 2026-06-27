@@ -229,16 +229,30 @@
     // Heavy Mold - Ingot
     // =====================
 
-    "block-vmmheavymold-toolmold-ingot-blue-fired-ingot": "Earthy brown heavy ingot mold",
-    "block-vmmheavymold-toolmold-ingot-black-fired-ingot": "Black heavy ingot mold",
-    "block-vmmheavymold-toolmold-ingot-brown-fired-ingot": "Brown heavy ingot mold",
-    "block-vmmheavymold-toolmold-ingot-cream-fired-ingot": "Cream heavy ingot mold",
-    "block-vmmheavymold-toolmold-ingot-fire-fired-ingot": "Fireclay heavy ingot mold",
-    "block-vmmheavymold-toolmold-ingot-gray-fired-ingot": "Gray heavy ingot mold",
-    "block-vmmheavymold-toolmold-ingot-orange-fired-ingot": "Orange heavy ingot mold",
-    "block-vmmheavymold-toolmold-ingot-red-fired-ingot": "Red heavy ingot mold",
-    "block-vmmheavymold-toolmold-ingot-tan-fired-ingot": "Tan heavy ingot mold",
+    "block-vmmheavymold-toolmold-complet-blue-fired-ingot": "Earthy brown heavy ingot mold",
+    "block-vmmheavymold-toolmold-complet-black-fired-ingot": "Black heavy ingot mold",
+    "block-vmmheavymold-toolmold-complet-brown-fired-ingot": "Brown heavy ingot mold",
+    "block-vmmheavymold-toolmold-complet-cream-fired-ingot": "Cream heavy ingot mold",
+    "block-vmmheavymold-toolmold-complet-fire-fired-ingot": "Fireclay heavy ingot mold",
+    "block-vmmheavymold-toolmold-complet-gray-fired-ingot": "Gray heavy ingot mold",
+    "block-vmmheavymold-toolmold-complet-orange-fired-ingot": "Orange heavy ingot mold",
+    "block-vmmheavymold-toolmold-complet-red-fired-ingot": "Red heavy ingot mold",
+    "block-vmmheavymold-toolmold-complet-tan-fired-ingot": "Tan heavy ingot mold",
+
+    // =====================
+    // Heavy Mold - Plate
+    // =====================
+
+    "block-vmmheavymold-toolmold-complet-blue-fired-plate": "Earthy brown heavy plate mold",
+    "block-vmmheavymold-toolmold-complet-black-fired-plate": "Black heavy plate mold",
+    "block-vmmheavymold-toolmold-complet-brown-fired-plate": "Brown heavy plate mold",
+    "block-vmmheavymold-toolmold-complet-cream-fired-plate": "Cream heavy plate mold",
+    "block-vmmheavymold-toolmold-complet-fire-fired-plate": "Fireclay heavy plate mold",
+    "block-vmmheavymold-toolmold-complet-gray-fired-plate": "Gray heavy plate mold",
+    "block-vmmheavymold-toolmold-complet-orange-fired-plate": "Orange heavy plate mold",
+    "block-vmmheavymold-toolmold-complet-red-fired-plate": "Red heavy plate mold",
+    "block-vmmheavymold-toolmold-complet-tan-fired-plate": "Tan heavy plate mold",
 
     //Heavy Mold handbook info
-    "vanillamoremolds:block-handbooktext-vanillamoremolds:vmmheavymold-*": "<strong>Heavy Mold:</strong><br>Designed for the mass production of ingots. Its container is water-resistant and must be filled with sand before creating an imprint from an existing ingot.<br><br><strong>Usage:</strong><br>Add the required ingredients to the mold: Shift + Right-click"
+    "vanillamoremolds:block-handbooktext-vanillamoremolds:vmmheavymold-*": "<strong>Heavy Mold:</strong><br>Designed for the mass production of ingots and metal plates. Its container is water-resistant and must be filled with sand before creating an imprint.<br><br><strong>Usage:</strong><br>Fill with sand: Shift + Right-click with sand<br>Create ingot mold: Shift + Right-click with an ingot<br>Create plate mold: Shift + Right-click with a metal plate"
 }

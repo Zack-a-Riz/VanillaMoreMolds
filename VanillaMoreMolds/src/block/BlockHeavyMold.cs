@@ -14,7 +14,6 @@ namespace VanillaMoreMolds
             "empty" => "fill1",
             "fill1" => "fill2",
             "fill2" => "fill3",
-            "fill3" => "ingot",
             _ => null
         };
 
@@ -26,17 +25,24 @@ namespace VanillaMoreMolds
             bool hasShift = byPlayer?.Entity?.Controls?.ShiftKey == true;
             bool isSand = held?.Block?.Code?.Path?.StartsWith("sand-") == true;
             bool isIngot = held?.Item?.Code?.Path?.Contains("ingot") == true;
+            bool isPlate = held?.Item?.Code?.Path?.StartsWith("metalplate-") == true;
 
-            if (Stage != "fill3" && Stage != "ingot" && isSand && hasShift)
+            if (Stage != "fill3" && isSand && hasShift)
             {
                 string sandRock = held.Block.Code.Path.Substring("sand-".Length);
-                AdvanceStage(world, byPlayer, blockSel, sandRock, consumeItem: true);
+                AdvanceStage(world, byPlayer, blockSel, NextStageCodePart(), sandRock, consumeItem: true);
                 return true;
             }
 
             if (Stage == "fill3" && isIngot && hasShift)
             {
-                AdvanceStage(world, byPlayer, blockSel, sandRock: null, consumeItem: false);
+                AdvanceStage(world, byPlayer, blockSel, "ingot", sandRock: null, consumeItem: false);
+                return true;
+            }
+
+            if (Stage == "fill3" && isPlate && hasShift)
+            {
+                AdvanceStage(world, byPlayer, blockSel, "plate", sandRock: null, consumeItem: false);
                 return true;
             }
 
@@ -82,9 +88,8 @@ namespace VanillaMoreMolds
                 world.BlockAccessor.MarkBlockEntityDirty(blockPos);
         }
 
-        private void AdvanceStage(IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel, string sandRock, bool consumeItem)
+        private void AdvanceStage(IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel, string nextStage, string sandRock, bool consumeItem)
         {
-            string nextStage = NextStageCodePart();
             if (nextStage == null) return;
 
             string color = world.BlockAccessor.GetBlock(blockSel.Position).Variant?["color"] ?? "blue";
@@ -93,13 +98,13 @@ namespace VanillaMoreMolds
             string existingSandType = currentBe?.SandType;
             string sandType = sandRock ?? existingSandType;
 
-            Block nextBlock = nextStage == "ingot"
-                ? world.GetBlock(new AssetLocation("vanillamoremolds:vmmheavymold-toolmold-ingot-" + color + "-fired-ingot"))
+            Block nextBlock = (nextStage == "ingot" || nextStage == "plate")
+                ? world.GetBlock(new AssetLocation("vanillamoremolds:vmmheavymold-toolmold-complet-" + color + "-fired-" + nextStage))
                 : world.GetBlock(CodeWithParts(nextStage, color));
 
             if (nextBlock == null) return;
 
-            if (nextStage == "ingot" && !string.IsNullOrEmpty(sandType))
+            if ((nextStage == "ingot" || nextStage == "plate") && !string.IsNullOrEmpty(sandType))
                 BEBehaviorSandTexture.PendingSandType[blockSel.Position.Copy()] = sandType;
 
             world.BlockAccessor.SetBlock(nextBlock.BlockId, blockSel.Position);

@@ -10,7 +10,7 @@
     "variantgroups": [
         {
             "code": "stage",
-            "states": [ "ingot" ]
+            "states": [ "complet" ]
         },
         {
             "code": "color",
@@ -22,12 +22,16 @@
         },
         {
             "code": "tooltype",
-            "states": [ "ingot" ]
+            "states": [ "ingot", "plate" ]
         }
     ],
     "shapebytype": {
-        "*ingot*": {
+        "*-fired-ingot": {
             "base": "block/clay/mold/heavymold/state/heavymold-ingot",
+            "rotateY": 0
+        },
+        "*-fired-plate": {
+            "base": "block/clay/mold/heavymold/state/heavymold-plate",
             "rotateY": 0
         }
     },
@@ -59,10 +63,10 @@
             "groupBy": [ "{color}" ]
         }
     },
-    "attributesByType": {
-        "vmmheavymold-toolmold-ingot-*": {
-            "requiredUnits": 600,
-            "fillHeight": 7,
+	"attributesByType": {
+		"vmmheavymold-toolmold-complet-*-fired-ingot": {
+			"requiredUnits": 600,
+			"fillHeight": 7,
 			"fillQuadsByLevel": [
 				{ "x1": 3, "z1": 3, "x2": 13, "z2": 13 },
 				{ "x1": 3, "z1": 3, "x2": 13, "z2": 13 },
@@ -71,14 +75,32 @@
 				{ "x1": 3, "z1": 3, "x2": 13, "z2": 13 },
 				{ "x1": 3, "z1": 3, "x2": 13, "z2": 13 },
 				{ "x1": 3, "z1": 3, "x2": 13, "z2": 13 }
-                ],
-            "drop": {
-                "type": "item",
-                "code": "game:ingot-{metal}",
-                "quantity": 6
-            }
-        }
-    },
+			],
+			"drop": {
+				"type": "item",
+				"code": "game:ingot-{metal}",
+				"quantity": 6
+			}
+		},
+		"vmmheavymold-toolmold-complet-*-fired-plate": {
+			"requiredUnits": 800,
+			"fillHeight": 7,
+			"fillQuadsByLevel": [
+				{ "x1": 3, "z1": 3, "x2": 13, "z2": 13 },
+				{ "x1": 3, "z1": 3, "x2": 13, "z2": 13 },
+				{ "x1": 3, "z1": 3, "x2": 13, "z2": 13 },
+				{ "x1": 3, "z1": 3, "x2": 13, "z2": 13 },
+				{ "x1": 3, "z1": 3, "x2": 13, "z2": 13 },
+				{ "x1": 3, "z1": 3, "x2": 13, "z2": 13 },
+				{ "x1": 3, "z1": 3, "x2": 13, "z2": 13 }
+			],
+			"drop": {
+				"type": "item",
+				"code": "game:metalplate-{metal}",
+				"quantity": 4
+			}
+		}
+	},
     "blockmaterial": "Ceramic",
     "creativeinventory": {
         "general": [ "*" ],

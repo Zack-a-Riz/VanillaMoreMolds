@@ -1,7 +1,6 @@
 ﻿using System.Reflection;
 using Vintagestory.API.Common;
 using Vintagestory.API.MathTools;
-#nullable disable
 
 namespace VanillaMoreMolds
 {
@@ -9,7 +8,7 @@ namespace VanillaMoreMolds
     {
         private string Stage => Variant?["stage"] ?? "empty";
 
-        private string NextStageCodePart() => Stage switch
+        private string? NextStageCodePart() => Stage switch
         {
             "empty" => "fill1",
             "fill1" => "fill2",
@@ -21,7 +20,7 @@ namespace VanillaMoreMolds
         {
             if (blockSel?.Position == null) return false;
 
-            ItemStack held = byPlayer?.InventoryManager?.ActiveHotbarSlot?.Itemstack;
+            ItemStack? held = byPlayer?.InventoryManager?.ActiveHotbarSlot?.Itemstack;
             bool hasShift = byPlayer?.Entity?.Controls?.ShiftKey == true;
             bool isSand = held?.Block?.Code?.Path?.StartsWith("sand-") == true;
             bool isIngot = held?.Item?.Code?.Path?.Contains("ingot") == true;
@@ -29,7 +28,7 @@ namespace VanillaMoreMolds
 
             if (Stage != "fill3" && isSand && hasShift)
             {
-                string sandRock = held.Block.Code.Path.Substring("sand-".Length);
+                string sandRock = held!.Block.Code.Path.Substring("sand-".Length);
                 AdvanceStage(world, byPlayer, blockSel, NextStageCodePart(), sandRock, consumeItem: true);
                 return true;
             }
@@ -46,7 +45,7 @@ namespace VanillaMoreMolds
                 return true;
             }
 
-            if (!hasShift && held == null)
+            if (!hasShift && held == null && byPlayer != null)
             {
                 if (world.Side == EnumAppSide.Server)
                 {
@@ -88,17 +87,17 @@ namespace VanillaMoreMolds
                 world.BlockAccessor.MarkBlockEntityDirty(blockPos);
         }
 
-        private void AdvanceStage(IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel, string nextStage, string sandRock, bool consumeItem)
+        private void AdvanceStage(IWorldAccessor world, IPlayer? byPlayer, BlockSelection blockSel, string? nextStage, string? sandRock, bool consumeItem)
         {
             if (nextStage == null) return;
 
             string color = world.BlockAccessor.GetBlock(blockSel.Position).Variant?["color"] ?? "blue";
             var currentBe = world.BlockAccessor.GetBlockEntity(blockSel.Position) as BEHeavyMold;
             float meshAngle = currentBe?.MeshAngle ?? 0f;
-            string existingSandType = currentBe?.SandType;
-            string sandType = sandRock ?? existingSandType;
+            string? existingSandType = currentBe?.SandType;
+            string? sandType = sandRock ?? existingSandType;
 
-            Block nextBlock = (nextStage == "ingot" || nextStage == "plate")
+            Block? nextBlock = (nextStage == "ingot" || nextStage == "plate")
                 ? world.GetBlock(new AssetLocation("vanillamoremolds:vmmheavymold-toolmold-complet-" + color + "-fired-" + nextStage))
                 : world.GetBlock(CodeWithParts(nextStage, color));
 
@@ -129,7 +128,7 @@ namespace VanillaMoreMolds
 
             if (world.Side == EnumAppSide.Server)
             {
-                if (consumeItem && byPlayer.WorldData.CurrentGameMode != EnumGameMode.Creative)
+                if (consumeItem && byPlayer != null && byPlayer.WorldData.CurrentGameMode != EnumGameMode.Creative)
                 {
                     ItemSlot slot = byPlayer.InventoryManager.ActiveHotbarSlot;
                     if (slot?.Itemstack != null)

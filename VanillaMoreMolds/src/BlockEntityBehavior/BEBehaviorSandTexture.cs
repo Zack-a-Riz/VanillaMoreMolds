@@ -5,7 +5,6 @@ using Vintagestory.API.Common;
 using Vintagestory.API.Datastructures;
 using Vintagestory.API.MathTools;
 using Vintagestory.API.Util;
-#nullable disable
 
 namespace VanillaMoreMolds
 {
@@ -13,9 +12,9 @@ namespace VanillaMoreMolds
     {
         internal static readonly Dictionary<BlockPos, string> PendingSandType = new();
 
-        private string sandType;
-        private string appliedSandType;
-        private readonly MethodInfo genMeshesMethod;
+        private string? sandType;
+        private string? appliedSandType;
+        private readonly MethodInfo? genMeshesMethod;
 
         public BEBehaviorSandTexture(BlockEntity be) : base(be)
         {
@@ -43,7 +42,7 @@ namespace VanillaMoreMolds
         public override void Initialize(ICoreAPI api, JsonObject properties)
         {
             if (string.IsNullOrEmpty(sandType) && Blockentity.Pos != null
-                && PendingSandType.TryGetValue(Blockentity.Pos, out string pending))
+                && PendingSandType.TryGetValue(Blockentity.Pos, out string? pending))
             {
                 sandType = pending;
                 PendingSandType.Remove(Blockentity.Pos);

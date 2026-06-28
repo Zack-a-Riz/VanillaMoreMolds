@@ -2,7 +2,6 @@ using Vintagestory.API.Client;
 using Vintagestory.API.Common;
 using Vintagestory.API.Datastructures;
 using Vintagestory.API.MathTools;
-#nullable disable
 
 namespace VanillaMoreMolds
 {
@@ -11,7 +10,7 @@ namespace VanillaMoreMolds
         private static readonly Vec3f RotationPivot = new Vec3f(0.5f, 0.5f, 0.5f);
 
         public float MeshAngle { get; set; }
-        public string SandType { get; set; }
+        public string? SandType { get; set; }
 
         public override void ToTreeAttributes(ITreeAttribute tree)
         {
@@ -24,7 +23,7 @@ namespace VanillaMoreMolds
         public override void FromTreeAttributes(ITreeAttribute tree, IWorldAccessor world)
         {
             float prevAngle = MeshAngle;
-            string prevSand = SandType;
+            string? prevSand = SandType;
             base.FromTreeAttributes(tree, world);
             MeshAngle = tree.GetFloat("meshAngle", 0f);
             SandType = tree.GetString("sandType", null);
@@ -38,7 +37,7 @@ namespace VanillaMoreMolds
 
         public override bool OnTesselation(ITerrainMeshPool mesher, ITesselatorAPI tessThreadTesselator)
         {
-            CompositeTexture prevSandTex = null;
+            CompositeTexture? prevSandTex = null;
 
             if (!string.IsNullOrEmpty(SandType) && Block.Textures.ContainsKey("sand")
                 && Api is ICoreClientAPI capi)

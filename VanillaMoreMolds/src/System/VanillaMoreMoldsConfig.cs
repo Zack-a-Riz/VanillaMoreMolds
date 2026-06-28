@@ -1,10 +1,9 @@
-#nullable disable
 
 namespace VanillaMoreMolds
 {
     public class VanillaMoreMoldsConfig
     {
-        public static VanillaMoreMoldsConfig Current { get; set; }
+        public static VanillaMoreMoldsConfig? Current { get; set; }
 
         public int ConfigVersion { get; set; } = 0;
         // Master switch : enables or disables all small molds at once

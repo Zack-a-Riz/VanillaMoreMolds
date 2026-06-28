@@ -55,7 +55,7 @@ namespace VanillaMoreMolds
             "  // WARNING //\n" +
             "  // Config version : 1 //\n" +
             "}\n";
-        private const int CurrentConfigVersion = 1; // Update cette version si la configuration change de manière incompatible avec les versions précédentes
+        private const int CurrentConfigVersion = 1; // Zack : Update cette version si la configuration change n'oublie pas de mettre à jour la version dans le fichier de configuration aussi.
 
         private static readonly (string Key, string AssetPath)[] ToolMoldAssets =
         {
@@ -97,6 +97,7 @@ namespace VanillaMoreMolds
             base.AssetsLoaded(api);
 
             var cfg = VanillaMoreMoldsConfig.Current;
+            if (cfg == null) return;
 
             foreach (var (key, assetPath) in ToolMoldAssets)
             {

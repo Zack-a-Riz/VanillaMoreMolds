@@ -6,6 +6,7 @@ namespace VanillaMoreMolds
     {
         public static VanillaMoreMoldsConfig Current { get; set; }
 
+        public int ConfigVersion { get; set; } = 0;
         // Master switch : enables or disables all small molds at once
         // If false, the individual options below are ignored
         public bool EnableVMMToolMolds   { get; set; } = true;

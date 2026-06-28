@@ -9,6 +9,8 @@ namespace VanillaMoreMolds
     {
         private const string DefaultConfig =
             "{\n" +
+            "  \"ConfigVersion\": 1,\n" +
+            "\n" +
             "  //\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\n" +
             "\n" +
             "  //                            === Vanilla More Molds : Configuration File ===\n" +
@@ -51,7 +53,10 @@ namespace VanillaMoreMolds
             "  // WARNING //\n" +
             "  // Don't forget to restart your world after modifying this configuration file for the changes to take effect.\n" +
             "  // WARNING //\n" +
+            "  // Config version : 1 //\n" +
             "}\n";
+        private const int CurrentConfigVersion = 1; // Update cette version si la configuration change de manière incompatible avec les versions précédentes
+
         private static readonly (string Key, string AssetPath)[] ToolMoldAssets =
         {
             ("arrowhead",  "vanillamoremolds:recipes/clayforming/rcarrowheadmold.json"),
@@ -72,7 +77,15 @@ namespace VanillaMoreMolds
             api.RegisterBlockEntityBehaviorClass("BEBehaviorSandTexture", typeof(BEBehaviorSandTexture));
 
             string configPath = Path.Combine(api.GetOrCreateDataPath("ModConfig"), "vanillamoremolds.json");
-            if (!File.Exists(configPath))
+
+            bool needsRegen = !File.Exists(configPath);
+            if (!needsRegen)
+            {
+                var existing = api.LoadModConfig<VanillaMoreMoldsConfig>("vanillamoremolds.json");
+                needsRegen = existing == null || existing.ConfigVersion != CurrentConfigVersion;
+            }
+
+            if (needsRegen)
                 File.WriteAllText(configPath, DefaultConfig);
 
             VanillaMoreMoldsConfig.Current =

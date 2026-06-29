@@ -139,6 +139,35 @@ namespace VanillaMoreMolds
                     }
                 }
 
+                if (consumeItem && !string.IsNullOrEmpty(sandRock))
+                {
+                    var soundLocation = new AssetLocation("vanillamoremolds:sounds/block/heavymold/heavymold-in");
+                    world.PlaySoundAt(
+                        soundLocation,
+                        blockSel.Position,
+                        0,
+                        null,
+                        true,
+                        10f,
+                        1f
+                    );
+                }
+
+                if (nextStage == "ingot" || nextStage == "plate")
+                {
+                    var soundLocation = new AssetLocation("vanillamoremolds:sounds/block/heavymold/heavymold-out");
+
+                    world.PlaySoundAt(
+                        soundLocation,
+                        blockSel.Position,
+                        0,
+                        null,
+                        true,
+                        10f,
+                        1f
+                    );
+                }
+
                 if (nextBlock.Sounds?.Place != null)
                     world.PlaySoundAt(nextBlock.Sounds.Place, blockSel.Position.X, blockSel.Position.Y, blockSel.Position.Z, 0);
             }

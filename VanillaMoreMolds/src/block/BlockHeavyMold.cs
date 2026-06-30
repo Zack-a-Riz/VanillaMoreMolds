@@ -63,6 +63,7 @@ namespace VanillaMoreMolds
 
                     world.BlockAccessor.SetBlock(0, blockSel.Position);
                 }
+
                 return true;
             }
 
@@ -113,15 +114,18 @@ namespace VanillaMoreMolds
             {
                 newBe.MeshAngle = meshAngle;
                 newBe.SandType = sandType;
+
                 if (world.Side == EnumAppSide.Server)
                     newBe.MarkDirty(true);
             }
             else if (newEntity != null)
             {
                 newEntity.GetType().GetField("MeshAngle", BindingFlags.Public | BindingFlags.Instance)?.SetValue(newEntity, meshAngle);
+
                 var sandBehavior = newEntity.GetBehavior<BEBehaviorSandTexture>();
                 if (sandBehavior != null && !string.IsNullOrEmpty(sandType))
                     sandBehavior.SetSandType(sandType);
+
                 if (world.Side == EnumAppSide.Server)
                     newEntity.MarkDirty(true);
             }
@@ -142,6 +146,7 @@ namespace VanillaMoreMolds
                 if (consumeItem && !string.IsNullOrEmpty(sandRock))
                 {
                     var soundLocation = new AssetLocation("vanillamoremolds:sounds/block/heavymold/heavymold-in");
+
                     world.PlaySoundAt(
                         soundLocation,
                         blockSel.Position,
@@ -151,6 +156,8 @@ namespace VanillaMoreMolds
                         10f,
                         1f
                     );
+
+                    SpawnFallingSandDustParticles(world, blockSel, sandRock);
                 }
 
                 if (nextStage == "ingot" || nextStage == "plate")
@@ -171,6 +178,40 @@ namespace VanillaMoreMolds
                 if (nextBlock.Sounds?.Place != null)
                     world.PlaySoundAt(nextBlock.Sounds.Place, blockSel.Position.X, blockSel.Position.Y, blockSel.Position.Z, 0);
             }
+        }
+
+        private void SpawnFallingSandDustParticles(IWorldAccessor world, BlockSelection blockSel, string sandRock)
+        {
+            if (world.Side != EnumAppSide.Server) return;
+
+            Block? sandBlock = world.GetBlock(new AssetLocation("game:sand-" + sandRock));
+            if (sandBlock == null) return;
+
+            Vec3d basePos = blockSel.Position.ToVec3d();
+
+            Vec3d minPos = basePos.AddCopy(0.25, 0.2, 0.25);
+            Vec3d maxPos = basePos.AddCopy(0.75, 0.65, 0.75);
+
+            SimpleParticleProperties particles = new SimpleParticleProperties(
+                30f,                                // quantité minimum
+                60f,                                // quantité maximum
+                unchecked((int)0xD8C59AFF),          // couleur fallback si ColorByBlock ne marche pas
+                minPos,
+                maxPos,
+                new Vec3f(-0.00f, -0.01f, -0.0f), // vitesse minimum
+                new Vec3f(-0.0f, -0.05f, -0.00f), // vitesse maximum
+                1.0f,                              // durée de vie
+                0.00f,                               // gravité
+                0.1f,                              // taille minimum
+                0.3f,                              // taille maximum
+                EnumParticleModel.Quad              // particules type poussière, pas cubes cassés
+            );
+
+            particles.ColorByBlock = sandBlock;
+            particles.WithTerrainCollision = false;
+            particles.WindAffected = false;
+
+            world.SpawnParticles(particles, null);
         }
     }
 }

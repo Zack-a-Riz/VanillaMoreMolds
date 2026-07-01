@@ -54,7 +54,7 @@ namespace VanillaMoreMolds
             "  // Don't forget to restart your world after modifying this configuration file for the changes to take effect.\n" +
             "  // WARNING //\n" +
             "}\n";
-        private const int CurrentConfigVersion = 1; // Zack : Update cette version si la configuration change n'oublie pas de mettre à jour la version dans le fichier de configuration aussi.
+        private const int CurrentConfigVersion = 1; // Note : Update cette version si la configuration change n'oublie pas de mettre à jour la version dans le fichier de configuration aussi.
 
         private static readonly (string Key, string AssetPath)[] ToolMoldAssets =
         {

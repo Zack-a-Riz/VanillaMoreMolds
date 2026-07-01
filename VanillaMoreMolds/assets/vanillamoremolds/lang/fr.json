@@ -173,6 +173,24 @@
     // Heavy Mold - Empty
     // =====================
 
+    // =====================
+    // Heavy Mold - Base
+    // =====================
+
+    "block-vmmheavybasetoolmold-blue-fired-heavybase": "Base de moule lourd en céramique brun foncé",
+    "block-vmmheavybasetoolmold-black-fired-heavybase": "Base de moule lourd en céramique noire",
+    "block-vmmheavybasetoolmold-brown-fired-heavybase": "Base de moule lourd en céramique brune",
+    "block-vmmheavybasetoolmold-cream-fired-heavybase": "Base de moule lourd en céramique crème",
+    "block-vmmheavybasetoolmold-fire-fired-heavybase": "Base de moule lourd en céramique réfractaire",
+    "block-vmmheavybasetoolmold-gray-fired-heavybase": "Base de moule lourd en céramique grise",
+    "block-vmmheavybasetoolmold-orange-fired-heavybase": "Base de moule lourd en céramique orange",
+    "block-vmmheavybasetoolmold-red-fired-heavybase": "Base de moule lourd en céramique rouge",
+    "block-vmmheavybasetoolmold-tan-fired-heavybase": "Base de moule lourd en céramique ocre",
+
+    // =====================
+    // Heavy Mold - Empty
+    // =====================
+
     "block-vmmheavymold-empty-blue": "Moule lourd en céramique brun foncé vide",
     "block-vmmheavymold-empty-black": "Moule lourd en céramique noire vide",
     "block-vmmheavymold-empty-brown": "Moule lourd en céramique brune vide",
@@ -252,6 +270,11 @@
     "block-vmmheavymold-toolmold-complet-orange-fired-plate": "Moule lourd à plaques en céramique orange",
     "block-vmmheavymold-toolmold-complet-red-fired-plate": "Moule lourd à plaques en céramique rouge",
     "block-vmmheavymold-toolmold-complet-tan-fired-plate": "Moule lourd à plaques en céramique ocre",
+
+    //Heavy Mold interaction
+    "blockhelp-vmmheavymold-sand": "Remplir de sable",
+    "blockhelp-vmmheavymold-fill3-ingot": "Créer une empreinte de lingot",
+    "blockhelp-vmmheavymold-fill3-plate": "Créer une empreinte de plaque",
 
     //Heavy Mold handbook info
     "vanillamoremolds:block-handbooktext-vanillamoremolds:vmmheavymold-*": "<strong>Moule lourd :</strong><br>Conçu pour la production de masse de lingots et de plaques métalliques. Son contenant résiste à l'eau et doit être rempli de sable avant de créer une empreinte.<br><br><strong>Utilisation :</strong><br>Remplir de sable : Shift + Clic droit avec du sable<br>Créer un moule à lingots : Shift + Clic droit avec un lingot<br>Créer un moule à plaques : Shift + Clic droit avec une plaque métallique"

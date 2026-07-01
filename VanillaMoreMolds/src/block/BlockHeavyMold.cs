@@ -1,4 +1,7 @@
-﻿using System.Reflection;
+﻿using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
+using Vintagestory.API.Client;
 using Vintagestory.API.Common;
 using Vintagestory.API.MathTools;
 
@@ -193,18 +196,18 @@ namespace VanillaMoreMolds
             Vec3d maxPos = basePos.AddCopy(0.75, 0.65, 0.75);
 
             SimpleParticleProperties particles = new SimpleParticleProperties(
-                30f,                                // quantité minimum
-                60f,                                // quantité maximum
-                unchecked((int)0xD8C59AFF),          // couleur fallback si ColorByBlock ne marche pas
+                30f,                              
+                60f,                              
+                unchecked((int)0xD8C59AFF),       
                 minPos,
                 maxPos,
-                new Vec3f(-0.00f, -0.01f, -0.0f), // vitesse minimum
-                new Vec3f(-0.0f, -0.05f, -0.00f), // vitesse maximum
-                1.0f,                              // durée de vie
-                0.00f,                               // gravité
-                0.1f,                              // taille minimum
-                0.3f,                              // taille maximum
-                EnumParticleModel.Quad              // particules type poussière, pas cubes cassés
+                new Vec3f(-0.00f, -0.01f, -0.0f), 
+                new Vec3f(-0.0f, -0.05f, -0.00f), 
+                1.0f,                             
+                0.00f,                            
+                0.1f,                             
+                0.3f,                             
+                EnumParticleModel.Quad            
             );
 
             particles.ColorByBlock = sandBlock;
@@ -212,6 +215,72 @@ namespace VanillaMoreMolds
             particles.WindAffected = false;
 
             world.SpawnParticles(particles, null);
+        }
+
+        public override WorldInteraction[] GetPlacedBlockInteractionHelp(IWorldAccessor world, BlockSelection selection, IPlayer forPlayer)
+        {
+            var interactions = new List<WorldInteraction>();
+
+            if (Stage != "fill3")
+            {
+                ItemStack[] sandStacks = world.SearchBlocks(new AssetLocation("game:sand-*"))
+                    .Where(block => block.Code.Path.IndexOf('-', "sand-".Length) < 0)
+                    .Select(block => new ItemStack(block))
+                    .ToArray();
+
+                if (sandStacks.Length > 0)
+                {
+                    interactions.Add(new WorldInteraction
+                    {
+                        ActionLangCode = "vanillamoremolds:blockhelp-vmmheavymold-sand",
+                        MouseButton = EnumMouseButton.Right,
+                        HotKeyCode = "shift",
+                        Itemstacks = sandStacks
+                    });
+                }
+
+                return [.. interactions, .. base.GetPlacedBlockInteractionHelp(world, selection, forPlayer)];
+            }
+
+            if (VanillaMoreMoldsConfig.Current?.IsHeavyMoldIngotEnabled ?? true)
+            {
+                ItemStack[] ingotStacks = world.SearchItems(new AssetLocation("game:ingot-*"))
+                    .Select(item => new ItemStack(item))
+                    .Where(stack => stack.Item != null)
+                    .ToArray();
+
+                if (ingotStacks.Length > 0)
+                {
+                    interactions.Add(new WorldInteraction
+                    {
+                        ActionLangCode = "vanillamoremolds:blockhelp-vmmheavymold-fill3-ingot",
+                        MouseButton = EnumMouseButton.Right,
+                        HotKeyCode = "shift",
+                        Itemstacks = ingotStacks
+                    });
+                }
+            }
+
+            if (VanillaMoreMoldsConfig.Current?.IsHeavyMoldPlateEnabled ?? true)
+            {
+                ItemStack[] plateStacks = world.SearchItems(new AssetLocation("game:metalplate-*"))
+                    .Select(item => new ItemStack(item))
+                    .Where(stack => stack.Item != null)
+                    .ToArray();
+
+                if (plateStacks.Length > 0)
+                {
+                    interactions.Add(new WorldInteraction
+                    {
+                        ActionLangCode = "vanillamoremolds:blockhelp-vmmheavymold-fill3-plate",
+                        MouseButton = EnumMouseButton.Right,
+                        HotKeyCode = "shift",
+                        Itemstacks = plateStacks
+                    });
+                }
+            }
+
+            return [.. interactions, .. base.GetPlacedBlockInteractionHelp(world, selection, forPlayer)];
         }
     }
 }

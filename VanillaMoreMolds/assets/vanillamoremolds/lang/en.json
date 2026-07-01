@@ -173,6 +173,24 @@
     // Heavy Mold - Empty
     // =====================
 
+    // =====================
+    // Heavy Mold - Base
+    // =====================
+
+    "block-vmmheavybasetoolmold-blue-fired-heavybase": "Earthy brown heavy mold base",
+    "block-vmmheavybasetoolmold-black-fired-heavybase": "Black heavy mold base",
+    "block-vmmheavybasetoolmold-brown-fired-heavybase": "Brown heavy mold base",
+    "block-vmmheavybasetoolmold-cream-fired-heavybase": "Cream heavy mold base",
+    "block-vmmheavybasetoolmold-fire-fired-heavybase": "Fireclay heavy mold base",
+    "block-vmmheavybasetoolmold-gray-fired-heavybase": "Gray heavy mold base",
+    "block-vmmheavybasetoolmold-orange-fired-heavybase": "Orange heavy mold base",
+    "block-vmmheavybasetoolmold-red-fired-heavybase": "Red heavy mold base",
+    "block-vmmheavybasetoolmold-tan-fired-heavybase": "Tan heavy mold base",
+
+    // =====================
+    // Heavy Mold - Empty
+    // =====================
+
     "block-vmmheavymold-empty-blue": "Empty earthy brown heavy mold",
     "block-vmmheavymold-empty-black": "Empty black heavy mold",
     "block-vmmheavymold-empty-brown": "Empty brown heavy mold",
@@ -252,6 +270,11 @@
     "block-vmmheavymold-toolmold-complet-orange-fired-plate": "Orange heavy plate mold",
     "block-vmmheavymold-toolmold-complet-red-fired-plate": "Red heavy plate mold",
     "block-vmmheavymold-toolmold-complet-tan-fired-plate": "Tan heavy plate mold",
+
+    //Heavy Mold interaction
+    "blockhelp-vmmheavymold-sand": "Fill with sand",
+    "blockhelp-vmmheavymold-fill3-ingot": "Place ingot imprint",
+    "blockhelp-vmmheavymold-fill3-plate": "Place plate imprint",
 
     //Heavy Mold handbook info
     "vanillamoremolds:block-handbooktext-vanillamoremolds:vmmheavymold-*": "<strong>Heavy Mold:</strong><br>Designed for the mass production of ingots and metal plates. Its container is water-resistant and must be filled with sand before creating an imprint.<br><br><strong>Usage:</strong><br>Fill with sand: Shift + Right-click with sand<br>Create ingot mold: Shift + Right-click with an ingot<br>Create plate mold: Shift + Right-click with a metal plate"

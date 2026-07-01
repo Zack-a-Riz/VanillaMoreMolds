@@ -1,4 +1,4 @@
-{ // Moules � outils en argile cuits
+{ // Moules outils en argile cuits
     "code": "vmmtoolmold",
     "class": "BlockToolMold",
     "entityClass": "ToolMold",

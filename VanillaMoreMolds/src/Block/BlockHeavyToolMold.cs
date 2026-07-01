@@ -23,25 +23,29 @@ namespace VanillaMoreMolds
                 && byPlayer.InventoryManager.ActiveHotbarSlot.Empty
                 && byPlayer.Entity?.Controls?.ShiftKey != true)
             {
-                string? sandType = GetSandType(world, blockSel.Position);
-                if (!string.IsNullOrEmpty(sandType))
+                BlockEntityToolMold? betm = world.BlockAccessor.GetBlockEntity(blockSel.Position) as BlockEntityToolMold;
+                if (betm?.MetalContent == null)
                 {
-                    ItemStack stack = new ItemStack(this);
-                    stack.Attributes.SetString("sandType", sandType);
+                    string? sandType = GetSandType(world, blockSel.Position);
+                    if (!string.IsNullOrEmpty(sandType))
+                    {
+                        ItemStack stack = new ItemStack(this);
+                        stack.Attributes.SetString("sandType", sandType);
 
-                    if (!byPlayer.InventoryManager.TryGiveItemstack(stack, true))
-                        world.SpawnItemEntity(stack, blockSel.Position.ToVec3d().AddCopy(0.5, 0.1, 0.5));
+                        if (!byPlayer.InventoryManager.TryGiveItemstack(stack, true))
+                            world.SpawnItemEntity(stack, blockSel.Position.ToVec3d().AddCopy(0.5, 0.1, 0.5));
 
-                    world.BlockAccessor.SetBlock(0, blockSel.Position);
-                    world.BlockAccessor.TriggerNeighbourBlockUpdate(blockSel.Position);
+                        world.BlockAccessor.SetBlock(0, blockSel.Position);
+                        world.BlockAccessor.TriggerNeighbourBlockUpdate(blockSel.Position);
 
-                    BlockSounds? sounds = GetSounds(world.BlockAccessor, blockSel);
-                    if (sounds != null)
-                        world.PlaySoundAt(sounds.Place.Location,
-                            blockSel.Position.X + 0.5, blockSel.Position.Y + 0.5, blockSel.Position.Z + 0.5,
-                            byPlayer);
+                        BlockSounds? sounds = GetSounds(world.BlockAccessor, blockSel);
+                        if (sounds != null)
+                            world.PlaySoundAt(sounds.Place.Location,
+                                blockSel.Position.X + 0.5, blockSel.Position.Y + 0.5, blockSel.Position.Z + 0.5,
+                                byPlayer);
 
-                    return true;
+                        return true;
+                    }
                 }
             }
 

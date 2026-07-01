@@ -61,14 +61,7 @@ namespace VanillaMoreMolds
                     if (be?.SandType != null)
                         pickupStack.Attributes.SetString("sandType", be.SandType);
 
-                    ItemSlot activeSlot = byPlayer.InventoryManager.ActiveHotbarSlot;
-
-                    if (activeSlot.Empty)
-                    {
-                        activeSlot.Itemstack = pickupStack;
-                        activeSlot.MarkDirty();
-                    }
-                    else if (!byPlayer.InventoryManager.TryGiveItemstack(pickupStack))
+                    if (!byPlayer.InventoryManager.TryGiveItemstack(pickupStack))
                         world.SpawnItemEntity(pickupStack, blockSel.Position.ToVec3d());
 
                     world.BlockAccessor.SetBlock(0, blockSel.Position);

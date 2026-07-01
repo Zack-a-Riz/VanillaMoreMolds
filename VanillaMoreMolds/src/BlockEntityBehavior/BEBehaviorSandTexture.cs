@@ -16,6 +16,8 @@ namespace VanillaMoreMolds
         private string? appliedSandType;
         private readonly MethodInfo? genMeshesMethod;
 
+        public string? SandType => sandType;
+
         public BEBehaviorSandTexture(BlockEntity be) : base(be)
         {
             genMeshesMethod = be.GetType()

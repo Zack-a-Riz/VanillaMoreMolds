@@ -1,6 +1,6 @@
 { // HeavyMold toolmold
     "code": "vmmheavymold-toolmold",
-    "class": "BlockToolMold",
+    "class": "BlockHeavyToolMold",
     "entityClass": "ToolMold",
     "behaviors": [
         { "name": "Lockable" },

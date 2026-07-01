@@ -7,54 +7,54 @@ namespace VanillaMoreMolds
 {
     public class VanillaMoreMoldsModSystem : ModSystem
     {
-        private const string DefaultConfig =
-            "{\n" +
-            "  \"ConfigVersion\": 1,\n" +
-            "\n" +
-            "  //\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\n" +
-            "\n" +
-            "  //                            === Vanilla More Molds : Configuration File ===\n" +
-            "  //                                          Config version : 1\n" +
-            "\n" +
-            "  //\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\n" +
-            "\n" +
-            "  //                   Hi, I'm Zack! This is the configuration file for VanillaMoreMolds.\n" +
-            "  //  The default settings are designed to keep the game balanced and avoid making blacksmithing obsolete.\n" +
-            "  //                      Feel free to change these settings to suit your preferences,\n" +
-            "  //      but I recommend keeping the defaults if you want to preserve the intended gameplay balance.\n" +
-            "  //            This is a very early version of the configuration file, so it may evolve over time.\n" +
-            "\n" +
-            "  //\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\u2593\n" +
-            "\n" +
-            "  // Configuration:\n" +
-            "\n" +
-            "  // === Vanilla More Molds : Additional Vanilla-Style Molds ===\n" +
-            "\n" +
-            "  \"EnableVMMToolMolds\": true, // Default: true\n" +
-            "  // If \"EnableVMMToolMolds\" is set to false, the individual options below are ignored.\n" +
-            "\n" +
-            "  \"EnableArrowheadMold\": false, // Default: false\n" +
-            "  \"EnableHoopMold\": true, // Default: true\n" +
-            "  \"EnableKnifeBladeMold\": false, // Default: false\n" +
-            "  \"EnableNailMold\": true, // Default: true\n" +
-            "  \"EnablePlateMold\": true, // Default: true\n" +
-            "  \"EnableSawBladeMold\": false, // Default: false\n" +
-            "  \"EnableScytheHeadMold\": false, // Default: false\n" +
-            "  \"EnableSpearHeadMold\": false, // Default: false\n" +
-            "\n" +
-            "  // === Vanilla More Molds : Heavy Molds ===\n" +
-            "\n" +
-            "  \"EnableVMMHeavyMold\": true, // Default: true\n" +
-            "  // If \"EnableVMMHeavyMold\" is set to false, the individual options below are ignored.\n" +
-            "\n" +
-            "  \"EnableHeavyMoldIngot\": true, // Default: true\n" +
-            "  \"EnableHeavyMoldPlate\": true // Default: true\n" +
-            "\n" +
-            "  // WARNING //\n" +
-            "  // Don't forget to restart your world after modifying this configuration file for the changes to take effect.\n" +
-            "  // WARNING //\n" +
-            "}\n";
         private const int CurrentConfigVersion = 1; // Note : Update cette version si la configuration change n'oublie pas de mettre à jour la version dans le fichier de configuration aussi.
+
+        private static readonly string DefaultConfig = $$"""
+            {
+              //████████████████████████████████████████████████████████████████████████████████████████████████████
+
+              //                            === Vanilla More Molds : Configuration File ===
+              //                                          Config version : {{CurrentConfigVersion}}
+
+              //████████████████████████████████████████████████████████████████████████████████████████████████████
+
+              //                   Hi, I'm Zack! This is the configuration file for VanillaMoreMolds.
+              //  The default settings are designed to keep the game balanced and avoid making blacksmithing obsolete.
+              //                      Feel free to change these settings to suit your preferences,
+              //      but I recommend keeping the defaults if you want to preserve the intended gameplay balance.
+              //            This is a very early version of the configuration file, so it may evolve over time.
+
+              //████████████████████████████████████████████████████████████████████████████████████████████████████
+
+              // Configuration:
+
+              // === Vanilla More Molds : Additional Vanilla-Style Molds ===
+
+              "EnableVMMToolMolds": true, // Default: true
+              // If "EnableVMMToolMolds" is set to false, the individual options below are ignored.
+
+              "EnableArrowheadMold": false, // Default: false
+              "EnableHoopMold": true, // Default: true
+              "EnableKnifeBladeMold": false, // Default: false
+              "EnableNailMold": true, // Default: true
+              "EnablePlateMold": true, // Default: true
+              "EnableSawBladeMold": false, // Default: false
+              "EnableScytheHeadMold": false, // Default: false
+              "EnableSpearHeadMold": false, // Default: false
+
+              // === Vanilla More Molds : Heavy Molds ===
+
+              "EnableVMMHeavyMold": true, // Default: true
+              // If "EnableVMMHeavyMold" is set to false, the individual options below are ignored.
+
+              "EnableHeavyMoldIngot": true, // Default: true
+              "EnableHeavyMoldPlate": true // Default: true
+
+              // WARNING //
+              // Don't forget to restart your world after modifying this configuration file for the changes to take effect.
+              // WARNING //
+            }
+            """;
 
         private static readonly (string Key, string AssetPath)[] ToolMoldAssets =
         {
@@ -72,6 +72,7 @@ namespace VanillaMoreMolds
         {
             base.Start(api);
             api.RegisterBlockClass("BlockHeavyMold", typeof(BlockHeavyMold));
+            api.RegisterBlockClass("BlockHeavyToolMold", typeof(BlockHeavyToolMold));
             api.RegisterBlockEntityClass("BEHeavyMold", typeof(BEHeavyMold));
             api.RegisterBlockEntityBehaviorClass("BEBehaviorSandTexture", typeof(BEBehaviorSandTexture));
 

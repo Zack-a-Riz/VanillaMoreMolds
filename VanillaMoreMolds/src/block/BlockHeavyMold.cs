@@ -11,6 +11,8 @@ namespace VanillaMoreMolds
     {
         private string Stage => Variant?["stage"] ?? "empty";
 
+        private readonly Dictionary<string, MultiTextureMeshRef> sandMeshCache = new();
+
         private string? NextStageCodePart() => Stage switch
         {
             "empty" => "fill1",
@@ -54,6 +56,11 @@ namespace VanillaMoreMolds
                 {
                     Block block = world.BlockAccessor.GetBlock(blockSel.Position);
                     ItemStack pickupStack = new ItemStack(block);
+
+                    var be = world.BlockAccessor.GetBlockEntity(blockSel.Position) as BEHeavyMold;
+                    if (be?.SandType != null)
+                        pickupStack.Attributes.SetString("sandType", be.SandType);
+
                     ItemSlot activeSlot = byPlayer.InventoryManager.ActiveHotbarSlot;
 
                     if (activeSlot.Empty)
@@ -85,10 +92,61 @@ namespace VanillaMoreMolds
 
             be.MeshAngle = (float)(System.Math.Round(placer.Entity.Pos.Yaw / GameMath.PIHALF) * GameMath.PIHALF);
 
+            string? sandType = byItemStack?.Attributes?.GetString("sandType");
+            if (sandType != null)
+                be.SandType = sandType;
+
             if (world.Side == EnumAppSide.Server)
                 be.MarkDirty(true);
             else
                 world.BlockAccessor.MarkBlockEntityDirty(blockPos);
+        }
+
+        public override ItemStack OnPickBlock(IWorldAccessor world, BlockPos pos)
+        {
+            ItemStack stack = base.OnPickBlock(world, pos);
+            var be = world.BlockAccessor.GetBlockEntity(pos) as BEHeavyMold;
+            if (be?.SandType != null)
+                stack.Attributes.SetString("sandType", be.SandType);
+            return stack;
+        }
+
+        public override void OnBeforeRender(ICoreClientAPI capi, ItemStack itemstack, EnumItemRenderTarget target, ref ItemRenderInfo renderinfo)
+        {
+            base.OnBeforeRender(capi, itemstack, target, ref renderinfo);
+
+            string? sandType = itemstack.Attributes?.GetString("sandType");
+            if (string.IsNullOrEmpty(sandType) || !Textures.ContainsKey("sand")) return;
+
+            string cacheKey = Code.ToString() + "/" + sandType;
+
+            if (!sandMeshCache.TryGetValue(cacheKey, out MultiTextureMeshRef? meshRef))
+            {
+                AssetLocation texLoc = new AssetLocation("game", "block/stone/sand/" + sandType);
+                capi.BlockTextureAtlas.GetOrInsertTexture(texLoc, out int texSubId, out _);
+
+                CompositeTexture prevTex = Textures["sand"];
+                Textures["sand"] = new CompositeTexture(texLoc)
+                {
+                    Baked = new BakedCompositeTexture { BakedName = texLoc, TextureSubId = texSubId }
+                };
+                capi.Tesselator.TesselateBlock(this, out MeshData? mesh);
+                Textures["sand"] = prevTex;
+
+                if (mesh == null) return;
+                meshRef = capi.Render.UploadMultiTextureMesh(mesh);
+                sandMeshCache[cacheKey] = meshRef;
+            }
+
+            renderinfo.ModelRef = meshRef;
+        }
+
+        public override void OnUnloaded(ICoreAPI api)
+        {
+            base.OnUnloaded(api);
+            foreach (MultiTextureMeshRef meshRef in sandMeshCache.Values)
+                meshRef.Dispose();
+            sandMeshCache.Clear();
         }
 
         private void AdvanceStage(IWorldAccessor world, IPlayer? byPlayer, BlockSelection blockSel, string? nextStage, string? sandRock, bool consumeItem)

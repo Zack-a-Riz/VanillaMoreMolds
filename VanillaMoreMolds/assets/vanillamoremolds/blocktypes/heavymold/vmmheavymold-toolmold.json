@@ -1,0 +1,213 @@
+{ // HeavyMold toolmold
+    "code": "vmmheavymold-toolmold",
+    "class": "BlockHeavyToolMold",
+    "entityClass": "ToolMold",
+    "behaviors": [
+        { "name": "Lockable" },
+        { "name": "UnstableFalling" }
+    ],
+    "entityBehaviors": [ { "name": "BEBehaviorSandTexture" } ],
+    "variantgroups": [
+        {
+            "code": "stage",
+            "states": [ "complet" ]
+        },
+        {
+            "code": "color",
+            "states": [ "blue", "fire", "black", "brown", "cream", "gray", "orange", "red", "tan" ]
+        },
+        {
+            "code": "materialtype",
+            "states": [ "fired" ]
+        },
+        {
+            "code": "tooltype",
+            "states": [ "ingot", "plate" ]
+        }
+    ],
+    "shapebytype": {
+        "*-fired-ingot": {
+            "base": "block/clay/mold/heavymold/state/heavymold-ingot",
+            "rotateY": 0
+        },
+        "*-fired-plate": {
+            "base": "block/clay/mold/heavymold/state/heavymold-plate",
+            "rotateY": 0
+        }
+    },
+    "textures": {
+        "floor": { "base": "game:block/clay/hardened/{color}" },
+        "other": { "base": "game:block/clay/hardened/{color}" },
+        "wood": { "base": "game:block/wood/planks/aged/aged2" },
+        "rope": { "base": "game:block/cloth/paper/blank-large" },
+        "sand": { "base": "game:block/stone/sand/andesite" }
+    },
+    "attributes": {
+        "reinforcable": true,
+        "onTongTransformByType": {
+            "*": {
+                "translation": {
+                    "x": -1.7,
+                    "y": -1.3,
+                    "z": -0.57
+                },
+                "rotation": {
+                    "x": 98,
+                    "y": 16,
+                    "z": 3
+                },
+                "scale": 0.55
+            }
+        },
+        "handbook": {
+            "groupBy": [ "{color}" ]
+        }
+    },
+	"attributesByType": {
+		"vmmheavymold-toolmold-complet-*-fired-ingot": {
+			"requiredUnits": 600,
+			"fillHeight": 7,
+			"fillQuadsByLevel": [
+				{ "x1": 3, "z1": 3, "x2": 13, "z2": 13 },
+				{ "x1": 3, "z1": 3, "x2": 13, "z2": 13 },
+				{ "x1": 3, "z1": 3, "x2": 13, "z2": 13 },
+				{ "x1": 3, "z1": 3, "x2": 13, "z2": 13 },
+				{ "x1": 3, "z1": 3, "x2": 13, "z2": 13 },
+				{ "x1": 3, "z1": 3, "x2": 13, "z2": 13 },
+				{ "x1": 3, "z1": 3, "x2": 13, "z2": 13 }
+			],
+			"drop": {
+				"type": "item",
+				"code": "game:ingot-{metal}",
+				"quantity": 6
+			}
+		},
+		"vmmheavymold-toolmold-complet-*-fired-plate": {
+			"requiredUnits": 800,
+			"fillHeight": 7,
+			"fillQuadsByLevel": [
+				{ "x1": 3, "z1": 3, "x2": 13, "z2": 13 },
+				{ "x1": 3, "z1": 3, "x2": 13, "z2": 13 },
+				{ "x1": 3, "z1": 3, "x2": 13, "z2": 13 },
+				{ "x1": 3, "z1": 3, "x2": 13, "z2": 13 },
+				{ "x1": 3, "z1": 3, "x2": 13, "z2": 13 },
+				{ "x1": 3, "z1": 3, "x2": 13, "z2": 13 },
+				{ "x1": 3, "z1": 3, "x2": 13, "z2": 13 }
+			],
+			"drop": {
+				"type": "item",
+				"code": "game:metalplate-{metal}",
+				"quantity": 4
+			}
+		}
+	},
+    "blockmaterial": "Ceramic",
+    "creativeinventory": {
+        "general": [ "*" ],
+        "construction": [ "*" ],
+        "VanillaMoreMolds": [ "*" ]
+    },
+    "replaceable": 700,
+    "resistance": 1.5,
+    "maxStackSize": 1,
+    "lightAbsorption": 0,
+    "sounds": {
+        "walk": "game:walk/stone"
+    },
+    "collisionboxByType": {
+        "*": {
+            "z1": 0.1875,
+            "y1": 0,
+            "x1": 0.1875,
+            "z2": 0.8125,
+            "y2": 0.5625,
+            "x2": 0.8125
+        }
+    },
+    "selectionboxByType": {
+        "*": {
+            "z1": 0.1875,
+            "y1": 0,
+            "x1": 0.1875,
+            "z2": 0.8125,
+            "y2": 0.5625,
+            "x2": 0.8125
+        }
+    },
+    "sideopaque": { "all": false },
+    "sidesolid": { "all": false },
+    "heldTpIdleAnimationByType": { "*": "holdbothhandslarge" },
+    "heldTpUseAnimationByType": { "*": "twohandplaceblock" },
+    "guiTransformByType": {
+        "*": {
+            "translation": {
+                "x": 0,
+                "y": 3,
+                "z": 0
+            },
+            "origin": {
+                "x": 0.5,
+                "y": 0.2,
+                "z": 0.5
+            },
+            "scale": 1.33
+        }
+    },
+    "tpHandTransformByType": {
+        "*": {
+            "translation": {
+                "x": -0.5,
+                "y": 0,
+                "z": -0.45
+            },
+            "rotation": {
+                "x": -77,
+                "y": 14,
+                "z": -102
+            },
+            "origin": {
+                "x": 0.5,
+                "y": 0.125,
+                "z": 0.5
+            },
+            "scale": 0.7
+        }
+    },
+    "fpHandTransformByType": {
+        "*": {
+            "translation": {
+                "x": -0.3,
+                "y": 0,
+                "z": 0.5
+            },
+            "rotation": {
+                "x": 16,
+                "y": -50,
+                "z": 1
+            },
+            "origin": {
+                "x": 0.5,
+                "y": 0.125,
+                "z": 0.5
+            }
+        }
+    },
+    "groundTransform": {
+        "translation": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+        },
+        "rotation": {
+            "x": 0,
+            "y": -45,
+            "z": 0
+        },
+        "origin": {
+            "x": 0.5,
+            "y": 0,
+            "z": 0.5
+        },
+        "scale": 2.2
+    }
+}

@@ -1,13 +1,13 @@
-{ // Moules outils en argile non cuits
-    "code": "vmmtoolmold",
+{ // Moules de base en argile non cuits
+    "code": "vmmheavybasetoolmold",
     "class": "Block",
     "behaviors": [
         {
             "name": "GroundStorable",
             "properties": { "layout": "SingleCenter" }
         },
-        { "name": "Unplaceable" },
-        { "name": "RightClickPickup" }
+        { "name": "RightClickPickup" },
+        { "name": "Unplaceable" }
     ],
     "variantgroups": [
         {
@@ -20,13 +20,13 @@
         },
         {
             "code": "tooltype",
-            "states": [ "sawblade", "nail", "arrowhead", "plate", "hoop", "spearhead", "knifeblade", "scythehead" ]
+            "states": [ "heavybase" ]
         }
     ],
     "shapebytype": {
         "*": {
-            "base": "block/clay/mold/{tooltype}",
-            "rotateY": 90
+            "base": "block/clay/mold/heavymold/{tooltype}",
+            "rotateY": 0
         }
     },
     "textures": { "all": { "base": "game:block/clay/{color}clay" } },
@@ -51,91 +51,91 @@
             "*": false
         },
         "handbook": {
-            "groupBy": [ "game:toolmold-*-{materialtype}-{tooltype}" ]
+            "groupBy": [ "{color}-{materialtype}-{tooltype}" ]
         }
     },
     "attributesByType": {
-        "vmmtoolmold-red-raw-*": {
+        "vmmheavybasetoolmold-red-raw-*": {
             "beehivekiln": {
                 "0": {
                     "type": "block",
-                    "code": "vanillamoremolds:vmmtoolmold-tan-fired-{tooltype}"
+                    "code": "vanillamoremolds:vmmheavybasetoolmold-tan-fired-{tooltype}"
                 },
                 "1": {
                     "type": "block",
-                    "code": "vanillamoremolds:vmmtoolmold-orange-fired-{tooltype}"
+                    "code": "vanillamoremolds:vmmheavybasetoolmold-orange-fired-{tooltype}"
                 },
                 "2": {
                     "type": "block",
-                    "code": "vanillamoremolds:vmmtoolmold-red-fired-{tooltype}"
+                    "code": "vanillamoremolds:vmmheavybasetoolmold-red-fired-{tooltype}"
                 },
                 "3": {
                     "type": "block",
-                    "code": "vanillamoremolds:vmmtoolmold-brown-fired-{tooltype}"
+                    "code": "vanillamoremolds:vmmheavybasetoolmold-brown-fired-{tooltype}"
                 }
             }
         },
-        "vmmtoolmold-blue-raw-*": {
+        "vmmheavybasetoolmold-blue-raw-*": {
             "beehivekiln": {
                 "0": {
                     "type": "block",
-                    "code": "vanillamoremolds:vmmtoolmold-cream-fired-{tooltype}"
+                    "code": "vanillamoremolds:vmmheavybasetoolmold-cream-fired-{tooltype}"
                 },
                 "1": {
                     "type": "block",
-                    "code": "vanillamoremolds:vmmtoolmold-gray-fired-{tooltype}"
+                    "code": "vanillamoremolds:vmmheavybasetoolmold-gray-fired-{tooltype}"
                 },
                 "2": {
                     "type": "block",
-                    "code": "vanillamoremolds:vmmtoolmold-black-fired-{tooltype}"
+                    "code": "vanillamoremolds:vmmheavybasetoolmold-black-fired-{tooltype}"
                 },
                 "3": {
                     "type": "block",
-                    "code": "vanillamoremolds:vmmtoolmold-black-fired-{tooltype}"
+                    "code": "vanillamoremolds:vmmheavybasetoolmold-black-fired-{tooltype}"
                 }
             }
         },
-        "vmmtoolmold-fire-raw-*": {
+        "vmmheavybasetoolmold-fire-raw-*": {
             "beehivekiln": {
                 "0": {
                     "type": "block",
-                    "code": "vanillamoremolds:vmmtoolmold-fire-fired-{tooltype}"
+                    "code": "vanillamoremolds:vmmheavybasetoolmold-fire-fired-{tooltype}"
                 },
                 "1": {
                     "type": "block",
-                    "code": "vanillamoremolds:vmmtoolmold-fire-fired-{tooltype}"
+                    "code": "vanillamoremolds:vmmheavybasetoolmold-fire-fired-{tooltype}"
                 },
                 "2": {
                     "type": "block",
-                    "code": "vanillamoremolds:vmmtoolmold-fire-fired-{tooltype}"
+                    "code": "vanillamoremolds:vmmheavybasetoolmold-fire-fired-{tooltype}"
                 },
                 "3": {
                     "type": "block",
-                    "code": "vanillamoremolds:vmmtoolmold-fire-fired-{tooltype}"
+                    "code": "vanillamoremolds:vmmheavybasetoolmold-fire-fired-{tooltype}"
                 }
             }
         }
     },
     "combustiblePropsByType": {
-        "vmmtoolmold-fire-raw-*": {
+        "vmmheavybasetoolmold-fire-raw-*": {
             "meltingPoint": 650,
             "meltingDuration": 45,
             "smeltedRatio": 1,
             "smeltingType": "fire",
             "smeltedStack": {
                 "type": "block",
-                "code": "vanillamoremolds:vmmtoolmold-fire-fired-{tooltype}"
+                "code": "vanillamoremolds:vmmheavybasetoolmold-fire-fired-{tooltype}"
             },
             "requiresContainer": false
         },
-        "vmmtoolmold-*-raw-*": {
+        "vmmheavybasetoolmold-*-raw-*": {
             "meltingPoint": 650,
             "meltingDuration": 45,
             "smeltedRatio": 1,
             "smeltingType": "fire",
             "smeltedStack": {
                 "type": "block",
-                "code": "vanillamoremolds:vmmtoolmold-blue-fired-{tooltype}"
+                "code": "vanillamoremolds:vmmheavybasetoolmold-blue-fired-{tooltype}"
             },
             "requiresContainer": false
         }
@@ -148,29 +148,29 @@
     },
     "replaceable": 700,
     "resistance": 1.5,
-    "maxStackSize": 8,
+    "maxStackSize": 1,
     "lightAbsorption": 0,
     "sounds": {
         "walk": "game:walk/stone"
     },
     "collisionboxByType": {
         "*": {
-            "x1": 0.0625,
+            "z1": 0.1875,
             "y1": 0,
-            "z1": 0.0625,
-            "x2": 0.9375,
-            "y2": 0.125,
-            "z2": 0.9375
+            "x1": 0.1875,
+            "z2": 0.8125,
+            "y2": 0.5625,
+            "x2": 0.8125
         }
     },
     "selectionboxByType": {
         "*": {
-            "x1": 0.0625,
+            "z1": 0.1875,
             "y1": 0,
-            "z1": 0.0625,
-            "x2": 0.9375,
-            "y2": 0.125,
-            "z2": 0.9375
+            "x1": 0.1875,
+            "z2": 0.8125,
+            "y2": 0.5625,
+            "x2": 0.8125
         }
     },
     "sideopaque": {
@@ -188,7 +188,7 @@
             },
             "origin": {
                 "x": 0.5,
-                "y": 0.0625,
+                "y": 0.2,
                 "z": 0.5
             },
             "scale": 1.33
@@ -197,21 +197,21 @@
     "tpHandTransformByType": {
         "*": {
             "translation": {
-                "x": -1,
-                "y": -0.6,
-                "z": -1.05
+                "x": -0.5,
+                "y": -0,
+                "z": -0.45
             },
             "rotation": {
-                "x": -87,
-                "y": 9,
-                "z": 4
+                "x": -77,
+                "y": 14,
+                "z": -102
             },
             "origin": {
                 "x": 0.5,
                 "y": 0.125,
                 "z": 0.5
             },
-            "scale": 0.5
+            "scale": 0.7
         }
     },
     "fpHandTransformByType": {
@@ -223,8 +223,8 @@
             },
             "rotation": {
                 "x": 16,
-                "y": -51,
-                "z": 91
+                "y": -50,
+                "z": 1
             },
             "origin": {
                 "x": 0.5,

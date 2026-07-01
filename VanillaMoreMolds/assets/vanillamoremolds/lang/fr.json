@@ -1,7 +1,281 @@
 {
-    //Natively translated by Zack.a.riz
+    //Translated by Zack.a.riz | Special thanks to Kralthen, Skylotl, and Lud for their help with the translations.
     //Start log
-    "start": "VanillaMoreMolds : Loaded",
+    "start": "VanillaMoreMolds : Chargé",
+
     //Menu tab
     "game:tabname-VanillaMoreMolds": "Vanilla More Molds",
+
+    //Handbook text caution for fired molds
+    "vanillamoremolds:block-handbooktext-vanillamoremolds:vmmtoolmold-*-fired-*": "<strong>Attention\u00A0:</strong> Mouiller un moule contenant du métal en fusion entraînera sa destruction et vous perdrez une partie du métal.",
+
+    // =====================
+    // Tool Molds - Saw Blade
+    // =====================
+
+    //Mold sawblade raw
+    "block-vmmtoolmold-blue-raw-sawblade": "Moule de lame de scie en argile bleue brut",
+    "block-vmmtoolmold-red-raw-sawblade": "Moule de lame de scie en argile rouge brut",
+    "block-vmmtoolmold-fire-raw-sawblade": "Moule de lame de scie en argile réfractaire brut",
+
+    //Mold sawblade fired
+    "block-vmmtoolmold-blue-fired-sawblade": "Moule de lame de scie en céramique brun foncé",
+    "block-vmmtoolmold-black-fired-sawblade": "Moule de lame de scie en céramique noire",
+    "block-vmmtoolmold-brown-fired-sawblade": "Moule de lame de scie en céramique brune",
+    "block-vmmtoolmold-cream-fired-sawblade": "Moule de lame de scie en céramique crème",
+    "block-vmmtoolmold-fire-fired-sawblade": "Moule de lame de scie en céramique réfractaire",
+    "block-vmmtoolmold-gray-fired-sawblade": "Moule de lame de scie en céramique grise",
+    "block-vmmtoolmold-orange-fired-sawblade": "Moule de lame de scie en céramique orange",
+    "block-vmmtoolmold-red-fired-sawblade": "Moule de lame de scie en céramique rouge",
+    "block-vmmtoolmold-tan-fired-sawblade": "Moule de lame de scie en céramique ocre",
+
+    // =====================
+    // Tool Molds - Nail
+    // =====================
+
+    //Mold nail raw
+    "block-vmmtoolmold-blue-raw-nail": "Moule de clous et bandes en argile bleue brut",
+    "block-vmmtoolmold-red-raw-nail": "Moule de clous et bandes en argile rouge brut",
+    "block-vmmtoolmold-fire-raw-nail": "Moule de clous et bandes en argile réfractaire brut",
+
+    //Mold nail fired
+    "block-vmmtoolmold-blue-fired-nail": "Moule de clous et bandes en céramique brun foncé",
+    "block-vmmtoolmold-black-fired-nail": "Moule de clous et bandes en céramique noire",
+    "block-vmmtoolmold-brown-fired-nail": "Moule de clous et bandes en céramique brune",
+    "block-vmmtoolmold-cream-fired-nail": "Moule de clous et bandes en céramique crème",
+    "block-vmmtoolmold-fire-fired-nail": "Moule de clous et bandes en céramique réfractaire",
+    "block-vmmtoolmold-gray-fired-nail": "Moule de clous et bandes en céramique grise",
+    "block-vmmtoolmold-orange-fired-nail": "Moule de clous et bandes en céramique orange",
+    "block-vmmtoolmold-red-fired-nail": "Moule de clous et bandes en céramique rouge",
+    "block-vmmtoolmold-tan-fired-nail": "Moule de clous et bandes en céramique ocre",
+
+    // =====================
+    // Tool Molds - Arrowhead
+    // =====================
+
+    //Mold arrowhead raw
+    "block-vmmtoolmold-blue-raw-arrowhead": "Moule de pointe de flèche en argile bleue brut",
+    "block-vmmtoolmold-red-raw-arrowhead": "Moule de pointe de flèche en argile rouge brut",
+    "block-vmmtoolmold-fire-raw-arrowhead": "Moule de pointe de flèche en argile réfractaire brut",
+
+    //Mold arrowhead fired
+    "block-vmmtoolmold-blue-fired-arrowhead": "Moule de pointe de flèche en céramique brun foncé",
+    "block-vmmtoolmold-black-fired-arrowhead": "Moule de pointe de flèche en céramique noire",
+    "block-vmmtoolmold-brown-fired-arrowhead": "Moule de pointe de flèche en céramique brune",
+    "block-vmmtoolmold-cream-fired-arrowhead": "Moule de pointe de flèche en céramique crème",
+    "block-vmmtoolmold-fire-fired-arrowhead": "Moule de pointe de flèche en céramique réfractaire",
+    "block-vmmtoolmold-gray-fired-arrowhead": "Moule de pointe de flèche en céramique grise",
+    "block-vmmtoolmold-orange-fired-arrowhead": "Moule de pointe de flèche en céramique orange",
+    "block-vmmtoolmold-red-fired-arrowhead": "Moule de pointe de flèche en céramique rouge",
+    "block-vmmtoolmold-tan-fired-arrowhead": "Moule de pointe de flèche en céramique ocre",
+
+    // =====================
+    // Tool Molds - Hoop
+    // =====================
+
+    //Mold hoop raw
+    "block-vmmtoolmold-blue-raw-hoop": "Moule de cerclage en argile bleue brut",
+    "block-vmmtoolmold-red-raw-hoop": "Moule de cerclage en argile rouge brut",
+    "block-vmmtoolmold-fire-raw-hoop": "Moule de cerclage en argile réfractaire brut",
+
+    //Mold hoop fired
+    "block-vmmtoolmold-blue-fired-hoop": "Moule de cerclage en céramique brun foncé",
+    "block-vmmtoolmold-black-fired-hoop": "Moule de cerclage en céramique noire",
+    "block-vmmtoolmold-brown-fired-hoop": "Moule de cerclage en céramique brune",
+    "block-vmmtoolmold-cream-fired-hoop": "Moule de cerclage en céramique crème",
+    "block-vmmtoolmold-fire-fired-hoop": "Moule de cerclage en céramique réfractaire",
+    "block-vmmtoolmold-gray-fired-hoop": "Moule de cerclage en céramique grise",
+    "block-vmmtoolmold-orange-fired-hoop": "Moule de cerclage en céramique orange",
+    "block-vmmtoolmold-red-fired-hoop": "Moule de cerclage en céramique rouge",
+    "block-vmmtoolmold-tan-fired-hoop": "Moule de cerclage en céramique ocre",
+
+    // =====================
+    // Tool Molds - Plate
+    // =====================
+
+    //Mold plate raw
+    "block-vmmtoolmold-blue-raw-plate": "Moule de plaque en argile bleue brut",
+    "block-vmmtoolmold-red-raw-plate": "Moule de plaque en argile rouge brut",
+    "block-vmmtoolmold-fire-raw-plate": "Moule de plaque en argile réfractaire brut",
+
+    //Mold plate fired
+    "block-vmmtoolmold-blue-fired-plate": "Moule de plaque en céramique brun foncé",
+    "block-vmmtoolmold-black-fired-plate": "Moule de plaque en céramique noire",
+    "block-vmmtoolmold-brown-fired-plate": "Moule de plaque en céramique brune",
+    "block-vmmtoolmold-cream-fired-plate": "Moule de plaque en céramique crème",
+    "block-vmmtoolmold-fire-fired-plate": "Moule de plaque en céramique réfractaire",
+    "block-vmmtoolmold-gray-fired-plate": "Moule de plaque en céramique grise",
+    "block-vmmtoolmold-orange-fired-plate": "Moule de plaque en céramique orange",
+    "block-vmmtoolmold-red-fired-plate": "Moule de plaque en céramique rouge",
+    "block-vmmtoolmold-tan-fired-plate": "Moule de plaque en céramique ocre",
+
+    // =====================
+    // Tool Molds - Spearhead
+    // =====================
+
+    //Mold spearhead raw
+    "block-vmmtoolmold-blue-raw-spearhead": "Moule de pointe de lance en argile bleue brut",
+    "block-vmmtoolmold-red-raw-spearhead": "Moule de pointe de lance en argile rouge brut",
+    "block-vmmtoolmold-fire-raw-spearhead": "Moule de pointe de lance en argile réfractaire brut",
+
+    //Mold spearhead fired
+    "block-vmmtoolmold-blue-fired-spearhead": "Moule de pointe de lance en céramique brun foncé",
+    "block-vmmtoolmold-black-fired-spearhead": "Moule de pointe de lance en céramique noire",
+    "block-vmmtoolmold-brown-fired-spearhead": "Moule de pointe de lance en céramique brune",
+    "block-vmmtoolmold-cream-fired-spearhead": "Moule de pointe de lance en céramique crème",
+    "block-vmmtoolmold-fire-fired-spearhead": "Moule de pointe de lance en céramique réfractaire",
+    "block-vmmtoolmold-gray-fired-spearhead": "Moule de pointe de lance en céramique grise",
+    "block-vmmtoolmold-orange-fired-spearhead": "Moule de pointe de lance en céramique orange",
+    "block-vmmtoolmold-red-fired-spearhead": "Moule de pointe de lance en céramique rouge",
+    "block-vmmtoolmold-tan-fired-spearhead": "Moule de pointe de lance en céramique ocre",
+
+    // =====================
+    // Tool Molds - Knife Blade
+    // =====================
+
+    //Mold knifeblade raw
+    "block-vmmtoolmold-blue-raw-knifeblade": "Moule de lame de couteau en argile bleue brut",
+    "block-vmmtoolmold-red-raw-knifeblade": "Moule de lame de couteau en argile rouge brut",
+    "block-vmmtoolmold-fire-raw-knifeblade": "Moule de lame de couteau en argile réfractaire brut",
+
+    //Mold knifeblade fired
+    "block-vmmtoolmold-blue-fired-knifeblade": "Moule de lame de couteau en céramique brun foncé",
+    "block-vmmtoolmold-black-fired-knifeblade": "Moule de lame de couteau en céramique noire",
+    "block-vmmtoolmold-brown-fired-knifeblade": "Moule de lame de couteau en céramique brune",
+    "block-vmmtoolmold-cream-fired-knifeblade": "Moule de lame de couteau en céramique crème",
+    "block-vmmtoolmold-fire-fired-knifeblade": "Moule de lame de couteau en céramique réfractaire",
+    "block-vmmtoolmold-gray-fired-knifeblade": "Moule de lame de couteau en céramique grise",
+    "block-vmmtoolmold-orange-fired-knifeblade": "Moule de lame de couteau en céramique orange",
+    "block-vmmtoolmold-red-fired-knifeblade": "Moule de lame de couteau en céramique rouge",
+    "block-vmmtoolmold-tan-fired-knifeblade": "Moule de lame de couteau en céramique ocre",
+
+    // =====================
+    // Tool Molds - Scythe Head
+    // =====================
+
+    //Mold scythehead raw
+    "block-vmmtoolmold-blue-raw-scythehead": "Moule de lame de faux en argile bleue brut",
+    "block-vmmtoolmold-red-raw-scythehead": "Moule de lame de faux en argile rouge brut",
+    "block-vmmtoolmold-fire-raw-scythehead": "Moule de lame de faux en argile réfractaire brut",
+
+    //Mold scythehead fired
+    "block-vmmtoolmold-blue-fired-scythehead": "Moule de lame de faux en céramique brun foncé",
+    "block-vmmtoolmold-black-fired-scythehead": "Moule de lame de faux en céramique noire",
+    "block-vmmtoolmold-brown-fired-scythehead": "Moule de lame de faux en céramique brune",
+    "block-vmmtoolmold-cream-fired-scythehead": "Moule de lame de faux en céramique crème",
+    "block-vmmtoolmold-fire-fired-scythehead": "Moule de lame de faux en céramique réfractaire",
+    "block-vmmtoolmold-gray-fired-scythehead": "Moule de lame de faux en céramique grise",
+    "block-vmmtoolmold-orange-fired-scythehead": "Moule de lame de faux en céramique orange",
+    "block-vmmtoolmold-red-fired-scythehead": "Moule de lame de faux en céramique rouge",
+    "block-vmmtoolmold-tan-fired-scythehead": "Moule de lame de faux en céramique ocre",
+
+    // =====================
+    // Heavy Mold - Empty
+    // =====================
+
+    // =====================
+    // Heavy Mold - Base
+    // =====================
+
+    "block-vmmheavybasetoolmold-blue-fired-heavybase": "Base de moule lourd en céramique brun foncé",
+    "block-vmmheavybasetoolmold-black-fired-heavybase": "Base de moule lourd en céramique noire",
+    "block-vmmheavybasetoolmold-brown-fired-heavybase": "Base de moule lourd en céramique brune",
+    "block-vmmheavybasetoolmold-cream-fired-heavybase": "Base de moule lourd en céramique crème",
+    "block-vmmheavybasetoolmold-fire-fired-heavybase": "Base de moule lourd en céramique réfractaire",
+    "block-vmmheavybasetoolmold-gray-fired-heavybase": "Base de moule lourd en céramique grise",
+    "block-vmmheavybasetoolmold-orange-fired-heavybase": "Base de moule lourd en céramique orange",
+    "block-vmmheavybasetoolmold-red-fired-heavybase": "Base de moule lourd en céramique rouge",
+    "block-vmmheavybasetoolmold-tan-fired-heavybase": "Base de moule lourd en céramique ocre",
+
+    // =====================
+    // Heavy Mold - Empty
+    // =====================
+
+    "block-vmmheavymold-empty-blue": "Moule lourd en céramique brun foncé vide",
+    "block-vmmheavymold-empty-black": "Moule lourd en céramique noire vide",
+    "block-vmmheavymold-empty-brown": "Moule lourd en céramique brune vide",
+    "block-vmmheavymold-empty-cream": "Moule lourd en céramique crème vide",
+    "block-vmmheavymold-empty-fire": "Moule lourd en céramique réfractaire vide",
+    "block-vmmheavymold-empty-gray": "Moule lourd en céramique grise vide",
+    "block-vmmheavymold-empty-orange": "Moule lourd en céramique orange vide",
+    "block-vmmheavymold-empty-red": "Moule lourd en céramique rouge vide",
+    "block-vmmheavymold-empty-tan": "Moule lourd en céramique ocre vide",
+
+    // =====================
+    // Heavy Mold - Fill 1
+    // =====================
+
+    "block-vmmheavymold-fill1-blue": "Moule lourd en céramique brun foncé légèrement rempli",
+    "block-vmmheavymold-fill1-black": "Moule lourd en céramique noire légèrement rempli",
+    "block-vmmheavymold-fill1-brown": "Moule lourd en céramique brune légèrement rempli",
+    "block-vmmheavymold-fill1-cream": "Moule lourd en céramique crème légèrement rempli",
+    "block-vmmheavymold-fill1-fire": "Moule lourd en céramique réfractaire légèrement rempli",
+    "block-vmmheavymold-fill1-gray": "Moule lourd en céramique grise légèrement rempli",
+    "block-vmmheavymold-fill1-orange": "Moule lourd en céramique orange légèrement rempli",
+    "block-vmmheavymold-fill1-red": "Moule lourd en céramique rouge légèrement rempli",
+    "block-vmmheavymold-fill1-tan": "Moule lourd en céramique ocre légèrement rempli",
+
+    // =====================
+    // Heavy Mold - Fill 2
+    // =====================
+
+    "block-vmmheavymold-fill2-blue": "Moule lourd en céramique brun foncé partiellement rempli",
+    "block-vmmheavymold-fill2-black": "Moule lourd en céramique noire partiellement rempli",
+    "block-vmmheavymold-fill2-brown": "Moule lourd en céramique brune partiellement rempli",
+    "block-vmmheavymold-fill2-cream": "Moule lourd en céramique crème partiellement rempli",
+    "block-vmmheavymold-fill2-fire": "Moule lourd en céramique réfractaire partiellement rempli",
+    "block-vmmheavymold-fill2-gray": "Moule lourd en céramique grise partiellement rempli",
+    "block-vmmheavymold-fill2-orange": "Moule lourd en céramique orange partiellement rempli",
+    "block-vmmheavymold-fill2-red": "Moule lourd en céramique rouge partiellement rempli",
+    "block-vmmheavymold-fill2-tan": "Moule lourd en céramique ocre partiellement rempli",
+
+    // =====================
+    // Heavy Mold - Fill 3
+    // =====================
+
+    "block-vmmheavymold-fill3-blue": "Moule lourd en céramique brun foncé rempli",
+    "block-vmmheavymold-fill3-black": "Moule lourd en céramique noire rempli",
+    "block-vmmheavymold-fill3-brown": "Moule lourd en céramique brune rempli",
+    "block-vmmheavymold-fill3-cream": "Moule lourd en céramique crème rempli",
+    "block-vmmheavymold-fill3-fire": "Moule lourd en céramique réfractaire rempli",
+    "block-vmmheavymold-fill3-gray": "Moule lourd en céramique grise rempli",
+    "block-vmmheavymold-fill3-orange": "Moule lourd en céramique orange rempli",
+    "block-vmmheavymold-fill3-red": "Moule lourd en céramique rouge rempli",
+    "block-vmmheavymold-fill3-tan": "Moule lourd en céramique ocre rempli",
+
+    // =====================
+    // Heavy Mold - Ingot
+    // =====================
+
+    "block-vmmheavymold-toolmold-complet-blue-fired-ingot": "Moule lourd à lingots en céramique brun foncé",
+    "block-vmmheavymold-toolmold-complet-black-fired-ingot": "Moule lourd à lingots en céramique noire",
+    "block-vmmheavymold-toolmold-complet-brown-fired-ingot": "Moule lourd à lingots en céramique brune",
+    "block-vmmheavymold-toolmold-complet-cream-fired-ingot": "Moule lourd à lingots en céramique crème",
+    "block-vmmheavymold-toolmold-complet-fire-fired-ingot": "Moule lourd à lingots en céramique réfractaire",
+    "block-vmmheavymold-toolmold-complet-gray-fired-ingot": "Moule lourd à lingots en céramique grise",
+    "block-vmmheavymold-toolmold-complet-orange-fired-ingot": "Moule lourd à lingots en céramique orange",
+    "block-vmmheavymold-toolmold-complet-red-fired-ingot": "Moule lourd à lingots en céramique rouge",
+    "block-vmmheavymold-toolmold-complet-tan-fired-ingot": "Moule lourd à lingots en céramique ocre",
+
+    // =====================
+    // Heavy Mold - Plate
+    // =====================
+
+    "block-vmmheavymold-toolmold-complet-blue-fired-plate": "Moule lourd à plaques en céramique brun foncé",
+    "block-vmmheavymold-toolmold-complet-black-fired-plate": "Moule lourd à plaques en céramique noire",
+    "block-vmmheavymold-toolmold-complet-brown-fired-plate": "Moule lourd à plaques en céramique brune",
+    "block-vmmheavymold-toolmold-complet-cream-fired-plate": "Moule lourd à plaques en céramique crème",
+    "block-vmmheavymold-toolmold-complet-fire-fired-plate": "Moule lourd à plaques en céramique réfractaire",
+    "block-vmmheavymold-toolmold-complet-gray-fired-plate": "Moule lourd à plaques en céramique grise",
+    "block-vmmheavymold-toolmold-complet-orange-fired-plate": "Moule lourd à plaques en céramique orange",
+    "block-vmmheavymold-toolmold-complet-red-fired-plate": "Moule lourd à plaques en céramique rouge",
+    "block-vmmheavymold-toolmold-complet-tan-fired-plate": "Moule lourd à plaques en céramique ocre",
+
+    //Heavy Mold interaction
+    "blockhelp-vmmheavymold-sand": "Remplir de sable",
+    "blockhelp-vmmheavymold-fill3-ingot": "Créer une empreinte de lingot",
+    "blockhelp-vmmheavymold-fill3-plate": "Créer une empreinte de plaque",
+
+    //Heavy Mold handbook info
+    "vanillamoremolds:block-handbooktext-vanillamoremolds:vmmheavymold-*": "<strong>Moule lourd :</strong><br>Conçu pour la production de masse de lingots et de plaques métalliques. Son contenant résiste à l'eau et doit être rempli de sable avant de créer une empreinte.<br><br><strong>Utilisation :</strong><br>Remplir de sable : Shift + Clic droit avec du sable<br>Créer un moule à lingots : Shift + Clic droit avec un lingot<br>Créer un moule à plaques : Shift + Clic droit avec une plaque métallique"
 }

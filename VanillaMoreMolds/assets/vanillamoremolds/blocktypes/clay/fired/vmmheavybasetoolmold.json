@@ -1,0 +1,166 @@
+{ // Moules de base en argile cuits
+    "code": "vmmheavybasetoolmold",
+    "class": "Block",
+    "behaviors": [
+        {
+            "name": "GroundStorable",
+            "properties": { "layout": "SingleCenter" }
+        },
+        { "name": "RightClickPickup" },
+        { "name": "Unplaceable" }
+    ],
+    "variantgroups": [
+        {
+            "code": "color",
+            "states": [ "blue", "fire", "black", "brown", "cream", "gray", "orange", "red", "tan" ]
+        },
+        {
+            "code": "materialtype",
+            "states": [ "fired" ]
+        },
+        {
+            "code": "tooltype",
+            "states": [ "heavybase" ]
+        }
+    ],
+    "shapebytype": {
+        "*": {
+            "base": "block/clay/mold/heavymold/{tooltype}",
+            "rotateY": 0
+        }
+    },
+    "textures": {
+        "floor": { "base": "game:block/clay/hardened/{color}" },
+        "other": { "base": "game:block/clay/hardened/{color}" }
+    },
+    "attributes": {
+        "reinforcable": true,
+        "onTongTransformByType": {
+            "*": {
+                "translation": {
+                    "x": -1.7,
+                    "y": -1.3,
+                    "z": -0.57
+                },
+                "rotation": {
+                    "x": 98,
+                    "y": 16,
+                    "z": 3
+                },
+                "scale": 0.55
+            }
+        },
+        "handbook": {
+            "groupBy": [ "{color}-{materialtype}-{tooltype}" ]
+        }
+    },
+    "blockmaterial": "Ceramic",
+    "creativeinventory": {
+        "general": [ "*" ],
+        "construction": [ "*" ],
+        "VanillaMoreMolds": [ "*" ]
+    },
+    "replaceable": 700,
+    "resistance": 1.5,
+    "maxStackSize": 1,
+    "lightAbsorption": 0,
+    "sounds": {
+        "walk": "game:walk/stone"
+    },
+    "collisionboxByType": {
+        "*": {
+            "z1": 0.1875,
+            "y1": 0,
+            "x1": 0.1875,
+            "z2": 0.8125,
+            "y2": 0.5625,
+            "x2": 0.8125
+        }
+    },
+    "selectionboxByType": {
+        "*": {
+            "z1": 0.1875,
+            "y1": 0,
+            "x1": 0.1875,
+            "z2": 0.8125,
+            "y2": 0.5625,
+            "x2": 0.8125
+        }
+    },
+    "sideopaque": { "all": false },
+    "sidesolid": { "all": false },
+    "heldTpIdleAnimationByType": { "*": "holdbothhandslarge" },
+    "heldTpUseAnimationByType": { "*": "twohandplaceblock" },
+    "guiTransformByType": {
+        "*": {
+            "translation": {
+                "x": 0,
+                "y": 3,
+                "z": 0
+            },
+            "origin": {
+                "x": 0.5,
+                "y": 0.2,
+                "z": 0.5
+            },
+            "scale": 1.33
+        }
+    },
+    "tpHandTransformByType": {
+        "*": {
+            "translation": {
+                "x": -0.5,
+                "y": 0,
+                "z": -0.45
+            },
+            "rotation": {
+                "x": -77,
+                "y": 14,
+                "z": -102
+            },
+            "origin": {
+                "x": 0.5,
+                "y": 0.125,
+                "z": 0.5
+            },
+            "scale": 0.7
+        }
+    },
+    "fpHandTransformByType": {
+        "*": {
+            "translation": {
+                "x": -0.3,
+                "y": 0,
+                "z": 0.5
+            },
+            "rotation": {
+                "x": 16,
+                "y": -50,
+                "z": 1
+            },
+            "origin": {
+                "x": 0.5,
+                "y": 0.125,
+                "z": 0.5
+            }
+        }
+    },
+    "groundTransform": {
+        "translation": {
+            "x": 0,
+            "y": 0,
+            "z": 0
+        },
+        "rotation": {
+            "x": 0,
+            "y": -45,
+            "z": 0
+        },
+        "origin": {
+            "x": 0.5,
+            "y": 0,
+            "z": 0.5
+        },
+        "scale": 2.2
+    }
+}

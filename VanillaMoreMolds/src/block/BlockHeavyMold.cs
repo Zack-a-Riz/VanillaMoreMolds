@@ -1,0 +1,337 @@
+﻿using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
+using Vintagestory.API.Client;
+using Vintagestory.API.Common;
+using Vintagestory.API.MathTools;
+
+namespace VanillaMoreMolds
+{
+    public class BlockHeavyMold : Block
+    {
+        private string Stage => Variant?["stage"] ?? "empty";
+
+        private readonly Dictionary<string, MultiTextureMeshRef> sandMeshCache = new();
+
+        private string? NextStageCodePart() => Stage switch
+        {
+            "empty" => "fill1",
+            "fill1" => "fill2",
+            "fill2" => "fill3",
+            _ => null
+        };
+
+        public override bool OnBlockInteractStart(IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel)
+        {
+            if (blockSel?.Position == null) return false;
+
+            ItemStack? held = byPlayer?.InventoryManager?.ActiveHotbarSlot?.Itemstack;
+            bool hasShift = byPlayer?.Entity?.Controls?.ShiftKey == true;
+            bool isSand = held?.Block?.Code?.Path?.StartsWith("sand-") == true;
+            bool isIngot = held?.Item?.Code?.Path?.Contains("ingot") == true;
+            bool isPlate = held?.Item?.Code?.Path?.StartsWith("metalplate-") == true;
+
+            if (Stage != "fill3" && isSand && hasShift)
+            {
+                string sandRock = held!.Block.Code.Path.Substring("sand-".Length);
+                AdvanceStage(world, byPlayer, blockSel, NextStageCodePart(), sandRock, consumeItem: true);
+                return true;
+            }
+
+            if (Stage == "fill3" && isIngot && hasShift && (VanillaMoreMoldsConfig.Current?.IsHeavyMoldIngotEnabled ?? true))
+            {
+                AdvanceStage(world, byPlayer, blockSel, "ingot", sandRock: null, consumeItem: false);
+                return true;
+            }
+
+            if (Stage == "fill3" && isPlate && hasShift && (VanillaMoreMoldsConfig.Current?.IsHeavyMoldPlateEnabled ?? true))
+            {
+                AdvanceStage(world, byPlayer, blockSel, "plate", sandRock: null, consumeItem: false);
+                return true;
+            }
+
+            if (!hasShift && held == null && byPlayer != null)
+            {
+                if (world.Side == EnumAppSide.Server)
+                {
+                    Block block = world.BlockAccessor.GetBlock(blockSel.Position);
+                    ItemStack pickupStack = new ItemStack(block);
+
+                    var be = world.BlockAccessor.GetBlockEntity(blockSel.Position) as BEHeavyMold;
+                    if (be?.SandType != null)
+                        pickupStack.Attributes.SetString("sandType", be.SandType);
+
+                    if (!byPlayer.InventoryManager.TryGiveItemstack(pickupStack))
+                        world.SpawnItemEntity(pickupStack, blockSel.Position.ToVec3d());
+
+                    world.BlockAccessor.SetBlock(0, blockSel.Position);
+                }
+
+                return true;
+            }
+
+            return base.OnBlockInteractStart(world, byPlayer, blockSel);
+        }
+
+        public override void OnBlockPlaced(IWorldAccessor world, BlockPos blockPos, ItemStack byItemStack)
+        {
+            base.OnBlockPlaced(world, blockPos, byItemStack);
+
+            var be = world.BlockAccessor.GetBlockEntity(blockPos) as BEHeavyMold;
+            if (be == null) return;
+
+            IPlayer placer = world.NearestPlayer(blockPos.X, blockPos.Y, blockPos.Z);
+            if (placer == null) return;
+
+            be.MeshAngle = (float)(System.Math.Round(placer.Entity.Pos.Yaw / GameMath.PIHALF) * GameMath.PIHALF);
+
+            string? sandType = byItemStack?.Attributes?.GetString("sandType");
+            if (sandType != null)
+                be.SandType = sandType;
+
+            if (world.Side == EnumAppSide.Server)
+                be.MarkDirty(true);
+            else
+                world.BlockAccessor.MarkBlockEntityDirty(blockPos);
+        }
+
+        public override ItemStack OnPickBlock(IWorldAccessor world, BlockPos pos)
+        {
+            ItemStack stack = base.OnPickBlock(world, pos);
+            var be = world.BlockAccessor.GetBlockEntity(pos) as BEHeavyMold;
+            if (be?.SandType != null)
+                stack.Attributes.SetString("sandType", be.SandType);
+            return stack;
+        }
+
+        public override void OnBeforeRender(ICoreClientAPI capi, ItemStack itemstack, EnumItemRenderTarget target, ref ItemRenderInfo renderinfo)
+        {
+            base.OnBeforeRender(capi, itemstack, target, ref renderinfo);
+
+            string? sandType = itemstack.Attributes?.GetString("sandType");
+            if (string.IsNullOrEmpty(sandType) || !Textures.ContainsKey("sand")) return;
+
+            string cacheKey = Code.ToString() + "/" + sandType;
+
+            if (!sandMeshCache.TryGetValue(cacheKey, out MultiTextureMeshRef? meshRef))
+            {
+                AssetLocation texLoc = new AssetLocation("game", "block/stone/sand/" + sandType);
+                capi.BlockTextureAtlas.GetOrInsertTexture(texLoc, out int texSubId, out _);
+
+                CompositeTexture prevTex = Textures["sand"];
+                Textures["sand"] = new CompositeTexture(texLoc)
+                {
+                    Baked = new BakedCompositeTexture { BakedName = texLoc, TextureSubId = texSubId }
+                };
+                capi.Tesselator.TesselateBlock(this, out MeshData? mesh);
+                Textures["sand"] = prevTex;
+
+                if (mesh == null) return;
+                meshRef = capi.Render.UploadMultiTextureMesh(mesh);
+                sandMeshCache[cacheKey] = meshRef;
+            }
+
+            renderinfo.ModelRef = meshRef;
+        }
+
+        public override void OnUnloaded(ICoreAPI api)
+        {
+            base.OnUnloaded(api);
+            foreach (MultiTextureMeshRef meshRef in sandMeshCache.Values)
+                meshRef.Dispose();
+            sandMeshCache.Clear();
+        }
+
+        private void AdvanceStage(IWorldAccessor world, IPlayer? byPlayer, BlockSelection blockSel, string? nextStage, string? sandRock, bool consumeItem)
+        {
+            if (nextStage == null) return;
+
+            string color = world.BlockAccessor.GetBlock(blockSel.Position).Variant?["color"] ?? "blue";
+            var currentBe = world.BlockAccessor.GetBlockEntity(blockSel.Position) as BEHeavyMold;
+            float meshAngle = currentBe?.MeshAngle ?? 0f;
+            string? existingSandType = currentBe?.SandType;
+            string? sandType = sandRock ?? existingSandType;
+
+            Block? nextBlock = (nextStage == "ingot" || nextStage == "plate")
+                ? world.GetBlock(new AssetLocation("vanillamoremolds:vmmheavymold-toolmold-complet-" + color + "-fired-" + nextStage))
+                : world.GetBlock(CodeWithParts(nextStage, color));
+
+            if (nextBlock == null) return;
+
+            if ((nextStage == "ingot" || nextStage == "plate") && !string.IsNullOrEmpty(sandType))
+                BEBehaviorSandTexture.PendingSandType[blockSel.Position.Copy()] = sandType;
+
+            world.BlockAccessor.SetBlock(nextBlock.BlockId, blockSel.Position);
+
+            var newEntity = world.BlockAccessor.GetBlockEntity(blockSel.Position);
+            if (newEntity is BEHeavyMold newBe)
+            {
+                newBe.MeshAngle = meshAngle;
+                newBe.SandType = sandType;
+
+                if (world.Side == EnumAppSide.Server)
+                    newBe.MarkDirty(true);
+            }
+            else if (newEntity != null)
+            {
+                newEntity.GetType().GetField("MeshAngle", BindingFlags.Public | BindingFlags.Instance)?.SetValue(newEntity, meshAngle);
+
+                var sandBehavior = newEntity.GetBehavior<BEBehaviorSandTexture>();
+                if (sandBehavior != null && !string.IsNullOrEmpty(sandType))
+                    sandBehavior.SetSandType(sandType);
+
+                if (world.Side == EnumAppSide.Server)
+                    newEntity.MarkDirty(true);
+            }
+
+            if (world.Side == EnumAppSide.Server)
+            {
+                if (consumeItem && byPlayer != null && byPlayer.WorldData.CurrentGameMode != EnumGameMode.Creative)
+                {
+                    ItemSlot slot = byPlayer.InventoryManager.ActiveHotbarSlot;
+                    if (slot?.Itemstack != null)
+                    {
+                        slot.Itemstack.StackSize--;
+                        if (slot.Itemstack.StackSize <= 0) slot.Itemstack = null;
+                        slot.MarkDirty();
+                    }
+                }
+
+                if (consumeItem && !string.IsNullOrEmpty(sandRock))
+                {
+                    var soundLocation = new AssetLocation("vanillamoremolds:sounds/block/heavymold/heavymold-in");
+
+                    world.PlaySoundAt(
+                        soundLocation,
+                        blockSel.Position,
+                        0,
+                        null,
+                        true,
+                        10f,
+                        1f
+                    );
+
+                    SpawnFallingSandDustParticles(world, blockSel, sandRock);
+                }
+
+                if (nextStage == "ingot" || nextStage == "plate")
+                {
+                    var soundLocation = new AssetLocation("vanillamoremolds:sounds/block/heavymold/heavymold-out");
+
+                    world.PlaySoundAt(
+                        soundLocation,
+                        blockSel.Position,
+                        0,
+                        null,
+                        true,
+                        10f,
+                        1f
+                    );
+                }
+
+                if (nextBlock.Sounds?.Place != null)
+                    world.PlaySoundAt(nextBlock.Sounds.Place, blockSel.Position.X, blockSel.Position.Y, blockSel.Position.Z, 0);
+            }
+        }
+
+        private void SpawnFallingSandDustParticles(IWorldAccessor world, BlockSelection blockSel, string sandRock)
+        {
+            if (world.Side != EnumAppSide.Server) return;
+
+            Block? sandBlock = world.GetBlock(new AssetLocation("game:sand-" + sandRock));
+            if (sandBlock == null) return;
+
+            Vec3d basePos = blockSel.Position.ToVec3d();
+
+            Vec3d minPos = basePos.AddCopy(0.25, 0.2, 0.25);
+            Vec3d maxPos = basePos.AddCopy(0.75, 0.65, 0.75);
+
+            SimpleParticleProperties particles = new SimpleParticleProperties(
+                30f,                              
+                60f,                              
+                unchecked((int)0xD8C59AFF),       
+                minPos,
+                maxPos,
+                new Vec3f(-0.00f, -0.01f, -0.0f), 
+                new Vec3f(-0.0f, -0.05f, -0.00f), 
+                1.0f,                             
+                0.00f,                            
+                0.1f,                             
+                0.3f,                             
+                EnumParticleModel.Quad            
+            );
+
+            particles.ColorByBlock = sandBlock;
+            particles.WithTerrainCollision = false;
+            particles.WindAffected = false;
+
+            world.SpawnParticles(particles, null);
+        }
+
+        public override WorldInteraction[] GetPlacedBlockInteractionHelp(IWorldAccessor world, BlockSelection selection, IPlayer forPlayer)
+        {
+            var interactions = new List<WorldInteraction>();
+
+            if (Stage != "fill3")
+            {
+                ItemStack[] sandStacks = world.SearchBlocks(new AssetLocation("game:sand-*"))
+                    .Where(block => block.Code.Path.IndexOf('-', "sand-".Length) < 0)
+                    .Select(block => new ItemStack(block))
+                    .ToArray();
+
+                if (sandStacks.Length > 0)
+                {
+                    interactions.Add(new WorldInteraction
+                    {
+                        ActionLangCode = "vanillamoremolds:blockhelp-vmmheavymold-sand",
+                        MouseButton = EnumMouseButton.Right,
+                        HotKeyCode = "shift",
+                        Itemstacks = sandStacks
+                    });
+                }
+
+                return [.. interactions, .. base.GetPlacedBlockInteractionHelp(world, selection, forPlayer)];
+            }
+
+            if (VanillaMoreMoldsConfig.Current?.IsHeavyMoldIngotEnabled ?? true)
+            {
+                ItemStack[] ingotStacks = world.SearchItems(new AssetLocation("game:ingot-*"))
+                    .Select(item => new ItemStack(item))
+                    .Where(stack => stack.Item != null)
+                    .ToArray();
+
+                if (ingotStacks.Length > 0)
+                {
+                    interactions.Add(new WorldInteraction
+                    {
+                        ActionLangCode = "vanillamoremolds:blockhelp-vmmheavymold-fill3-ingot",
+                        MouseButton = EnumMouseButton.Right,
+                        HotKeyCode = "shift",
+                        Itemstacks = ingotStacks
+                    });
+                }
+            }
+
+            if (VanillaMoreMoldsConfig.Current?.IsHeavyMoldPlateEnabled ?? true)
+            {
+                ItemStack[] plateStacks = world.SearchItems(new AssetLocation("game:metalplate-*"))
+                    .Select(item => new ItemStack(item))
+                    .Where(stack => stack.Item != null)
+                    .ToArray();
+
+                if (plateStacks.Length > 0)
+                {
+                    interactions.Add(new WorldInteraction
+                    {
+                        ActionLangCode = "vanillamoremolds:blockhelp-vmmheavymold-fill3-plate",
+                        MouseButton = EnumMouseButton.Right,
+                        HotKeyCode = "shift",
+                        Itemstacks = plateStacks
+                    });
+                }
+            }
+
+            return [.. interactions, .. base.GetPlacedBlockInteractionHelp(world, selection, forPlayer)];
+        }
+    }
+}

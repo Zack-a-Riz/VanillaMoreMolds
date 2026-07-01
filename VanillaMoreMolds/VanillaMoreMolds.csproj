@@ -1,15 +1,41 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <OutputPath>bin\$(Configuration)\Mods\mod</OutputPath>
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="src\**" />
+    <EmbeddedResource Remove="src\**" />
+    <None Remove="src\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="src\Block\BlockHeavyMold.cs" />
+    <Compile Include="src\Block\BlockHeavyToolMold.cs" />
+    <Compile Include="src\BlockEntity\BEHeavyMold.cs" />
+    <Compile Include="src\BlockEntityBehavior\BEBehaviorSandTexture.cs" />
+    <Compile Include="src\System\VanillaMoreMoldsConfig.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <RuntimeHostConfigurationOption Include="System.Runtime.Loader.UseResolvingHandlerOnLoad" Value="false" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Reference Include="VintagestoryAPI">
       <HintPath>$(VINTAGE_STORY)/VintagestoryAPI.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="VSSurvivalMod">
+      <HintPath>$(APPDATA)/Vintagestory/Mods/VSSurvivalMod.dll</HintPath>
+      <Private>false</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>$(APPDATA)/Vintagestory/Lib/Newtonsoft.Json.dll</HintPath>
       <Private>false</Private>
     </Reference>
   </ItemGroup>
@@ -24,6 +50,12 @@
   <Content Include="modicon.png" Condition="Exists('modicon.png')">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
   </Content>
+</ItemGroup>
+
+<ItemGroup>
+  <Folder Include="assets\ModConfig\" />
+  <Folder Include="src\BlockEntity\" />
+  <Folder Include="src\BlockEntityBehavior\" />
 </ItemGroup>
 
 </Project>

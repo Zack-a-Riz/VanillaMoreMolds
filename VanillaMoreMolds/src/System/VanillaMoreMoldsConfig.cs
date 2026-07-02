@@ -5,7 +5,7 @@ namespace VanillaMoreMolds
     {
         public static VanillaMoreMoldsConfig? Current { get; set; }
 
-        public int ConfigVersion { get; set; } = 0;
+        public int ConfigVersion { get; set; } = 1;
         public bool EnableVMMToolMolds   { get; set; } = true;
         public bool EnableArrowheadMold  { get; set; } = false;
         public bool EnableHoopMold       { get; set; } = true;

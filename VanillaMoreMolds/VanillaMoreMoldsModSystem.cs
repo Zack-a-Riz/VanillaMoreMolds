@@ -7,14 +7,13 @@ namespace VanillaMoreMolds
 {
     public class VanillaMoreMoldsModSystem : ModSystem
     {
-        private const int CurrentConfigVersion = 1; // Note : Update cette version si la configuration change n'oublie pas de mettre à jour la version dans le fichier de configuration aussi.
+        private const int CurrentConfigVersion = 2; // Note : Update cette version si la configuration change n'oublie pas de mettre à jour la version dans le fichier de configuration aussi.
 
         private static readonly string DefaultConfig = $$"""
             {
               //████████████████████████████████████████████████████████████████████████████████████████████████████
 
               //                            === Vanilla More Molds : Configuration File ===
-              //                                          Config version : {{CurrentConfigVersion}}
 
               //████████████████████████████████████████████████████████████████████████████████████████████████████
 
@@ -27,6 +26,8 @@ namespace VanillaMoreMolds
               //████████████████████████████████████████████████████████████████████████████████████████████████████
 
               // Configuration:
+
+              "ConfigVersion": {{CurrentConfigVersion}}, // Version of the configuration file. Do not change this value.
 
               // === Vanilla More Molds : Additional Vanilla-Style Molds ===
 

@@ -146,6 +146,7 @@
 <li><span style="color: #e74c3c;"><strong>Save files from 1.x</strong> : Molds from version of VanillaMoreMolds 1.x will be broken starting from 2.0. It is recommended to remove all Vanilla More Molds molds from your world before updating.</span></li>
 </ul>
 <h3>Update:</h3>
+<p>02/08/2026 : 2.0.1 : HotFix : Fixed config issue, and VanillaMoreMoldsModSystem.cs. Add new modicon.png</p>
 <p>01/07/2026 : <strong>2.0.0</strong> : Major overhaul of the mod, introduction of heavy molds, addition of the config system</p>
 <p>19/02/2025 : <strong>1.1.2</strong> : Community Update</p>
 <p>21/01/2025 : <strong>1.1.1</strong> : Fixed mod loading issue in 1.1.0</p>

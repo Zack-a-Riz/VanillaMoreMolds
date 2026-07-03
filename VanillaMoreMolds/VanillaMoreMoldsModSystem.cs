@@ -73,9 +73,7 @@ namespace VanillaMoreMolds
         {
             base.Start(api);
             api.RegisterBlockClass("BlockHeavyMold", typeof(BlockHeavyMold));
-            api.RegisterBlockClass("BlockHeavyToolMold", typeof(BlockHeavyToolMold));
             api.RegisterBlockEntityClass("BEHeavyMold", typeof(BEHeavyMold));
-            api.RegisterBlockEntityBehaviorClass("BEBehaviorSandTexture", typeof(BEBehaviorSandTexture));
 
             string configPath = Path.Combine(api.GetOrCreateDataPath("ModConfig"), "vanillamoremolds.json");
 

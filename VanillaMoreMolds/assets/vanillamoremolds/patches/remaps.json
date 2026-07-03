@@ -1,0 +1,27 @@
+[
+    {
+        "op": "add",
+        "file": "game:config/remaps.json",
+        "path": "/vanillamoremolds:v2.1.0",
+        "value": [
+            "/bir remapq block-vmmheavymold-toolmold-complet-blue-fired-ingot block-vmmheavymold-ingot-blue force",
+            "/bir remapq block-vmmheavymold-toolmold-complet-fire-fired-ingot block-vmmheavymold-ingot-fire force",
+            "/bir remapq block-vmmheavymold-toolmold-complet-black-fired-ingot block-vmmheavymold-ingot-black force",
+            "/bir remapq block-vmmheavymold-toolmold-complet-brown-fired-ingot block-vmmheavymold-ingot-brown force",
+            "/bir remapq block-vmmheavymold-toolmold-complet-cream-fired-ingot block-vmmheavymold-ingot-cream force",
+            "/bir remapq block-vmmheavymold-toolmold-complet-gray-fired-ingot block-vmmheavymold-ingot-gray force",
+            "/bir remapq block-vmmheavymold-toolmold-complet-orange-fired-ingot block-vmmheavymold-ingot-orange force",
+            "/bir remapq block-vmmheavymold-toolmold-complet-red-fired-ingot block-vmmheavymold-ingot-red force",
+            "/bir remapq block-vmmheavymold-toolmold-complet-tan-fired-ingot block-vmmheavymold-ingot-tan force",
+            "/bir remapq block-vmmheavymold-toolmold-complet-blue-fired-plate block-vmmheavymold-plate-blue force",
+            "/bir remapq block-vmmheavymold-toolmold-complet-fire-fired-plate block-vmmheavymold-plate-fire force",
+            "/bir remapq block-vmmheavymold-toolmold-complet-black-fired-plate block-vmmheavymold-plate-black force",
+            "/bir remapq block-vmmheavymold-toolmold-complet-brown-fired-plate block-vmmheavymold-plate-brown force",
+            "/bir remapq block-vmmheavymold-toolmold-complet-cream-fired-plate block-vmmheavymold-plate-cream force",
+            "/bir remapq block-vmmheavymold-toolmold-complet-gray-fired-plate block-vmmheavymold-plate-gray force",
+            "/bir remapq block-vmmheavymold-toolmold-complet-orange-fired-plate block-vmmheavymold-plate-orange force",
+            "/bir remapq block-vmmheavymold-toolmold-complet-red-fired-plate block-vmmheavymold-plate-red force",
+            "/bir remapq block-vmmheavymold-toolmold-complet-tan-fired-plate block-vmmheavymold-plate-tan force"
+        ]
+    }
+]

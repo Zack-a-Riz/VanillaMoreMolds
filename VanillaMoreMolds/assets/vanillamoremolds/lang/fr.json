@@ -247,29 +247,29 @@
     // Heavy Mold - Ingot
     // =====================
 
-    "block-vmmheavymold-toolmold-complet-blue-fired-ingot": "Moule lourd à lingots en céramique brun foncé",
-    "block-vmmheavymold-toolmold-complet-black-fired-ingot": "Moule lourd à lingots en céramique noire",
-    "block-vmmheavymold-toolmold-complet-brown-fired-ingot": "Moule lourd à lingots en céramique brune",
-    "block-vmmheavymold-toolmold-complet-cream-fired-ingot": "Moule lourd à lingots en céramique crème",
-    "block-vmmheavymold-toolmold-complet-fire-fired-ingot": "Moule lourd à lingots en céramique réfractaire",
-    "block-vmmheavymold-toolmold-complet-gray-fired-ingot": "Moule lourd à lingots en céramique grise",
-    "block-vmmheavymold-toolmold-complet-orange-fired-ingot": "Moule lourd à lingots en céramique orange",
-    "block-vmmheavymold-toolmold-complet-red-fired-ingot": "Moule lourd à lingots en céramique rouge",
-    "block-vmmheavymold-toolmold-complet-tan-fired-ingot": "Moule lourd à lingots en céramique ocre",
+    "block-vmmheavymold-ingot-blue":   "Moule lourd à lingots en céramique brun foncé",
+    "block-vmmheavymold-ingot-black":  "Moule lourd à lingots en céramique noire",
+    "block-vmmheavymold-ingot-brown":  "Moule lourd à lingots en céramique brune",
+    "block-vmmheavymold-ingot-cream":  "Moule lourd à lingots en céramique crème",
+    "block-vmmheavymold-ingot-fire":   "Moule lourd à lingots en céramique réfractaire",
+    "block-vmmheavymold-ingot-gray":   "Moule lourd à lingots en céramique grise",
+    "block-vmmheavymold-ingot-orange": "Moule lourd à lingots en céramique orange",
+    "block-vmmheavymold-ingot-red":    "Moule lourd à lingots en céramique rouge",
+    "block-vmmheavymold-ingot-tan":    "Moule lourd à lingots en céramique ocre",
 
     // =====================
     // Heavy Mold - Plate
     // =====================
 
-    "block-vmmheavymold-toolmold-complet-blue-fired-plate": "Moule lourd à plaques en céramique brun foncé",
-    "block-vmmheavymold-toolmold-complet-black-fired-plate": "Moule lourd à plaques en céramique noire",
-    "block-vmmheavymold-toolmold-complet-brown-fired-plate": "Moule lourd à plaques en céramique brune",
-    "block-vmmheavymold-toolmold-complet-cream-fired-plate": "Moule lourd à plaques en céramique crème",
-    "block-vmmheavymold-toolmold-complet-fire-fired-plate": "Moule lourd à plaques en céramique réfractaire",
-    "block-vmmheavymold-toolmold-complet-gray-fired-plate": "Moule lourd à plaques en céramique grise",
-    "block-vmmheavymold-toolmold-complet-orange-fired-plate": "Moule lourd à plaques en céramique orange",
-    "block-vmmheavymold-toolmold-complet-red-fired-plate": "Moule lourd à plaques en céramique rouge",
-    "block-vmmheavymold-toolmold-complet-tan-fired-plate": "Moule lourd à plaques en céramique ocre",
+    "block-vmmheavymold-plate-blue":   "Moule lourd à plaques en céramique brun foncé",
+    "block-vmmheavymold-plate-black":  "Moule lourd à plaques en céramique noire",
+    "block-vmmheavymold-plate-brown":  "Moule lourd à plaques en céramique brune",
+    "block-vmmheavymold-plate-cream":  "Moule lourd à plaques en céramique crème",
+    "block-vmmheavymold-plate-fire":   "Moule lourd à plaques en céramique réfractaire",
+    "block-vmmheavymold-plate-gray":   "Moule lourd à plaques en céramique grise",
+    "block-vmmheavymold-plate-orange": "Moule lourd à plaques en céramique orange",
+    "block-vmmheavymold-plate-red":    "Moule lourd à plaques en céramique rouge",
+    "block-vmmheavymold-plate-tan":    "Moule lourd à plaques en céramique ocre",
 
     //Heavy Mold interaction
     "blockhelp-vmmheavymold-sand": "Remplir de sable",

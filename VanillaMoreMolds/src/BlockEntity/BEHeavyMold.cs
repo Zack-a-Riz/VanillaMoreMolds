@@ -308,7 +308,7 @@ namespace VanillaMoreMolds
 
             UpdateRenderer();
 
-            if (world.Side == EnumAppSide.Client && Api != null && Pos != null
+            if (world != null && world.Side == EnumAppSide.Client && Api != null && Pos != null
                 && (MeshAngle != prevAngle || SandType != prevSand))
             {
                 Api.World.BlockAccessor.MarkBlockDirty(Pos);

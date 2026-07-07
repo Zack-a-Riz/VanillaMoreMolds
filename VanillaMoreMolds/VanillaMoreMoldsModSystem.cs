@@ -7,7 +7,7 @@ namespace VanillaMoreMolds
 {
     public class VanillaMoreMoldsModSystem : ModSystem
     {
-        private const int CurrentConfigVersion = 2; // Note : Update cette version si la configuration change n'oublie pas de mettre à jour la version dans le fichier de configuration aussi.
+        private const int CurrentConfigVersion = 3; // Note : Update cette version si la configuration change n'oublie pas de mettre à jour la version dans le fichier de configuration aussi.
 
         private static readonly string DefaultConfig = $$"""
             {
@@ -49,7 +49,8 @@ namespace VanillaMoreMolds
               // If "EnableVMMHeavyMold" is set to false, the individual options below are ignored.
 
               "EnableHeavyMoldIngot": true, // Default: true
-              "EnableHeavyMoldPlate": true // Default: true
+              "EnableHeavyMoldPlate": true, // Default: true
+              "EnableHeavyMoldRod": true  // Default: true
 
               // WARNING //
               // Don't forget to restart your world after modifying this configuration file for the changes to take effect.
@@ -59,38 +60,52 @@ namespace VanillaMoreMolds
 
         private static readonly (string Key, string AssetPath)[] ToolMoldAssets =
         {
-            ("arrowhead",  "vanillamoremolds:recipes/clayforming/rcarrowheadmold.json"),
-            ("hoop",       "vanillamoremolds:recipes/clayforming/rchoopmold.json"),
+            ("arrowhead", "vanillamoremolds:recipes/clayforming/rcarrowheadmold.json"),
+            ("hoop", "vanillamoremolds:recipes/clayforming/rchoopmold.json"),
             ("knifeblade", "vanillamoremolds:recipes/clayforming/rcknifeblademold.json"),
-            ("nail",       "vanillamoremolds:recipes/clayforming/rcnailmold.json"),
-            ("plate",      "vanillamoremolds:recipes/clayforming/rcplatemold.json"),
-            ("sawblade",   "vanillamoremolds:recipes/clayforming/rcsawblademold.json"),
+            ("nail", "vanillamoremolds:recipes/clayforming/rcnailmold.json"),
+            ("plate", "vanillamoremolds:recipes/clayforming/rcplatemold.json"),
+            ("sawblade", "vanillamoremolds:recipes/clayforming/rcsawblademold.json"),
             ("scythehead", "vanillamoremolds:recipes/clayforming/rcscytheheadmold.json"),
-            ("spearhead",  "vanillamoremolds:recipes/clayforming/rcspearheadmold.json"),
+            ("spearhead", "vanillamoremolds:recipes/clayforming/rcspearheadmold.json"),
         };
 
         public override void Start(ICoreAPI api)
         {
             base.Start(api);
             api.RegisterBlockClass("BlockHeavyMold", typeof(BlockHeavyMold));
-            api.RegisterBlockClass("BlockHeavyToolMold", typeof(BlockHeavyToolMold));
             api.RegisterBlockEntityClass("BEHeavyMold", typeof(BEHeavyMold));
-            api.RegisterBlockEntityBehaviorClass("BEBehaviorSandTexture", typeof(BEBehaviorSandTexture));
 
             string configPath = Path.Combine(api.GetOrCreateDataPath("ModConfig"), "vanillamoremolds.json");
 
             bool needsRegen = !File.Exists(configPath);
             if (!needsRegen)
             {
-                var existing = api.LoadModConfig<VanillaMoreMoldsConfig>("vanillamoremolds.json");
-                needsRegen = existing == null || existing.ConfigVersion != CurrentConfigVersion;
+                try
+                {
+                    var existing = api.LoadModConfig<VanillaMoreMoldsConfig>("vanillamoremolds.json");
+                    needsRegen = existing == null || existing.ConfigVersion != CurrentConfigVersion;
+                }
+                catch
+                {
+                    needsRegen = true;
+                    api.Logger.Warning("[VanillaMoreMolds] Configuration file is invalid, resetting to defaults.");
+                }
             }
 
             if (needsRegen)
                 File.WriteAllText(configPath, DefaultConfig);
 
-            VanillaMoreMoldsConfig.Current =
-                api.LoadModConfig<VanillaMoreMoldsConfig>("vanillamoremolds.json") ?? new VanillaMoreMoldsConfig();
+            try
+            {
+                VanillaMoreMoldsConfig.Current =
+                    api.LoadModConfig<VanillaMoreMoldsConfig>("vanillamoremolds.json") ?? new VanillaMoreMoldsConfig();
+            }
+            catch
+            {
+                api.Logger.Warning("[VanillaMoreMolds] Failed to load configuration after reset, using defaults.");
+                VanillaMoreMoldsConfig.Current = new VanillaMoreMoldsConfig();
+            }
         }
 
         public override void AssetsLoaded(ICoreAPI api)
@@ -106,8 +121,11 @@ namespace VanillaMoreMolds
                     DisableRecipeAsset(api, assetPath);
             }
 
-            if (!cfg.EnableVMMHeavyMold || (!cfg.EnableHeavyMoldIngot && !cfg.EnableHeavyMoldPlate))
+            if (!cfg.EnableVMMHeavyMold || (!cfg.EnableHeavyMoldIngot && !cfg.EnableHeavyMoldPlate && !cfg.EnableHeavyMoldRod))
+            {
                 DisableRecipeAsset(api, "vanillamoremolds:recipes/grid/rcheavymold.json");
+                DisableRecipeAsset(api, "vanillamoremolds:recipes/clayforming/heavymold/rcheavybasemold.json");
+            }
         }
 
         private static void DisableRecipeAsset(ICoreAPI api, string assetPath)

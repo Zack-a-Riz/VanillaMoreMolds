@@ -1,52 +1,138 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using Vintagestory.API.Client;
-using Vintagestory.API.Common;
-using Vintagestory.API.MathTools;
-
 namespace VanillaMoreMolds
 {
+    using System.Collections.Generic;
+    using System.Linq;
+    using Vintagestory.API.Client;
+    using Vintagestory.API.Common;
+    using Vintagestory.API.Datastructures;
+    using Vintagestory.API.MathTools;
+    using Vintagestory.GameContent;
+
+        public class HeavyMoldOutput
+    {
+        public string OutputKey { get; set; } = "";
+
+        public string ItemMatch { get; set; } = "";
+
+        public string HelpItemMatch { get; set; } = "";
+
+        public string ConfigKey { get; set; } = "";
+
+        public string HelpLangCode=> $"vanillamoremolds:blockhelp-vmmheavymold-fill3-{OutputKey}";
+    }
+
     public class BlockHeavyMold : Block
     {
-        private string Stage => Variant?["stage"] ?? "empty";
+        private string Stage=> Variant?["stage"] ?? "empty";
+
+        private List<HeavyMoldOutput> outputs = [];
 
         private readonly Dictionary<string, MultiTextureMeshRef> sandMeshCache = new();
 
-        private string? NextStageCodePart() => Stage switch
+        public override void OnLoaded(ICoreAPI api)
         {
-            "empty" => "fill1",
-            "fill1" => "fill2",
-            "fill2" => "fill3",
-            _ => null
-        };
+            base.OnLoaded(api);
+
+            if (Attributes?["heavymoldOutputs"].Exists == true)
+                outputs = Attributes["heavymoldOutputs"].AsObject<List<HeavyMoldOutput>>() ?? [];
+        }
+
+        private string[]? FillStages=>
+            Attributes?["fillStages"].Exists == true
+                ? Attributes["fillStages"].AsObject<string[]>()
+                : ["empty", "fill1", "fill2", "fill3"];
+
+        private string? NextFillStage()
+        {
+            string[] stages = FillStages ?? ["empty", "fill1", "fill2", "fill3"];
+            int idx = System.Array.IndexOf(stages, Stage);
+            return (idx >= 0 && idx < stages.Length - 1) ? stages[idx + 1] : null;
+        }
+
+        private bool IsLastFillStage()
+        {
+            string[] stages = FillStages ?? ["empty", "fill1", "fill2", "fill3"];
+            return Stage == stages[^1];
+        }
+
+        private bool IsOutputEnabled(HeavyMoldOutput output)
+        {
+            if (string.IsNullOrEmpty(output.ConfigKey)) return true;
+            var cfg = VanillaMoreMoldsConfig.Current;
+            if (cfg == null) return true;
+            return output.ConfigKey switch
+            {
+                "IsHeavyMoldIngotEnabled" => cfg.IsHeavyMoldIngotEnabled,
+                "IsHeavyMoldPlateEnabled" => cfg.IsHeavyMoldPlateEnabled,
+                "IsHeavyMoldRodEnabled"   => cfg.IsHeavyMoldRodEnabled,
+                _ => true
+            };
+        }
+
+        private static bool ItemMatchesPattern(ItemStack? stack, string pattern)
+        {
+            if (stack == null || string.IsNullOrEmpty(pattern)) return false;
+            string code = stack.Class == EnumItemClass.Block
+                ? stack.Block.Code.ToString()
+                : stack.Item?.Code.ToString() ?? "";
+
+            int star = pattern.IndexOf('*');
+            if (star < 0)  return code == pattern;
+            string before = pattern[..star];
+            string after  = pattern[(star + 1)..];
+            return code.StartsWith(before) && code.EndsWith(after)
+                   && code.Length >= before.Length + after.Length;
+        }
 
         public override bool OnBlockInteractStart(IWorldAccessor world, IPlayer byPlayer, BlockSelection blockSel)
         {
             if (blockSel?.Position == null) return false;
 
-            ItemStack? held = byPlayer?.InventoryManager?.ActiveHotbarSlot?.Itemstack;
-            bool hasShift = byPlayer?.Entity?.Controls?.ShiftKey == true;
-            bool isSand = held?.Block?.Code?.Path?.StartsWith("sand-") == true;
-            bool isIngot = held?.Item?.Code?.Path?.Contains("ingot") == true;
-            bool isPlate = held?.Item?.Code?.Path?.StartsWith("metalplate-") == true;
+            ItemStack? held     = byPlayer?.InventoryManager?.ActiveHotbarSlot?.Itemstack;
+            bool       hasShift = byPlayer?.Entity?.Controls?.ShiftKey == true;
+            bool       isSand   = held?.Block?.Code?.Path?.StartsWith("sand-") == true;
 
-            if (Stage != "fill3" && isSand && hasShift)
+            if (!IsLastFillStage() && isSand && hasShift)
             {
-                string sandRock = held!.Block.Code.Path.Substring("sand-".Length);
-                AdvanceStage(world, byPlayer, blockSel, NextStageCodePart(), sandRock, consumeItem: true);
+                string sandRock = held!.Block.Code.Path["sand-".Length..];
+                AdvanceStage(world, byPlayer, blockSel, NextFillStage(), sandRock, consumeItem: true);
                 return true;
             }
 
-            if (Stage == "fill3" && isIngot && hasShift && (VanillaMoreMoldsConfig.Current?.IsHeavyMoldIngotEnabled ?? true))
+            if (IsLastFillStage() && hasShift)
             {
-                AdvanceStage(world, byPlayer, blockSel, "ingot", sandRock: null, consumeItem: false);
-                return true;
+                foreach (HeavyMoldOutput output in outputs)
+                {
+                    if (!IsOutputEnabled(output)) continue;
+                    if (!ItemMatchesPattern(held, output.ItemMatch)) continue;
+
+                    AdvanceStage(world, byPlayer, blockSel, output.OutputKey, sandRock: null, consumeItem: false);
+                    return true;
+                }
             }
 
-            if (Stage == "fill3" && isPlate && hasShift && (VanillaMoreMoldsConfig.Current?.IsHeavyMoldPlateEnabled ?? true))
+            if (world.BlockAccessor.GetBlockEntity(blockSel.Position) is BEHeavyMold betm && betm.IsOutputStage)
             {
-                AdvanceStage(world, byPlayer, blockSel, "plate", sandRock: null, consumeItem: false);
+                if (betm.MetalContent == null && betm.FillLevel == 0)
+                {
+                    if (!hasShift && held == null && byPlayer != null)
+                    {
+                        if (world.Side == EnumAppSide.Server)
+                        {
+                            Block block = world.BlockAccessor.GetBlock(blockSel.Position);
+                            ItemStack pickupStack = new ItemStack(block);
+                            if (betm.SandType != null)
+                                pickupStack.Attributes.SetString("sandType", betm.SandType);
+                            if (!byPlayer.InventoryManager.TryGiveItemstack(pickupStack))
+                                world.SpawnItemEntity(pickupStack, blockSel.Position.ToVec3d());
+                            world.BlockAccessor.SetBlock(0, blockSel.Position);
+                        }
+                        return true;
+                    }
+                    return false;
+                }
+
+                betm.OnPlayerInteract(byPlayer!, blockSel.Face, blockSel.HitPosition);
                 return true;
             }
 
@@ -66,7 +152,6 @@ namespace VanillaMoreMolds
 
                     world.BlockAccessor.SetBlock(0, blockSel.Position);
                 }
-
                 return true;
             }
 
@@ -77,13 +162,11 @@ namespace VanillaMoreMolds
         {
             base.OnBlockPlaced(world, blockPos, byItemStack);
 
-            var be = world.BlockAccessor.GetBlockEntity(blockPos) as BEHeavyMold;
-            if (be == null) return;
+            if (world.BlockAccessor.GetBlockEntity(blockPos) is not BEHeavyMold be) return;
 
-            IPlayer placer = world.NearestPlayer(blockPos.X, blockPos.Y, blockPos.Z);
-            if (placer == null) return;
-
-            be.MeshAngle = (float)(System.Math.Round(placer.Entity.Pos.Yaw / GameMath.PIHALF) * GameMath.PIHALF);
+            IPlayer? placer = world.NearestPlayer(blockPos.X, blockPos.Y, blockPos.Z);
+            if (placer != null)
+                be.MeshAngle = (float)(System.Math.Round(placer.Entity.Pos.Yaw / GameMath.PIHALF) * GameMath.PIHALF);
 
             string? sandType = byItemStack?.Attributes?.GetString("sandType");
             if (sandType != null)
@@ -98,8 +181,7 @@ namespace VanillaMoreMolds
         public override ItemStack OnPickBlock(IWorldAccessor world, BlockPos pos)
         {
             ItemStack stack = base.OnPickBlock(world, pos);
-            var be = world.BlockAccessor.GetBlockEntity(pos) as BEHeavyMold;
-            if (be?.SandType != null)
+            if (world.BlockAccessor.GetBlockEntity(pos) is BEHeavyMold be && be.SandType != null)
                 stack.Attributes.SetString("sandType", be.SandType);
             return stack;
         }
@@ -109,7 +191,7 @@ namespace VanillaMoreMolds
             base.OnBeforeRender(capi, itemstack, target, ref renderinfo);
 
             string? sandType = itemstack.Attributes?.GetString("sandType");
-            if (string.IsNullOrEmpty(sandType) || !Textures.ContainsKey("sand")) return;
+            if (string.IsNullOrEmpty(sandType) || !Textures.ContainsKey("fill")) return;
 
             string cacheKey = Code.ToString() + "/" + sandType;
 
@@ -118,13 +200,13 @@ namespace VanillaMoreMolds
                 AssetLocation texLoc = new AssetLocation("game", "block/stone/sand/" + sandType);
                 capi.BlockTextureAtlas.GetOrInsertTexture(texLoc, out int texSubId, out _);
 
-                CompositeTexture prevTex = Textures["sand"];
-                Textures["sand"] = new CompositeTexture(texLoc)
+                CompositeTexture prevTex = Textures["fill"];
+                Textures["fill"] = new CompositeTexture(texLoc)
                 {
                     Baked = new BakedCompositeTexture { BakedName = texLoc, TextureSubId = texSubId }
                 };
                 capi.Tesselator.TesselateBlock(this, out MeshData? mesh);
-                Textures["sand"] = prevTex;
+                Textures["fill"] = prevTex;
 
                 if (mesh == null) return;
                 meshRef = capi.Render.UploadMultiTextureMesh(mesh);
@@ -137,58 +219,45 @@ namespace VanillaMoreMolds
         public override void OnUnloaded(ICoreAPI api)
         {
             base.OnUnloaded(api);
-            foreach (MultiTextureMeshRef meshRef in sandMeshCache.Values)
+            foreach (var meshRef in sandMeshCache.Values)
                 meshRef.Dispose();
             sandMeshCache.Clear();
         }
 
-        private void AdvanceStage(IWorldAccessor world, IPlayer? byPlayer, BlockSelection blockSel, string? nextStage, string? sandRock, bool consumeItem)
+        private void AdvanceStage(IWorldAccessor world, IPlayer? byPlayer, BlockSelection blockSel,
+            string? nextStage, string? sandRock, bool consumeItem)
         {
             if (nextStage == null) return;
 
-            string color = world.BlockAccessor.GetBlock(blockSel.Position).Variant?["color"] ?? "blue";
-            var currentBe = world.BlockAccessor.GetBlockEntity(blockSel.Position) as BEHeavyMold;
-            float meshAngle = currentBe?.MeshAngle ?? 0f;
-            string? existingSandType = currentBe?.SandType;
-            string? sandType = sandRock ?? existingSandType;
+            string color          = world.BlockAccessor.GetBlock(blockSel.Position).Variant?["color"] ?? "blue";
+            var    currentBe      = world.BlockAccessor.GetBlockEntity(blockSel.Position) as BEHeavyMold;
+            float  meshAngle      = currentBe?.MeshAngle ?? 0f;
+            string? existingSand  = currentBe?.SandType;
+            string? sandType      = sandRock ?? existingSand;
 
-            Block? nextBlock = (nextStage == "ingot" || nextStage == "plate")
-                ? world.GetBlock(new AssetLocation("vanillamoremolds:vmmheavymold-toolmold-complet-" + color + "-fired-" + nextStage))
-                : world.GetBlock(CodeWithParts(nextStage, color));
+            bool isOutputStage = outputs.Any(o => o.OutputKey == nextStage);
 
+            Block? nextBlock = world.GetBlock(new AssetLocation("vanillamoremolds:vmmheavymold-" + nextStage + "-" + color));
             if (nextBlock == null) return;
 
-            if ((nextStage == "ingot" || nextStage == "plate") && !string.IsNullOrEmpty(sandType))
-                BEBehaviorSandTexture.PendingSandType[blockSel.Position.Copy()] = sandType;
+            if (isOutputStage && !string.IsNullOrEmpty(sandType))
+                BEHeavyMold.PendingSandType[blockSel.Position.Copy()] = sandType;
 
             world.BlockAccessor.SetBlock(nextBlock.BlockId, blockSel.Position);
 
-            var newEntity = world.BlockAccessor.GetBlockEntity(blockSel.Position);
-            if (newEntity is BEHeavyMold newBe)
+            if (world.BlockAccessor.GetBlockEntity(blockSel.Position) is BEHeavyMold newBe)
             {
                 newBe.MeshAngle = meshAngle;
-                newBe.SandType = sandType;
-
+                newBe.SandType  = sandType;
                 if (world.Side == EnumAppSide.Server)
                     newBe.MarkDirty(true);
-            }
-            else if (newEntity != null)
-            {
-                newEntity.GetType().GetField("MeshAngle", BindingFlags.Public | BindingFlags.Instance)?.SetValue(newEntity, meshAngle);
-
-                var sandBehavior = newEntity.GetBehavior<BEBehaviorSandTexture>();
-                if (sandBehavior != null && !string.IsNullOrEmpty(sandType))
-                    sandBehavior.SetSandType(sandType);
-
-                if (world.Side == EnumAppSide.Server)
-                    newEntity.MarkDirty(true);
             }
 
             if (world.Side == EnumAppSide.Server)
             {
-                if (consumeItem && byPlayer != null && byPlayer.WorldData.CurrentGameMode != EnumGameMode.Creative)
+                if (consumeItem && byPlayer?.WorldData.CurrentGameMode != EnumGameMode.Creative)
                 {
-                    ItemSlot slot = byPlayer.InventoryManager.ActiveHotbarSlot;
+                    ItemSlot slot = byPlayer!.InventoryManager.ActiveHotbarSlot;
                     if (slot?.Itemstack != null)
                     {
                         slot.Itemstack.StackSize--;
@@ -199,34 +268,15 @@ namespace VanillaMoreMolds
 
                 if (consumeItem && !string.IsNullOrEmpty(sandRock))
                 {
-                    var soundLocation = new AssetLocation("vanillamoremolds:sounds/block/heavymold/heavymold-in");
-
-                    world.PlaySoundAt(
-                        soundLocation,
-                        blockSel.Position,
-                        0,
-                        null,
-                        true,
-                        10f,
-                        1f
-                    );
-
+                    world.PlaySoundAt(new AssetLocation("vanillamoremolds:sounds/block/heavymold/heavymold-in"),
+                        blockSel.Position, 0, null, true, 10f, 1f);
                     SpawnFallingSandDustParticles(world, blockSel, sandRock);
                 }
 
-                if (nextStage == "ingot" || nextStage == "plate")
+                if (isOutputStage)
                 {
-                    var soundLocation = new AssetLocation("vanillamoremolds:sounds/block/heavymold/heavymold-out");
-
-                    world.PlaySoundAt(
-                        soundLocation,
-                        blockSel.Position,
-                        0,
-                        null,
-                        true,
-                        10f,
-                        1f
-                    );
+                    world.PlaySoundAt(new AssetLocation("vanillamoremolds:sounds/block/heavymold/heavymold-out"),
+                        blockSel.Position, 0, null, true, 10f, 1f);
                 }
 
                 if (nextBlock.Sounds?.Place != null)
@@ -234,104 +284,113 @@ namespace VanillaMoreMolds
             }
         }
 
-        private void SpawnFallingSandDustParticles(IWorldAccessor world, BlockSelection blockSel, string sandRock)
+        private static void SpawnFallingSandDustParticles(IWorldAccessor world, BlockSelection blockSel, string sandRock)
         {
             if (world.Side != EnumAppSide.Server) return;
-
             Block? sandBlock = world.GetBlock(new AssetLocation("game:sand-" + sandRock));
             if (sandBlock == null) return;
 
             Vec3d basePos = blockSel.Position.ToVec3d();
-
-            Vec3d minPos = basePos.AddCopy(0.25, 0.2, 0.25);
-            Vec3d maxPos = basePos.AddCopy(0.75, 0.65, 0.75);
-
             SimpleParticleProperties particles = new SimpleParticleProperties(
-                30f,                              
-                60f,                              
-                unchecked((int)0xD8C59AFF),       
-                minPos,
-                maxPos,
-                new Vec3f(-0.00f, -0.01f, -0.0f), 
-                new Vec3f(-0.0f, -0.05f, -0.00f), 
-                1.0f,                             
-                0.00f,                            
-                0.1f,                             
-                0.3f,                             
-                EnumParticleModel.Quad            
-            );
-
-            particles.ColorByBlock = sandBlock;
-            particles.WithTerrainCollision = false;
-            particles.WindAffected = false;
-
+                30f, 60f, unchecked((int)0xD8C59AFF),
+                basePos.AddCopy(0.25, 0.2, 0.25), basePos.AddCopy(0.75, 0.65, 0.75),
+                new Vec3f(0f, -0.01f, 0f), new Vec3f(0f, -0.05f, 0f),
+                1.0f, 0.00f, 0.1f, 0.3f, EnumParticleModel.Quad)
+            {
+                ColorByBlock          = sandBlock,
+                WithTerrainCollision  = false,
+                WindAffected          = false
+            };
             world.SpawnParticles(particles, null);
         }
+
 
         public override WorldInteraction[] GetPlacedBlockInteractionHelp(IWorldAccessor world, BlockSelection selection, IPlayer forPlayer)
         {
             var interactions = new List<WorldInteraction>();
 
-            if (Stage != "fill3")
+            bool isOutputStage = outputs.Any(o => o.OutputKey == Stage);
+            var be = world.BlockAccessor.GetBlockEntity(selection.Position) as BEHeavyMold;
+
+            if (!IsLastFillStage() && !isOutputStage)
             {
                 ItemStack[] sandStacks = world.SearchBlocks(new AssetLocation("game:sand-*"))
-                    .Where(block => block.Code.Path.IndexOf('-', "sand-".Length) < 0)
-                    .Select(block => new ItemStack(block))
+                    .Where(b => b.Code.Path.IndexOf('-', "sand-".Length) < 0)
+                    .Select(b => new ItemStack(b))
                     .ToArray();
 
                 if (sandStacks.Length > 0)
-                {
                     interactions.Add(new WorldInteraction
                     {
                         ActionLangCode = "vanillamoremolds:blockhelp-vmmheavymold-sand",
-                        MouseButton = EnumMouseButton.Right,
-                        HotKeyCode = "shift",
-                        Itemstacks = sandStacks
+                        MouseButton    = EnumMouseButton.Right,
+                        HotKeyCode     = "shift",
+                        Itemstacks     = sandStacks
                     });
+            }
+            else if (IsLastFillStage() && !isOutputStage)
+            {
+                foreach (HeavyMoldOutput output in outputs)
+                {
+                    if (!IsOutputEnabled(output)) continue;
+
+                    ItemStack[] stacks = world.SearchItems(new AssetLocation(output.HelpItemMatch))
+                        .Select(i => new ItemStack(i))
+                        .Where(s => s.Item != null)
+                        .ToArray();
+
+                    if (stacks.Length == 0)
+                        stacks = world.SearchBlocks(new AssetLocation(output.HelpItemMatch))
+                            .Select(b => new ItemStack(b))
+                            .ToArray();
+
+                    if (stacks.Length > 0)
+                        interactions.Add(new WorldInteraction
+                        {
+                            ActionLangCode = output.HelpLangCode,
+                            MouseButton    = EnumMouseButton.Right,
+                            HotKeyCode     = "shift",
+                            Itemstacks     = stacks
+                        });
+                }
+            }
+            else if (isOutputStage)
+            {
+
+                if (be?.IsFull != true)
+                {
+                    ItemStack[] smeltedStacks = world.Blocks
+                        .Where(b => b is BlockSmeltedContainer)
+                        .Select(b => new ItemStack(b))
+                        .ToArray();
+
+                    if (smeltedStacks.Length > 0)
+                        interactions.Add(new WorldInteraction
+                        {
+                            ActionLangCode = "blockhelp-toolmold-pour",
+                            MouseButton    = EnumMouseButton.Right,
+                            HotKeyCode     = "shift",
+                            Itemstacks     = smeltedStacks
+                        });
                 }
 
-                return [.. interactions, .. base.GetPlacedBlockInteractionHelp(world, selection, forPlayer)];
-            }
-
-            if (VanillaMoreMoldsConfig.Current?.IsHeavyMoldIngotEnabled ?? true)
-            {
-                ItemStack[] ingotStacks = world.SearchItems(new AssetLocation("game:ingot-*"))
-                    .Select(item => new ItemStack(item))
-                    .Where(stack => stack.Item != null)
-                    .ToArray();
-
-                if (ingotStacks.Length > 0)
-                {
+                if (be?.IsFull == true && be.IsHardened)
                     interactions.Add(new WorldInteraction
                     {
-                        ActionLangCode = "vanillamoremolds:blockhelp-vmmheavymold-fill3-ingot",
-                        MouseButton = EnumMouseButton.Right,
-                        HotKeyCode = "shift",
-                        Itemstacks = ingotStacks
+                        ActionLangCode = "blockhelp-toolmold-takeworkitem",
+                        MouseButton    = EnumMouseButton.Right
                     });
-                }
             }
 
-            if (VanillaMoreMoldsConfig.Current?.IsHeavyMoldPlateEnabled ?? true)
-            {
-                ItemStack[] plateStacks = world.SearchItems(new AssetLocation("game:metalplate-*"))
-                    .Select(item => new ItemStack(item))
-                    .Where(stack => stack.Item != null)
-                    .ToArray();
-
-                if (plateStacks.Length > 0)
+            if (!isOutputStage || (be?.MetalContent == null && be?.FillLevel == 0))
+                interactions.Add(new WorldInteraction
                 {
-                    interactions.Add(new WorldInteraction
-                    {
-                        ActionLangCode = "vanillamoremolds:blockhelp-vmmheavymold-fill3-plate",
-                        MouseButton = EnumMouseButton.Right,
-                        HotKeyCode = "shift",
-                        Itemstacks = plateStacks
-                    });
-                }
-            }
+                    ActionLangCode  = "blockhelp-behavior-rightclickpickup",
+                    MouseButton     = EnumMouseButton.Right,
+                    RequireFreeHand = true
+                });
 
-            return [.. interactions, .. base.GetPlacedBlockInteractionHelp(world, selection, forPlayer)];
+            return interactions.ToArray();
         }
     }
 }

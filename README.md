@@ -53,70 +53,70 @@
 <table style="border-collapse: collapse; width: 75.6267%; height: 124px; background-color: #95a5a6; border-color: #000000; border-style: solid;" border="3">
 <tbody>
 <tr style="height: 21px;">
-<td style="width: 11.1111%; text-align: left; height: 21px;"><strong>Mold name:</strong></td>
-<td style="width: 11.1111%; text-align: center; height: 21px;"><strong>Sawblade Mold</strong></td>
-<td style="width: 11.1111%; text-align: center; height: 21px;"><strong>Nail and Strips Mold</strong></td>
-<td style="width: 11.1111%; text-align: center; height: 21px;"><strong>Arrowhead Mold</strong></td>
-<td style="width: 11.1111%; text-align: center; height: 21px;"><strong>Hoop Mold</strong></td>
-<td style="width: 11.1111%; text-align: center; height: 21px;"><strong>Plate Mold</strong></td>
-<td style="width: 11.1111%; text-align: center; height: 21px;"><strong>Spearhead Mold</strong></td>
-<td style="width: 11.1111%; text-align: center; height: 21px;"><strong>Knifeblade Mold</strong></td>
-<td style="width: 11.1111%; text-align: center; height: 21px;"><strong>Scythehead Mold</strong></td>
+<td style="width: 11.1055%; text-align: left; height: 21px;"><strong>Mold name:</strong></td>
+<td style="width: 11.1055%; text-align: center; height: 21px;"><strong>Sawblade Mold</strong></td>
+<td style="width: 11.1055%; text-align: center; height: 21px;"><strong>Nail and Strips Mold</strong></td>
+<td style="width: 11.1055%; text-align: center; height: 21px;"><strong>Arrowhead Mold</strong></td>
+<td style="width: 11.1055%; text-align: center; height: 21px;"><strong>Hoop Mold</strong></td>
+<td style="width: 11.1055%; text-align: center; height: 21px;"><strong>Plate Mold</strong></td>
+<td style="width: 11.1055%; text-align: center; height: 21px;"><strong>Spearhead Mold</strong></td>
+<td style="width: 11.1055%; text-align: center; height: 21px;"><strong>Knifeblade Mold</strong></td>
+<td style="width: 11.1055%; text-align: center; height: 21px;"><strong>Scythehead Mold</strong></td>
 </tr>
 <tr style="height: 20px;">
-<td style="text-align: left; height: 20px; width: 11.1111%;"><strong>Molten metal required:</strong></td>
-<td style="text-align: center; height: 20px; width: 11.1111%;">100</td>
-<td style="text-align: center; height: 20px; width: 11.1111%;">75</td>
-<td style="text-align: center; height: 20px; width: 11.1111%;">100</td>
-<td style="text-align: center; height: 20px; width: 11.1111%;">100</td>
-<td style="text-align: center; height: 20px; width: 11.1111%;">200</td>
-<td style="text-align: center; height: 20px; width: 11.1111%;">100</td>
-<td style="text-align: center; height: 20px; width: 11.1111%;">100</td>
-<td style="text-align: center; height: 20px; width: 11.1111%;">100</td>
+<td style="text-align: left; height: 20px; width: 11.1055%;"><strong>Molten metal required:</strong></td>
+<td style="text-align: center; height: 20px; width: 11.1055%;">100</td>
+<td style="text-align: center; height: 20px; width: 11.1055%;">75</td>
+<td style="text-align: center; height: 20px; width: 11.1055%;">100</td>
+<td style="text-align: center; height: 20px; width: 11.1055%;">100</td>
+<td style="text-align: center; height: 20px; width: 11.1055%;">200</td>
+<td style="text-align: center; height: 20px; width: 11.1055%;">100</td>
+<td style="text-align: center; height: 20px; width: 11.1055%;">100</td>
+<td style="text-align: center; height: 20px; width: 11.1055%;">100</td>
 </tr>
 <tr style="height: 20px;">
-<td style="text-align: left; height: 20px; width: 11.1111%;"><strong>Drop:</strong></td>
-<td style="text-align: center; height: 20px; width: 11.1111%;">x1 sawblade</td>
-<td style="text-align: center; height: 20px; width: 11.1111%;">x3 metal nails and strips</td>
-<td style="text-align: center; height: 20px; width: 11.1111%;">x8 arrowheads</td>
-<td style="text-align: center; height: 20px; width: 11.1111%;">x1 hoop</td>
-<td style="text-align: center; height: 20px; width: 11.1111%;">x1 metal plate</td>
-<td style="text-align: center; height: 20px; width: 11.1111%;">x1 spearhead</td>
-<td style="text-align: center; height: 20px; width: 11.1111%;">x1 knifeblade</td>
-<td style="text-align: center; height: 20px; width: 11.1111%;">x1 scythehead</td>
+<td style="text-align: left; height: 20px; width: 11.1055%;"><strong>Drop:</strong></td>
+<td style="text-align: center; height: 20px; width: 11.1055%;">x1 sawblade</td>
+<td style="text-align: center; height: 20px; width: 11.1055%;">x3 metal nails and strips</td>
+<td style="text-align: center; height: 20px; width: 11.1055%;">x8 arrowheads</td>
+<td style="text-align: center; height: 20px; width: 11.1055%;">x1 hoop</td>
+<td style="text-align: center; height: 20px; width: 11.1055%;">x1 metal plate</td>
+<td style="text-align: center; height: 20px; width: 11.1055%;">x1 spearhead</td>
+<td style="text-align: center; height: 20px; width: 11.1055%;">x1 knifeblade</td>
+<td style="text-align: center; height: 20px; width: 11.1055%;">x1 scythehead</td>
 </tr>
 <tr style="height: 21px;">
-<td style="text-align: left; height: 21px; width: 11.1111%;"><strong>Type of clay:</strong></td>
-<td style="text-align: center; height: 21px; width: 11.1111%;"><em>Blue, Fire, Red</em></td>
-<td style="text-align: center; height: 21px; width: 11.1111%;"><em>Blue, Fire, Red</em></td>
-<td style="text-align: center; height: 21px; width: 11.1111%;"><em>Blue, Fire, Red</em></td>
-<td style="text-align: center; height: 21px; width: 11.1111%;"><em>Blue, Fire, Red</em></td>
-<td style="text-align: center; height: 21px; width: 11.1111%;"><em>Blue, Fire, Red</em></td>
-<td style="text-align: center; height: 21px; width: 11.1111%;"><em>Blue, Fire, Red</em></td>
-<td style="text-align: center; height: 21px; width: 11.1111%;"><em>Blue, Fire, Red</em></td>
-<td style="text-align: center; height: 21px; width: 11.1111%;"><em>Blue, Fire, Red</em></td>
+<td style="text-align: left; height: 21px; width: 11.1055%;"><strong>Type of clay:</strong></td>
+<td style="text-align: center; height: 21px; width: 11.1055%;"><em>Blue, Fire, Red</em></td>
+<td style="text-align: center; height: 21px; width: 11.1055%;"><em>Blue, Fire, Red</em></td>
+<td style="text-align: center; height: 21px; width: 11.1055%;"><em>Blue, Fire, Red</em></td>
+<td style="text-align: center; height: 21px; width: 11.1055%;"><em>Blue, Fire, Red</em></td>
+<td style="text-align: center; height: 21px; width: 11.1055%;"><em>Blue, Fire, Red</em></td>
+<td style="text-align: center; height: 21px; width: 11.1055%;"><em>Blue, Fire, Red</em></td>
+<td style="text-align: center; height: 21px; width: 11.1055%;"><em>Blue, Fire, Red</em></td>
+<td style="text-align: center; height: 21px; width: 11.1055%;"><em>Blue, Fire, Red</em></td>
 </tr>
 <tr style="height: 21px;">
-<td style="text-align: left; height: 21px; width: 11.1111%;"><strong>Active by default:</strong></td>
-<td style="text-align: center; height: 21px; width: 11.1111%;"><span style="background-color: #e74c3c;"><em>✗ Disabled</em></span></td>
-<td style="text-align: center; height: 21px; width: 11.1111%;"><span style="background-color: #27ae60;"><em>✓ Enabled</em></span></td>
-<td style="text-align: center; height: 21px; width: 11.1111%;"><span style="background-color: #e74c3c;"><em>✗ Disabled</em></span></td>
-<td style="text-align: center; height: 21px; width: 11.1111%;"><span style="background-color: #27ae60;"><em>✓ Enabled</em></span></td>
-<td style="text-align: center; height: 21px; width: 11.1111%;"><span style="background-color: #27ae60;"><em>✓ Enabled</em></span></td>
-<td style="text-align: center; height: 21px; width: 11.1111%;"><span style="background-color: #e74c3c;"><em>✗ Disabled</em></span></td>
-<td style="text-align: center; height: 21px; width: 11.1111%;"><span style="background-color: #e74c3c;"><em>✗ Disabled</em></span></td>
-<td style="text-align: center; height: 21px; width: 11.1111%;"><span style="background-color: #e74c3c;"><em>✗ Disabled</em></span></td>
+<td style="text-align: left; height: 21px; width: 11.1055%;"><strong>Active by default:</strong></td>
+<td style="text-align: center; height: 21px; width: 11.1055%;"><span style="background-color: #e74c3c;"><em>✗ Disabled</em></span></td>
+<td style="text-align: center; height: 21px; width: 11.1055%;"><span style="background-color: #27ae60;"><em>✓ Enabled</em></span></td>
+<td style="text-align: center; height: 21px; width: 11.1055%;"><span style="background-color: #e74c3c;"><em>✗ Disabled</em></span></td>
+<td style="text-align: center; height: 21px; width: 11.1055%;"><span style="background-color: #27ae60;"><em>✓ Enabled</em></span></td>
+<td style="text-align: center; height: 21px; width: 11.1055%;"><span style="background-color: #27ae60;"><em>✓ Enabled</em></span></td>
+<td style="text-align: center; height: 21px; width: 11.1055%;"><span style="background-color: #e74c3c;"><em>✗ Disabled</em></span></td>
+<td style="text-align: center; height: 21px; width: 11.1055%;"><span style="background-color: #e74c3c;"><em>✗ Disabled</em></span></td>
+<td style="text-align: center; height: 21px; width: 11.1055%;"><span style="background-color: #e74c3c;"><em>✗ Disabled</em></span></td>
 </tr>
 <tr style="height: 21px;">
-<td style="text-align: left; height: 21px; width: 11.1111%;"><strong>Shatters on contact with water.</strong></td>
-<td style="text-align: center; height: 21px; width: 11.1111%;"><em>True</em></td>
-<td style="text-align: center; height: 21px; width: 11.1111%;"><em>True</em></td>
-<td style="text-align: center; height: 21px; width: 11.1111%;"><em>True</em></td>
-<td style="text-align: center; height: 21px; width: 11.1111%;"><em>True</em></td>
-<td style="text-align: center; height: 21px; width: 11.1111%;"><em>True</em></td>
-<td style="text-align: center; height: 21px; width: 11.1111%;"><em>True</em></td>
-<td style="text-align: center; height: 21px; width: 11.1111%;"><em>True</em></td>
-<td style="text-align: center; height: 21px; width: 11.1111%;"><em>True</em></td>
+<td style="text-align: left; height: 21px; width: 11.1055%;"><strong>Shatters on contact with water.</strong></td>
+<td style="text-align: center; height: 21px; width: 11.1055%;"><em>Yes</em></td>
+<td style="text-align: center; height: 21px; width: 11.1055%;"><em>Yes</em></td>
+<td style="text-align: center; height: 21px; width: 11.1055%;"><em>Yes</em></td>
+<td style="text-align: center; height: 21px; width: 11.1055%;"><em>Yes</em></td>
+<td style="text-align: center; height: 21px; width: 11.1055%;"><em>Yes</em></td>
+<td style="text-align: center; height: 21px; width: 11.1055%;"><em>Yes</em></td>
+<td style="text-align: center; height: 21px; width: 11.1055%;"><em>Yes</em></td>
+<td style="text-align: center; height: 21px; width: 11.1055%;"><em>Yes</em></td>
 </tr>
 </tbody>
 </table>
@@ -158,9 +158,9 @@
 </tr>
 <tr style="height: 40.375px;">
 <td style="text-align: left; height: 40.375px; width: 30.0126%;"><strong>Shatters on contact with water.</strong></td>
-<td style="text-align: center; height: 40.375px; width: 22.6986%;"><em>False</em></td>
-<td style="text-align: center; height: 40.375px; width: 24.3399%;"><em>False</em></td>
-<td style="text-align: center; width: 22.9489%; height: 40.375px;"><em>False</em></td>
+<td style="text-align: center; height: 40.375px; width: 22.6986%;"><em>No</em></td>
+<td style="text-align: center; height: 40.375px; width: 24.3399%;"><em>No</em></td>
+<td style="text-align: center; width: 22.9489%; height: 40.375px;"><em>No</em></td>
 </tr>
 </tbody>
 </table>

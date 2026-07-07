@@ -18,10 +18,6 @@
     <Compile Include="src\BlockEntity\BEHeavyMold.cs" />
     <Compile Include="src\BlockEntityRenderer\HeavyMoldRenderer.cs" />
     <Compile Include="src\Renderer\HeavyMoldRenderer.cs" />
-    <Compile Include="src\save\BehaviorRightClickPickup.cs" />
-    <Compile Include="src\save\BEToolMold.cs" />
-    <Compile Include="src\save\BlockToolMold (1).cs" />
-    <Compile Include="src\save\ToolMoldRenderer (1).cs" />
     <Compile Include="src\System\VanillaMoreMoldsConfig.cs" />
   </ItemGroup>
 

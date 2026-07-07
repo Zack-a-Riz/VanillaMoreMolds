@@ -1,0 +1,27 @@
+[ // "For anyone who needs help, here's the correct syntax. :P --> /bir remapq NEW-ID ANCIEN-ID force"
+    {
+        "file": "game:config/remaps.json",
+        "op": "add",
+        "path": "/vanillamoremolds:v2.1.0",
+        "value": [
+            "/bir remapq vanillamoremolds:vmmheavymold-ingot-blue vanillamoremolds:vmmheavymold-toolmold-complet-blue-fired-ingot force",
+            "/bir remapq vanillamoremolds:vmmheavymold-ingot-fire vanillamoremolds:vmmheavymold-toolmold-complet-fire-fired-ingot force",
+            "/bir remapq vanillamoremolds:vmmheavymold-ingot-black vanillamoremolds:vmmheavymold-toolmold-complet-black-fired-ingot force",
+            "/bir remapq vanillamoremolds:vmmheavymold-ingot-brown vanillamoremolds:vmmheavymold-toolmold-complet-brown-fired-ingot force",
+            "/bir remapq vanillamoremolds:vmmheavymold-ingot-cream vanillamoremolds:vmmheavymold-toolmold-complet-cream-fired-ingot force",
+            "/bir remapq vanillamoremolds:vmmheavymold-ingot-gray vanillamoremolds:vmmheavymold-toolmold-complet-gray-fired-ingot force",
+            "/bir remapq vanillamoremolds:vmmheavymold-ingot-orange vanillamoremolds:vmmheavymold-toolmold-complet-orange-fired-ingot force",
+            "/bir remapq vanillamoremolds:vmmheavymold-ingot-red vanillamoremolds:vmmheavymold-toolmold-complet-red-fired-ingot force",
+            "/bir remapq vanillamoremolds:vmmheavymold-ingot-tan vanillamoremolds:vmmheavymold-toolmold-complet-tan-fired-ingot force",
+            "/bir remapq vanillamoremolds:vmmheavymold-plate-blue vanillamoremolds:vmmheavymold-toolmold-complet-blue-fired-plate force",
+            "/bir remapq vanillamoremolds:vmmheavymold-plate-fire vanillamoremolds:vmmheavymold-toolmold-complet-fire-fired-plate force",
+            "/bir remapq vanillamoremolds:vmmheavymold-plate-black vanillamoremolds:vmmheavymold-toolmold-complet-black-fired-plate force",
+            "/bir remapq vanillamoremolds:vmmheavymold-plate-brown vanillamoremolds:vmmheavymold-toolmold-complet-brown-fired-plate force",
+            "/bir remapq vanillamoremolds:vmmheavymold-plate-cream vanillamoremolds:vmmheavymold-toolmold-complet-cream-fired-plate force",
+            "/bir remapq vanillamoremolds:vmmheavymold-plate-gray vanillamoremolds:vmmheavymold-toolmold-complet-gray-fired-plate force",
+            "/bir remapq vanillamoremolds:vmmheavymold-plate-orange vanillamoremolds:vmmheavymold-toolmold-complet-orange-fired-plate force",
+            "/bir remapq vanillamoremolds:vmmheavymold-plate-red vanillamoremolds:vmmheavymold-toolmold-complet-red-fired-plate force",
+            "/bir remapq vanillamoremolds:vmmheavymold-plate-tan vanillamoremolds:vmmheavymold-toolmold-complet-tan-fired-plate force"
+        ]
+    }
+]

@@ -1,20 +1,21 @@
 {
-    //▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
+    //████████████████████████████████████████████████████████████████████████████████████████████████████
 
     //                            === Vanilla More Molds : Configuration File ===
-    //                                          Config version : 1
 
-    //▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
+    //████████████████████████████████████████████████████████████████████████████████████████████████████
 
     //                   Hi, I'm Zack! This is the configuration file for VanillaMoreMolds.
     //  The default settings are designed to keep the game balanced and avoid making blacksmithing obsolete.
-    //                      Feel free to change these settings to suit your preferences, 
+    //                      Feel free to change these settings to suit your preferences,
     //      but I recommend keeping the defaults if you want to preserve the intended gameplay balance.
     //            This is a very early version of the configuration file, so it may evolve over time.
 
-    //▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓
+    //████████████████████████████████████████████████████████████████████████████████████████████████████
 
     // Configuration:
+
+    "ConfigVersion": 3, // Version of the configuration file. Do not change this value.
 
     // === Vanilla More Molds : Additional Vanilla-Style Molds ===
 
@@ -36,7 +37,8 @@
     // If "EnableVMMHeavyMold" is set to false, the individual options below are ignored.
 
     "EnableHeavyMoldIngot": true, // Default: true
-    "EnableHeavyMoldPlate": true // Default: true
+    "EnableHeavyMoldPlate": true, // Default: true
+    "EnableHeavyMoldRod": true // Default: true
 
     // WARNING //
     // Don't forget to restart your world after modifying this configuration file for the changes to take effect.

@@ -50,7 +50,7 @@ namespace VanillaMoreMolds
 
               "EnableHeavyMoldIngot": true, // Default: true
               "EnableHeavyMoldPlate": true, // Default: true
-              "EnableHeavyMoldRod":   true  // Default: true
+              "EnableHeavyMoldRod": true  // Default: true
 
               // WARNING //
               // Don't forget to restart your world after modifying this configuration file for the changes to take effect.
@@ -60,14 +60,14 @@ namespace VanillaMoreMolds
 
         private static readonly (string Key, string AssetPath)[] ToolMoldAssets =
         {
-            ("arrowhead",  "vanillamoremolds:recipes/clayforming/rcarrowheadmold.json"),
-            ("hoop",       "vanillamoremolds:recipes/clayforming/rchoopmold.json"),
+            ("arrowhead", "vanillamoremolds:recipes/clayforming/rcarrowheadmold.json"),
+            ("hoop", "vanillamoremolds:recipes/clayforming/rchoopmold.json"),
             ("knifeblade", "vanillamoremolds:recipes/clayforming/rcknifeblademold.json"),
-            ("nail",       "vanillamoremolds:recipes/clayforming/rcnailmold.json"),
-            ("plate",      "vanillamoremolds:recipes/clayforming/rcplatemold.json"),
-            ("sawblade",   "vanillamoremolds:recipes/clayforming/rcsawblademold.json"),
+            ("nail", "vanillamoremolds:recipes/clayforming/rcnailmold.json"),
+            ("plate", "vanillamoremolds:recipes/clayforming/rcplatemold.json"),
+            ("sawblade", "vanillamoremolds:recipes/clayforming/rcsawblademold.json"),
             ("scythehead", "vanillamoremolds:recipes/clayforming/rcscytheheadmold.json"),
-            ("spearhead",  "vanillamoremolds:recipes/clayforming/rcspearheadmold.json"),
+            ("spearhead", "vanillamoremolds:recipes/clayforming/rcspearheadmold.json"),
         };
 
         public override void Start(ICoreAPI api)

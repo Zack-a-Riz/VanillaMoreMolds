@@ -247,35 +247,50 @@
     // Heavy Mold - Ingot
     // =====================
 
-    "block-vmmheavymold-ingot-blue":   "Moule lourd à lingots en céramique brun foncé",
-    "block-vmmheavymold-ingot-black":  "Moule lourd à lingots en céramique noire",
-    "block-vmmheavymold-ingot-brown":  "Moule lourd à lingots en céramique brune",
-    "block-vmmheavymold-ingot-cream":  "Moule lourd à lingots en céramique crème",
-    "block-vmmheavymold-ingot-fire":   "Moule lourd à lingots en céramique réfractaire",
-    "block-vmmheavymold-ingot-gray":   "Moule lourd à lingots en céramique grise",
+    "block-vmmheavymold-ingot-blue": "Moule lourd à lingots en céramique brun foncé",
+    "block-vmmheavymold-ingot-black": "Moule lourd à lingots en céramique noire",
+    "block-vmmheavymold-ingot-brown": "Moule lourd à lingots en céramique brune",
+    "block-vmmheavymold-ingot-cream": "Moule lourd à lingots en céramique crème",
+    "block-vmmheavymold-ingot-fire": "Moule lourd à lingots en céramique réfractaire",
+    "block-vmmheavymold-ingot-gray": "Moule lourd à lingots en céramique grise",
     "block-vmmheavymold-ingot-orange": "Moule lourd à lingots en céramique orange",
-    "block-vmmheavymold-ingot-red":    "Moule lourd à lingots en céramique rouge",
-    "block-vmmheavymold-ingot-tan":    "Moule lourd à lingots en céramique ocre",
+    "block-vmmheavymold-ingot-red": "Moule lourd à lingots en céramique rouge",
+    "block-vmmheavymold-ingot-tan": "Moule lourd à lingots en céramique ocre",
 
     // =====================
     // Heavy Mold - Plate
     // =====================
 
-    "block-vmmheavymold-plate-blue":   "Moule lourd à plaques en céramique brun foncé",
-    "block-vmmheavymold-plate-black":  "Moule lourd à plaques en céramique noire",
-    "block-vmmheavymold-plate-brown":  "Moule lourd à plaques en céramique brune",
-    "block-vmmheavymold-plate-cream":  "Moule lourd à plaques en céramique crème",
-    "block-vmmheavymold-plate-fire":   "Moule lourd à plaques en céramique réfractaire",
-    "block-vmmheavymold-plate-gray":   "Moule lourd à plaques en céramique grise",
+    "block-vmmheavymold-plate-blue": "Moule lourd à plaques en céramique brun foncé",
+    "block-vmmheavymold-plate-black": "Moule lourd à plaques en céramique noire",
+    "block-vmmheavymold-plate-brown": "Moule lourd à plaques en céramique brune",
+    "block-vmmheavymold-plate-cream": "Moule lourd à plaques en céramique crème",
+    "block-vmmheavymold-plate-fire": "Moule lourd à plaques en céramique réfractaire",
+    "block-vmmheavymold-plate-gray": "Moule lourd à plaques en céramique grise",
     "block-vmmheavymold-plate-orange": "Moule lourd à plaques en céramique orange",
-    "block-vmmheavymold-plate-red":    "Moule lourd à plaques en céramique rouge",
-    "block-vmmheavymold-plate-tan":    "Moule lourd à plaques en céramique ocre",
+    "block-vmmheavymold-plate-red": "Moule lourd à plaques en céramique rouge",
+    "block-vmmheavymold-plate-tan": "Moule lourd à plaques en céramique ocre",
+
+    // =====================
+    // Heavy Mold - Rod
+    // =====================
+
+    "block-vmmheavymold-rod-blue": "Moule lourd à tiges en céramique brun foncé",
+    "block-vmmheavymold-rod-black": "Moule lourd à tiges en céramique noire",
+    "block-vmmheavymold-rod-brown": "Moule lourd à tiges en céramique brune",
+    "block-vmmheavymold-rod-cream": "Moule lourd à tiges en céramique crème",
+    "block-vmmheavymold-rod-fire": "Moule lourd à tiges en céramique réfractaire",
+    "block-vmmheavymold-rod-gray": "Moule lourd à tiges en céramique grise",
+    "block-vmmheavymold-rod-orange": "Moule lourd à tiges en céramique orange",
+    "block-vmmheavymold-rod-red": "Moule lourd à tiges en céramique rouge",
+    "block-vmmheavymold-rod-tan": "Moule lourd à tiges en céramique ocre",
 
     //Heavy Mold interaction
     "blockhelp-vmmheavymold-sand": "Remplir de sable",
     "blockhelp-vmmheavymold-fill3-ingot": "Créer une empreinte de lingot",
     "blockhelp-vmmheavymold-fill3-plate": "Créer une empreinte de plaque",
+    "blockhelp-vmmheavymold-fill3-rod": "Créer une empreinte de tige",
 
     //Heavy Mold handbook info
-    "vanillamoremolds:block-handbooktext-vanillamoremolds:vmmheavymold-*": "<strong>Moule lourd :</strong><br>Conçu pour la production de masse de lingots et de plaques métalliques. Son contenant résiste à l'eau et doit être rempli de sable avant de créer une empreinte.<br><br><strong>Utilisation :</strong><br>Remplir de sable : Shift + Clic droit avec du sable<br>Créer un moule à lingots : Shift + Clic droit avec un lingot<br>Créer un moule à plaques : Shift + Clic droit avec une plaque métallique"
+    "vanillamoremolds:block-handbooktext-vanillamoremolds:vmmheavymold-*": "<strong>Moule lourd :</strong><br>Conçu pour la production de masse de lingots et de plaques métalliques. Son contenant résiste à l'eau et doit être rempli de sable avant de créer une empreinte.<br><br><strong>Utilisation :</strong><br>Remplir de sable : Shift + Clic droit avec du sable.<br>Créer un moule à lingots : Shift + Clic droit avec un lingot.<br>Créer un moule à plaques : Shift + Clic droit avec une de métal.<br>Créer un moule à tiges : Shift + Clic droit avec une tige de métal."
 }

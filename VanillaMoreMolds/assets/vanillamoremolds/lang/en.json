@@ -247,35 +247,50 @@
     // Heavy Mold - Ingot
     // =====================
 
-    "block-vmmheavymold-ingot-blue":   "Earthy brown heavy ingot mold",
-    "block-vmmheavymold-ingot-black":  "Black heavy ingot mold",
-    "block-vmmheavymold-ingot-brown":  "Brown heavy ingot mold",
-    "block-vmmheavymold-ingot-cream":  "Cream heavy ingot mold",
-    "block-vmmheavymold-ingot-fire":   "Fireclay heavy ingot mold",
-    "block-vmmheavymold-ingot-gray":   "Gray heavy ingot mold",
+    "block-vmmheavymold-ingot-blue": "Earthy brown heavy ingot mold",
+    "block-vmmheavymold-ingot-black": "Black heavy ingot mold",
+    "block-vmmheavymold-ingot-brown": "Brown heavy ingot mold",
+    "block-vmmheavymold-ingot-cream": "Cream heavy ingot mold",
+    "block-vmmheavymold-ingot-fire": "Fireclay heavy ingot mold",
+    "block-vmmheavymold-ingot-gray": "Gray heavy ingot mold",
     "block-vmmheavymold-ingot-orange": "Orange heavy ingot mold",
-    "block-vmmheavymold-ingot-red":    "Red heavy ingot mold",
-    "block-vmmheavymold-ingot-tan":    "Tan heavy ingot mold",
+    "block-vmmheavymold-ingot-red": "Red heavy ingot mold",
+    "block-vmmheavymold-ingot-tan": "Tan heavy ingot mold",
 
     // =====================
     // Heavy Mold - Plate
     // =====================
 
-    "block-vmmheavymold-plate-blue":   "Earthy brown heavy plate mold",
-    "block-vmmheavymold-plate-black":  "Black heavy plate mold",
-    "block-vmmheavymold-plate-brown":  "Brown heavy plate mold",
-    "block-vmmheavymold-plate-cream":  "Cream heavy plate mold",
-    "block-vmmheavymold-plate-fire":   "Fireclay heavy plate mold",
-    "block-vmmheavymold-plate-gray":   "Gray heavy plate mold",
+    "block-vmmheavymold-plate-blue": "Earthy brown heavy plate mold",
+    "block-vmmheavymold-plate-black": "Black heavy plate mold",
+    "block-vmmheavymold-plate-brown": "Brown heavy plate mold",
+    "block-vmmheavymold-plate-cream": "Cream heavy plate mold",
+    "block-vmmheavymold-plate-fire": "Fireclay heavy plate mold",
+    "block-vmmheavymold-plate-gray": "Gray heavy plate mold",
     "block-vmmheavymold-plate-orange": "Orange heavy plate mold",
-    "block-vmmheavymold-plate-red":    "Red heavy plate mold",
-    "block-vmmheavymold-plate-tan":    "Tan heavy plate mold",
+    "block-vmmheavymold-plate-red": "Red heavy plate mold",
+    "block-vmmheavymold-plate-tan": "Tan heavy plate mold",
+
+    // =====================
+    // Heavy Mold - Rod
+    // =====================
+
+    "block-vmmheavymold-rod-blue": "Earthy brown heavy rod mold",
+    "block-vmmheavymold-rod-black": "Black heavy rod mold",
+    "block-vmmheavymold-rod-brown": "Brown heavy rod mold",
+    "block-vmmheavymold-rod-cream": "Cream heavy rod mold",
+    "block-vmmheavymold-rod-fire": "Fireclay heavy rod mold",
+    "block-vmmheavymold-rod-gray": "Gray heavy rod mold",
+    "block-vmmheavymold-rod-orange": "Orange heavy rod mold",
+    "block-vmmheavymold-rod-red": "Red heavy rod mold",
+    "block-vmmheavymold-rod-tan": "Tan heavy rod mold",
 
     //Heavy Mold interaction
     "blockhelp-vmmheavymold-sand": "Fill with sand",
     "blockhelp-vmmheavymold-fill3-ingot": "Place ingot imprint",
     "blockhelp-vmmheavymold-fill3-plate": "Place plate imprint",
+    "blockhelp-vmmheavymold-fill3-rod": "Place rod imprint",
 
     //Heavy Mold handbook info
-    "vanillamoremolds:block-handbooktext-vanillamoremolds:vmmheavymold-*": "<strong>Heavy Mold:</strong><br>Designed for the mass production of ingots and metal plates. Its container is water-resistant and must be filled with sand before creating an imprint.<br><br><strong>Usage:</strong><br>Fill with sand: Shift + Right-click with sand<br>Create ingot mold: Shift + Right-click with an ingot<br>Create plate mold: Shift + Right-click with a metal plate"
+    "vanillamoremolds:block-handbooktext-vanillamoremolds:vmmheavymold-*": "<strong>Heavy Mold:</strong><br>Designed for the mass production of ingots and metal plates. Its container is water-resistant and must be filled with sand before creating an imprint.<br><br><strong>Usage:</strong><br>Fill with sand: Shift + Right-click with sand.<br>Create ingot mold: Shift + Right-click with an ingot.<br>Create plate mold: Shift + Right-click with a metal plate.<br>Create rod mold: Shift + Right-click with a metal rod."
 }

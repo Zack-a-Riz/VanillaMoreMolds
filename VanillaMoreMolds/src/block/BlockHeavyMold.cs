@@ -64,6 +64,7 @@ namespace VanillaMoreMolds
             {
                 "IsHeavyMoldIngotEnabled" => cfg.IsHeavyMoldIngotEnabled,
                 "IsHeavyMoldPlateEnabled" => cfg.IsHeavyMoldPlateEnabled,
+                "IsHeavyMoldRodEnabled"   => cfg.IsHeavyMoldRodEnabled,
                 _ => true
             };
         }

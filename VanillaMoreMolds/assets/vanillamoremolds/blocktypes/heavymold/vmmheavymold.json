@@ -1,4 +1,4 @@
-{ // Heavymold
+{ // Moule lourd 
     "code": "vmmheavymold",
     "class": "BlockHeavyMold",
     "entityClass": "BEHeavyMold",
@@ -9,7 +9,7 @@
     "variantgroups": [
         {
             "code": "stage",
-            "states": [ "empty", "fill1", "fill2", "fill3", "ingot", "plate" ]
+            "states": [ "empty", "fill1", "fill2", "fill3", "ingot", "plate", "rod" ]
         },
         {
             "code": "color",
@@ -22,7 +22,8 @@
         "*-fill2-*": { "base": "block/clay/mold/heavymold/state/heavymold-fill2", "rotateY": 0 },
         "*-fill3-*": { "base": "block/clay/mold/heavymold/state/heavymold-fill3", "rotateY": 0 },
         "*-ingot-*": { "base": "block/clay/mold/heavymold/state/heavymold-ingot", "rotateY": 0 },
-        "*-plate-*": { "base": "block/clay/mold/heavymold/state/heavymold-plate", "rotateY": 0 }
+        "*-plate-*": { "base": "block/clay/mold/heavymold/state/heavymold-plate", "rotateY": 0 },
+        "*-rod-*": { "base": "block/clay/mold/heavymold/state/heavymold-rod", "rotateY": 0 }
     },
     "textures": {
         "floor": { "base": "game:block/clay/hardened/{color}" },
@@ -46,6 +47,12 @@
                 "itemMatch":     "game:metalplate-*",
                 "helpItemMatch": "game:metalplate-*",
                 "configKey":     "IsHeavyMoldPlateEnabled"
+            },
+            {
+                "outputKey":     "rod",
+                "itemMatch":     "game:rod-*",
+                "helpItemMatch": "game:rod-*",
+                "configKey":     "IsHeavyMoldRodEnabled"
             }
         ],
         "onTongTransformByType": {
@@ -73,7 +80,7 @@
             "drop": { "type": "item", "code": "game:ingot-{metal}", "quantity": 6 }
         },
         "vmmheavymold-plate-*": {
-            "requiredUnits": 800,
+            "requiredUnits": 1000,
             "fillHeight": 7,
             "fillQuadsByLevel": [
                 { "x1": 3, "z1": 3, "x2": 13, "z2": 13 },
@@ -84,14 +91,28 @@
                 { "x1": 3, "z1": 3, "x2": 13, "z2": 13 },
                 { "x1": 3, "z1": 3, "x2": 13, "z2": 13 }
             ],
-            "drop": { "type": "item", "code": "game:metalplate-{metal}", "quantity": 4 }
+            "drop": { "type": "item", "code": "game:metalplate-{metal}", "quantity": 5 }
+        },
+        "vmmheavymold-rod-*": {
+            "requiredUnits": 900,
+            "fillHeight": 7,
+            "fillQuadsByLevel": [
+                { "x1": 3, "z1": 3, "x2": 13, "z2": 13 },
+                { "x1": 3, "z1": 3, "x2": 13, "z2": 13 },
+                { "x1": 3, "z1": 3, "x2": 13, "z2": 13 },
+                { "x1": 3, "z1": 3, "x2": 13, "z2": 13 },
+                { "x1": 3, "z1": 3, "x2": 13, "z2": 13 },
+                { "x1": 3, "z1": 3, "x2": 13, "z2": 13 },
+                { "x1": 3, "z1": 3, "x2": 13, "z2": 13 }
+            ],
+            "drop": { "type": "item", "code": "game:rod-{metal}", "quantity": 9 }
         }
     },
     "blockmaterial": "Ceramic",
     "placedPriorityInteract": true,
     "creativeinventory": {
-        "general": [ "*empty*", "*ingot*", "*plate*" ],
-        "VanillaMoreMolds": [ "*empty*", "*ingot*", "*plate*" ]
+        "general": [ "*empty*", "*ingot*", "*plate*", "*rod*" ],
+        "VanillaMoreMolds": [ "*empty*", "*ingot*", "*plate*", "*rod*" ]
     },
     "replaceable": 700,
     "resistance": 1.5,

@@ -1,6 +1,7 @@
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using Vintagestory.API.Client;
 using Vintagestory.API.Common;
@@ -32,7 +33,9 @@ namespace VanillaMoreMolds
         public bool  IsFull      => FillLevel >= requiredUnits;
         public bool  IsHot       => Temperature >= 200;
         public bool  CanReceiveAny => !Shattered && IsOutputStage;
-        public bool  IsOutputStage => Block?.Variant?["stage"] is "ingot" or "plate";
+
+        private HashSet<string> outputStages = [];
+        public bool IsOutputStage => Block?.Variant?["stage"] is string s && outputStages.Contains(s);
 
         private ICoreClientAPI? capi;
         private HeavyMoldRenderer? renderer;
@@ -50,6 +53,12 @@ namespace VanillaMoreMolds
 
                 if (Block.Attributes["fillQuadsByLevel"].Exists)
                     fillQuadsByLevel = Block.Attributes["fillQuadsByLevel"].AsObject<Cuboidf[]>() ?? [];
+
+                if (Block.Attributes["heavymoldOutputs"].Exists)
+                {
+                    var list = Block.Attributes["heavymoldOutputs"].AsObject<List<HeavyMoldOutput>>() ?? [];
+                    outputStages = [..list.Select(o => o.OutputKey)];
+                }
             }
 
             if (fillQuadsByLevel.Length == 0)

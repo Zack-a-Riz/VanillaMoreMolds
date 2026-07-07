@@ -18,6 +18,7 @@ namespace VanillaMoreMolds
         public bool EnableVMMHeavyMold   { get; set; } = true;
         public bool EnableHeavyMoldIngot { get; set; } = true;
         public bool EnableHeavyMoldPlate { get; set; } = true;
+        public bool EnableHeavyMoldRod   { get; set; } = true;
 
         public bool IsToolMoldEnabled(string key) => EnableVMMToolMolds && key switch
         {
@@ -34,5 +35,6 @@ namespace VanillaMoreMolds
 
         public bool IsHeavyMoldIngotEnabled => EnableVMMHeavyMold && EnableHeavyMoldIngot;
         public bool IsHeavyMoldPlateEnabled => EnableVMMHeavyMold && EnableHeavyMoldPlate;
+        public bool IsHeavyMoldRodEnabled   => EnableVMMHeavyMold && EnableHeavyMoldRod;
     }
 }

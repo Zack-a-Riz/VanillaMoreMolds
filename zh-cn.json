@@ -1,0 +1,299 @@
+{
+    //Translated by Zack.a.riz
+    //Start log
+    "start": "VanillaMoreMolds : 已加载",
+
+    //Menu tab
+    "game:tabname-VanillaMoreMolds": "更多原版模具",
+
+    //Handbook text caution for fired molds
+    "vanillamoremolds:block-handbooktext-vanillamoremolds:vmmtoolmold-*-fired-*": "<strong>注意：</strong>装有熔融金属的模具如果弄湿会碎裂，并且会损失部分金属。",
+
+    // =====================
+    // Tool Molds - Saw Blade
+    // =====================
+
+    //Mold sawblade raw
+    "block-vmmtoolmold-blue-raw-sawblade": "生蓝黏土锯片模具",
+    "block-vmmtoolmold-red-raw-sawblade": "生红黏土锯片模具",
+    "block-vmmtoolmold-fire-raw-sawblade": "生耐火黏土锯片模具",
+
+    //Mold sawblade fired
+    "block-vmmtoolmold-blue-fired-sawblade": "土褐色陶瓷锯片模具",
+    "block-vmmtoolmold-black-fired-sawblade": "黑色陶瓷锯片模具",
+    "block-vmmtoolmold-brown-fired-sawblade": "棕色陶瓷锯片模具",
+    "block-vmmtoolmold-cream-fired-sawblade": "奶油色陶瓷锯片模具",
+    "block-vmmtoolmold-fire-fired-sawblade": "耐火陶瓷锯片模具",
+    "block-vmmtoolmold-gray-fired-sawblade": "灰色陶瓷锯片模具",
+    "block-vmmtoolmold-orange-fired-sawblade": "橙色陶瓷锯片模具",
+    "block-vmmtoolmold-red-fired-sawblade": "红色陶瓷锯片模具",
+    "block-vmmtoolmold-tan-fired-sawblade": "黄褐色陶瓷锯片模具",
+
+    // =====================
+    // Tool Molds - Nail
+    // =====================
+
+    //Mold nail raw
+    "block-vmmtoolmold-blue-raw-nail": "生蓝黏土钉与条模具",
+    "block-vmmtoolmold-red-raw-nail": "生红黏土钉与条模具",
+    "block-vmmtoolmold-fire-raw-nail": "生耐火黏土钉与条模具",
+
+    //Mold nail fired
+    "block-vmmtoolmold-blue-fired-nail": "土褐色陶瓷钉与条模具",
+    "block-vmmtoolmold-black-fired-nail": "黑色陶瓷钉与条模具",
+    "block-vmmtoolmold-brown-fired-nail": "棕色陶瓷钉与条模具",
+    "block-vmmtoolmold-cream-fired-nail": "奶油色陶瓷钉与条模具",
+    "block-vmmtoolmold-fire-fired-nail": "耐火陶瓷钉与条模具",
+    "block-vmmtoolmold-gray-fired-nail": "灰色陶瓷钉与条模具",
+    "block-vmmtoolmold-orange-fired-nail": "橙色陶瓷钉与条模具",
+    "block-vmmtoolmold-red-fired-nail": "红色陶瓷钉与条模具",
+    "block-vmmtoolmold-tan-fired-nail": "黄褐色陶瓷钉与条模具",
+
+    // =====================
+    // Tool Molds - Arrowhead
+    // =====================
+
+    //Mold arrowhead raw
+    "block-vmmtoolmold-blue-raw-arrowhead": "生蓝黏土箭头模具",
+    "block-vmmtoolmold-red-raw-arrowhead": "生红黏土箭头模具",
+    "block-vmmtoolmold-fire-raw-arrowhead": "生耐火黏土箭头模具",
+
+    //Mold arrowhead fired
+    "block-vmmtoolmold-blue-fired-arrowhead": "土褐色陶瓷箭头模具",
+    "block-vmmtoolmold-black-fired-arrowhead": "黑色陶瓷箭头模具",
+    "block-vmmtoolmold-brown-fired-arrowhead": "棕色陶瓷箭头模具",
+    "block-vmmtoolmold-cream-fired-arrowhead": "奶油色陶瓷箭头模具",
+    "block-vmmtoolmold-fire-fired-arrowhead": "耐火陶瓷箭头模具",
+    "block-vmmtoolmold-gray-fired-arrowhead": "灰色陶瓷箭头模具",
+    "block-vmmtoolmold-orange-fired-arrowhead": "橙色陶瓷箭头模具",
+    "block-vmmtoolmold-red-fired-arrowhead": "红色陶瓷箭头模具",
+    "block-vmmtoolmold-tan-fired-arrowhead": "黄褐色陶瓷箭头模具",
+
+    // =====================
+    // Tool Molds - Hoop
+    // =====================
+
+    //Mold hoop raw
+    "block-vmmtoolmold-blue-raw-hoop": "生蓝黏土箍圈模具",
+    "block-vmmtoolmold-red-raw-hoop": "生红黏土箍圈模具",
+    "block-vmmtoolmold-fire-raw-hoop": "生耐火黏土箍圈模具",
+
+    //Mold hoop fired
+    "block-vmmtoolmold-blue-fired-hoop": "土褐色陶瓷箍圈模具",
+    "block-vmmtoolmold-black-fired-hoop": "黑色陶瓷箍圈模具",
+    "block-vmmtoolmold-brown-fired-hoop": "棕色陶瓷箍圈模具",
+    "block-vmmtoolmold-cream-fired-hoop": "奶油色陶瓷箍圈模具",
+    "block-vmmtoolmold-fire-fired-hoop": "耐火陶瓷箍圈模具",
+    "block-vmmtoolmold-gray-fired-hoop": "灰色陶瓷箍圈模具",
+    "block-vmmtoolmold-orange-fired-hoop": "橙色陶瓷箍圈模具",
+    "block-vmmtoolmold-red-fired-hoop": "红色陶瓷箍圈模具",
+    "block-vmmtoolmold-tan-fired-hoop": "黄褐色陶瓷箍圈模具",
+
+    // =====================
+    // Tool Molds - Plate
+    // =====================
+
+    //Mold plate raw
+    "block-vmmtoolmold-blue-raw-plate": "生蓝黏土板材模具",
+    "block-vmmtoolmold-red-raw-plate": "生红黏土板材模具",
+    "block-vmmtoolmold-fire-raw-plate": "生耐火黏土板材模具",
+
+    //Mold plate fired
+    "block-vmmtoolmold-blue-fired-plate": "土褐色陶瓷板材模具",
+    "block-vmmtoolmold-black-fired-plate": "黑色陶瓷板材模具",
+    "block-vmmtoolmold-brown-fired-plate": "棕色陶瓷板材模具",
+    "block-vmmtoolmold-cream-fired-plate": "奶油色陶瓷板材模具",
+    "block-vmmtoolmold-fire-fired-plate": "耐火陶瓷板材模具",
+    "block-vmmtoolmold-gray-fired-plate": "灰色陶瓷板材模具",
+    "block-vmmtoolmold-orange-fired-plate": "橙色陶瓷板材模具",
+    "block-vmmtoolmold-red-fired-plate": "红色陶瓷板材模具",
+    "block-vmmtoolmold-tan-fired-plate": "黄褐色陶瓷板材模具",
+
+    // =====================
+    // Tool Molds - Spearhead
+    // =====================
+
+    //Mold spearhead raw
+    "block-vmmtoolmold-blue-raw-spearhead": "生蓝黏土矛头模具",
+    "block-vmmtoolmold-red-raw-spearhead": "生红黏土矛头模具",
+    "block-vmmtoolmold-fire-raw-spearhead": "生耐火黏土矛头模具",
+
+    //Mold spearhead fired
+    "block-vmmtoolmold-blue-fired-spearhead": "土褐色陶瓷矛头模具",
+    "block-vmmtoolmold-black-fired-spearhead": "黑色陶瓷矛头模具",
+    "block-vmmtoolmold-brown-fired-spearhead": "棕色陶瓷矛头模具",
+    "block-vmmtoolmold-cream-fired-spearhead": "奶油色陶瓷矛头模具",
+    "block-vmmtoolmold-fire-fired-spearhead": "耐火陶瓷矛头模具",
+    "block-vmmtoolmold-gray-fired-spearhead": "灰色陶瓷矛头模具",
+    "block-vmmtoolmold-orange-fired-spearhead": "橙色陶瓷矛头模具",
+    "block-vmmtoolmold-red-fired-spearhead": "红色陶瓷矛头模具",
+    "block-vmmtoolmold-tan-fired-spearhead": "黄褐色陶瓷矛头模具",
+
+    // =====================
+    // Tool Molds - Knife Blade
+    // =====================
+
+    //Mold knifeblade raw
+    "block-vmmtoolmold-blue-raw-knifeblade": "生蓝黏土刀片模具",
+    "block-vmmtoolmold-red-raw-knifeblade": "生红黏土刀片模具",
+    "block-vmmtoolmold-fire-raw-knifeblade": "生耐火黏土刀片模具",
+
+    //Mold knifeblade fired
+    "block-vmmtoolmold-blue-fired-knifeblade": "土褐色陶瓷刀片模具",
+    "block-vmmtoolmold-black-fired-knifeblade": "黑色陶瓷刀片模具",
+    "block-vmmtoolmold-brown-fired-knifeblade": "棕色陶瓷刀片模具",
+    "block-vmmtoolmold-cream-fired-knifeblade": "奶油色陶瓷刀片模具",
+    "block-vmmtoolmold-fire-fired-knifeblade": "耐火陶瓷刀片模具",
+    "block-vmmtoolmold-gray-fired-knifeblade": "灰色陶瓷刀片模具",
+    "block-vmmtoolmold-orange-fired-knifeblade": "橙色陶瓷刀片模具",
+    "block-vmmtoolmold-red-fired-knifeblade": "红色陶瓷刀片模具",
+    "block-vmmtoolmold-tan-fired-knifeblade": "黄褐色陶瓷刀片模具",
+
+    // =====================
+    // Tool Molds - Scythe Head
+    // =====================
+
+    //Mold scythehead raw
+    "block-vmmtoolmold-blue-raw-scythehead": "生蓝黏土镰刀头模具",
+    "block-vmmtoolmold-red-raw-scythehead": "生红黏土镰刀头模具",
+    "block-vmmtoolmold-fire-raw-scythehead": "生耐火黏土镰刀头模具",
+
+    //Mold scythehead fired
+    "block-vmmtoolmold-blue-fired-scythehead": "土褐色陶瓷镰刀头模具",
+    "block-vmmtoolmold-black-fired-scythehead": "黑色陶瓷镰刀头模具",
+    "block-vmmtoolmold-brown-fired-scythehead": "棕色陶瓷镰刀头模具",
+    "block-vmmtoolmold-cream-fired-scythehead": "奶油色陶瓷镰刀头模具",
+    "block-vmmtoolmold-fire-fired-scythehead": "耐火陶瓷镰刀头模具",
+    "block-vmmtoolmold-gray-fired-scythehead": "灰色陶瓷镰刀头模具",
+    "block-vmmtoolmold-orange-fired-scythehead": "橙色陶瓷镰刀头模具",
+    "block-vmmtoolmold-red-fired-scythehead": "红色陶瓷镰刀头模具",
+    "block-vmmtoolmold-tan-fired-scythehead": "黄褐色陶瓷镰刀头模具",
+
+    // =====================
+    // Heavy Mold - Raw
+    // =====================
+
+    "block-vmmheavybasetoolmold-blue-raw-heavybase": "生蓝黏土重型模具",
+    "block-vmmheavybasetoolmold-red-raw-heavybase": "生红黏土重型模具",
+    "block-vmmheavybasetoolmold-fire-raw-heavybase": "生耐火黏土重型模具",
+    // =====================
+    // Heavy Mold - Base
+    // =====================
+
+    "block-vmmheavybasetoolmold-blue-fired-heavybase": "土褐色重型模具底座",
+    "block-vmmheavybasetoolmold-black-fired-heavybase": "黑色重型模具底座",
+    "block-vmmheavybasetoolmold-brown-fired-heavybase": "棕色重型模具底座",
+    "block-vmmheavybasetoolmold-cream-fired-heavybase": "奶油色重型模具底座",
+    "block-vmmheavybasetoolmold-fire-fired-heavybase": "耐火重型模具底座",
+    "block-vmmheavybasetoolmold-gray-fired-heavybase": "灰色重型模具底座",
+    "block-vmmheavybasetoolmold-orange-fired-heavybase": "橙色重型模具底座",
+    "block-vmmheavybasetoolmold-red-fired-heavybase": "红色重型模具底座",
+    "block-vmmheavybasetoolmold-tan-fired-heavybase": "黄褐色重型模具底座",
+
+    // =====================
+    // Heavy Mold - Empty
+    // =====================
+
+    "block-vmmheavymold-empty-blue": "空土褐色重型模具",
+    "block-vmmheavymold-empty-black": "空黑色重型模具",
+    "block-vmmheavymold-empty-brown": "空棕色重型模具",
+    "block-vmmheavymold-empty-cream": "空奶油色重型模具",
+    "block-vmmheavymold-empty-fire": "空耐火重型模具",
+    "block-vmmheavymold-empty-gray": "空灰色重型模具",
+    "block-vmmheavymold-empty-orange": "空橙色重型模具",
+    "block-vmmheavymold-empty-red": "空红色重型模具",
+    "block-vmmheavymold-empty-tan": "空黄褐色重型模具",
+
+    // =====================
+    // Heavy Mold - Fill 1
+    // =====================
+
+    "block-vmmheavymold-fill1-blue": "轻微填充的土褐色重型模具",
+    "block-vmmheavymold-fill1-black": "轻微填充的黑色重型模具",
+    "block-vmmheavymold-fill1-brown": "轻微填充的棕色重型模具",
+    "block-vmmheavymold-fill1-cream": "轻微填充的奶油色重型模具",
+    "block-vmmheavymold-fill1-fire": "轻微填充的耐火重型模具",
+    "block-vmmheavymold-fill1-gray": "轻微填充的灰色重型模具",
+    "block-vmmheavymold-fill1-orange": "轻微填充的橙色重型模具",
+    "block-vmmheavymold-fill1-red": "轻微填充的红色重型模具",
+    "block-vmmheavymold-fill1-tan": "轻微填充的黄褐色重型模具",
+
+    // =====================
+    // Heavy Mold - Fill 2
+    // =====================
+
+    "block-vmmheavymold-fill2-blue": "大部分填充的土褐色重型模具",
+    "block-vmmheavymold-fill2-black": "大部分填充的黑色重型模具",
+    "block-vmmheavymold-fill2-brown": "大部分填充的棕色重型模具",
+    "block-vmmheavymold-fill2-cream": "大部分填充的奶油色重型模具",
+    "block-vmmheavymold-fill2-fire": "大部分填充的耐火重型模具",
+    "block-vmmheavymold-fill2-gray": "大部分填充的灰色重型模具",
+    "block-vmmheavymold-fill2-orange": "大部分填充的橙色重型模具",
+    "block-vmmheavymold-fill2-red": "大部分填充的红色重型模具",
+    "block-vmmheavymold-fill2-tan": "大部分填充的黄褐色重型模具",
+
+    // =====================
+    // Heavy Mold - Fill 3
+    // =====================
+
+    "block-vmmheavymold-fill3-blue": "完全填充的土褐色重型模具",
+    "block-vmmheavymold-fill3-black": "完全填充的黑色重型模具",
+    "block-vmmheavymold-fill3-brown": "完全填充的棕色重型模具",
+    "block-vmmheavymold-fill3-cream": "完全填充的奶油色重型模具",
+    "block-vmmheavymold-fill3-fire": "完全填充的耐火重型模具",
+    "block-vmmheavymold-fill3-gray": "完全填充的灰色重型模具",
+    "block-vmmheavymold-fill3-orange": "完全填充的橙色重型模具",
+    "block-vmmheavymold-fill3-red": "完全填充的红色重型模具",
+    "block-vmmheavymold-fill3-tan": "完全填充的黄褐色重型模具",
+
+    // =====================
+    // Heavy Mold - Ingot
+    // =====================
+
+    "block-vmmheavymold-ingot-blue": "土褐色重型锭模具",
+    "block-vmmheavymold-ingot-black": "黑色重型锭模具",
+    "block-vmmheavymold-ingot-brown": "棕色重型锭模具",
+    "block-vmmheavymold-ingot-cream": "奶油色重型锭模具",
+    "block-vmmheavymold-ingot-fire": "耐火重型锭模具",
+    "block-vmmheavymold-ingot-gray": "灰色重型锭模具",
+    "block-vmmheavymold-ingot-orange": "橙色重型锭模具",
+    "block-vmmheavymold-ingot-red": "红色重型锭模具",
+    "block-vmmheavymold-ingot-tan": "黄褐色重型锭模具",
+
+    // =====================
+    // Heavy Mold - Plate
+    // =====================
+
+    "block-vmmheavymold-plate-blue": "土褐色重型板材模具",
+    "block-vmmheavymold-plate-black": "黑色重型板材模具",
+    "block-vmmheavymold-plate-brown": "棕色重型板材模具",
+    "block-vmmheavymold-plate-cream": "奶油色重型板材模具",
+    "block-vmmheavymold-plate-fire": "耐火重型板材模具",
+    "block-vmmheavymold-plate-gray": "灰色重型板材模具",
+    "block-vmmheavymold-plate-orange": "橙色重型板材模具",
+    "block-vmmheavymold-plate-red": "红色重型板材模具",
+    "block-vmmheavymold-plate-tan": "黄褐色重型板材模具",
+
+    // =====================
+    // Heavy Mold - Rod
+    // =====================
+
+    "block-vmmheavymold-rod-blue": "土褐色重型棒材模具",
+    "block-vmmheavymold-rod-black": "黑色重型棒材模具",
+    "block-vmmheavymold-rod-brown": "棕色重型棒材模具",
+    "block-vmmheavymold-rod-cream": "奶油色重型棒材模具",
+    "block-vmmheavymold-rod-fire": "耐火重型棒材模具",
+    "block-vmmheavymold-rod-gray": "灰色重型棒材模具",
+    "block-vmmheavymold-rod-orange": "橙色重型棒材模具",
+    "block-vmmheavymold-rod-red": "红色重型棒材模具",
+    "block-vmmheavymold-rod-tan": "黄褐色重型棒材模具",
+
+    //Heavy Mold interaction
+    "blockhelp-vmmheavymold-sand": "填入沙子",
+    "blockhelp-vmmheavymold-fill3-ingot": "放置锭印模",
+    "blockhelp-vmmheavymold-fill3-plate": "放置板材印模",
+    "blockhelp-vmmheavymold-fill3-rod": "放置棒材印模",
+
+    //Heavy Mold handbook info
+    "vanillamoremolds:block-handbooktext-vanillamoremolds:vmmheavymold-*": "<strong>重型模具：</strong><br>专为锭和金属板材的大规模生产而设计。其容器具有防水性，在制作印模前必须填入沙子。<br><br><strong>使用方法：</strong><br>填入沙子：手持沙子，Shift + 右键点击。<br>制作锭模具：手持锭，Shift + 右键点击。<br>制作板材模具：手持金属板材，Shift + 右键点击。<br>制作棒材模具：手持金属棒材，Shift + 右键点击。"
+}

@@ -1,0 +1,300 @@
+{
+    //Translated by Zack.a.riz
+    //Start log
+    "start": "VanillaMoreMolds : Loaded",
+
+    //Menu tab
+    "game:tabname-VanillaMoreMolds": "Vanilla More Molds",
+
+    //Handbook text caution for fired molds
+    "vanillamoremolds:block-handbooktext-vanillamoremolds:vmmtoolmold-*-fired-*": "<strong>Caution:</strong> Getting a mold with molten metal in it wet will cause the mold to shatter, and you will lose some of the metal.",
+
+    // =====================
+    // Tool Molds - Saw Blade
+    // =====================
+
+    //Mold sawblade raw
+    "block-vmmtoolmold-blue-raw-sawblade": "Raw blue clay saw blade mold",
+    "block-vmmtoolmold-red-raw-sawblade": "Raw red clay saw blade mold",
+    "block-vmmtoolmold-fire-raw-sawblade": "Raw fire clay saw blade mold",
+
+    //Mold sawblade fired
+    "block-vmmtoolmold-blue-fired-sawblade": "Earthy brown ceramic saw blade mold",
+    "block-vmmtoolmold-black-fired-sawblade": "Black ceramic saw blade mold",
+    "block-vmmtoolmold-brown-fired-sawblade": "Brown ceramic saw blade mold",
+    "block-vmmtoolmold-cream-fired-sawblade": "Cream ceramic saw blade mold",
+    "block-vmmtoolmold-fire-fired-sawblade": "Fireclay ceramic saw blade mold",
+    "block-vmmtoolmold-gray-fired-sawblade": "Gray ceramic saw blade mold",
+    "block-vmmtoolmold-orange-fired-sawblade": "Orange ceramic saw blade mold",
+    "block-vmmtoolmold-red-fired-sawblade": "Red ceramic saw blade mold",
+    "block-vmmtoolmold-tan-fired-sawblade": "Tan ceramic saw blade mold",
+
+    // =====================
+    // Tool Molds - Nail
+    // =====================
+
+    //Mold nail raw
+    "block-vmmtoolmold-blue-raw-nail": "Raw blue clay nail and strip mold",
+    "block-vmmtoolmold-red-raw-nail": "Raw red clay nail and strip mold",
+    "block-vmmtoolmold-fire-raw-nail": "Raw fire clay nail and strip mold",
+
+    //Mold nail fired
+    "block-vmmtoolmold-blue-fired-nail": "Earthy brown ceramic nail and strip mold",
+    "block-vmmtoolmold-black-fired-nail": "Black ceramic nail and strip mold",
+    "block-vmmtoolmold-brown-fired-nail": "Brown ceramic nail and strip mold",
+    "block-vmmtoolmold-cream-fired-nail": "Cream ceramic nail and strip mold",
+    "block-vmmtoolmold-fire-fired-nail": "Fireclay ceramic nail and strip mold",
+    "block-vmmtoolmold-gray-fired-nail": "Gray ceramic nail and strip mold",
+    "block-vmmtoolmold-orange-fired-nail": "Orange ceramic nail and strip mold",
+    "block-vmmtoolmold-red-fired-nail": "Red ceramic nail and strip mold",
+    "block-vmmtoolmold-tan-fired-nail": "Tan ceramic nail and strip mold",
+
+    // =====================
+    // Tool Molds - Arrowhead
+    // =====================
+
+    //Mold arrowhead raw
+    "block-vmmtoolmold-blue-raw-arrowhead": "Raw blue clay arrowhead mold",
+    "block-vmmtoolmold-red-raw-arrowhead": "Raw red clay arrowhead mold",
+    "block-vmmtoolmold-fire-raw-arrowhead": "Raw fire clay arrowhead mold",
+
+    //Mold arrowhead fired
+    "block-vmmtoolmold-blue-fired-arrowhead": "Earthy brown ceramic arrowhead mold",
+    "block-vmmtoolmold-black-fired-arrowhead": "Black ceramic arrowhead mold",
+    "block-vmmtoolmold-brown-fired-arrowhead": "Brown ceramic arrowhead mold",
+    "block-vmmtoolmold-cream-fired-arrowhead": "Cream ceramic arrowhead mold",
+    "block-vmmtoolmold-fire-fired-arrowhead": "Fireclay ceramic arrowhead mold",
+    "block-vmmtoolmold-gray-fired-arrowhead": "Gray ceramic arrowhead mold",
+    "block-vmmtoolmold-orange-fired-arrowhead": "Orange ceramic arrowhead mold",
+    "block-vmmtoolmold-red-fired-arrowhead": "Red ceramic arrowhead mold",
+    "block-vmmtoolmold-tan-fired-arrowhead": "Tan ceramic arrowhead mold",
+
+    // =====================
+    // Tool Molds - Hoop
+    // =====================
+
+    //Mold hoop raw
+    "block-vmmtoolmold-blue-raw-hoop": "Raw blue clay hoop mold",
+    "block-vmmtoolmold-red-raw-hoop": "Raw red clay hoop mold",
+    "block-vmmtoolmold-fire-raw-hoop": "Raw fire clay hoop mold",
+
+    //Mold hoop fired
+    "block-vmmtoolmold-blue-fired-hoop": "Earthy brown ceramic hoop mold",
+    "block-vmmtoolmold-black-fired-hoop": "Black ceramic hoop mold",
+    "block-vmmtoolmold-brown-fired-hoop": "Brown ceramic hoop mold",
+    "block-vmmtoolmold-cream-fired-hoop": "Cream ceramic hoop mold",
+    "block-vmmtoolmold-fire-fired-hoop": "Fireclay ceramic hoop mold",
+    "block-vmmtoolmold-gray-fired-hoop": "Gray ceramic hoop mold",
+    "block-vmmtoolmold-orange-fired-hoop": "Orange ceramic hoop mold",
+    "block-vmmtoolmold-red-fired-hoop": "Red ceramic hoop mold",
+    "block-vmmtoolmold-tan-fired-hoop": "Tan ceramic hoop mold",
+
+    // =====================
+    // Tool Molds - Plate
+    // =====================
+
+    //Mold plate raw
+    "block-vmmtoolmold-blue-raw-plate": "Raw blue clay plate mold",
+    "block-vmmtoolmold-red-raw-plate": "Raw red clay plate mold",
+    "block-vmmtoolmold-fire-raw-plate": "Raw fire clay plate mold",
+
+    //Mold plate fired
+    "block-vmmtoolmold-blue-fired-plate": "Earthy brown ceramic plate mold",
+    "block-vmmtoolmold-black-fired-plate": "Black ceramic plate mold",
+    "block-vmmtoolmold-brown-fired-plate": "Brown ceramic plate mold",
+    "block-vmmtoolmold-cream-fired-plate": "Cream ceramic plate mold",
+    "block-vmmtoolmold-fire-fired-plate": "Fireclay ceramic plate mold",
+    "block-vmmtoolmold-gray-fired-plate": "Gray ceramic plate mold",
+    "block-vmmtoolmold-orange-fired-plate": "Orange ceramic plate mold",
+    "block-vmmtoolmold-red-fired-plate": "Red ceramic plate mold",
+    "block-vmmtoolmold-tan-fired-plate": "Tan ceramic plate mold",
+
+    // =====================
+    // Tool Molds - Spearhead
+    // =====================
+
+    //Mold spearhead raw
+    "block-vmmtoolmold-blue-raw-spearhead": "Raw blue clay spearhead mold",
+    "block-vmmtoolmold-red-raw-spearhead": "Raw red clay spearhead mold",
+    "block-vmmtoolmold-fire-raw-spearhead": "Raw fire clay spearhead mold",
+
+    //Mold spearhead fired
+    "block-vmmtoolmold-blue-fired-spearhead": "Earthy brown ceramic spearhead mold",
+    "block-vmmtoolmold-black-fired-spearhead": "Black ceramic spearhead mold",
+    "block-vmmtoolmold-brown-fired-spearhead": "Brown ceramic spearhead mold",
+    "block-vmmtoolmold-cream-fired-spearhead": "Cream ceramic spearhead mold",
+    "block-vmmtoolmold-fire-fired-spearhead": "Fireclay ceramic spearhead mold",
+    "block-vmmtoolmold-gray-fired-spearhead": "Gray ceramic spearhead mold",
+    "block-vmmtoolmold-orange-fired-spearhead": "Orange ceramic spearhead mold",
+    "block-vmmtoolmold-red-fired-spearhead": "Red ceramic spearhead mold",
+    "block-vmmtoolmold-tan-fired-spearhead": "Tan ceramic spearhead mold",
+
+    // =====================
+    // Tool Molds - Knife Blade
+    // =====================
+
+    //Mold knifeblade raw
+    "block-vmmtoolmold-blue-raw-knifeblade": "Raw blue clay knife blade mold",
+    "block-vmmtoolmold-red-raw-knifeblade": "Raw red clay knife blade mold",
+    "block-vmmtoolmold-fire-raw-knifeblade": "Raw fire clay knife blade mold",
+
+    //Mold knifeblade fired
+    "block-vmmtoolmold-blue-fired-knifeblade": "Earthy brown ceramic knife blade mold",
+    "block-vmmtoolmold-black-fired-knifeblade": "Black ceramic knife blade mold",
+    "block-vmmtoolmold-brown-fired-knifeblade": "Brown ceramic knife blade mold",
+    "block-vmmtoolmold-cream-fired-knifeblade": "Cream ceramic knife blade mold",
+    "block-vmmtoolmold-fire-fired-knifeblade": "Fireclay ceramic knife blade mold",
+    "block-vmmtoolmold-gray-fired-knifeblade": "Gray ceramic knife blade mold",
+    "block-vmmtoolmold-orange-fired-knifeblade": "Orange ceramic knife blade mold",
+    "block-vmmtoolmold-red-fired-knifeblade": "Red ceramic knife blade mold",
+    "block-vmmtoolmold-tan-fired-knifeblade": "Tan ceramic knife blade mold",
+
+    // =====================
+    // Tool Molds - Scythe Head
+    // =====================
+
+    //Mold scythehead raw
+    "block-vmmtoolmold-blue-raw-scythehead": "Raw blue clay scythe blade mold",
+    "block-vmmtoolmold-red-raw-scythehead": "Raw red clay scythe blade mold",
+    "block-vmmtoolmold-fire-raw-scythehead": "Raw fire clay scythe blade mold",
+
+    //Mold scythehead fired
+    "block-vmmtoolmold-blue-fired-scythehead": "Earthy brown ceramic scythe blade mold",
+    "block-vmmtoolmold-black-fired-scythehead": "Black ceramic scythe blade mold",
+    "block-vmmtoolmold-brown-fired-scythehead": "Brown ceramic scythe blade mold",
+    "block-vmmtoolmold-cream-fired-scythehead": "Cream ceramic scythe blade mold",
+    "block-vmmtoolmold-fire-fired-scythehead": "Fireclay ceramic scythe blade mold",
+    "block-vmmtoolmold-gray-fired-scythehead": "Gray ceramic scythe blade mold",
+    "block-vmmtoolmold-orange-fired-scythehead": "Orange ceramic scythe blade mold",
+    "block-vmmtoolmold-red-fired-scythehead": "Red ceramic scythe blade mold",
+    "block-vmmtoolmold-tan-fired-scythehead": "Tan ceramic scythe blade mold",
+
+    // =====================
+    // Heavy Mold - Raw
+    // =====================
+
+    "block-vmmheavybasetoolmold-blue-raw-heavybase": "Raw blue clay heavy mold",
+    "block-vmmheavybasetoolmold-red-raw-heavybase": "Raw red clay heavy mold",
+    "block-vmmheavybasetoolmold-fire-raw-heavybase": "Raw fire clay heavy mold",
+
+    // =====================
+    // Heavy Mold - Base
+    // =====================
+
+    "block-vmmheavybasetoolmold-blue-fired-heavybase": "Earthy brown heavy mold base",
+    "block-vmmheavybasetoolmold-black-fired-heavybase": "Black heavy mold base",
+    "block-vmmheavybasetoolmold-brown-fired-heavybase": "Brown heavy mold base",
+    "block-vmmheavybasetoolmold-cream-fired-heavybase": "Cream heavy mold base",
+    "block-vmmheavybasetoolmold-fire-fired-heavybase": "Fireclay heavy mold base",
+    "block-vmmheavybasetoolmold-gray-fired-heavybase": "Gray heavy mold base",
+    "block-vmmheavybasetoolmold-orange-fired-heavybase": "Orange heavy mold base",
+    "block-vmmheavybasetoolmold-red-fired-heavybase": "Red heavy mold base",
+    "block-vmmheavybasetoolmold-tan-fired-heavybase": "Tan heavy mold base",
+
+    // =====================
+    // Heavy Mold - Empty
+    // =====================
+
+    "block-vmmheavymold-empty-blue": "Empty earthy brown heavy mold",
+    "block-vmmheavymold-empty-black": "Empty black heavy mold",
+    "block-vmmheavymold-empty-brown": "Empty brown heavy mold",
+    "block-vmmheavymold-empty-cream": "Empty cream heavy mold",
+    "block-vmmheavymold-empty-fire": "Empty fireclay heavy mold",
+    "block-vmmheavymold-empty-gray": "Empty gray heavy mold",
+    "block-vmmheavymold-empty-orange": "Empty orange heavy mold",
+    "block-vmmheavymold-empty-red": "Empty red heavy mold",
+    "block-vmmheavymold-empty-tan": "Empty tan heavy mold",
+
+    // =====================
+    // Heavy Mold - Fill 1
+    // =====================
+
+    "block-vmmheavymold-fill1-blue": "Slightly filled earthy brown heavy mold",
+    "block-vmmheavymold-fill1-black": "Slightly filled black heavy mold",
+    "block-vmmheavymold-fill1-brown": "Slightly filled brown heavy mold",
+    "block-vmmheavymold-fill1-cream": "Slightly filled cream heavy mold",
+    "block-vmmheavymold-fill1-fire": "Slightly filled fireclay heavy mold",
+    "block-vmmheavymold-fill1-gray": "Slightly filled gray heavy mold",
+    "block-vmmheavymold-fill1-orange": "Slightly filled orange heavy mold",
+    "block-vmmheavymold-fill1-red": "Slightly filled red heavy mold",
+    "block-vmmheavymold-fill1-tan": "Slightly filled tan heavy mold",
+
+    // =====================
+    // Heavy Mold - Fill 2
+    // =====================
+
+    "block-vmmheavymold-fill2-blue": "Mostly filled earthy brown heavy mold",
+    "block-vmmheavymold-fill2-black": "Mostly filled black heavy mold",
+    "block-vmmheavymold-fill2-brown": "Mostly filled brown heavy mold",
+    "block-vmmheavymold-fill2-cream": "Mostly filled cream heavy mold",
+    "block-vmmheavymold-fill2-fire": "Mostly filled fireclay heavy mold",
+    "block-vmmheavymold-fill2-gray": "Mostly filled gray heavy mold",
+    "block-vmmheavymold-fill2-orange": "Mostly filled orange heavy mold",
+    "block-vmmheavymold-fill2-red": "Mostly filled red heavy mold",
+    "block-vmmheavymold-fill2-tan": "Mostly filled tan heavy mold",
+
+    // =====================
+    // Heavy Mold - Fill 3
+    // =====================
+
+    "block-vmmheavymold-fill3-blue": "Fully filled earthy brown heavy mold",
+    "block-vmmheavymold-fill3-black": "Fully filled black heavy mold",
+    "block-vmmheavymold-fill3-brown": "Fully filled brown heavy mold",
+    "block-vmmheavymold-fill3-cream": "Fully filled cream heavy mold",
+    "block-vmmheavymold-fill3-fire": "Fully filled fireclay heavy mold",
+    "block-vmmheavymold-fill3-gray": "Fully filled gray heavy mold",
+    "block-vmmheavymold-fill3-orange": "Fully filled orange heavy mold",
+    "block-vmmheavymold-fill3-red": "Fully filled red heavy mold",
+    "block-vmmheavymold-fill3-tan": "Fully filled tan heavy mold",
+
+    // =====================
+    // Heavy Mold - Ingot
+    // =====================
+
+    "block-vmmheavymold-ingot-blue": "Earthy brown heavy ingot mold",
+    "block-vmmheavymold-ingot-black": "Black heavy ingot mold",
+    "block-vmmheavymold-ingot-brown": "Brown heavy ingot mold",
+    "block-vmmheavymold-ingot-cream": "Cream heavy ingot mold",
+    "block-vmmheavymold-ingot-fire": "Fireclay heavy ingot mold",
+    "block-vmmheavymold-ingot-gray": "Gray heavy ingot mold",
+    "block-vmmheavymold-ingot-orange": "Orange heavy ingot mold",
+    "block-vmmheavymold-ingot-red": "Red heavy ingot mold",
+    "block-vmmheavymold-ingot-tan": "Tan heavy ingot mold",
+
+    // =====================
+    // Heavy Mold - Plate
+    // =====================
+
+    "block-vmmheavymold-plate-blue": "Earthy brown heavy plate mold",
+    "block-vmmheavymold-plate-black": "Black heavy plate mold",
+    "block-vmmheavymold-plate-brown": "Brown heavy plate mold",
+    "block-vmmheavymold-plate-cream": "Cream heavy plate mold",
+    "block-vmmheavymold-plate-fire": "Fireclay heavy plate mold",
+    "block-vmmheavymold-plate-gray": "Gray heavy plate mold",
+    "block-vmmheavymold-plate-orange": "Orange heavy plate mold",
+    "block-vmmheavymold-plate-red": "Red heavy plate mold",
+    "block-vmmheavymold-plate-tan": "Tan heavy plate mold",
+
+    // =====================
+    // Heavy Mold - Rod
+    // =====================
+
+    "block-vmmheavymold-rod-blue": "Earthy brown heavy rod mold",
+    "block-vmmheavymold-rod-black": "Black heavy rod mold",
+    "block-vmmheavymold-rod-brown": "Brown heavy rod mold",
+    "block-vmmheavymold-rod-cream": "Cream heavy rod mold",
+    "block-vmmheavymold-rod-fire": "Fireclay heavy rod mold",
+    "block-vmmheavymold-rod-gray": "Gray heavy rod mold",
+    "block-vmmheavymold-rod-orange": "Orange heavy rod mold",
+    "block-vmmheavymold-rod-red": "Red heavy rod mold",
+    "block-vmmheavymold-rod-tan": "Tan heavy rod mold",
+
+    //Heavy Mold interaction
+    "blockhelp-vmmheavymold-sand": "Fill with sand",
+    "blockhelp-vmmheavymold-fill3-ingot": "Place ingot imprint",
+    "blockhelp-vmmheavymold-fill3-plate": "Place plate imprint",
+    "blockhelp-vmmheavymold-fill3-rod": "Place rod imprint",
+
+    //Heavy Mold handbook info
+    "vanillamoremolds:block-handbooktext-vanillamoremolds:vmmheavymold-*": "<strong>Heavy Mold:</strong><br>Designed for the mass production of ingots and metal plates. Its container is water-resistant and must be filled with sand before creating an imprint.<br><br><strong>Usage:</strong><br>Fill with sand: Shift + Right-click with sand.<br>Create ingot mold: Shift + Right-click with an ingot.<br>Create plate mold: Shift + Right-click with a metal plate.<br>Create rod mold: Shift + Right-click with a metal rod."
+}

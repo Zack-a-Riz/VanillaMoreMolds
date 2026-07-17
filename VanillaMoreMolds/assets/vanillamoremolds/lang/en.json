@@ -170,8 +170,12 @@
     "block-vmmtoolmold-tan-fired-scythehead": "Tan ceramic scythe blade mold",
 
     // =====================
-    // Heavy Mold - Empty
+    // Heavy Mold - Raw
     // =====================
+
+    "block-vmmheavybasetoolmold-blue-raw-heavybase": "Raw blue clay heavy mold",
+    "block-vmmheavybasetoolmold-red-raw-heavybase": "Raw red clay heavy mold",
+    "block-vmmheavybasetoolmold-fire-raw-heavybase": "Raw fire clay heavy mold",
 
     // =====================
     // Heavy Mold - Base

@@ -170,8 +170,12 @@
     "block-vmmtoolmold-tan-fired-scythehead": "Moule de lame de faux en céramique ocre",
 
     // =====================
-    // Heavy Mold - Empty
+    // Heavy Mold - Raw
     // =====================
+
+    "block-vmmheavybasetoolmold-blue-raw-heavybase": "Base de moule lourd en argile bleue brute",
+    "block-vmmheavybasetoolmold-red-raw-heavybase": "Base de moule lourd en argile rouge brute",
+    "block-vmmheavybasetoolmold-fire-raw-heavybase": "Base de moule lourd en argile réfractaire brute",
 
     // =====================
     // Heavy Mold - Base

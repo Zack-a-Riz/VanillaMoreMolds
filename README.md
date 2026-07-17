@@ -2,7 +2,6 @@
 <p>&nbsp;</p>
 <p><img style="display: block; margin-left: auto; margin-right: auto;" src="https://github.com/user-attachments/assets/614be4e9-8aa2-4b80-8717-54ce0c128c68" alt="" width="777" height="437" /></p>
 <h4 style="text-align: center;"><em>Do you want more diverse molds while staying true to the spirit and mechanics of the game? This mod is for you!</em></h4>
-<h2 style="text-align: center;"><span style="color: #e74c3c;"><br />Thank you for the 13,000+ downloads! </span></h2>
 <p>&nbsp;</p>
 <h4 style="text-align: center;"><strong>The VanillaMoreMolds project aims to add new varieties of molds to expand the arsenal of your forge, while staying true to the base game mechanics, smelting logic, and crafting style.</strong></h4>
 <h4 style="text-align: center;"><strong>The mod also introduces a brand-new mechanic for certain molds, designed to stay as close as possible to what the base game could naturally offer.</strong></h4>
@@ -16,36 +15,24 @@
 <p>&nbsp;</p>
 <h4><span style="color: #e03e2d;">I also have a question for you all :</span></h4>
 <p>Right now, after using a Heavy Mold, the inprint in the sand remains and can be reused. Would you prefer it to reset after each use, so the mold becomes empty again?</p>
-<h2>What&rsquo;s new in 2.1?</h2>
+<h2>What&rsquo;s new in 2.1.1?</h2>
 <p>&nbsp;</p>
 <ul style="list-style-type: circle;">
 <li>
 <h3>FEATURE :</h3>
 <ul>
-<li>Added HeayMold for metal Rod.</li>
-<li>
-<p>Beginning of the implementation of JSON-driven functionality.</p>
-</li>
-<li>
-<p>Added block remapping to preserve compatibility with version 2.0.1.</p>
-</li>
+<li>Added <strong>Chinese</strong> translation by ch4Ver (CH44).</li>
 </ul>
 <h3>UPDATE :</h3>
 <ul>
-<li>Update modicon.png.</li>
-<li>Update config version -&gt; 3.</li>
-<li>Update heavymold 3d model ( Ingot and plate ).</li>
-<li>Optimized the existing C# classes.</li>
 <li>
-<p>Optimized heavy mold behavior.</p>
+<p>Updated the supported game versions in modinfo to properly support Vintage Story <strong>1.22.1</strong> and <strong>1.22.2</strong>. (Thx MrJewsbury)</p>
 </li>
 </ul>
 <h3>FIX :</h3>
 <ul>
-<li>Fix 'again' config files ( heavymolds section ).</li>
-<li>
-<p>Heavy molds should now have a smoother workflow.</p>
-</li>
+<li>Fixed a missing entry in <strong>en.json</strong>, contributed by ch4Ver (CH44).</li>
+<li>Fixed several translation issues in <strong>fr.json</strong> and <strong>en.json</strong>.</li>
 </ul>
 </li>
 </ul>
@@ -203,6 +190,7 @@
 <li><span style="text-decoration: line-through;"><strong>The config doesn&rsquo;t work as it should for the heavy molds. </strong></span></li>
 </ul>
 <h3>Update:</h3>
+<p>17/07/2026 : <strong>2.1.1</strong> : Various fixes and added a Chinese translation, contributed by ch4Ver (CH44).</p>
 <p>07/07/2026 : <strong>2.1.0</strong> : New rod HeavyMold, Heavymold 3d model tweek, bug fix and more.</p>
 <p>02/08/2026 : <strong>2.0.1</strong> : HotFix : Fixed config issue, and VanillaMoreMoldsModSystem.cs. Add new modicon.png.</p>
 <p>01/07/2026 : <strong>2.0.0</strong> : Major overhaul of the mod, introduction of heavy molds, addition of the config system.</p>

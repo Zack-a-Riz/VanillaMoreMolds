@@ -15,26 +15,24 @@
 <p>&nbsp;</p>
 <h4><span style="color: #e03e2d;">I also have a question for you all :</span></h4>
 <p>Right now, after using a Heavy Mold, the inprint in the sand remains and can be reused. Would you prefer it to reset after each use, so the mold becomes empty again?</p>
-<h2>What&rsquo;s new in 2.1.1?</h2>
-<p>&nbsp;</p>
-<ul style="list-style-type: circle;">
-<li>
+<h2>What&rsquo;s new in 2.1.2?</h2>
 <h3>FEATURE :</h3>
 <ul>
-<li>Added <strong>Chinese</strong> translation by ch4Ver (CH44).</li>
+<li>Added&nbsp;<strong>Russian</strong> translation by ChimaMAG.</li>
 </ul>
 <h3>UPDATE :</h3>
 <ul>
 <li>
-<p>Updated the supported game versions in modinfo to properly support Vintage Story <strong>1.22.1</strong> and <strong>1.22.2</strong>. (Thx MrJewsbury)</p>
+<p>Updated the supported game versions in modinfo to properly support Vintage Story&nbsp;<strong>1.22.4</strong>&nbsp;and&nbsp;<strong>1.22.5</strong>.</p>
 </li>
 </ul>
 <h3>FIX :</h3>
 <ul>
-<li>Fixed a missing entry in <strong>en.json</strong>, contributed by ch4Ver (CH44).</li>
-<li>Fixed several translation issues in <strong>fr.json</strong> and <strong>en.json</strong>.</li>
+<li>Corrected the explanation text for the "Heavy Mold handbook info" entry in the <strong>en.json</strong> and <strong>fr.json</strong> files.</li>
 </ul>
-</li>
+<h3>KNOW ISSUE :</h3>
+<ul>
+<li>If you break Heavy Molds by hand instead of retrieving them properly, the sand does not display the correct texture. <em>(This is a known bug the mold should appear empty, i'm gona fix this in the coming days.)</em></li>
 </ul>
 <h2 style="text-align: left;">Feature: Tool molds</h2>
 <table style="border-collapse: collapse; width: 75.6267%; height: 124px; background-color: #95a5a6; border-color: #000000; border-style: solid;" border="3">
@@ -187,12 +185,13 @@
 </ul>
 <h3>Know issue:</h3>
 <ul style="list-style-type: circle;">
-<li><span style="text-decoration: line-through;"><strong>The config doesn&rsquo;t work as it should for the heavy molds. </strong></span></li>
+<li>If you break Heavy Molds by hand instead of retrieving them properly, the sand does not display the correct texture. <em>(This is a known bug the mold should appear empty, i'm gona fix this in the coming days.)</em></li>
 </ul>
 <h3>Update:</h3>
-<p>17/07/2026 : <strong>2.1.1</strong> : Various fixes and added a Chinese translation, contributed by ch4Ver (CH44).</p>
+<p>22/07/2026 : <strong>2.1.2</strong> : Fixed several issues in the translation files, added a Russian translation by <strong>ChimMAG</strong>.</p>
+<p>17/07/2026 : <strong>2.1.1</strong> : Various fixes and added a Chinese translation, contributed by <strong>ch4Ver</strong> (CH44).</p>
 <p>07/07/2026 : <strong>2.1.0</strong> : New rod HeavyMold, Heavymold 3d model tweek, bug fix and more.</p>
-<p>02/08/2026 : <strong>2.0.1</strong> : HotFix : Fixed config issue, and VanillaMoreMoldsModSystem.cs. Add new modicon.png.</p>
+<p>02/07/2026 : <strong>2.0.1</strong> : HotFix : Fixed config issue, and VanillaMoreMoldsModSystem.cs. Add new modicon.png.</p>
 <p>01/07/2026 : <strong>2.0.0</strong> : Major overhaul of the mod, introduction of heavy molds, addition of the config system.</p>
 <p>19/02/2025 : <strong>1.1.2</strong> : Community Update.</p>
 <p>21/01/2025 : <strong>1.1.1</strong> : Fixed mod loading issue in 1.1.0.</p>

@@ -296,5 +296,5 @@
     "blockhelp-vmmheavymold-fill3-rod": "Place rod imprint",
 
     //Heavy Mold handbook info
-    "vanillamoremolds:block-handbooktext-vanillamoremolds:vmmheavymold-*": "<strong>Heavy Mold:</strong><br>Designed for the mass production of ingots and metal plates. Its container is water-resistant and must be filled with sand before creating an imprint.<br><br><strong>Usage:</strong><br>Fill with sand: Shift + Right-click with sand.<br>Create ingot mold: Shift + Right-click with an ingot.<br>Create plate mold: Shift + Right-click with a metal plate.<br>Create rod mold: Shift + Right-click with a metal rod."
+    "vanillamoremolds:block-handbooktext-vanillamoremolds:vmmheavymold-*": "<strong>Heavy Mold:</strong><br>Designed for the mass production of ingots, rods and metal plates. Its container is water-resistant and must be filled with sand before creating an imprint.<br><br><strong>Usage:</strong><br>Fill with sand: Shift + Right-click with sand.<br>Create ingot mold: Shift + Right-click with an ingot.<br>Create plate mold: Shift + Right-click with a metal plate.<br>Create rod mold: Shift + Right-click with a metal rod."
 }

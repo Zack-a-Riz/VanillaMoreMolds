@@ -1,0 +1,300 @@
+{
+    //Translated by ChimMAG
+    //Start log
+    "start": "VanillaMoreMolds : Загружен",
+
+    //Menu tab
+    "game:tabname-VanillaMoreMolds": "Vanilla More Molds",
+
+    //Handbook text caution for fired molds
+    "vanillamoremolds:block-handbooktext-vanillamoremolds:vmmtoolmold-*-fired-*": "<strong>Внимание:</strong> если намочить форму с расплавленным металлом внутри, она расколется, и вы потеряете часть металла.",
+
+    // =====================
+    // Tool Molds - Saw Blade
+    // =====================
+
+    //Mold sawblade raw
+    "block-vmmtoolmold-blue-raw-sawblade": "Форма для пилы из голубой глины (необожжённая)",
+    "block-vmmtoolmold-red-raw-sawblade": "Форма для пилы из красной глины (необожжённая)",
+    "block-vmmtoolmold-fire-raw-sawblade": "Форма для пилы из огнеупорной глины (необожжённая)",
+
+    //Mold sawblade fired
+    "block-vmmtoolmold-blue-fired-sawblade": "Форма для пилы, тёмно-коричневая",
+    "block-vmmtoolmold-black-fired-sawblade": "Форма для пилы, чёрная",
+    "block-vmmtoolmold-brown-fired-sawblade": "Форма для пилы, коричневая",
+    "block-vmmtoolmold-cream-fired-sawblade": "Форма для пилы, бежевая",
+    "block-vmmtoolmold-fire-fired-sawblade": "Форма для пилы из огнеупорной глины",
+    "block-vmmtoolmold-gray-fired-sawblade": "Форма для пилы, серая",
+    "block-vmmtoolmold-orange-fired-sawblade": "Форма для пилы, оранжевая",
+    "block-vmmtoolmold-red-fired-sawblade": "Форма для пилы, красная",
+    "block-vmmtoolmold-tan-fired-sawblade": "Форма для пилы, светло-коричневая",
+
+    // =====================
+    // Tool Molds - Nail
+    // =====================
+
+    //Mold nail raw
+    "block-vmmtoolmold-blue-raw-nail": "Форма для гвоздей из голубой глины (необожжённая)",
+    "block-vmmtoolmold-red-raw-nail": "Форма для гвоздей из красной глины (необожжённая)",
+    "block-vmmtoolmold-fire-raw-nail": "Форма для гвоздей из огнеупорной глины (необожжённая)",
+
+    //Mold nail fired
+    "block-vmmtoolmold-blue-fired-nail": "Форма для гвоздей, тёмно-коричневая",
+    "block-vmmtoolmold-black-fired-nail": "Форма для гвоздей, чёрная",
+    "block-vmmtoolmold-brown-fired-nail": "Форма для гвоздей, коричневая",
+    "block-vmmtoolmold-cream-fired-nail": "Форма для гвоздей, бежевая",
+    "block-vmmtoolmold-fire-fired-nail": "Форма для гвоздей из огнеупорной глины",
+    "block-vmmtoolmold-gray-fired-nail": "Форма для гвоздей, серая",
+    "block-vmmtoolmold-orange-fired-nail": "Форма для гвоздей, оранжевая",
+    "block-vmmtoolmold-red-fired-nail": "Форма для гвоздей, красная",
+    "block-vmmtoolmold-tan-fired-nail": "Форма для гвоздей, светло-коричневая",
+
+    // =====================
+    // Tool Molds - Arrowhead
+    // =====================
+
+    //Mold arrowhead raw
+    "block-vmmtoolmold-blue-raw-arrowhead": "Форма для наконечников стрел из голубой глины (необожжённая)",
+    "block-vmmtoolmold-red-raw-arrowhead": "Форма для наконечников стрел из красной глины (необожжённая)",
+    "block-vmmtoolmold-fire-raw-arrowhead": "Форма для наконечников стрел из огнеупорной глины (необожжённая)",
+
+    //Mold arrowhead fired
+    "block-vmmtoolmold-blue-fired-arrowhead": "Форма для наконечников стрел, тёмно-коричневая",
+    "block-vmmtoolmold-black-fired-arrowhead": "Форма для наконечников стрел, чёрная",
+    "block-vmmtoolmold-brown-fired-arrowhead": "Форма для наконечников стрел, коричневая",
+    "block-vmmtoolmold-cream-fired-arrowhead": "Форма для наконечников стрел, бежевая",
+    "block-vmmtoolmold-fire-fired-arrowhead": "Форма для наконечников стрел из огнеупорной глины",
+    "block-vmmtoolmold-gray-fired-arrowhead": "Форма для наконечников стрел, серая",
+    "block-vmmtoolmold-orange-fired-arrowhead": "Форма для наконечников стрел, оранжевая",
+    "block-vmmtoolmold-red-fired-arrowhead": "Форма для наконечников стрел, красная",
+    "block-vmmtoolmold-tan-fired-arrowhead": "Форма для наконечников стрел, светло-коричневая",
+
+    // =====================
+    // Tool Molds - Hoop
+    // =====================
+
+    //Mold hoop raw
+    "block-vmmtoolmold-blue-raw-hoop": "Форма для обруча из голубой глины (необожжённая)",
+    "block-vmmtoolmold-red-raw-hoop": "Форма для обруча из красной глины (необожжённая)",
+    "block-vmmtoolmold-fire-raw-hoop": "Форма для обруча из огнеупорной глины (необожжённая)",
+
+    //Mold hoop fired
+    "block-vmmtoolmold-blue-fired-hoop": "Форма для обруча, тёмно-коричневая",
+    "block-vmmtoolmold-black-fired-hoop": "Форма для обруча, чёрная",
+    "block-vmmtoolmold-brown-fired-hoop": "Форма для обруча, коричневая",
+    "block-vmmtoolmold-cream-fired-hoop": "Форма для обруча, бежевая",
+    "block-vmmtoolmold-fire-fired-hoop": "Форма для обруча из огнеупорной глины",
+    "block-vmmtoolmold-gray-fired-hoop": "Форма для обруча, серая",
+    "block-vmmtoolmold-orange-fired-hoop": "Форма для обруча, оранжевая",
+    "block-vmmtoolmold-red-fired-hoop": "Форма для обруча, красная",
+    "block-vmmtoolmold-tan-fired-hoop": "Форма для обруча, светло-коричневая",
+
+    // =====================
+    // Tool Molds - Plate
+    // =====================
+
+    //Mold plate raw
+    "block-vmmtoolmold-blue-raw-plate": "Форма для пластины из голубой глины (необожжённая)",
+    "block-vmmtoolmold-red-raw-plate": "Форма для пластины из красной глины (необожжённая)",
+    "block-vmmtoolmold-fire-raw-plate": "Форма для пластины из огнеупорной глины (необожжённая)",
+
+    //Mold plate fired
+    "block-vmmtoolmold-blue-fired-plate": "Форма для пластины, тёмно-коричневая",
+    "block-vmmtoolmold-black-fired-plate": "Форма для пластины, чёрная",
+    "block-vmmtoolmold-brown-fired-plate": "Форма для пластины, коричневая",
+    "block-vmmtoolmold-cream-fired-plate": "Форма для пластины, бежевая",
+    "block-vmmtoolmold-fire-fired-plate": "Форма для пластины из огнеупорной глины",
+    "block-vmmtoolmold-gray-fired-plate": "Форма для пластины, серая",
+    "block-vmmtoolmold-orange-fired-plate": "Форма для пластины, оранжевая",
+    "block-vmmtoolmold-red-fired-plate": "Форма для пластины, красная",
+    "block-vmmtoolmold-tan-fired-plate": "Форма для пластины, светло-коричневая",
+
+    // =====================
+    // Tool Molds - Spearhead
+    // =====================
+
+    //Mold spearhead raw
+    "block-vmmtoolmold-blue-raw-spearhead": "Форма для наконечника копья из голубой глины (необожжённая)",
+    "block-vmmtoolmold-red-raw-spearhead": "Форма для наконечника копья из красной глины (необожжённая)",
+    "block-vmmtoolmold-fire-raw-spearhead": "Форма для наконечника копья из огнеупорной глины (необожжённая)",
+
+    //Mold spearhead fired
+    "block-vmmtoolmold-blue-fired-spearhead": "Форма для наконечника копья, тёмно-коричневая",
+    "block-vmmtoolmold-black-fired-spearhead": "Форма для наконечника копья, чёрная",
+    "block-vmmtoolmold-brown-fired-spearhead": "Форма для наконечника копья, коричневая",
+    "block-vmmtoolmold-cream-fired-spearhead": "Форма для наконечника копья, бежевая",
+    "block-vmmtoolmold-fire-fired-spearhead": "Форма для наконечника копья из огнеупорной глины",
+    "block-vmmtoolmold-gray-fired-spearhead": "Форма для наконечника копья, серая",
+    "block-vmmtoolmold-orange-fired-spearhead": "Форма для наконечника копья, оранжевая",
+    "block-vmmtoolmold-red-fired-spearhead": "Форма для наконечника копья, красная",
+    "block-vmmtoolmold-tan-fired-spearhead": "Форма для наконечника копья, светло-коричневая",
+
+    // =====================
+    // Tool Molds - Knife Blade
+    // =====================
+
+    //Mold knifeblade raw
+    "block-vmmtoolmold-blue-raw-knifeblade": "Форма для лезвия ножа из голубой глины (необожжённая)",
+    "block-vmmtoolmold-red-raw-knifeblade": "Форма для лезвия ножа из красной глины (необожжённая)",
+    "block-vmmtoolmold-fire-raw-knifeblade": "Форма для лезвия ножа из огнеупорной глины (необожжённая)",
+
+    //Mold knifeblade fired
+    "block-vmmtoolmold-blue-fired-knifeblade": "Форма для лезвия ножа, тёмно-коричневая",
+    "block-vmmtoolmold-black-fired-knifeblade": "Форма для лезвия ножа, чёрная",
+    "block-vmmtoolmold-brown-fired-knifeblade": "Форма для лезвия ножа, коричневая",
+    "block-vmmtoolmold-cream-fired-knifeblade": "Форма для лезвия ножа, бежевая",
+    "block-vmmtoolmold-fire-fired-knifeblade": "Форма для лезвия ножа из огнеупорной глины",
+    "block-vmmtoolmold-gray-fired-knifeblade": "Форма для лезвия ножа, серая",
+    "block-vmmtoolmold-orange-fired-knifeblade": "Форма для лезвия ножа, оранжевая",
+    "block-vmmtoolmold-red-fired-knifeblade": "Форма для лезвия ножа, красная",
+    "block-vmmtoolmold-tan-fired-knifeblade": "Форма для лезвия ножа, светло-коричневая",
+
+    // =====================
+    // Tool Molds - Scythe Head
+    // =====================
+
+    //Mold scythehead raw
+    "block-vmmtoolmold-blue-raw-scythehead": "Форма для лезвия косы из голубой глины (необожжённая)",
+    "block-vmmtoolmold-red-raw-scythehead": "Форма для лезвия косы из красной глины (необожжённая)",
+    "block-vmmtoolmold-fire-raw-scythehead": "Форма для лезвия косы из огнеупорной глины (необожжённая)",
+
+    //Mold scythehead fired
+    "block-vmmtoolmold-blue-fired-scythehead": "Форма для лезвия косы, тёмно-коричневая",
+    "block-vmmtoolmold-black-fired-scythehead": "Форма для лезвия косы, чёрная",
+    "block-vmmtoolmold-brown-fired-scythehead": "Форма для лезвия косы, коричневая",
+    "block-vmmtoolmold-cream-fired-scythehead": "Форма для лезвия косы, бежевая",
+    "block-vmmtoolmold-fire-fired-scythehead": "Форма для лезвия косы из огнеупорной глины",
+    "block-vmmtoolmold-gray-fired-scythehead": "Форма для лезвия косы, серая",
+    "block-vmmtoolmold-orange-fired-scythehead": "Форма для лезвия косы, оранжевая",
+    "block-vmmtoolmold-red-fired-scythehead": "Форма для лезвия косы, красная",
+    "block-vmmtoolmold-tan-fired-scythehead": "Форма для лезвия косы, светло-коричневая",
+
+    // =====================
+    // Heavy Mold - Raw
+    // =====================
+
+    "block-vmmheavybasetoolmold-blue-raw-heavybase": "Тяжёлая основа формы из голубой глины, необожжённая",
+    "block-vmmheavybasetoolmold-red-raw-heavybase": "Тяжёлая основа формы из красной глины, необожжённая",
+    "block-vmmheavybasetoolmold-fire-raw-heavybase": "Тяжёлая основа формы из огнеупорной глины, необожжённая",
+
+    // =====================
+    // Heavy Mold - Base
+    // =====================
+
+    "block-vmmheavybasetoolmold-blue-fired-heavybase": "Тяжёлое основание формы, тёмно-коричневое",
+    "block-vmmheavybasetoolmold-black-fired-heavybase": "Тяжёлое основание формы, чёрное",
+    "block-vmmheavybasetoolmold-brown-fired-heavybase": "Тяжёлое основание формы, коричневое",
+    "block-vmmheavybasetoolmold-cream-fired-heavybase": "Тяжёлое основание формы, бежевое",
+    "block-vmmheavybasetoolmold-fire-fired-heavybase": "Тяжёлое основание формы из огнеупорной глины",
+    "block-vmmheavybasetoolmold-gray-fired-heavybase": "Тяжёлое основание формы, серое",
+    "block-vmmheavybasetoolmold-orange-fired-heavybase": "Тяжёлое основание формы, оранжевое",
+    "block-vmmheavybasetoolmold-red-fired-heavybase": "Тяжёлое основание формы, красное",
+    "block-vmmheavybasetoolmold-tan-fired-heavybase": "Тяжёлое основание формы, светло-коричневое",
+
+    // =====================
+    // Heavy Mold - Empty
+    // =====================
+
+    "block-vmmheavymold-empty-blue": "Пустая тяжёлая форма, тёмно-коричневая",
+    "block-vmmheavymold-empty-black": "Пустая тяжёлая форма, чёрная",
+    "block-vmmheavymold-empty-brown": "Пустая тяжёлая форма, коричневая",
+    "block-vmmheavymold-empty-cream": "Пустая тяжёлая форма, бежевая",
+    "block-vmmheavymold-empty-fire": "Пустая тяжёлая форма из огнеупорной глины",
+    "block-vmmheavymold-empty-gray": "Пустая тяжёлая форма, серая",
+    "block-vmmheavymold-empty-orange": "Пустая тяжёлая форма, оранжевая",
+    "block-vmmheavymold-empty-red": "Пустая тяжёлая форма, красная",
+    "block-vmmheavymold-empty-tan": "Пустая тяжёлая форма, светло-коричневая",
+
+    // =====================
+    // Heavy Mold - Fill 1
+    // =====================
+
+    "block-vmmheavymold-fill1-blue": "Частично заполненная тяжёлая форма, тёмно-коричневая",
+    "block-vmmheavymold-fill1-black": "Частично заполненная тяжёлая форма, чёрная",
+    "block-vmmheavymold-fill1-brown": "Частично заполненная тяжёлая форма, коричневая",
+    "block-vmmheavymold-fill1-cream": "Частично заполненная тяжёлая форма, бежевая",
+    "block-vmmheavymold-fill1-fire": "Частично заполненная тяжёлая форма из огнеупорной глины",
+    "block-vmmheavymold-fill1-gray": "Частично заполненная тяжёлая форма, серая",
+    "block-vmmheavymold-fill1-orange": "Частично заполненная тяжёлая форма, оранжевая",
+    "block-vmmheavymold-fill1-red": "Частично заполненная тяжёлая форма, красная",
+    "block-vmmheavymold-fill1-tan": "Частично заполненная тяжёлая форма, светло-коричневая",
+
+    // =====================
+    // Heavy Mold - Fill 2
+    // =====================
+
+    "block-vmmheavymold-fill2-blue": "Почти заполненная тяжёлая форма, тёмно-коричневая",
+    "block-vmmheavymold-fill2-black": "Почти заполненная тяжёлая форма, чёрная",
+    "block-vmmheavymold-fill2-brown": "Почти заполненная тяжёлая форма, коричневая",
+    "block-vmmheavymold-fill2-cream": "Почти заполненная тяжёлая форма, бежевая",
+    "block-vmmheavymold-fill2-fire": "Почти заполненная тяжёлая форма из огнеупорной глины",
+    "block-vmmheavymold-fill2-gray": "Почти заполненная тяжёлая форма, серая",
+    "block-vmmheavymold-fill2-orange": "Почти заполненная тяжёлая форма, оранжевая",
+    "block-vmmheavymold-fill2-red": "Почти заполненная тяжёлая форма, красная",
+    "block-vmmheavymold-fill2-tan": "Почти заполненная тяжёлая форма, светло-коричневая",
+
+    // =====================
+    // Heavy Mold - Fill 3
+    // =====================
+
+    "block-vmmheavymold-fill3-blue": "Заполненная тяжёлая форма, тёмно-коричневая",
+    "block-vmmheavymold-fill3-black": "Заполненная тяжёлая форма, чёрная",
+    "block-vmmheavymold-fill3-brown": "Заполненная тяжёлая форма, коричневая",
+    "block-vmmheavymold-fill3-cream": "Заполненная тяжёлая форма, бежевая",
+    "block-vmmheavymold-fill3-fire": "Заполненная тяжёлая форма из огнеупорной глины",
+    "block-vmmheavymold-fill3-gray": "Заполненная тяжёлая форма, серая",
+    "block-vmmheavymold-fill3-orange": "Заполненная тяжёлая форма, оранжевая",
+    "block-vmmheavymold-fill3-red": "Заполненная тяжёлая форма, красная",
+    "block-vmmheavymold-fill3-tan": "Заполненная тяжёлая форма, светло-коричневая",
+
+    // =====================
+    // Heavy Mold - Ingot
+    // =====================
+
+    "block-vmmheavymold-ingot-blue": "Тяжёлая форма для слитка, тёмно-коричневая",
+    "block-vmmheavymold-ingot-black": "Тяжёлая форма для слитка, чёрная",
+    "block-vmmheavymold-ingot-brown": "Тяжёлая форма для слитка, коричневая",
+    "block-vmmheavymold-ingot-cream": "Тяжёлая форма для слитка, бежевая",
+    "block-vmmheavymold-ingot-fire": "Тяжёлая форма для слитка из огнеупорной глины",
+    "block-vmmheavymold-ingot-gray": "Тяжёлая форма для слитка, серая",
+    "block-vmmheavymold-ingot-orange": "Тяжёлая форма для слитка, оранжевая",
+    "block-vmmheavymold-ingot-red": "Тяжёлая форма для слитка, красная",
+    "block-vmmheavymold-ingot-tan": "Тяжёлая форма для слитка, светло-коричневая",
+
+    // =====================
+    // Heavy Mold - Plate
+    // =====================
+
+    "block-vmmheavymold-plate-blue": "Тяжёлая форма для пластины, тёмно-коричневая",
+    "block-vmmheavymold-plate-black": "Тяжёлая форма для пластины, чёрная",
+    "block-vmmheavymold-plate-brown": "Тяжёлая форма для пластины, коричневая",
+    "block-vmmheavymold-plate-cream": "Тяжёлая форма для пластины, бежевая",
+    "block-vmmheavymold-plate-fire": "Тяжёлая форма для пластины из огнеупорной глины",
+    "block-vmmheavymold-plate-gray": "Тяжёлая форма для пластины, серая",
+    "block-vmmheavymold-plate-orange": "Тяжёлая форма для пластины, оранжевая",
+    "block-vmmheavymold-plate-red": "Тяжёлая форма для пластины, красная",
+    "block-vmmheavymold-plate-tan": "Тяжёлая форма для пластины, светло-коричневая",
+
+    // =====================
+    // Heavy Mold - Rod
+    // =====================
+
+    "block-vmmheavymold-rod-blue": "Тяжёлая форма для стержня, тёмно-коричневая",
+    "block-vmmheavymold-rod-black": "Тяжёлая форма для стержня, чёрная",
+    "block-vmmheavymold-rod-brown": "Тяжёлая форма для стержня, коричневая",
+    "block-vmmheavymold-rod-cream": "Тяжёлая форма для стержня, бежевая",
+    "block-vmmheavymold-rod-fire": "Тяжёлая форма для стержня, огнеупорная",
+    "block-vmmheavymold-rod-gray": "Тяжёлая форма для стержня, серая",
+    "block-vmmheavymold-rod-orange": "Тяжёлая форма для стержня, оранжевая",
+    "block-vmmheavymold-rod-red": "Тяжёлая форма для стержня, красная",
+    "block-vmmheavymold-rod-tan": "Тяжёлая форма для стержня, светло-коричневая",
+
+    //Heavy Mold interaction
+    "blockhelp-vmmheavymold-sand": "Заполнить песком",
+    "blockhelp-vmmheavymold-fill3-ingot": "Поместить оттиск слитка",
+    "blockhelp-vmmheavymold-fill3-plate": "Поместить оттиск пластины",
+    "blockhelp-vmmheavymold-fill3-rod": "Поместить оттиск стержня",
+
+    //Heavy Mold handbook info
+    "vanillamoremolds:block-handbooktext-vanillamoremolds:vmmheavymold-*": "<strong>Тяжёлая форма:</strong><br>Предназначена для массового производства слитков и металлических пластин. Её корпус водонепроницаем, и перед созданием оттиска его необходимо заполнить песком.<br><br><strong>Использование:</strong><br>Заполнение песком: Shift + ПКМ с песком.<br>Создание формы для слитка: Shift + ПКМ со слитком.<br>Создание формы для пластины: Shift + ПКМ с металлической пластиной.<br>Создание формы для стержня: Shift + ПКМ с металлическим стержнем."
+}

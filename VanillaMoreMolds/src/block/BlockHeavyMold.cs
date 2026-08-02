@@ -92,7 +92,7 @@ namespace VanillaMoreMolds
             bool       hasShift = byPlayer?.Entity?.Controls?.ShiftKey == true;
             bool       isSand   = held?.Block?.Code?.Path?.StartsWith("sand-") == true;
 
-            if (!IsLastFillStage() && isSand && hasShift)
+            if (!IsLastFillStage() && isSand)
             {
                 string sandRock = held!.Block.Code.Path["sand-".Length..];
                 AdvanceStage(world, byPlayer, blockSel, NextFillStage(), sandRock, consumeItem: true);
@@ -156,6 +156,37 @@ namespace VanillaMoreMolds
             }
 
             return base.OnBlockInteractStart(world, byPlayer, blockSel);
+        }
+
+        public override ItemStack[] GetDrops(IWorldAccessor world, BlockPos pos, IPlayer byPlayer, float dropQuantityMultiplier = 1f)
+        {
+            if (Stage == "empty")
+                return base.GetDrops(world, pos, byPlayer, dropQuantityMultiplier);
+
+            string color = Variant?["color"] ?? "blue";
+            Block? emptyBlock = world.GetBlock(new AssetLocation("vanillamoremolds:vmmheavymold-empty-" + color));
+            if (emptyBlock == null)
+                return base.GetDrops(world, pos, byPlayer, dropQuantityMultiplier);
+
+            return [new ItemStack(emptyBlock)];
+        }
+
+        public override void OnBlockBroken(IWorldAccessor world, BlockPos pos, IPlayer byPlayer, float dropQuantityMultiplier = 1f)
+        {
+            if (Stage == "empty")
+            {
+                base.OnBlockBroken(world, pos, byPlayer, dropQuantityMultiplier);
+                return;
+            }
+
+            var be = world.BlockAccessor.GetBlockEntity(pos) as BEHeavyMold;
+            string sandRock = be?.SandType ?? "andesite";
+
+            base.OnBlockBroken(world, pos, byPlayer, dropQuantityMultiplier);
+
+            world.PlaySoundAt(new AssetLocation("vanillamoremolds:sounds/block/heavymold/heavymold-in"),
+                pos, 0, null, true, 10f, 1f);
+            SpawnFallingSandDustParticles(world, pos, sandRock);
         }
 
         public override void OnBlockPlaced(IWorldAccessor world, BlockPos blockPos, ItemStack byItemStack)
@@ -284,6 +315,26 @@ namespace VanillaMoreMolds
             }
         }
 
+        private static void SpawnFallingSandDustParticles(IWorldAccessor world, BlockPos pos, string sandRock)
+        {
+            if (world.Side != EnumAppSide.Server) return;
+            Block? sandBlock = world.GetBlock(new AssetLocation("game:sand-" + sandRock));
+            if (sandBlock == null) return;
+
+            Vec3d basePos = pos.ToVec3d();
+            SimpleParticleProperties particles = new SimpleParticleProperties(
+                30f, 60f, unchecked((int)0xD8C59AFF),
+                basePos.AddCopy(0.25, 0.2, 0.25), basePos.AddCopy(0.75, 0.65, 0.75),
+                new Vec3f(0f, -0.01f, 0f), new Vec3f(0f, -0.05f, 0f),
+                1.0f, 0.00f, 0.1f, 0.3f, EnumParticleModel.Quad)
+            {
+                ColorByBlock          = sandBlock,
+                WithTerrainCollision  = false,
+                WindAffected          = false
+            };
+            world.SpawnParticles(particles, null);
+        }
+
         private static void SpawnFallingSandDustParticles(IWorldAccessor world, BlockSelection blockSel, string sandRock)
         {
             if (world.Side != EnumAppSide.Server) return;
@@ -324,7 +375,6 @@ namespace VanillaMoreMolds
                     {
                         ActionLangCode = "vanillamoremolds:blockhelp-vmmheavymold-sand",
                         MouseButton    = EnumMouseButton.Right,
-                        HotKeyCode     = "shift",
                         Itemstacks     = sandStacks
                     });
             }

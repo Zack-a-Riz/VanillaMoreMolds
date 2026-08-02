@@ -296,5 +296,5 @@
     "blockhelp-vmmheavymold-fill3-rod": "Créer une empreinte de tige",
 
     //Heavy Mold handbook info
-    "vanillamoremolds:block-handbooktext-vanillamoremolds:vmmheavymold-*": "<strong>Moule lourd :</strong><br>Conçu pour la production de masse de lingots, plaques et tiges métalliques. Son contenant résiste à l'eau et doit être rempli de sable avant de créer une empreinte.<br><br><strong>Utilisation :</strong><br>Remplir de sable : Shift + Clic droit avec du sable.<br>Créer un moule à lingots : Shift + Clic droit avec un lingot.<br>Créer un moule à plaques : Shift + Clic droit avec une de métal.<br>Créer un moule à tiges : Shift + Clic droit avec une tige de métal."
+    "vanillamoremolds:block-handbooktext-vanillamoremolds:vmmheavymold-*": "<strong>Moule lourd :</strong><br>Conçu pour la production de masse de lingots, plaques et tiges métalliques. Son contenant résiste à l'eau et doit être rempli de sable avant de créer une empreinte.<br><br><strong>Utilisation :</strong><br>Remplir de sable : Maj + clic droit avec du sable (3 étapes de remplissage).<br>Créer un moule à lingots : Shift + Clic droit avec un lingot.<br>Créer un moule à plaques : Shift + Clic droit avec une plaque de métal.<br>Créer un moule à tiges : Shift + Clic droit avec une tige de métal."
 }

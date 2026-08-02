@@ -5,34 +5,42 @@
 <p>&nbsp;</p>
 <h4 style="text-align: center;"><strong>The VanillaMoreMolds project aims to add new varieties of molds to expand the arsenal of your forge, while staying true to the base game mechanics, smelting logic, and crafting style.</strong></h4>
 <h4 style="text-align: center;"><strong>The mod also introduces a brand-new mechanic for certain molds, designed to stay as close as possible to what the base game could naturally offer.</strong></h4>
-<h2>&nbsp;</h2>
-<p>Let's talk a bit about <strong>v2.1.0</strong>! This release came much faster than I expected.</p>
-<p>I've started refactoring several of my C# classes to make many systems less hard-coded and more JSON-driven. This made it much easier to implement the new <strong>Heavy Mold (Rod)</strong> and will also make future additions much easier to maintain.</p>
-<p>Technically, it's already possible to create addons, but these changes are mainly intended to let me develop more interesting updates in the future. To make addon development easier for others, I'll need to provide proper documentation, which isn't ready yet. x)</p>
 <p>&nbsp;</p>
-<p>Your feedback has also been incredibly helpful in fixing configuration issues. Once again, if you run into any problems, please don't hesitate to let me know.</p>
-<p>I've also added block remapping for the <strong>Heavy Mold (Ingot)</strong> and <strong>Heavy Mold (Plate)</strong>, since their asset paths changed between <strong>v2.0.1</strong> and <strong>v2.1.0</strong>. You shouldn't encounter any issues when updating, except that the sand color inside existing ingot and plate molds may change.</p>
+<h2>What&rsquo;s new in 2.2.0?</h2>
 <p>&nbsp;</p>
-<h4><span style="color: #e03e2d;">I also have a question for you all :</span></h4>
-<p>Right now, after using a Heavy Mold, the inprint in the sand remains and can be reused. Would you prefer it to reset after each use, so the mold becomes empty again?</p>
-<h2>What&rsquo;s new in 2.1.2?</h2>
+<p><strong><span style="color: #e03e2d;">THANK YOU FOR 17,000 DOWNLOADS ! &lt;3</span></strong></p>
+<p>&nbsp;</p>
+<p>The <strong>Quality of Life (QoL) update</strong> is finally here!</p>
+<p>This update includes several bug fixes, but most importantly, you can now empty Heavy Molds by simply breaking them!</p>
+<p>I've also improved sand filling:</p>
+<ul>
+<li>
+<p>No more accidentally placing sand blocks on top of the mold.</p>
+</li>
+<li>
+<p>Just <strong>right-click while holding sand</strong> to fill it.</p>
+</li>
+</ul>
+<p>&nbsp;</p>
+<p>As always, I'd love to hear your feedback! If you run into any bugs or have suggestions, feel free to contact me on Discord: <strong>zack.a.riz :3</strong></p>
 <h3>FEATURE :</h3>
 <ul>
-<li>Added&nbsp;<strong>Russian</strong> translation by ChimaMAG.</li>
+<li>QOL : Heavy molds will now empty their contents when broken if they contain sand or an existing imprint, allowing you to change the contents afterward.</li>
 </ul>
 <h3>UPDATE :</h3>
 <ul>
 <li>
-<p>Updated the supported game versions in modinfo to properly support Vintage Story&nbsp;<strong>1.22.4</strong>&nbsp;and&nbsp;<strong>1.22.5</strong>.</p>
+<p>Updated the supported game versions in modinfo to properly support Vintage Story&nbsp;<strong>1.22.6</strong>.</p>
 </li>
+<li>QOL : Removed the requirement to hold Shift when placing sand into heavy molds. (Shift is still required to create ingot, rod, and plate imprints.)</li>
 </ul>
 <h3>FIX :</h3>
 <ul>
-<li>Corrected the explanation text for the "Heavy Mold handbook info" entry in the <strong>en.json</strong> and <strong>fr.json</strong> files.</li>
+<li>Fix the "Heavy Mold Handbook Info" once again....I still can't find a wording that I'm happy with. (While fixing spelling mistakes in <strong>fr.json.</strong>)</li>
 </ul>
 <h3>KNOW ISSUE :</h3>
 <ul>
-<li>If you break Heavy Molds by hand instead of retrieving them properly, the sand does not display the correct texture. <em>(This is a known bug the mold should appear empty, i'm gona fix this in the coming days.)</em></li>
+<li>Nothing at the moment ! If you encounter any bugs, feel free to contact me on Discord to make communication easier: <strong>zack.a.riz </strong>!</li>
 </ul>
 <h2 style="text-align: left;">Feature: Tool molds</h2>
 <table style="border-collapse: collapse; width: 75.6267%; height: 124px; background-color: #95a5a6; border-color: #000000; border-style: solid;" border="3">
@@ -120,7 +128,7 @@
 <tr style="height: 20.1875px;">
 <td style="text-align: left; height: 20.1875px; width: 30.0126%;"><strong>Molten metal required:</strong></td>
 <td style="text-align: center; height: 20.1875px; width: 22.6986%;">600</td>
-<td style="text-align: center; height: 20.1875px; width: 24.3399%;">800</td>
+<td style="text-align: center; height: 20.1875px; width: 24.3399%;">1000</td>
 <td style="text-align: center; width: 22.9489%; height: 20.1875px;">900</td>
 </tr>
 <tr style="height: 20.1875px;">
@@ -188,6 +196,7 @@
 <li>If you break Heavy Molds by hand instead of retrieving them properly, the sand does not display the correct texture. <em>(This is a known bug the mold should appear empty, i'm gona fix this in the coming days.)</em></li>
 </ul>
 <h3>Update:</h3>
+<p>02/08/2026 : <strong>2.2.0</strong> : QOL Update !</p>
 <p>22/07/2026 : <strong>2.1.2</strong> : Fixed several issues in the translation files, added a Russian translation by <strong>ChimMAG</strong>.</p>
 <p>17/07/2026 : <strong>2.1.1</strong> : Various fixes and added a Chinese translation, contributed by <strong>ch4Ver</strong> (CH44).</p>
 <p>07/07/2026 : <strong>2.1.0</strong> : New rod HeavyMold, Heavymold 3d model tweek, bug fix and more.</p>

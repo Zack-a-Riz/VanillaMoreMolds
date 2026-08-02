@@ -296,5 +296,5 @@
     "blockhelp-vmmheavymold-fill3-rod": "放置棒材印模",
 
     //Heavy Mold handbook info
-    "vanillamoremolds:block-handbooktext-vanillamoremolds:vmmheavymold-*": "<strong>重型模具：</strong><br>专为锭和金属板材的大规模生产而设计。其容器具有防水性，在制作印模前必须填入沙子。<br><br><strong>使用方法：</strong><br>填入沙子：手持沙子，Shift + 右键点击。<br>制作锭模具：手持锭，Shift + 右键点击。<br>制作板材模具：手持金属板材，Shift + 右键点击。<br>制作棒材模具：手持金属棒材，Shift + 右键点击。"
+    "vanillamoremolds:block-handbooktext-vanillamoremolds:vmmheavymold-*": "<strong>重型模具：</strong><br>专为锭和金属板材的大规模生产而设计。其容器具有防水性，在制作印模前必须填入沙子。<br><br><strong>使用方法：</strong><br>填入沙子：手持沙子，右键点击 (3 个填充阶段)。<br>制作锭模具：手持锭，Shift + 右键点击。<br>制作板材模具：手持金属板材，Shift + 右键点击。<br>制作棒材模具：手持金属棒材，Shift + 右键点击。"
 }

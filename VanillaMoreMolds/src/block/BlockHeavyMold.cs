@@ -92,7 +92,7 @@ namespace VanillaMoreMolds
             bool       hasShift = byPlayer?.Entity?.Controls?.ShiftKey == true;
             bool       isSand   = held?.Block?.Code?.Path?.StartsWith("sand-") == true;
 
-            if (!IsLastFillStage() && isSand && hasShift)
+            if (!IsLastFillStage() && isSand)
             {
                 string sandRock = held!.Block.Code.Path["sand-".Length..];
                 AdvanceStage(world, byPlayer, blockSel, NextFillStage(), sandRock, consumeItem: true);
@@ -375,7 +375,6 @@ namespace VanillaMoreMolds
                     {
                         ActionLangCode = "vanillamoremolds:blockhelp-vmmheavymold-sand",
                         MouseButton    = EnumMouseButton.Right,
-                        HotKeyCode     = "shift",
                         Itemstacks     = sandStacks
                     });
             }
